@@ -1,6 +1,4 @@
 import React from "react";
-// import PropTypes from "prop-types";
-// import ArticleRoll from "../components/ArticleRoll";
 import UpdateRoll from "../components/UpdateRoll";
 import { makePage } from "../components/Layout";
 import { graphql, Link } from "gatsby";
