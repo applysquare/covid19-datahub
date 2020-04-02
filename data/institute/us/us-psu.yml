@@ -1,0 +1,18 @@
+slug: us-psu
+name_en: Penn State University Park
+name_cn: 宾夕法尼亚州立大学（主校区）
+countryCode: us
+website: http://www.psu.edu/
+state_cn: 宾夕法尼亚州
+state_en: Pennsylvania
+public_or_private: public
+covid19_news_link: https://sites.psu.edu/virusinfo/
+cover: https://cdn.applysquare.net/a2/institute/psu/cover_app.jpg
+logo: https://cdn.applysquare.net/a2/institute/psu/logo.png
+state_case_number: 院校所在州确诊数字
+state_daily_change_number: 院校所在州新增数字
+state_death_number: 院校所在州死亡数字
+course_operation_status: 网课
+course_policy_link:
+online_course_start_date: 2020-03-16
+return_campus_course_date: 

@@ -1,0 +1,18 @@
+slug: us-unc
+name_en: University of North Carolina at Chapel Hill
+name_cn: 北卡罗来纳大学教堂山分校
+countryCode: us
+website: http://www.unc.edu/
+state_cn: 北卡罗莱纳州
+state_en: North Carolina
+public_or_private: public
+covid19_news_link: https://www.unc.edu/coronavirus/
+cover: https://cdn.applysquare.net/a2/institute/unc/cover_app.jpg
+logo: https://cdn.applysquare.net/a2/institute/Unc/logo.png
+state_case_number: 院校所在州确诊数字
+state_daily_change_number: 院校所在州新增数字
+state_death_number: 院校所在州死亡数字
+course_operation_status: 网课
+course_policy_link:
+online_course_start_date: 2020-03-23
+return_campus_course_date: 

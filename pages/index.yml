@@ -1,0 +1,10 @@
+templateKey: index-page
+title: 全球留学生疫情互助数据中心
+highlightAreas:
+  - name: 美国疫情
+    link: /area/us
+    apiSlug: us
+  - name: 英国疫情
+    link: /area/uk
+    apiSlug: united-kingdom
+
