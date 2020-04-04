@@ -5,25 +5,26 @@ import { graphql, Link } from "gatsby";
 
 export const IndexPageCore = ({ data, errors }) => {
   const config = data.pageIndexYml;
-  const getApiData = (apiSlug) => {
+  const getApiData = (apiCode) => {
     return data.allCovid19Country.edges.find(edge => {
-      return edge.node.data.Slug === apiSlug;
+      return edge.node.data.CountryCode === apiCode;
     })?.node?.data;
   }
+
   return (
     <div>
       <div>
         <h1>全球院校追踪lalala</h1>
         <div>
           {config.highlightAreas.map(area => {
-            const apiData = getApiData(area.apiSlug);
+            const apiData = getApiData(area.apiCode);
             return (
               <div key={area.link}>
                 <Link to={area.link} >
                   {area.name}
                 </Link>
-                <div>累计: {apiData.TotalConfirmed}</div>
-                <div>最新: {apiData.NewConfirmed}</div>
+                <div>累计: {apiData?.TotalConfirmed}</div>
+                <div>最新: {apiData?.NewConfirmed}</div>
               </div>
             );
           })}
@@ -51,19 +52,20 @@ const Page = makePage(IndexPageCore);
 export default Page;
 
 export const pageQuery = graphql`
-  query IndedxPage($apiSlugs: [String]) {
+  query IndedxPage($apiCodes: [String]) {
     pageIndexYml {
       highlightAreas {
         name
         link
-        apiSlug
+        apiCode
       }
     }
-    allCovid19Country(filter: {data: {Slug: {in: $apiSlugs}}}) {
+    allCovid19Country(filter: {data: {CountryCode: {in: $apiCodes}}}) {
       edges {
         node {
           data {
             Country
+            CountryCode
             Slug
             NewConfirmed
             TotalConfirmed
