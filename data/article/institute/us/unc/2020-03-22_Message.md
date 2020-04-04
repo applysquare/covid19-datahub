@@ -1,0 +1,51 @@
+---
+# templateKey: news-page
+title: Message from campus leaders on the return to academics
+subtitle: 
+date: 2020-03-22
+link: >-
+  https://www.unc.edu/posts/2020/03/22/message-return-to-academics/
+countryCode: us
+stauts: published
+institute_slug: unc
+---
+Provost Robert Blouin and Interim Vice Chancellor for Student Affairs Jonathan Sauls share resources available to students as the semester resumes and remote learning begins.
+
+<div class="author-metadata"><span class="author-name">Posted by University Communications,</span> Sunday, March 22nd, 2020</div>
+
+<div class="has-content-area" data-url="https://www.unc.edu/posts/2020/03/22/message-return-to-academics/" data-title="Message from campus leaders on the return to academics" title="undefined">
+
+<div class="pf-content">
+
+Dear Carolina students,
+
+As you prepare to return to your spring 2020 classes and transition to remote learning on March 23, we want to welcome you back and acknowledge that together we are entering a new world. These past few weeks have been a period of disruption, worry and loss. Many of you have had to return suddenly from study abroad programs that you had long looked forward to attending. Others have had to leave your residence halls and apartments just as springtime is arriving in Chapel Hill. Still, others have lost the opportunity to compete with your teammates. And all of you have had to say goodbye for now to campus life with friends who inspire you, and to the daily joys of face-to-face community with one another.
+
+It is important to acknowledge these losses and also to see that there is a way forward and trust that we will find it together. The same strengths that brought you to Carolina — your brilliance; your work ethic; your willingness to see the best in others — will help you respond to the current moment with courage, resilience and creativity. These strengths will also help you finish this semester and continue to make progress towards your degree and towards the life you want to lead.
+
+Over the last two weeks, your professors have worked tirelessly to prepare for remote teaching and learning. They know that this is an extraordinary time for you, just as it is an extraordinary time for them, and they are committed to responding to your questions and helping you make the most of the rest of the semester. If you need something from them, please just ask, and we are confident they will do their best.
+
+Below are resources available to support you as the semester resumes and remote learning begins:
+
+*   The University has provided [guidance on emergency grading accommodations](https://registrar.unc.edu/files/2020/03/emergency-grading-accomodation.pdf) for the spring 2020 term. You can find more information on pass/fail options and frequently asked questions on the [College of Arts & Sciences’ website](https://college.unc.edu/2020/03/grading-students-faq/). We encourage you to speak with an academic advisor about any impact your choices might have for success in future courses or admissions to future programs. [Academic Advisors](https://advising.unc.edu/announcement/covid-19-advising-faq/) are available to communicate with undergraduate students remotely.
+*   Carolina’s Learning Center has [created a page](https://learningcenter.unc.edu/tips-and-tools/keep-writing-and-learning-designing-your-online-academic-life/) to help you keep learning and finish strong this semester. The site also includes helpful strategies tailored to address specific needs and support your academic success at Carolina.
+*   Students with learning differences and disabilities can find support and resources related to remote learning from the [Office of Accessibility Resources and Service](https://ars.unc.edu/). You can also report if you are having a [digital accessibility issue](https://digitalaccessibility.unc.edu/report/).
+*   [Campus Health](https://campushealth.unc.edu/)) remains open with staffing available to offer limited in-person appointments for acute illness. **Please only visit Campus Health after calling first ([919-966-2281](tel:919-966-2281)) and scheduling an appointment.**
+*   Mental health can be a challenge during this global health emergency. These are stressful times and it makes sense to be anxious. There are things you can do to help yourself. [Learn more from Healthy Heels](https://healthyheels.org/2020/03/13/managing-mental-health-during-coronavirus/). [Counseling and Psychological Services](https://caps.unc.edu/) is open and making appointments via Zoom.
+*   If you have any technical issues please visit [help.unc.edu](https://help.unc.edu/sp) or call 919-962-HELP to submit a request for support. ITS has great [tips for attending class in Zoom](https://help.unc.edu/sp?id=kb_article_view&sysparm_article=KB0010679&sys_kb_id=3984c2aedb2f485070551ffa6896198b). You should [test your Zoom connection](https://unc.zoom.us/test) before your first class. They’ve provided guidance on how to [improve your Zoom connection](https://help.unc.edu/sp?id=kb_article_view&sysparm_article=KB0010678&sys_kb_id=e12583161bab8c50b7de21b5ec4bcbe4) as well as [guidance for off-campus internet service](https://help.unc.edu/sp?id=kb_article_view&sysparm_article=KB0010677&sys_kb_id=ef58ef6e1b230c90b7de21b5ec4bcb4a).
+
+We are committed to supporting you and helping you stay on track towards your degree. The University has been posting important information and links to resources on [UNC-Chapel Hill’s coronavirus website](https://www.unc.edu/coronavirus/). Keep checking this page for updates. Next week we will launch new online resources specifically for students, including a CV19 Virtual Student Care Hub that will help us better understand what you need and how we may help. Students can contact the virtual hub at [covidcareforstudents@unc.edu](mailto:covidcareforstudents@unc.edu).
+
+In closing, we want to thank you. Your strength and resilience inspire us and we promise you the support of your University as we all rise to face these challenges.
+
+Sincerely,
+
+Robert A. Blouin  
+_Executive Vice Chancellor and Provost_
+
+Jonathan Sauls  
+_Interim Vice Chancellor for Student Affairs_
+
+</div>
+
+</div>
