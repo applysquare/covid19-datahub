@@ -6,13 +6,12 @@ website: http://www.columbia.edu/
 state_cn: 纽约州
 state_en: New York
 public_or_private: private
-covid19_news_link: https://covid19.columbia.edu/
+course_policy_link: https://covid19.columbia.edu/
 cover: https://cdn.applysquare.net/a2/institute/columbia/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/columbia/logo.png
-state_case_number: 院校所在州确诊数字
-state_daily_change_number: 院校所在州新增数字
-state_death_number: 院校所在州死亡数字
+state_case_number: 456 #院校所在州确诊数字，只是先留个位置，后期会通过api接口自动匹配州的这个数字，或是线下完成匹配
+state_daily_change_number: 123 #院校所在州新增数字，只是先留个位置，后期会通过api接口自动匹配州的这个数字，或是线下完成匹配
+state_death_number: 3456 #院校所在州死亡数字，只是先留个位置，后期会通过api接口自动匹配州的这个数字，或是线下完成匹配
 course_operation_status: 网课
-course_policy_link:
 online_course_start_date: 2020-03-26
 return_campus_course_date: 
