@@ -7,6 +7,7 @@ function toCamelCase(str) {
 }
 
 module.exports = {
+  pathPrefix: process.env.GATSBY_PATH_PREFIX,
   siteMetadata: {
     title: "Gatsby + Netlify CMS Starter",
     description:
