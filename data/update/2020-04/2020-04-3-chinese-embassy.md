@@ -3,7 +3,7 @@ templateKey: update-page
 title: 驻美使馆权威发布：疫情期间你在美国留学怎么办？
 date: 2020-04-04
 link: >-
-  https://cn.nytimes.com/morning-brief/20200327/coronavirus-briefing/?utm_source=top10-in-article&utm_medium=articlepage&utm_campaign=web
+  http://www.china-embassy.org/chn/lszj/zytz/t1765432.htm
 featuredpost: false
 featuredimage: 
 tags:
