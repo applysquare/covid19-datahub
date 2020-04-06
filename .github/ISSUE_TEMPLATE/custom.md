@@ -17,7 +17,7 @@ about: Support global univerities and students.
 <!-- Please ask questions on the NetlifyCMS Gitter channel (https://gitter.im/netlify/NetlifyCMS). -->
 <!-- Issues which contain questions or support requests will be closed. -->
 
-## What is an encouraged contribution?
+**What is an encouraged contribution?**
 
-## What kind of info are we looking for?
+**What kind of info are we looking for?**
 
