@@ -15,7 +15,7 @@ about: Support global univerities and students.
 
 **If you have any tutorial, policy, or sharing your own experience, Please contribute with format below**
 
-# templateKey: article-page
+emplateKey: article-page
 title: please put your title here
 date: YYYY-MM-DD
 link: >-
