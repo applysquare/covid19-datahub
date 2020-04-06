@@ -45,6 +45,10 @@
 
 ## License
 
-本数据中心使用License类型为xxx，查看LICENSE.md以了解更多细节
+本数据中心使用License类型如下：
+> The code of this project is licensed under the MIT license, and
+> the content and data is license under Attribution-NonCommercial-ShareAlike 
+> 4.0 International license.
+查看 [LICENSE.md](https://github.com/applysquare/covid19-datahub/blob/master/LICENSE)了解详情
 
 希望大家都能在疫情的影响下平安健康，安全发展。
