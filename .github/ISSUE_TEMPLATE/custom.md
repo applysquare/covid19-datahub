@@ -13,11 +13,11 @@ about: Support global univerities and students.
 
 ---
 
-<!-- Bug reports and Feature requests must use other templates, or will be closed -->
-<!-- Please ask questions on the NetlifyCMS Gitter channel (https://gitter.im/netlify/NetlifyCMS). -->
-<!-- Issues which contain questions or support requests will be closed. -->
+<!-- What is an encouraged contribution -->
+<!-- Please check readme.md -->
+<!-- Placeholder -->
 
-**What is an encouraged contribution?**
+**What is the title(placeholder)?**
 
-**What kind of info are we looking for?**
+**Which university is this about? If it is not related to a single university leave it blank(pleaceholder)**
 
