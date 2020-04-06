@@ -4,7 +4,6 @@ import { graphql, Link } from "gatsby";
 import ArticleList from "../components/ArticleList";
 
 export const IndexPageCore = ({ data, errors }) => {
-  console.log(data);
   const config = data.pageIndexYml;
   const getApiData = (apiCode) => {
     return data.allCovid19Country.edges.find(edge => {
@@ -49,7 +48,9 @@ export const IndexPageCore = ({ data, errors }) => {
   );
 };
 
-const Page = makePage(IndexPageCore);
+const Page = makePage(IndexPageCore, {
+  srcPath: '/src/templates/index-page.js',
+});
 export default Page;
 
 export const pageQuery = graphql`

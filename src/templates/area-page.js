@@ -43,7 +43,9 @@ export const AreaPageCore = ({ data }) => {
   );
 };
 
-const Page = makePage(AreaPageCore);
+const Page = makePage(AreaPageCore, {
+  srcPath: '/src/templates/area-page.js',
+});
 export default Page;
 
 export const pageQuery = graphql`
