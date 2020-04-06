@@ -7,7 +7,7 @@ link: >-
   https://thewell.unc.edu/2020/04/03/summer-school-to-transition-courses-to-remote-instruction/
 countryCode: us
 stauts: published
-institute_slug: us-unc
+instituteSlug: us-unc
 ---
 ![img](https://thewell.unc.edu/files/2020/04/bell-tower.jpg)
 

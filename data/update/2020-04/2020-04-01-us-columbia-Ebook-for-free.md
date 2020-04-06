@@ -7,7 +7,7 @@ link: >-
   https://covid19.columbia.edu/news/columbia-university-press-makes-e-books-available-free
 countryCode: us
 stauts: published
-institute_slug: columbia
+instituteSlug: columbia
 ---
 To address the needs of students who were forced to leave campus during the unfolding COVID-19 crisis without securing their course books, Columbia University Press has joined with VitalSource to make [its titles available for free as e-books](https://www.cupblog.org/2020/03/31/columbia-university-press-makes-e-book-learning-resources-available-to-students-online-at-no-cost/). 
 

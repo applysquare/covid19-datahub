@@ -7,7 +7,7 @@ link: >-
   https://covid19.columbia.edu/news/columbia-opens-residence-halls-doctors-and-healthcare-workers
 countryCode: us
 stauts: published
-institute_slug: columbia
+instituteSlug: columbia
 ---
 <div class="field field--name-field-cu-content field--type-entity-reference-revisions field--label-hidden field--items">
 

@@ -7,7 +7,7 @@ link: >-
   https://news.psu.edu/story/614029/2020/04/02/academics/graduate-school-implements-optional-alternative-grading-spring
 countryCode: us
 stauts: published
-institute_slug: psu
+instituteSlug: psu
 ---
 
 UNIVERSITY PARK, Pa. -- The Graduate School at Penn State is implementing an optional alternative grading system for the spring 2020 semester. The new, opt-in grading system is designed to mitigate the impacts to graduate students’ GPAs and academic transcripts due to unprecedented extenuating circumstances posed by the novel coronavirus public health crisis.

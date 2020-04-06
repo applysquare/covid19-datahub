@@ -7,7 +7,7 @@ link: >-
   https://www.unc.edu/posts/2020/03/24/message-social-distancing/
 countryCode: us
 stauts: published
-institute_slug: unc
+instituteSlug: unc
 ---
 "It is important that everyone in our community practice social distancing. That means staying home as much as possible, going out only when essential, avoiding groups of 10 or more people and staying 6 feet away from others when you must be out."
 
