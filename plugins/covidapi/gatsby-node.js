@@ -25,7 +25,7 @@ exports.sourceNodes = async ({ actions, createNodeId, createContentDigest }) => 
     data.Countries.map(country => {
         createNode(processResult({
             result: {
-                id: country.Slug,
+                id: country.CountryCode,
                 data: country,
             },
             type: 'Covid19Country',

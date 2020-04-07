@@ -1,22 +1,12 @@
 import React from "react";
 import { makePage } from "../../components/Layout";
 import { graphql } from 'gatsby';
+import ArticleList from "../../components/ArticleList";
 
 const PageCore = ({ data }) => {
   return <div>
     <h1>资料库</h1>
-    {
-      data.allMarkdownRemark.edges.map(edge => {
-        return (<div key={edge.node.id}>
-          <h2>{edge.node.frontmatter.title}</h2>
-          <div>
-            website:
-            <a href={edge.node.frontmatter.link}>{edge.node.frontmatter.link}
-            </a>
-          </div>
-        </div>);
-      })
-    }
+    <ArticleList articleEdges={data.allMarkdownRemark.edges} />
   </div>;
 };
 
@@ -35,13 +25,11 @@ query ArticlePageQuery {
         id
         fields {
           pathname
-          templateKey
         }
         frontmatter {
           title
           link
           date(formatString: "MMMM DD, YYYY")
-          featuredpost
         }
       }
     }

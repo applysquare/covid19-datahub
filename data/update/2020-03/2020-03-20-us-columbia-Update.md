@@ -7,7 +7,7 @@ link: >-
   https://covid19.columbia.edu/news/update-course-instruction-and-university-commencement
 countryCode: us
 stauts: published
-institute_slug: columbia
+instituteSlug: columbia
 ---
 <header>
 

@@ -1,7 +1,7 @@
 module.exports = function (node) {
   return {
-    apiSlugs: node.highlightAreas.map(area => {
-      return area.apiSlug;
+    apiCodes: node.highlightAreas.map(area => {
+      return area.apiCode;
     }),
   };
 }

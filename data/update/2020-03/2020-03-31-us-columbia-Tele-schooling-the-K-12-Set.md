@@ -6,7 +6,7 @@ link: >-
   hhttps://news.columbia.edu/news-remote-youth-online-learning-schools
 countryCode: us
 stauts: published
-institute_slug: columbia
+instituteSlug: columbia
 ---
 
 ![news image](https://news.columbia.edu/sites/default/files/styles/cu_crop/public/content/Research%20Images/youth-remote-learning-large.jpg?itok=hmG7YBrb)

@@ -7,7 +7,7 @@ link: >-
   https://www.unc.edu/posts/2020/03/22/message-return-to-academics/
 countryCode: us
 stauts: published
-institute_slug: unc
+instituteSlug: unc
 ---
 Provost Robert Blouin and Interim Vice Chancellor for Student Affairs Jonathan Sauls share resources available to students as the semester resumes and remote learning begins.
 

@@ -6,7 +6,7 @@ import "./all.sass";
 import useSiteMetadata from "./SiteMetadata";
 import { withPrefix } from "gatsby";
 
-const TemplateWrapper = ({ children, errors }) => {
+const TemplateWrapper = ({ children, errors, layoutProps }) => {
   const { title, description } = useSiteMetadata();
   if (errors) {
     console.error("page error: ", errors);
@@ -61,9 +61,9 @@ const TemplateWrapper = ({ children, errors }) => {
 
 export default TemplateWrapper;
 
-export function makePage(Component) {
+export function makePage(Component, layoutProps) {
   return props => (
-    <TemplateWrapper {...props}>
+    <TemplateWrapper layoutProps={layoutProps} {...props}>
       <Component {...props} />
     </TemplateWrapper>
   );
