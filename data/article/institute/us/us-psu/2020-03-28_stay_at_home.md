@@ -6,8 +6,8 @@ date: 2020-03-28
 link: >-
   https://news.psu.edu/story/613365/2020/03/28/administration/penn-state-campuses-are-aligned-governor%E2%80%99s-%E2%80%98stay-home%E2%80%99-order
 countryCode: us
-stauts: published
-instituteSlug: psu
+status: published
+instituteSlug: us-psu
 ---
 <div class="field field-name-body field-type-text-with-summary field-label-hidden">
 
