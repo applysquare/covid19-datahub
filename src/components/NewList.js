@@ -3,7 +3,7 @@ import React from "react";
 import { v4 } from "uuid";
 
 const styles = {
-  item: { margin: "15px 0" },
+  item: { padding: "10px 0" },
   title: {
     fontWeight: "600",
     fontSize: "18px",
