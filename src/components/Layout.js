@@ -12,7 +12,7 @@ const TemplateWrapper = ({ children, errors, layoutProps }) => {
     console.error("page error: ", errors);
   }
   return (
-    <div>
+    <div style={{ maxWidth: "780px", margin: "0 auto" }}>
       <Helmet>
         <html lang="en" />
         <title>{title}</title>
@@ -62,7 +62,7 @@ const TemplateWrapper = ({ children, errors, layoutProps }) => {
 export default TemplateWrapper;
 
 export function makePage(Component, layoutProps) {
-  return props => (
+  return (props) => (
     <TemplateWrapper layoutProps={layoutProps} {...props}>
       <Component {...props} />
     </TemplateWrapper>

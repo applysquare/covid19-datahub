@@ -15,25 +15,28 @@ const InstitutePageCore = ({ data, errors }) => {
       <div>Website: {data.institute.website}</div>
       <div>
         <div>当地确诊</div>
-        <div>
-          本周确诊 x
-          本周新增 x
-          本周死亡 x
-        </div>
+        <div>本周确诊 x 本周新增 x 本周死亡 x</div>
       </div>
       <div>
         <div>院校政策</div>
-        <div>院校运转: {data.institute.course_operation_status ?? '-'}</div>
-        <div>停课时间: {data.institute.online_course_start_date ?? '-'}</div>
+        <div>院校运转: {data.institute.course_operation_status ?? "-"}</div>
+        <div>停课时间: {data.institute.online_course_start_date ?? "-"}</div>
         <div>复课时间: -</div>
-        <div>依据: {
-          (data.institute.course_policy_link && <ExternalLink link={data.institute.course_policy_link} />)
-          || '-'}
+        <div>
+          依据:{" "}
+          {(data.institute.course_policy_link && (
+            <ExternalLink link={data.institute.course_policy_link} />
+          )) ||
+            "-"}
         </div>
       </div>
       <div>
         校友问题征集
-        <ExternalLink link={'https://github.com/applysquare/covid19-datahub/issues/new/choose'} />
+        <ExternalLink
+          link={
+            "https://github.com/applysquare/covid19-datahub/issues/new/choose"
+          }
+        />
       </div>
       <div>
         <h2>本校资料区</h2>
@@ -43,7 +46,6 @@ const InstitutePageCore = ({ data, errors }) => {
         <h2>本校资讯区</h2>
         <ArticleList articleEdges={data.updates.edges} />
       </div>
-
     </div>
   );
 };
@@ -74,7 +76,7 @@ export const pageQuery = graphql`
       sort: { order: DESC, fields: [frontmatter___date] }
       filter: {
         frontmatter: { instituteSlug: { eq: $slug } }
-        fields: { templateKey: { eq: "update-page" } } 
+        fields: { templateKey: { eq: "update-page" } }
       }
     ) {
       edges {
@@ -93,9 +95,10 @@ export const pageQuery = graphql`
     }
     articles: allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
-      filter: { 
+      filter: {
         frontmatter: { instituteSlug: { eq: $slug } }
-        fields: { templateKey: { eq: "article-page" } } }
+        fields: { templateKey: { eq: "article-page" } }
+      }
     ) {
       edges {
         node {
