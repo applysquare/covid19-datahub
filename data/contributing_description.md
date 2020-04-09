@@ -6,7 +6,7 @@ If you have any data, Please contribute with illustration below.
 
 ***
 
-**一、文件存放路径说明
+**一、文件存放路径说明**
 
 | Path     | Name         | Description  |
 | ------------- |:-------------:| -----:|
@@ -27,11 +27,11 @@ If you have any data, Please contribute with illustration below.
 
 ***
 
-**二、院校结构化数据
+**二、院校结构化数据**
 
 院校文件yml格式，以slug命名，存放在对应的路径：institute/{{countryCode}}  
 
 | Field     | Description         | Example  |
 | ------------- |:-------------:| -----:|
-| slug     | 学校的标识，格式：国家代码-学校官网主域名,，可点击https://so.csdn.net/so/search/s.do?q=markdown+the+view+has+crashed&t=blog| us-mit |
+| slug     | 学校的标识，格式：国家代码-学校官网主域名,，可点击定义好的<a href="http://example.com/" title="学校slug">查找| us-mit |
 
