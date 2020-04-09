@@ -36,7 +36,7 @@ If you have any data, Please contribute with illustration below.
 | slug     | **必填** |院校标识，格式：国家代码-学校官网主域名,，若不确定可点击定义好的<a href="https://docs.google.com/spreadsheets/d/1rJt3L7ZkI_HCRYnguAdGVhxExvK-wEPYhLpTYT1B9SU/edit?usp=sharing">学校slug</a>查找| us-columbia |
 | nameEn     | **必填** | 院校英文名 | Columbia University |
 | nameCn     | **必填** | 院校中文名 | 哥伦比亚大学 |
-| countryCode     | **必填** | 院校所在国家小写代码，若不确定可点击定义好的<a href="https://docs.google.com/spreadsheets/d/1eZMJ29XtJ_9ozQf-GEJH72fSuSVEiDZMvSYU0RQ3tP0/edit?usp=sharing">学校代码</a>查找 | us |
+| countryCode     | **必填** | 院校所在国家小写代码，若不确定可点击定义好的<a href="https://docs.google.com/spreadsheets/d/1eZMJ29XtJ_9ozQf-GEJH72fSuSVEiDZMvSYU0RQ3tP0/edit?usp=sharing">学校代码</a>查找  &emspo;&emspo;&emspo;&emspo;&emspo;&emspo; | us |
 | website     | 选填 | 院校官网，以http开头 | http://www.columbia.edu/ |
 | stateCn    | **必填** | 院校所在州或二级行政区的中文 | 纽约州 |
 | stateEn    | **必填** | 院校所在州或二级行政区的英文 | New York |
