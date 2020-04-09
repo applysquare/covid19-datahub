@@ -8,32 +8,43 @@ assignees: ''
 ---
 
 ---
-# name: 留学生求助
-about: 海外留学求助
+# name: Create / edit university information
+about: Create university, edit existed data, and report  data error
 ---
-你可以在这里提交求助，我们会尽力为你搜集解决方案，并在你的允许下公开征集答案。
 
-**你的问题是什么？**
+Thank you for your contribution, please put your answer after each question. Your information will be imported into the database after review. It will support global students and other overseas personnel.
+Please note"type of submission" and "name of the institution" are required, other content is optional.
 
-请把你的问题写在此处
+**Type of submission: Do you need to create or edit the university data?**
+Please identify “create”or“edit”
 
-**问题类型**
-请说明是“学业问题”，“回国求助”，“物资求助”，其他请说明
+**Name of university**
+Please write the name of the university here
 
-**问题详情**
-问题的细节描述
+*Country*
+Fill in the country the where institution is located
 
-**你目前所在的学校**
-院校名称
+**Region*
+Fill in the region/state where the institution is located
 
-**你目前居住的地区**
-所在国家城市
+**During the outbreak, does the university have an official website to release outbreak information? If yes, please provide a link**
+Fill Link 
 
-**我们怎么称呼你？**
-请填写你希望我们联系你的称呼
+**Course operation status**
+Please select "open", "online course", or "close", if there are other circumstances, please explain
 
-**你的联系方式**
-请给出可用的联系方式
+**When the online course start?**
+Please fill in the start date
 
-**你是否希望公开你的问题？**
-如果愿意公开，我们会公开收集问题的帮助
+**When will school resume?**
+Please fill in the resume date
+
+**Are there sufficient supplies in the local area?**
+Please explain. The more clearly you describe, the more helpful it is to others
+
+
+**Is international student safe in the local area?**
+Please explain. The more clearly you describe, the more helpful it is to others
+
+**Do you know local help and assistance information?**
+If there are help methods and resources, please give information
