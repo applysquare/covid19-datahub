@@ -11,7 +11,7 @@ export const AreaPageCore = ({ data }) => {
       </div>
       <h1>{area.title}</h1>
       <h2>学校</h2>
-      {allInstitute.edges.map(edge => {
+      {allInstitute.edges.map((edge) => {
         return (
           <div key={edge.node.id}>
             <Link to={edge.node.fields.pathname}>{edge.node.name_cn}</Link>
@@ -19,7 +19,7 @@ export const AreaPageCore = ({ data }) => {
         );
       })}
       <h2>资讯</h2>
-      {updates.edges.map(edge => {
+      {updates.edges.map((edge) => {
         return (
           <div key={edge.node.id}>
             <Link to={edge.node.fields.pathname}>
@@ -29,7 +29,7 @@ export const AreaPageCore = ({ data }) => {
         );
       })}
       <h2>资料</h2>
-      {articles.edges.map(edge => {
+      {articles.edges.map((edge) => {
         return (
           <div key={edge.node.id}>
             <Link to={edge.node.fields.pathname}>
@@ -44,7 +44,7 @@ export const AreaPageCore = ({ data }) => {
 };
 
 const Page = makePage(AreaPageCore, {
-  srcPath: '/src/templates/area-page.js',
+  srcPath: "/src/templates/area-page.js",
 });
 export default Page;
 
@@ -59,7 +59,7 @@ export const pageQuery = graphql`
       edges {
         node {
           id
-          name_cn
+          nameCn
           website
           fields {
             pathname
@@ -69,12 +69,8 @@ export const pageQuery = graphql`
     }
     updates: allMarkdownRemark(
       filter: {
-        fields: {
-          templateKey: { eq: "update-page" }
-        }
-        frontmatter: {
-          countryCode: { eq: $countryCode }
-        }
+        fields: { templateKey: { eq: "update-page" } }
+        frontmatter: { countryCode: { eq: $countryCode } }
       }
     ) {
       edges {
@@ -91,12 +87,8 @@ export const pageQuery = graphql`
     }
     articles: allMarkdownRemark(
       filter: {
-        fields: {
-          templateKey: { eq: "article-page" }
-        }
-        frontmatter: {
-          countryCode: { eq: $countryCode }
-        }
+        fields: { templateKey: { eq: "article-page" } }
+        frontmatter: { countryCode: { eq: $countryCode } }
       }
     ) {
       edges {
