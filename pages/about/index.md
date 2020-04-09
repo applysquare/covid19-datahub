@@ -12,7 +12,7 @@ title: About us
 
 ## 我要求助
 
-这里放上求助的方式和问题问卷
+你可以在[New Issues](https://github.com/applysquare/covid19-datahub/issues/new/choose)页面提交求助，我们会尽力为你搜集解决方案，并在你的允许下公开征集答案。
 
 ## 支持建设
 
