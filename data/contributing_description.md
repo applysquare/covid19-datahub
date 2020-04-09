@@ -1,4 +1,4 @@
-Thank you for your support. This page is a co-operate template.Please submit the information according to the format. 
+Thank you for your support. This page is a co-operate template.Please submit the information according to the format.   
 感谢您对信息建设的支持，本页面为信息共建模版。请按照模版格式提交信息，在审核后直接汇入数据及资讯库。
 
 **If you have any data, Please contribute with illustration below.**
