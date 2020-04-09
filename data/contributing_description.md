@@ -32,7 +32,7 @@ If you have any data, Please contribute with illustration below.
 院校文件yml格式，以slug命名，存放在对应的路径：institute/{{countryCode}}  
 
 | Field     |  Write |         Description         |  Example  |
-| :------------- |:-------------|:-------------|:------|
+| :------------- |:-------------|:-------------------------|:------|
 | slug     | **必填** |院校标识，格式：国家代码-学校官网主域名,，若不确定可点击定义好的<a href="https://docs.google.com/spreadsheets/d/1rJt3L7ZkI_HCRYnguAdGVhxExvK-wEPYhLpTYT1B9SU/edit?usp=sharing">学校slug</a>查找| us-columbia |
 | nameEn     | **必填** | 院校英文名 | Columbia University |
 | nameCn     | **必填** | 院校中文名 | 哥伦比亚大学 |
@@ -42,12 +42,12 @@ If you have any data, Please contribute with illustration below.
 | stateEn    | **必填** | 院校所在州或二级行政区的英文 | New York |
 | publicOrprivate     | 选填 | 院校属性，公办：public，私立：private | private |
 | coursePolicylink     | 选填 | 院校应对疫情的学习发展应对政策所在链接 | https://covid19.columbia.edu/ |
-| cover     | 选填 | 院校封面图，可通过申请方图片链接直接调用，example中的columbia替换为相应slug掉即可 | https://cdn.applysquare.net/a2/institute/columbia/cover_app.jpg |
-| logo     | 选填 |  院校校徽图片，可通过申请方图片链接直接调用，example中的columbia替换为相应slug掉即可| https://cdn.applysquare.net/a2/institute/columbia/logo.png |
-| stateCasenumber     | 不填 | 院校所在州或国家一级行政区确诊病例数，留白即可，申请方会有API接口自动调取 |  |
-| stateDailychangenumber     | 不填 | 院校所在州州或国家一级行政区新增病例数，留白即可，申请方会有API接口自动调取 |  |
-| stateDeathnumber     | 不填 | 院校所在州州或国家一级行政区死亡病例数，留白即可，申请方会有API接口自动调取 |  |
-| stateCurenumber     | 不填 | 院校所在州州或国家一级行政区治愈数，留白即可，申请方会有API接口自动调取 |  |
+| cover     | 选填 | 院校封面图，可通过申请方图片链接直接调用，example中的columbia替换为相应slug掉即可   | https://cdn.applysquare.net/a2/institute/columbia/cover_app.jpg |
+| logo     | 选填 |  院校校徽图片，可通过申请方图片链接直接调用，example中的columbia替换为相应slug掉即可  | https://cdn.applysquare.net/a2/institute/columbia/logo.png |
+| stateCasenumber     | 不填 | 院校所在州或国家一级行政区确诊病例数，留白即可，申请方会有API接口自动调取  |  |
+| stateDailychangenumber     | 不填 | 院校所在州或国家一级行政区新增病例数，留白即可，申请方会有API接口自动调取 |  |
+| stateDeathnumber     | 不填 | 院校所在州或国家一级行政区死亡病例数，留白即可，申请方会有API接口自动调取 |  |
+| stateCurenumber     | 不填 | 院校所在州或国家一级行政区治愈数，留白即可，申请方会有API接口自动调取 |  |
 | courseOperationstatus     | **必填** | 院校运转状态，选择一种：停课，网课，放假，正常 | 网课 |
 | onlineCoursestartdate     | 选填 | 院校网课开始日期 | 2020-03-26 |
 | returnCampuscoursedate     | 选填 | 院校复课日期 |  |
