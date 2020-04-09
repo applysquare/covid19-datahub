@@ -13,7 +13,7 @@ const TemplateWrapper = ({ children, errors, layoutProps }) => {
     console.error("page error: ", errors);
   }
   return (
-    <div style={{ maxWidth: "780px", margin: "0 auto" }}>
+    <div style={{ maxWidth: "750px", margin: "0 auto" }}>
       <Helmet>
         <html lang="en" />
         <title>{title}</title>
