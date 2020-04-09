@@ -4,7 +4,6 @@ Thank you for your support. This page is a co-operate template.Please submit the
 If you have any data, Please contribute with illustration below.  
 **如果您想贡献疫情相关的数据，请参照下列说明提交。**
 
-****
 一、文件存放路径说明
 
 | Path     | Name         | Description  |
@@ -24,7 +23,6 @@ If you have any data, Please contribute with illustration below.
 | update | 资讯   |  未经加工的、高频的新闻动态通知公告，内部按月份储存 |
 | update/YYYY-MM | 某月资讯   |  当前月份的新闻动态通知公告 |
 
-****
 
 二、院校结构化数据
 | Field     | Description         | Description  |
