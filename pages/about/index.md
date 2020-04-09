@@ -5,6 +5,7 @@ title: About us
 ---
 
 # 欢迎来到全球留学生疫情互助与实时数据中心
+网站地址：http://blog.applysquare.com/covid19-datahub/
 
 这里是全球留学生疫情互助资源与数据的共建页面。
 你可以参与实时数据建设，提供你所知道的资源，为护航全球留学生的安全与成长贡献力量；
@@ -12,10 +13,12 @@ title: About us
 
 ## 我要求助
 
-这里放上求助的方式和问题问卷
+你可以在[New Issues](https://github.com/applysquare/covid19-datahub/issues/new/choose)页面提交求助，我们会尽力为你搜集解决方案，并在你的允许下公开征集答案。
 
 ## 支持建设
 
+你可以在[New Issues](https://github.com/applysquare/covid19-datahub/issues/new/choose)页面提交资源与数据。
+选择Contribute info template（信息共建模版），根据内容类型选择不同的格式。
 目前数据中心需要三种数据建设：
 
 ### 资讯数据
@@ -48,6 +51,9 @@ title: About us
 - [申请方](http://www.applysquare.com)和提供数据与教育支持
 
 如果需要留学申请及背景提升服务，请[联系我们](http://www.applysquare.com)
+
+## 贡献者/合作机构
+- 此处为贡献者名单
 
 ## License
 
