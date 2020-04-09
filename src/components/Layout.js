@@ -7,13 +7,13 @@ import useSiteMetadata from "./SiteMetadata";
 import { withPrefix } from "gatsby";
 
 const TemplateWrapper = ({ children, errors, layoutProps }) => {
-  const { navbar = true, footer = true } = layoutProps;
+  // const { navbar = true, footer = true } = layoutProps;
   const { title, description } = useSiteMetadata();
   if (errors) {
     console.error("page error: ", errors);
   }
   return (
-    <div style={{ maxWidth: "780px", margin: "0 auto" }}>
+    <div style={{ maxWidth: "750px", margin: "0 auto" }}>
       <Helmet>
         <html lang="en" />
         <title>{title}</title>
@@ -52,10 +52,10 @@ const TemplateWrapper = ({ children, errors, layoutProps }) => {
           content={`${withPrefix("/")}img/og-image.jpg`}
         />
       </Helmet>
-      {navbar && <Navbar />}
+      <Navbar />
       <div>{children}</div>
       {errors && <div>{JSON.stringify(errors)}</div>}
-      {footer && <Footer />}
+      <Footer />
     </div>
   );
 };

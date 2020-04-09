@@ -5,6 +5,9 @@ import { ExternalLink } from "../components/ExternalLink";
 import NewList from "../components/NewList";
 import InfoList from "../components/InfoList";
 import Help from "../components/Help";
+import { LeftOutlined } from "@ant-design/icons";
+import circle from "../img/indexTitleImg.png";
+import indexTitleImg from "../img/bg.jpg";
 
 const help = {
   title: "校友问题征集",
@@ -18,6 +21,25 @@ const styles = {
     fontWeight: 500,
     fontSize: "20px",
     marginBottom: "24px",
+  },
+  logoBox: {
+    backgroundImage: `url(${indexTitleImg})`,
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
+    padding: "20px 15px",
+  },
+  logoTitle: {
+    fontSize: "14px",
+    color: "#FFFFFF",
+  },
+  nameCn: {
+    fontWeight: 500,
+    fontSize: "24px",
+    color: "#FFFFFF",
+  },
+  nameEn: {
+    fontSize: "12px",
+    color: "#FFFFFF",
   },
   policy: {
     padding: "24px 15px",
@@ -60,6 +82,10 @@ const styles = {
     padding: "5px",
     display: "inline-block",
   },
+  link: {
+    textDecoration: "none",
+    color: "#FFFFFF",
+  },
 };
 
 const InstitutePageCore = ({ data, errors }) => {
@@ -68,8 +94,6 @@ const InstitutePageCore = ({ data, errors }) => {
   }
   return (
     <div style={{ background: "rgba(241,241,241,0.8)" }}>
-      <h1>{data.institute.name_cn}</h1>
-      <div>{data.institute.name_en}</div>
       <div>Website: {data.institute.website}</div>
       <div>
         <div>
@@ -81,12 +105,39 @@ const InstitutePageCore = ({ data, errors }) => {
         </div>
       </div>
       <div>
-        校友问题征集
+        校友问题
         <ExternalLink
           link={
             "https://github.com/applysquare/covid19-datahub/issues/new/choose"
           }
         />
+      </div>
+      <div style={styles.logoBox}>
+        <div style={styles.logoTitle}>
+          <Link style={styles.link}>
+            <LeftOutlined />
+          </Link>
+          <span style={{ padding: "0 4px" }}>院校列表</span>
+        </div>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            margin: "36px 0 24px 6px",
+          }}
+        >
+          <span>
+            <img
+              src={circle}
+              alt=""
+              style={{ width: "40px", height: "40px", borderRadius: "50%" }}
+            />
+          </span>
+          <span style={{ paddingLeft: "12px" }}>
+            <div style={styles.nameCn}>{data.institute.nameCn}</div>
+            <div style={styles.nameEn}>{data.institute.nameEn}</div>
+          </span>
+        </div>
       </div>
       <div style={styles.localEpidemicBox}>
         <div
@@ -176,9 +227,7 @@ const InstitutePageCore = ({ data, errors }) => {
   );
 };
 
-const Page = makePage(InstitutePageCore, {
-  footer: false,
-});
+const Page = makePage(InstitutePageCore);
 export default Page;
 
 export const pageQuery = graphql`

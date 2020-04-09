@@ -89,7 +89,9 @@ export const IndexPageCore = ({ data, errors }) => {
       <div>
         <h1>全球院校动态</h1>
         <div>
-          <img style={styles.titleImg} src={indexTitleImg} alt="" />
+          <Link>
+            <img style={styles.titleImg} src={indexTitleImg} alt="" />
+          </Link>
         </div>
         <div></div>
         <div style={styles.safetyBox}>
@@ -140,7 +142,6 @@ export const IndexPageCore = ({ data, errors }) => {
           >
             资料区
           </div>
-          {/* <ArticleList articleEdges={data.articles.edges} /> */}
           <InfoList infoEdges={data.articles.edges} />
           {/* <Link to="/article">更多资料</Link> */}
 
@@ -168,7 +169,7 @@ export const IndexPageCore = ({ data, errors }) => {
 
 const Page = makePage(IndexPageCore, {
   srcPath: "/src/templates/index-page.js",
-  footer: false,
+  // footer: false,
 });
 export default Page;
 
