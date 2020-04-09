@@ -20,6 +20,6 @@ countryCode: us
 ## 文章列表
 | 文章   | 状态 | 链接 |
 |--------|------|------|
-| 4 Colleges, 2 Weeks, One Choice: How Covid-19 Scattered U.S. Higher Education   | 已汉化  |  [链接示意]（http://www.applysquare.com）    |
+| 4 Colleges, 2 Weeks, One Choice: How Covid-19 Scattered U.S. Higher Education   | 已汉化  |  [链接示意]  |
 | [COVID-19 and its impact on education](https://www.ei-ie.org/en/detail/16669/education-international-covid-19-tracker)   | 待汉化  |      |
 | [COVID‐19 Effects on US Higher Education Campuses](https://www.iie.org/COVID19-Effects-on-US-Higher-Education-Campuses) | 待汉化   |      |
