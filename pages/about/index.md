@@ -16,6 +16,8 @@ title: About us
 
 ## 支持建设
 
+你可以在[New Issues](https://github.com/applysquare/covid19-datahub/issues/new/choose)页面提交资源与数据。
+选择Contribute info template（信息共建模版），根据内容类型选择不同的格式。
 目前数据中心需要三种数据建设：
 
 ### 资讯数据
@@ -48,6 +50,9 @@ title: About us
 - [申请方](http://www.applysquare.com)和提供数据与教育支持
 
 如果需要留学申请及背景提升服务，请[联系我们](http://www.applysquare.com)
+
+## 贡献者/合作机构
+- 此处为贡献者名单
 
 ## License
 
