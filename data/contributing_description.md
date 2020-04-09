@@ -31,7 +31,7 @@ If you have any data, Please contribute with illustration below.
 
 院校文件yml格式，以slug命名，存放在对应的路径：institute/{{countryCode}}  
 
-| Field     |  Write | Description         | Example  |
+| Field     |  Write |         Description         |  Example  |
 | ------------- |:-------------:|-------------:| -----:|
 | slug     | **必填** |院校标识，格式：国家代码-学校官网主域名,，若不确定可点击定义好的<a href="https://docs.google.com/spreadsheets/d/1rJt3L7ZkI_HCRYnguAdGVhxExvK-wEPYhLpTYT1B9SU/edit?usp=sharing">学校slug</a>查找| us-columbia |
 | nameEn     | **必填** | 院校英文名 | Columbia University |
