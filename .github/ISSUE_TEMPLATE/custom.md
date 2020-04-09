@@ -1,7 +1,6 @@
 ---
-name: Contribute info template
-about: Base on covid-19 outbreak, contribute news, information and resources for global
-  univerities and students.
+name: Custom issue template
+about: Describe this issue template's purpose here.
 title: ''
 labels: ''
 assignees: ''
@@ -9,35 +8,33 @@ assignees: ''
 ---
 
 ---
-# name: Contribute info template:
-about: Support global univerities and students.
+# name: 提交资料
+about: 欢迎提供对政策的收集汇总，信息深度解读，回国与隔离指南，居家及回国日记，学习资源与援助信息
 ---
 
-**If you have any tutorial, policy, or sharing your own experience, Please contribute with format below**
+感谢您对信息建设的支持，请在每个问题后面提交相应的内容。通过审核后，你的信息将汇入数据及资讯库，帮助到全球留学生与其他海外人员。
 
-emplateKey: article-page
-title: please put your title here
-date: YYYY-MM-DD
-link: >-
-  https://resource-link-place-holder.com
-slug: 
-countryCode: 
-Please share the main content here.
+**文章标题**
 
-**If you would like to update university status, Please contribute with format below**
-name_en: University of North Carolina at Chapel Hill 
-name_cn: 北卡罗来纳大学教堂山分校
-countryCode: us
-website: http://www.unc.edu/
-state_cn: 北卡罗莱纳州
-state_en: North Carolina
-public_or_private: public
-course_policy_link: https://www.unc.edu/coronavirus/
-cover: https://cdn.applysquare.net/a2/institute/unc/cover_app.jpg
-logo: https://cdn.applysquare.net/a2/institute/Unc/logo.png
-state_case_number: 
-state_daily_change_number: 
-state_death_number:
-course_operation_status: Online/Close/Open
-online_course_start_date: 2020-03-23
-return_campus_course_date:
+请把文章标题写在此处
+
+**文章副标题**
+请把文章副标题写在此处，如没有副标题请忽略
+
+**原创/转载**
+请说明是否原创
+
+**署名**
+请给出希望的署名，如非原创请给出原作者名
+
+**文章链接**
+如内容为转载，请提供资讯文章的完整链接；
+
+**资料相关国家**
+这篇资料是否与某个国家有关？如果是请给出国家名称，如果无关请忽略
+
+**资料所属院校**
+这篇资料是否与某个院校有关？如果是请给出院校名称，如果无关请忽略
+
+**资料正文**
+请输入资料正文内容
