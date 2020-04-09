@@ -94,7 +94,7 @@ const InstitutePageCore = ({ data, errors }) => {
   }
   return (
     <div style={{ background: "rgba(241,241,241,0.8)" }}>
-      <div>Website: {data.institute.website}</div>
+      {/* <div>Website: {data.institute.website}</div>
       <div>
         <div>
           依据:{" "}
@@ -111,10 +111,10 @@ const InstitutePageCore = ({ data, errors }) => {
             "https://github.com/applysquare/covid19-datahub/issues/new/choose"
           }
         />
-      </div>
+      </div> */}
       <div style={styles.logoBox}>
         <div style={styles.logoTitle}>
-          <Link style={styles.link}>
+          <Link style={styles.link} to="/institute">
             <LeftOutlined />
           </Link>
           <span style={{ padding: "0 4px" }}>院校列表</span>
@@ -176,11 +176,11 @@ const InstitutePageCore = ({ data, errors }) => {
         <div style={styles.flexParent}>
           <div style={styles.flexChild}>
             <div>院校运转</div>
-            <div>{data.institute.course_operation_status ?? "-"}</div>
+            <div>{data.institute.courseOperationstatus ?? "-"}</div>
           </div>
           <div style={styles.flexChild}>
             <div>停课时间</div>
-            <div>{data.institute.online_course_start_date ?? "-"}</div>
+            <div>{data.institute.onlineCoursestartdate ?? "-"}</div>
           </div>
           <div style={styles.flexChild}>
             <div>复课时间</div>

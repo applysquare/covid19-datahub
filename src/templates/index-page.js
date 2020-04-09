@@ -74,6 +74,24 @@ const styles = {
   link: {
     textDecoration: "none",
   },
+  tabItem: {
+    padding: "8px 0",
+    textAlign: "center",
+    pointer: "cursor",
+    flex: 1,
+    textDecoration: "none",
+    color: "#333333",
+  },
+  triangle: {
+    width: 0,
+    height: 0,
+    display: "inline-block",
+    background: "transparent",
+    borderTop: "0px solid transparent",
+    borderBottom: "40px solid white",
+    borderLeft: "6px solid white",
+    borderRight: "10px solid transparent",
+  },
 };
 
 export const IndexPageCore = ({ data, errors }) => {
@@ -87,13 +105,26 @@ export const IndexPageCore = ({ data, errors }) => {
   return (
     <div style={{ background: "rgba(241,241,241,0.8)" }}>
       <div>
-        <h1>全球院校动态</h1>
         <div>
-          <Link>
+          <Link to="/about">
             <img style={styles.titleImg} src={indexTitleImg} alt="" />
           </Link>
         </div>
-        <div></div>
+        <div style={styles.flexParent}>
+          <Link
+            style={{
+              ...styles.tabItem,
+              background: "#ffffff",
+              color: "#1A6DFF",
+            }}
+          >
+            全球动态
+          </Link>
+          <div style={styles.triangle}></div>
+          <Link style={styles.tabItem} to="/institute">
+            院校数据
+          </Link>
+        </div>
         <div style={styles.safetyBox}>
           <div style={styles.title}>海外健康安全</div>
           <div style={styles.flexParent}>

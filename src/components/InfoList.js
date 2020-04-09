@@ -14,6 +14,12 @@ const styles = {
   link: {
     textDecoration: "none",
   },
+  txt: {
+    whiteSpace: "nowrap",
+    textOverflow: "ellipsis",
+    overflow: "hidden",
+    marginRight: "10px",
+  },
 };
 
 const InfoList = ({ infoEdges }) => {
@@ -29,7 +35,7 @@ const InfoList = ({ infoEdges }) => {
               to={edge?.node?.fields?.pathname}
             >
               <div style={styles.item}>
-                <div>{art?.title}</div>
+                <div style={styles.txt}>{art?.title}</div>
                 <RightOutlined />
               </div>
             </Link>

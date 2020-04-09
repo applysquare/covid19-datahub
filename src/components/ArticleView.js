@@ -1,22 +1,62 @@
 import React from "react";
-import { HTMLContent } from '../components/Content';
+import { Link } from "gatsby";
+import { HTMLContent } from "../components/Content";
+import { LeftOutlined } from "@ant-design/icons";
 
+const styles = {
+  box: {
+    padding: "18px 20px",
+  },
+  returnBox: {
+    color: "#333333",
+    fontSize: "16px",
+    textDecoration: "none",
+    display: "inline-block",
+    marginBottom: "30px",
+  },
+  title: {
+    color: "#333333",
+    fontSize: "24px",
+    fontWeight: 500,
+    marginBottom: "16px",
+  },
+  date: {
+    marginRight: "30px",
+  },
+  href: {
+    color: "#666666",
+  },
+  flexParent: {
+    display: "flex",
+    alignItems: "center",
+    color: "#666666",
+    fontSize: "14px",
+  },
+};
 export const ArticleView = ({ markdownRemark }) => {
   const article = markdownRemark;
   return (
-    <div>
-      <h1>{article?.frontmatter?.title}</h1>
-      <div>{article.frontmatter.date}</div>
-      <div>
-        {article?.frontmatter?.link && <a href={article?.frontmatter?.link}>原文链接</a>}
+    <div style={styles.box}>
+      <Link style={styles.returnBox} to="/">
+        <LeftOutlined />
+        <span style={{ paddingLeft: "5px" }}>返回</span>
+      </Link>
+      <div style={styles.title}>{article?.frontmatter?.title}</div>
+      <div style={styles.flexParent}>
+        <div style={styles.date}>{article.frontmatter.date}2020.03.11</div>
+        <div>
+          {article?.frontmatter?.link && (
+            <a style={styles.href} href={article?.frontmatter?.link}>
+              原文链接
+            </a>
+          )}
+        </div>
       </div>
       <div>
-        <HTMLContent
-          content={article.html}
-        />
+        <HTMLContent content={article.html} />
       </div>
     </div>
   );
-}
+};
 
 export default ArticleView;
