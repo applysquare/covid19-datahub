@@ -12,6 +12,7 @@ logo: https://cdn.applysquare.net/a2/institute/Unc/logo.png
 stateCasenumber: 566 #院校所在州确诊数字，只是先留个位置，后期会通过api接口自动匹配州的这个数字，或是线下完成匹配
 stateDailychangenumber: 203 #院校所在州新增数字，只是先留个位置，后期会通过api接口自动匹配州的这个数字，或是线下完成匹配
 stateDeathnumber: 4406 #院校所在州死亡数字，只是先留个位置，后期会通过api接口自动匹配州的这个数字，或是线下完成匹配
+stateCureumber: 406 #院校所在州治愈数字，只是先留个位置，后期会通过api接口自动匹配州的这个数字，或是线下完成匹配
 courseOperationstatus: 网课
 onlineCoursestartdate: 2020-03-23
 returnCampuscoursedate: 
