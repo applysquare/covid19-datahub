@@ -227,9 +227,7 @@ const InstitutePageCore = ({ data, errors }) => {
   );
 };
 
-const Page = makePage(InstitutePageCore, {
-  footer: false,
-});
+const Page = makePage(InstitutePageCore);
 export default Page;
 
 export const pageQuery = graphql`

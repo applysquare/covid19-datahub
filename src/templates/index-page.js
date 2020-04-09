@@ -169,7 +169,7 @@ export const IndexPageCore = ({ data, errors }) => {
 
 const Page = makePage(IndexPageCore, {
   srcPath: "/src/templates/index-page.js",
-  footer: false,
+  // footer: false,
 });
 export default Page;
 
