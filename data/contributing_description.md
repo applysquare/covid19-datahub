@@ -9,7 +9,7 @@ If you have any data, Please contribute with illustration below.
 **一、文件存放路径说明**
 
 | Path     | Name         | Description  |
-| ------------- |:-------------:| -----:|
+| :------------- |:-------------|:-----|
 | area     | 国家地区 | 储存国家地区信息 |
 | article      | 资料库  |  储存各种整理/汇总/加工后的资料，分主题存放 |
 | article/airline     | 航班信息  |  各航空公司的政策、航线新闻、机票动向 |
@@ -32,7 +32,7 @@ If you have any data, Please contribute with illustration below.
 院校文件yml格式，以slug命名，存放在对应的路径：institute/{{countryCode}}  
 
 | Field     |  Write |         Description         |  Example  |
-| ------------- |:-------------:|-------------:| -----:|
+| :------------- |:-------------|:-------------|:------|
 | slug     | **必填** |院校标识，格式：国家代码-学校官网主域名,，若不确定可点击定义好的<a href="https://docs.google.com/spreadsheets/d/1rJt3L7ZkI_HCRYnguAdGVhxExvK-wEPYhLpTYT1B9SU/edit?usp=sharing">学校slug</a>查找| us-columbia |
 | nameEn     | **必填** | 院校英文名 | Columbia University |
 | nameCn     | **必填** | 院校中文名 | 哥伦比亚大学 |
