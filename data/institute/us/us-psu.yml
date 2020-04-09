@@ -12,6 +12,7 @@ logo: https://cdn.applysquare.net/a2/institute/psu/logo.png
 stateCasenumber: 466 #院校所在州确诊数字，只是先留个位置，后期会通过api接口自动匹配州的这个数字，或是线下完成匹配
 stateDailychangenumber: 103 #院校所在州新增数字，只是先留个位置，后期会通过api接口自动匹配州的这个数字，或是线下完成匹配
 stateDeathnumber: 3406 #院校所在州死亡数字，只是先留个位置，后期会通过api接口自动匹配州的这个数字，或是线下完成匹配
+stateCurenumber: 406 #院校所在州治愈数字，只是先留个位置，后期会通过api接口自动匹配州的这个数字，或是线下完成匹配
 courseOperationstatus: 网课
 onlineCoursestartdate: 2020-03-16
 returnCampuscoursedate: 
