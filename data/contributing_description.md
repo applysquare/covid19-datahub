@@ -29,7 +29,7 @@ If you have any data, Please contribute with illustration below.
 
 **二、院校结构化数据**
 
-院校文件yml格式，以slug命名，存放在对应的路径：institute/{{countryCode}}  
+院校文件yml格式，以slug命名，存放在对应的路径：institute/{{countryCode}}，<a href="https://github.com/applysquare/covid19-datahub/blob/master/data/institute/us/us-columbia.yml">示例文件</a>  
 
 | Field     |  Write |         Description         |  Example  |
 | :-------------|:-------------|:-------------------------|:------|
@@ -42,8 +42,7 @@ If you have any data, Please contribute with illustration below.
 | stateEn    | **必填** | 院校所在州或二级行政区的英文 | New York |
 | publicOrprivate     | 选填 | 院校属性，公办：public，私立：private | private |
 | coursePolicylink     | 选填 | 院校应对疫情的学习发展应对政策所在链接 | https://covid19.columbia.edu/ |
-| cover     | 选填 | 院校封面图，可通过申请方图片链接直接调用   
-example中的columbia替换为相应slug掉即可 | https://cdn.applysquare.net/a2/institute/columbia/cover_app.jpg |
+| cover     | 选填 | 院校封面图，可通过申请方图片链接直接调用，example中的columbia替换为相应slug掉即可 | https://cdn.applysquare.net/a2/institute/columbia/cover_app.jpg |
 | logo     | 选填 | 院校校徽图片，可通过申请方图片链接直接调用，example中的columbia替换为相应slug掉即可   | https://cdn.applysquare.net/a2/institute/columbia/logo.png |
 | stateCasenumber     | 不填 | 院校所在州或国家一级行政区确诊病例数，留白即可，申请方会有API接口自动调取  |  |
 | stateDailychangenumber     | 不填 | 院校所在州或国家一级行政区新增病例数，留白即可，申请方会有API接口自动调取 |  |
