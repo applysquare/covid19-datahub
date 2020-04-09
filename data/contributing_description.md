@@ -1,10 +1,10 @@
 Thank you for your support. This page is a co-operate template.Please submit the information according to the format.   
 感谢您对信息建设的支持，本页面为信息共建模版。请按照模版格式提交信息，在审核后直接汇入数据及资讯库。
 
-**If you have any data, Please contribute with illustration below.**
+If you have any data, Please contribute with illustration below.  
 **如果您想贡献疫情相关的数据，请参照下列说明提交。**
 
----
+****
 一、文件存放路径说明
 
 | Path     | Name         | Description  |
@@ -24,7 +24,7 @@ Thank you for your support. This page is a co-operate template.Please submit the
 | update | 资讯   |  未经加工的、高频的新闻动态通知公告，内部按月份储存 |
 | update/YYYY-MM | 某月资讯   |  当前月份的新闻动态通知公告 |
 
----
+****
 
 二、院校结构化数据
 | Field     | Description         | Description  |
