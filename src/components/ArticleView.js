@@ -5,33 +5,33 @@ import { LeftOutlined } from "@ant-design/icons";
 
 const styles = {
   box: {
-    padding: "18px 20px",
+    padding: "18px 20px"
   },
   returnBox: {
     color: "#333333",
     fontSize: "16px",
     textDecoration: "none",
     display: "inline-block",
-    marginBottom: "30px",
+    marginBottom: "30px"
   },
   title: {
     color: "#333333",
     fontSize: "24px",
     fontWeight: 500,
-    marginBottom: "16px",
+    marginBottom: "16px"
   },
   date: {
-    marginRight: "30px",
+    marginRight: "30px"
   },
   href: {
-    color: "#666666",
+    color: "#666666"
   },
   flexParent: {
     display: "flex",
     alignItems: "center",
     color: "#666666",
-    fontSize: "14px",
-  },
+    fontSize: "14px"
+  }
 };
 export const ArticleView = ({ markdownRemark }) => {
   const article = markdownRemark;
@@ -52,7 +52,7 @@ export const ArticleView = ({ markdownRemark }) => {
           )}
         </div>
       </div>
-      <div>
+      <div style={{ fontFamily: "helvitica" }}>
         <HTMLContent content={article.html} />
       </div>
     </div>

@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { graphql } from "gatsby";
+import { v4 } from "uuid";
 import { makePage } from "../../components/Layout";
 import { RightOutlined } from "@ant-design/icons";
 import { Link } from "gatsby";
@@ -7,8 +8,7 @@ import { Link } from "gatsby";
 const styles = {
   flexParent: {
     display: "flex",
-    // justifyContent: "space-around",
-    flexWrap: "wrap",
+    flexWrap: "wrap"
   },
   tabItem: {
     padding: "8px 0",
@@ -17,34 +17,34 @@ const styles = {
     flex: 1,
     background: "#F1F1F1",
     textDecoration: "none",
-    color: "#333333",
+    color: "#333333"
   },
   triangle: {
     width: 0,
     height: 0,
     display: "inline-block",
     background: "transparent",
-    borderTop: "0px solid transparent",
-    // borderTop: "40px solid white",
-    borderRight: "6px solid white",
-    borderLeft: "10px solid transparent",
+    borderBottom: "0px solid transparent",
+    borderTop: "40px solid rgb(241, 241, 241)",
+    borderLeft: "6px solid rgb(241, 241, 241)",
+    borderRight: "10px solid transparent"
   },
   title: {
     fontSize: "20px",
-    marginTop: "30px",
+    marginTop: "30px"
   },
   link: {
     textDecoration: "none",
-    color: "#333333",
+    color: "#333333"
   },
   nameCn: {
-    fontSize: "16px",
+    fontSize: "16px"
   },
   nameEn: {
-    fontSize: "12px",
+    fontSize: "12px"
   },
   stateCn: {
-    paddingRight: "6px",
+    paddingRight: "6px"
   },
   countryCn: {
     background: "#FFFFFF",
@@ -53,11 +53,32 @@ const styles = {
     padding: "6px 16px",
     fontSize: "14px",
     color: "#999999",
-    margin: "16px 0",
-  },
+    margin: "16px 0"
+  }
 };
-const country = ["美国", "英国", "加拿大", "澳大利亚"];
+
 const PageCore = ({ data }) => {
+  const { allInstitute = {} } = data;
+  // 默认美国-us
+  const [institute, setInstitute] = useState([]);
+  const [countryCode, setCountryCode] = useState(null);
+  useEffect(() => {
+    const institute = (allInstitute.edges || []).filter(item => {
+      return item.node.countryCode === "us";
+    });
+    setInstitute(institute);
+    setCountryCode("us");
+  }, [data]);
+
+  const filter = countryCode => {
+    const institute =
+      (allInstitute.edges || []).filter(item => {
+        return item.node.countryCode === countryCode;
+      }) || [];
+    setInstitute(institute);
+    setCountryCode(countryCode);
+  };
+
   return (
     <div style={{ background: "#ffffff" }}>
       <div style={styles.flexParent}>
@@ -74,20 +95,32 @@ const PageCore = ({ data }) => {
       <div style={{ padding: "15px" }}>
         <div style={styles.title}>选择院校，了解院校安全发展动态</div>
         <div style={styles.flexParent}>
-          {country.map((item, index) => {
+          {((data.allArea || {}).edges || []).map((item, index) => {
             return (
               <div
+                key={v4()}
                 style={{
                   ...styles.countryCn,
                   marginLeft: `${index === 0 ? "0px" : "8px"}`,
+                  background: `${
+                    item.node.countryCode === countryCode
+                      ? "#1A6DFF"
+                      : "#ffffff"
+                  }`,
+                  color: `${
+                    item.node.countryCode === countryCode
+                      ? "#ffffff"
+                      : "rgb(153, 153, 153)"
+                  }`
                 }}
+                onClick={() => filter(item.node.countryCode)}
               >
-                {item}
+                {item.node.title}
               </div>
             );
           })}
         </div>
-        {data.allInstitute.edges.map((edge) => {
+        {institute.map(edge => {
           const { node } = edge;
           return (
             <Link
@@ -101,7 +134,7 @@ const PageCore = ({ data }) => {
                   justifyContent: "space-between",
                   alignItems: "center",
                   padding: "15px 10px",
-                  borderBottom: "1px solid #E4E4E4",
+                  borderBottom: "1px solid #E4E4E4"
                 }}
                 key={node.id}
               >
@@ -113,7 +146,7 @@ const PageCore = ({ data }) => {
                   style={{
                     ...styles.flexParent,
                     alignItems: "center",
-                    fontSize: "14px",
+                    fontSize: "14px"
                   }}
                 >
                   <span style={styles.stateCn}>{node.stateCn}</span>
@@ -134,9 +167,18 @@ export default Page;
 
 export const pageQuery = graphql`
   query InstituteListPage {
+    allArea {
+      edges {
+        node {
+          countryCode
+          title
+        }
+      }
+    }
     allInstitute(sort: { fields: [countryCode, nameEn] }) {
       edges {
         node {
+          countryCode
           id
           nameCn
           nameEn
