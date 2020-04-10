@@ -24,19 +24,19 @@ If you have any data, Please contribute with illustration below.
 | qa | 问答   |  整理对提问的回答，一条数据为一个主题(多个问答)|
 | update | 资讯   |  未经加工的、高频的新闻动态通知公告，内部按月份储存 |
 | update/YYYY-MM | 某月资讯   |  当前月份的新闻动态通知公告 |
+   
+***  
+   
+**二、院校页面结构化数据贡献说明**
 
-***
-
-**二、院校结构化数据**
-
-院校文件yml格式，以slug命名，存放在对应的路径：institute/{{countryCode}}，<a href="https://github.com/applysquare/covid19-datahub/blob/master/data/institute/us/us-columbia.yml">示例文件</a>  
+院校文件yml格式，以slug命名，存放在对应的路径：data/institute/{{countryCode}}，<a href="https://github.com/applysquare/covid19-datahub/blob/master/data/institute/us/us-columbia.yml">示例文件</a>  
 
 | Field     |  Write |         Description         |  Example  |
 | :-------------|:-------------|:-------------------------|:------|
 | slug     | **必填** |院校标识，格式：国家代码-学校官网主域名,，若不确定可点击定义好的<a href="https://docs.google.com/spreadsheets/d/1rJt3L7ZkI_HCRYnguAdGVhxExvK-wEPYhLpTYT1B9SU/edit?usp=sharing">学校slug</a>查找| us-columbia |
 | nameEn     | **必填** | 院校英文名 | Columbia University |
 | nameCn     | **必填** | 院校中文名 | 哥伦比亚大学 |
-| countryCode     | **必填** | 院校所在国家小写代码，若不确定可点击定义好的<a href="https://docs.google.com/spreadsheets/d/1eZMJ29XtJ_9ozQf-GEJH72fSuSVEiDZMvSYU0RQ3tP0/edit?usp=sharing">学校代码</a>查找    | us |
+| countryCode     | **必填** | 院校所在国家小写代码，若不确定可点击定义好的<a href="https://docs.google.com/spreadsheets/d/1eZMJ29XtJ_9ozQf-GEJH72fSuSVEiDZMvSYU0RQ3tP0/edit?usp=sharing">国家代码</a>查找，或提取slug里"-"前的前缀    | us |
 | website     | 选填 | 院校官网，以http开头 | http://www.columbia.edu/ |
 | stateCn    | **必填** | 院校所在州或二级行政区的中文 | 纽约州 |
 | stateEn    | **必填** | 院校所在州或二级行政区的英文 | New York |
@@ -48,6 +48,24 @@ If you have any data, Please contribute with illustration below.
 | numStateDailyNewCases     | 不填 | 院校所在州或国家一级行政区新增病例数，留白即可，申请方会有API接口自动调取 |  |
 | numStateDeaths     | 不填 | 院校所在州或国家一级行政区死亡病例数，留白即可，申请方会有API接口自动调取 |  |
 | numStateCures     | 不填 | 院校所在州或国家一级行政区治愈数，留白即可，申请方会有API接口自动调取 |  |
-| courseOperationStatus     | **必填** | 院校运转状态，停课:suspendCourse，网课：onlineCourse，正常：normalCourse，放假：holiday | onlineCourse |
+| courseOperationStatus     | **必填** | 院校运转状态，停课：suspendCourse，网课：onlineCourse，正常：normalCourse，放假：holiday | onlineCourse |
 | onlineCourseStartDate     | 选填 | 院校网课开始日期，格式：YYYY-MM-DD | 2020-03-26 |
 | onCompusCourseResumeDate     | 选填 | 院校复课日期，格式：YYYY-MM-DD | 2020-09-01 |
+   
+***  
+   
+**三、院校最新学习发展应对政策**    
+   
+文件md格式，以当前发布日期（YYYY-MM-DD）+title命名(title不超过20个字符)，存放在对应的路径：data/article/institute/{{countryCode}}/{{instituteSlug}}，<a href="https://github.com/jianghe1220/covid19-datahub/blob/master/data/article/institute/au/au-adelaide/2020-04-09-14_23_32.md">示例文件</a>     
+   
+   
+| Field     |  Write |         Description         |  Example  |
+| :-------------|:-------------|:-------------------------|:------|
+| title     | **必填** |  标题，注意：当标题中含有冒号时，应在标题两侧加英文双引号  |  Will my grades be affected by COVID-19？  |
+| subtitle     | 选填 |  二级标题，注意：当二级标题中含有冒号时，应在标题两侧加英文双引号  |  For All Students  |
+| date     | 选填 |  该项政策的官方发布日期，注意不是当前日期，格式：YYYY-MM-DD  |  2020-04-05  |
+| link     | **必填** |  政策所在官网，以http开头  |  http://www.bu.edu/provost/2020/03/09/remote-teaching-readiness-plan/  |
+| countryCode    | **必填** |  院校所在国家小写代码，若不确定可点击定义好的<a href="https://docs.google.com/spreadsheets/d/1eZMJ29XtJ_9ozQf-GEJH72fSuSVEiDZMvSYU0RQ3tP0/edit?usp=sharing">国家代码</a>查找，或提取instituteSlug里"-"前的前缀  |  http://www.bu.edu/provost/2020/03/09/remote-teaching-readiness-plan/  |
+| status     | **必填** |  发布状态，发布：published，草稿：draft，置顶：pinned  |  published  |
+| instituteSlug     | **必填** |院校标识，格式：国家代码-学校官网主域名,，若不确定可点击定义好的<a href="https://docs.google.com/spreadsheets/d/1rJt3L7ZkI_HCRYnguAdGVhxExvK-wEPYhLpTYT1B9SU/edit?usp=sharing">学校slug</a>查找| us-columbia |
+|      | **必填** |  正文内容，md文本格式  |  <a href="https://github.com/jianghe1220/covid19-datahub/blob/master/data/article/institute/au/au-adelaide/2020-04-09-14_23_32.md">示例文件</a>  |
