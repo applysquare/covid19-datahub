@@ -3,5 +3,6 @@ module.exports = function (node) {
     apiCodes: node.highlightAreas.map(area => {
       return area.apiCode;
     }),
+    areaList: node.areaList,
   };
 }

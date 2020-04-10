@@ -96,6 +96,7 @@ const styles = {
 
 export const IndexPageCore = ({ data, errors }) => {
   const config = data.pageIndexYml;
+  console.log(data);
   const getApiData = (apiCode) => {
     return data.allCovid19Country.edges.find((edge) => {
       return edge.node.data.CountryCode === apiCode;
@@ -205,12 +206,24 @@ const Page = makePage(IndexPageCore, {
 export default Page;
 
 export const pageQuery = graphql`
-  query IndedxPage($apiCodes: [String]) {
+  query IndedxPage($apiCodes: [String], $areaList: [String]) {
     pageIndexYml {
       highlightAreas {
         name
         link
         apiCode
+      }
+      areaList
+    }
+    allArea(filter: {countryCode: {in: $areaList}}) {
+      edges {
+        node {
+          countryCode
+          fields {
+            pathname
+          }
+          title
+        }
       }
     }
     allCovid19Country(filter: { data: { CountryCode: { in: $apiCodes } } }) {

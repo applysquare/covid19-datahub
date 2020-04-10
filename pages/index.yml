@@ -7,4 +7,6 @@ highlightAreas:
   - name: 英国疫情
     link: /area/uk
     apiCode: GB
-
+areaList:
+  - us
+  - uk

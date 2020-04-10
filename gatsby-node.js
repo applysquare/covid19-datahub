@@ -78,6 +78,22 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
         // slug: node.slug
       }, context),
     });
+
+    if (templateKey === 'area-page') {
+      createPage({
+        path: `/institute/${node.countryCode}`,
+        // tags: edge.node.frontmatter.tags,
+        component: path.resolve(`src/templates/area-institute-list-page.js`),
+        // additional data can be passed via context
+        context: Object.assign({
+          id: node.id,
+          countryCode: node.countryCode,
+          // instituteSlug: node.instituteSlug,
+          // slug: node.slug
+        }, context),
+      });
+    }
+
     createNodeField({
       node: node,
       name: `pathname`,
