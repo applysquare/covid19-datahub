@@ -1,10 +1,12 @@
 ---
-name: 资料汉化任务:4 Colleges, 2 Weeks, One Choice: How Covid-19 Scattered U.S. Higher Education
+name: '资料汉化任务: 4 Colleges, 2 Weeks, One Choice: How Covid-19 Scattered U.S. Higher Education'
 about: 对重要资料进行汉化支持
 title: 资料汉化
 labels: '资料汉化, 高级难度'
 assignees: ''
+
 ---
+
 
 ---
 # name: 资料汉化任务:4 Colleges, 2 Weeks, One Choice: How Covid-19 Scattered U.S. Higher Education
