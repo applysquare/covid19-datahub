@@ -40,14 +40,14 @@ If you have any data, Please contribute with illustration below.
 | website     | 选填 | 院校官网，以http开头 | http://www.columbia.edu/ |
 | stateCn    | **必填** | 院校所在州或二级行政区的中文 | 纽约州 |
 | stateEn    | **必填** | 院校所在州或二级行政区的英文 | New York |
-| publicOrprivate     | 选填 | 院校属性，公办：public，私立：private | private |
-| coursePolicylink     | 选填 | 院校应对疫情的学习发展应对政策所在链接 | https://covid19.columbia.edu/ |
+| publicOrPrivate     | 选填 | 院校属性，公办：public，私立：private | private |
+| coursePolicyLink     | 选填 | 院校应对疫情的学习发展应对政策所在链接 | https://covid19.columbia.edu/ |
 | cover     | 选填 | 院校封面图，可通过申请方图片链接直接调用，example中的columbia替换为相应slug掉即可 | https://cdn.applysquare.net/a2/institute/columbia/cover_app.jpg |
 | logo     | 选填 | 院校校徽图片，可通过申请方图片链接直接调用，example中的columbia替换为相应slug掉即可   | https://cdn.applysquare.net/a2/institute/columbia/logo.png |
-| stateCasenumber     | 不填 | 院校所在州或国家一级行政区确诊病例数，留白即可，申请方会有API接口自动调取  |  |
-| stateDailychangenumber     | 不填 | 院校所在州或国家一级行政区新增病例数，留白即可，申请方会有API接口自动调取 |  |
-| stateDeathnumber     | 不填 | 院校所在州或国家一级行政区死亡病例数，留白即可，申请方会有API接口自动调取 |  |
-| stateCurenumber     | 不填 | 院校所在州或国家一级行政区治愈数，留白即可，申请方会有API接口自动调取 |  |
-| courseOperationstatus     | **必填** | 院校运转状态，选择一种：停课，网课，放假，正常 | 网课 |
-| onlineCoursestartdate     | 选填 | 院校网课开始日期 | 2020-03-26 |
-| returnCampuscoursedate     | 选填 | 院校复课日期 |  |
+| numStateCases     | 不填 | 院校所在州或国家一级行政区确诊病例数，留白即可，申请方会有API接口自动调取  |  |
+| numStateDailyNewCases     | 不填 | 院校所在州或国家一级行政区新增病例数，留白即可，申请方会有API接口自动调取 |  |
+| numStateDeaths     | 不填 | 院校所在州或国家一级行政区死亡病例数，留白即可，申请方会有API接口自动调取 |  |
+| numStateCures     | 不填 | 院校所在州或国家一级行政区治愈数，留白即可，申请方会有API接口自动调取 |  |
+| courseOperationStatus     | **必填** | 院校运转状态，停课:suspendCourse，网课：onlineCourse，正常：normalCourse，放假：holiday | onlineCourse |
+| onlineCourseStartDate     | 选填 | 院校网课开始日期，格式YYYY-MM-DD | 2020-03-26 |
+| onCompusCourseResumeDate     | 选填 | 院校复课日期，格式YYYY-MM-DD | 2020-09-01 |
