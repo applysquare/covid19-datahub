@@ -1,8 +1,8 @@
 ---
 name: 提交新闻
 about: 提供最新疫情资讯，院校政策，留学生关注的动态
-title: ''
-labels: ''
+title: "[提交新闻]"
+labels: 欢迎新手, 提交新闻
 assignees: ''
 
 ---
