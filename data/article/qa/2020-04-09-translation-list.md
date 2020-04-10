@@ -1,6 +1,6 @@
 ---
 # templateKey: article-page
-title: '提问专题：疫情对美国暑校影响问题汇总(2020-04-09更新)'
+title: '汉化征集：征集汉化文章列表'
 date: 2020-04-09
 link: >-
 slug: 
