@@ -65,7 +65,7 @@ If you have any data, Please contribute with illustration below.
 | subtitle     | 选填 |  二级标题，注意：当二级标题中含有冒号时，应在标题两侧加英文双引号  |  For All Students  |
 | date     | 选填 |  该项政策的官方发布日期，注意不是当前日期，格式：YYYY-MM-DD  |  2020-04-05  |
 | link     | **必填** |  政策所在官网，以http开头  |  http://www.bu.edu/provost/2020/03/09/remote-teaching-readiness-plan/  |
-| countryCode    | **必填** |  院校所在国家小写代码，若不确定可点击定义好的<a href="https://docs.google.com/spreadsheets/d/1eZMJ29XtJ_9ozQf-GEJH72fSuSVEiDZMvSYU0RQ3tP0/edit?usp=sharing">国家代码</a>查找，或提取instituteSlug里"-"前的前缀  |  http://www.bu.edu/provost/2020/03/09/remote-teaching-readiness-plan/  |
+| countryCode    | **必填** |  院校所在国家小写代码，若不确定可点击定义好的<a href="https://docs.google.com/spreadsheets/d/1eZMJ29XtJ_9ozQf-GEJH72fSuSVEiDZMvSYU0RQ3tP0/edit?usp=sharing">国家代码</a>查找，或提取instituteSlug里"-"前的前缀  |  us  |
 | status     | **必填** |  发布状态，发布：published，草稿：draft，置顶：pinned  |  published  |
 | instituteSlug     | **必填** |院校标识，格式：国家代码-学校官网主域名,，若不确定可点击定义好的<a href="https://docs.google.com/spreadsheets/d/1rJt3L7ZkI_HCRYnguAdGVhxExvK-wEPYhLpTYT1B9SU/edit?usp=sharing">学校slug</a>查找| us-columbia |
 |      | **必填** |  正文内容，md文本格式  |  <a href="https://github.com/jianghe1220/covid19-datahub/blob/master/data/article/institute/au/au-adelaide/2020-04-09-14_23_32.md">示例文件</a>  |
