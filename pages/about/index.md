@@ -8,7 +8,7 @@
 ## 数据共建中心
 
 本站资讯与资料数据来自于申请方开放在Github平台的代码仓库共建。
-点击前往[applysquare/covid19-datahub](http://blog.applysquare.com/covid19-datahub/)
+点击前往[applysquare/covid19-datahub](https://github.com/applysquare/covid19-datahub）
 
 欢迎你参与中心建设：
 - 提供疫情与高等教育相关的实时资讯
