@@ -5,14 +5,14 @@ countryCode: uk
 website: http://www.kcl.ac.uk/index.aspx
 stateCn: 英国
 stateEn: United Kingdom
-publicOrprivate: public
-coursePolicylink: https://www.kcl.ac.uk/coronavirus
+publicOrPrivate: public
+coursePolicyLink: https://www.kcl.ac.uk/coronavirus
 cover: https://cdn.applysquare.net/a2/institute/uk.kcl/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/uk.kcl/logo.png
-stateCasenumber: 
-stateDailychangenumber: 
-stateDeathnumber: 
-stateCurenumber: 
-courseOperationstatus: 网课
-onlineCoursestartdate: 2020-03-23
-returnCampuscoursedate: 2020-05-01
+numStateCases: 
+numStateDailyNewCases: 
+numStateDeaths: 
+numStateCures: 
+courseOperationStatus: onlineCourse
+onlineCourseStartDate: 2020-03-23
+onCompusCourseResumeDate: 2020-05-01

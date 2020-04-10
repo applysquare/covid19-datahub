@@ -5,14 +5,14 @@ countryCode: uk
 website: https://www.abdn.ac.uk/
 stateCn: 英国
 stateEn: United Kingdom
-publicOrprivate: public
-coursePolicylink: https://www.abdn.ac.uk/staffnet/working-here/coronavirus/
+publicOrPrivate: public
+coursePolicyLink: https://www.abdn.ac.uk/staffnet/working-here/coronavirus/
 cover: https://cdn.applysquare.net/a2/institute/uk.abdn.ac/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/uk.abdn.ac/logo.png
-stateCasenumber: 
-stateDailychangenumber: 
-stateDeathnumber: 
-stateCurenumber: 
-courseOperationstatus: 网课
-onlineCoursestartdate: 2020-03-16
-returnCampuscoursedate: 
+numStateCases: 
+numStateDailyNewCases: 
+numStateDeaths: 
+numStateCures: 
+courseOperationStatus: onlineCourse
+onlineCourseStartDate: 2020-03-16
+onCompusCourseResumeDate: 

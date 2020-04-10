@@ -5,14 +5,14 @@ countryCode: us
 website: http://www.wfu.edu/
 stateCn: 北卡罗莱纳州
 stateEn: North Carolina
-publicOrprivate: private
-coursePolicylink: https://coronavirus.wfu.edu/
+publicOrPrivate: private
+coursePolicyLink: https://coronavirus.wfu.edu/
 cover: https://cdn.applysquare.net/a2/institute/wfu/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/wfu/logo.png
-stateCasenumber: 3499
-stateDailychangenumber: 200
-stateDeathnumber: 66
-stateCurenumber: 0
-courseOperationstatus: 网课
-onlineCoursestartdate: 2020-03-23
-returnCampuscoursedate: 
+numStateCases: 3736
+numStateDailyNewCases: 237
+numStateDeaths: 76
+numStateCures: 0
+courseOperationStatus: onlineCourse
+onlineCourseStartDate: 2020-03-23
+onCompusCourseResumeDate: 

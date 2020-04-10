@@ -5,14 +5,14 @@ countryCode: au
 website: http://www.anu.edu.au/
 stateCn: 澳大利亚首都特区
 stateEn: Australian Capital Territory
-publicOrprivate: public
-coursePolicylink: https://www.anu.edu.au/news/all-news/covid-19-advice
+publicOrPrivate: public
+coursePolicyLink: https://www.anu.edu.au/news/all-news/covid-19-advice
 cover: https://cdn.applysquare.net/a2/institute/au.anu/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/au.anu/logo.png
-stateCasenumber: 99
-stateDailychangenumber: 3
-stateDeathnumber: 2
-stateCurenumber: 40
-courseOperationstatus: 网课
-onlineCoursestartdate: 2020-03-30
-returnCampuscoursedate: 
+numStateCases: 100
+numStateDailyNewCases: 1
+numStateDeaths: 2
+numStateCures: 47
+courseOperationStatus: onlineCourse
+onlineCourseStartDate: 2020-03-30
+onCompusCourseResumeDate: 

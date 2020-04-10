@@ -5,14 +5,14 @@ countryCode: us
 website: http://www.northwestern.edu/
 stateCn: 伊利诺伊州
 stateEn: Illinois
-publicOrprivate: private
-coursePolicylink: https://www.northwestern.edu/coronavirus-covid-19-updates/
+publicOrPrivate: private
+coursePolicyLink: https://www.northwestern.edu/coronavirus-covid-19-updates/
 cover: https://cdn.applysquare.net/a2/institute/northwestern/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/northwestern/logo.png
-stateCasenumber: 15078
-stateDailychangenumber: 2807
-stateDeathnumber: 462
-stateCurenumber: 0
-courseOperationstatus: 网课
-onlineCoursestartdate: 2020-04-04
-returnCampuscoursedate: 
+numStateCases: 15079
+numStateDailyNewCases: 1
+numStateDeaths: 462
+numStateCures: 0
+courseOperationStatus: onlineCourse
+onlineCourseStartDate: 2020-04-04
+onCompusCourseResumeDate: 

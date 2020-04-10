@@ -5,14 +5,14 @@ countryCode: us
 website: http://www.twin-cities.umn.edu/
 stateCn: 明尼苏达州
 stateEn: Minnesota
-publicOrprivate: public
-coursePolicylink: https://safe-campus.umn.edu/public-health-alerts
+publicOrPrivate: public
+coursePolicyLink: https://safe-campus.umn.edu/public-health-alerts
 cover: https://cdn.applysquare.net/a2/institute/umn/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/umn/logo.png
-stateCasenumber: 1154
-stateDailychangenumber: 85
-stateDeathnumber: 39
-stateCurenumber: 0
-courseOperationstatus: 网课
-onlineCoursestartdate: 2020-03-18
-returnCampuscoursedate: 
+numStateCases: 1240
+numStateDailyNewCases: 86
+numStateDeaths: 50
+numStateCures: 0
+courseOperationStatus: onlineCourse
+onlineCourseStartDate: 2020-03-18
+onCompusCourseResumeDate: 

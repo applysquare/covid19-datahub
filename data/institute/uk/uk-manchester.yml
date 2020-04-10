@@ -5,14 +5,14 @@ countryCode: uk
 website: http://www.manchester.ac.uk/
 stateCn: 英国
 stateEn: United Kingdom
-publicOrprivate: public
-coursePolicylink: https://www.manchester.ac.uk/coronavirus/
+publicOrPrivate: public
+coursePolicyLink: https://www.manchester.ac.uk/coronavirus/
 cover: https://cdn.applysquare.net/a2/institute/uk.manchester/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/uk.manchester/logo.png
-stateCasenumber: 
-stateDailychangenumber: 
-stateDeathnumber: 
-stateCurenumber: 
-courseOperationstatus: 网课
-onlineCoursestartdate: 2020-03-16
-returnCampuscoursedate: 
+numStateCases: 
+numStateDailyNewCases: 
+numStateDeaths: 
+numStateCures: 
+courseOperationStatus: onlineCourse
+onlineCourseStartDate: 2020-03-16
+onCompusCourseResumeDate: 

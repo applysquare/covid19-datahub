@@ -5,14 +5,14 @@ countryCode: us
 website: http://www.uga.edu/
 stateCn: 佐治亚州
 stateEn: Georgia
-publicOrprivate: public
-coursePolicylink: https://www.uga.edu/coronavirus/info.php
+publicOrPrivate: public
+coursePolicyLink: https://www.uga.edu/coronavirus/info.php
 cover: https://cdn.applysquare.net/a2/institute/uga/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/uga/logo.png
-stateCasenumber: 9901
-stateDailychangenumber: 1079
-stateDeathnumber: 362
-stateCurenumber: 0
-courseOperationstatus: 网课
-onlineCoursestartdate: 2020-03-30
-returnCampuscoursedate: 
+numStateCases: 10566
+numStateDailyNewCases: 665
+numStateDeaths: 379
+numStateCures: 0
+courseOperationStatus: onlineCourse
+onlineCourseStartDate: 2020-03-30
+onCompusCourseResumeDate: 

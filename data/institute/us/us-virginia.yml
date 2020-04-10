@@ -5,14 +5,14 @@ countryCode: us
 website: http://www.virginia.edu/
 stateCn: 弗吉尼亚州
 stateEn: Virginia
-publicOrprivate: public
-coursePolicylink: https://www.virginia.edu/coronavirus?utm_source=VirginiaHP&utm_medium=referral&utm_campaign=tripleblock
+publicOrPrivate: public
+coursePolicyLink: https://www.virginia.edu/coronavirus?utm_source=VirginiaHP&utm_medium=referral&utm_campaign=tripleblock
 cover: https://cdn.applysquare.net/a2/institute/virginia/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/virginia/logo.png
-stateCasenumber: 3645
-stateDailychangenumber: 310
-stateDeathnumber: 66
-stateCurenumber: 0
-courseOperationstatus: 网课
-onlineCoursestartdate: 2020-03-19
-returnCampuscoursedate: 
+numStateCases: 4042
+numStateDailyNewCases: 397
+numStateDeaths: 109
+numStateCures: 0
+courseOperationStatus: onlineCourse
+onlineCourseStartDate: 2020-03-19
+onCompusCourseResumeDate: 

@@ -5,14 +5,14 @@ countryCode: us
 website: http://www.wm.edu/
 stateCn: 弗吉尼亚州
 stateEn: Virginia
-publicOrprivate: public
-coursePolicylink: https://www.wm.edu/about/administration/emergency/current_issues/coronavirus/
+publicOrPrivate: public
+coursePolicyLink: https://www.wm.edu/about/administration/emergency/current_issues/coronavirus/
 cover: https://cdn.applysquare.net/a2/institute/wm/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/wm/logo.png
-stateCasenumber: 3645
-stateDailychangenumber: 310
-stateDeathnumber: 66
-stateCurenumber: 0
-courseOperationstatus: 网课
-onlineCoursestartdate: 2020-03-23
-returnCampuscoursedate: 
+numStateCases: 4042
+numStateDailyNewCases: 397
+numStateDeaths: 109
+numStateCures: 0
+courseOperationStatus: onlineCourse
+onlineCourseStartDate: 2020-03-23
+onCompusCourseResumeDate: 

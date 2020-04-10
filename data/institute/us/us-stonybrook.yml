@@ -5,14 +5,14 @@ countryCode: us
 website: http://www.stonybrook.edu/
 stateCn: 纽约州
 stateEn: New York
-publicOrprivate: public
-coursePolicylink: https://www.stonybrook.edu/commcms/coronavirus/
+publicOrPrivate: public
+coursePolicyLink: https://www.stonybrook.edu/commcms/coronavirus/
 cover: https://cdn.applysquare.net/a2/institute/stonybrook/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/stonybrook/logo.png
-stateCasenumber: 151061
-stateDailychangenumber: 11186
-stateDeathnumber: 6268
-stateCurenumber: 0
-courseOperationstatus: 网课
-onlineCoursestartdate: 2020-03-30
-returnCampuscoursedate: 
+numStateCases: 161779
+numStateDailyNewCases: 10718
+numStateDeaths: 7067
+numStateCures: 0
+courseOperationStatus: onlineCourse
+onlineCourseStartDate: 2020-03-30
+onCompusCourseResumeDate: 

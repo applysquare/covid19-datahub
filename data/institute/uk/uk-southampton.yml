@@ -5,14 +5,14 @@ countryCode: uk
 website: http://www.southampton.ac.uk/
 stateCn: 英国
 stateEn: United Kingdom
-publicOrprivate: public
-coursePolicylink: https://www.southampton.ac.uk/news/statements/coronavirus.page
+publicOrPrivate: public
+coursePolicyLink: https://www.southampton.ac.uk/news/statements/coronavirus.page
 cover: https://cdn.applysquare.net/a2/institute/uk.southampton/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/uk.southampton/logo.png
-stateCasenumber: 
-stateDailychangenumber: 
-stateDeathnumber: 
-stateCurenumber: 
-courseOperationstatus: 放假
-onlineCoursestartdate: 2020-04-20
-returnCampuscoursedate: 
+numStateCases: 
+numStateDailyNewCases: 
+numStateDeaths: 
+numStateCures: 
+courseOperationStatus: holiday
+onlineCourseStartDate: 2020-04-20
+onCompusCourseResumeDate: 

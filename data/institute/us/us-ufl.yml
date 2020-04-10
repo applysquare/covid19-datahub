@@ -5,14 +5,14 @@ countryCode: us
 website: http://www.ufl.edu/
 stateCn: 佛罗里达州
 stateEn: Florida
-publicOrprivate: public
-coursePolicylink: http://www.ufl.edu/health-updates/
+publicOrPrivate: public
+coursePolicyLink: http://www.ufl.edu/health-updates/
 cover: https://cdn.applysquare.net/a2/institute/ufl/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/ufl/logo.png
-stateCasenumber: 15456
-stateDailychangenumber: 911
-stateDeathnumber: 309
-stateCurenumber: 0
-courseOperationstatus: 网课
-onlineCoursestartdate: 2020-03-16
-returnCampuscoursedate: 
+numStateCases: 16364
+numStateDailyNewCases: 908
+numStateDeaths: 354
+numStateCures: 0
+courseOperationStatus: onlineCourse
+onlineCourseStartDate: 2020-03-16
+onCompusCourseResumeDate: 

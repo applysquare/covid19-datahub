@@ -5,14 +5,14 @@ countryCode: us
 website: http://www.miami.edu/
 stateCn: 佛罗里达州
 stateEn: Florida
-publicOrprivate: private
-coursePolicylink: https://coronavirus.miami.edu/
+publicOrPrivate: private
+coursePolicyLink: https://coronavirus.miami.edu/
 cover: https://cdn.applysquare.net/a2/institute/miami/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/miami/logo.png
-stateCasenumber: 15456
-stateDailychangenumber: 911
-stateDeathnumber: 309
-stateCurenumber: 0
-courseOperationstatus: 网课
-onlineCoursestartdate: 2020-03-23
-returnCampuscoursedate: 
+numStateCases: 16364
+numStateDailyNewCases: 908
+numStateDeaths: 354
+numStateCures: 0
+courseOperationStatus: onlineCourse
+onlineCourseStartDate: 2020-03-23
+onCompusCourseResumeDate: 

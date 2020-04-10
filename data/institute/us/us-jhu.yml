@@ -5,14 +5,14 @@ countryCode: us
 website: http://www.jhu.edu/
 stateCn: 马里兰州
 stateEn: Maryland
-publicOrprivate: private
-coursePolicylink: https://hub.jhu.edu/novel-coronavirus-information/
+publicOrPrivate: private
+coursePolicyLink: https://hub.jhu.edu/novel-coronavirus-information/
 cover: https://cdn.applysquare.net/a2/institute/jhu/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/jhu/logo.png
-stateCasenumber: 5529
-stateDailychangenumber: 1158
-stateDeathnumber: 124
-stateCurenumber: 0
-courseOperationstatus: 网课
-onlineCoursestartdate: 2020-03-23
-returnCampuscoursedate: 
+numStateCases: 6185
+numStateDailyNewCases: 656
+numStateDeaths: 138
+numStateCures: 0
+courseOperationStatus: onlineCourse
+onlineCourseStartDate: 2020-03-23
+onCompusCourseResumeDate: 

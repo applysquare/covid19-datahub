@@ -5,14 +5,14 @@ countryCode: au
 website: http://www.unsw.edu.au/
 stateCn: 新南威尔士州
 stateEn: New South Wales
-publicOrprivate: public
-coursePolicylink: https://www.covid-19.unsw.edu.au/
+publicOrPrivate: public
+coursePolicyLink: https://www.covid-19.unsw.edu.au/
 cover: https://cdn.applysquare.net/a2/institute/au.unsw/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/au.unsw/logo.png
-stateCasenumber: 2734
-stateDailychangenumber: 48
-stateDeathnumber: 21
-stateCurenumber: 4
-courseOperationstatus: 网课
-onlineCoursestartdate: 2020-03-20
-returnCampuscoursedate: 
+numStateCases: 2773
+numStateDailyNewCases: 39
+numStateDeaths: 21
+numStateCures: 4
+courseOperationStatus: onlineCourse
+onlineCourseStartDate: 2020-03-20
+onCompusCourseResumeDate: 

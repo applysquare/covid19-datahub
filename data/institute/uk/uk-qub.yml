@@ -5,14 +5,14 @@ countryCode: uk
 website: http://www.qub.ac.uk/
 stateCn: 英国
 stateEn: United Kingdom
-publicOrprivate: public
-coursePolicylink: http://www.qub.ac.uk/home/coronavirus-faqs/
+publicOrPrivate: public
+coursePolicyLink: http://www.qub.ac.uk/home/coronavirus-faqs/
 cover: https://cdn.applysquare.net/a2/institute/uk.qub/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/uk.qub/logo.png
-stateCasenumber: 
-stateDailychangenumber: 
-stateDeathnumber: 
-stateCurenumber: 
-courseOperationstatus: 网课
-onlineCoursestartdate: 2020-03-17
-returnCampuscoursedate: 
+numStateCases: 
+numStateDailyNewCases: 
+numStateDeaths: 
+numStateCures: 
+courseOperationStatus: onlineCourse
+onlineCourseStartDate: 2020-03-17
+onCompusCourseResumeDate: 

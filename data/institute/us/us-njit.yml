@@ -5,14 +5,14 @@ countryCode: us
 website: http://www.njit.edu/
 stateCn: 新泽西州
 stateEn: New Jersey
-publicOrprivate: public
-coursePolicylink: https://www.njit.edu/coronavirus
+publicOrPrivate: public
+coursePolicyLink: https://www.njit.edu/coronavirus
 cover: https://cdn.applysquare.net/a2/institute/njit/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/njit/logo.png
-stateCasenumber: 47437
-stateDailychangenumber: 3021
-stateDeathnumber: 1504
-stateCurenumber: 0
-courseOperationstatus: 网课
-onlineCoursestartdate: 
-returnCampuscoursedate: 
+numStateCases: 51027
+numStateDailyNewCases: 3590
+numStateDeaths: 1709
+numStateCures: 0
+courseOperationStatus: onlineCourse
+onlineCourseStartDate: 
+onCompusCourseResumeDate: 

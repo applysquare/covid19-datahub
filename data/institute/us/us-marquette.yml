@@ -5,14 +5,14 @@ countryCode: us
 website: http://www.marquette.edu/
 stateCn: 威斯康星州
 stateEn: Wisconsin
-publicOrprivate: private
-coursePolicylink: https://www.marquette.edu/coronavirus/
+publicOrPrivate: private
+coursePolicyLink: https://www.marquette.edu/coronavirus/
 cover: https://cdn.applysquare.net/a2/institute/marquette/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/marquette/logo.png
-stateCasenumber: 2710
-stateDailychangenumber: 132
-stateDeathnumber: 100
-stateCurenumber: 0
-courseOperationstatus: 网课
-onlineCoursestartdate: 2020-03-18
-returnCampuscoursedate: 
+numStateCases: 2886
+numStateDailyNewCases: 176
+numStateDeaths: 111
+numStateCures: 0
+courseOperationStatus: onlineCourse
+onlineCourseStartDate: 2020-03-18
+onCompusCourseResumeDate: 

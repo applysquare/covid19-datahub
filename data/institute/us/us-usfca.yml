@@ -5,14 +5,14 @@ countryCode: us
 website: http://www.usfca.edu/
 stateCn: 加利福尼亚州
 stateEn: California
-publicOrprivate: private
-coursePolicylink: https://myusf.usfca.edu/emergency-resources-campus-protocols/coronavirus-updates-resources
+publicOrPrivate: private
+coursePolicyLink: https://myusf.usfca.edu/emergency-resources-campus-protocols/coronavirus-updates-resources
 cover: https://cdn.applysquare.net/a2/institute/usfca/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/usfca/logo.png
-stateCasenumber: 18897
-stateDailychangenumber: 1546
-stateDeathnumber: 495
-stateCurenumber: 0
-courseOperationstatus: 网课
-onlineCoursestartdate: 2020-03-18
-returnCampuscoursedate: 
+numStateCases: 19710
+numStateDailyNewCases: 813
+numStateDeaths: 544
+numStateCures: 0
+courseOperationStatus: onlineCourse
+onlineCourseStartDate: 2020-03-18
+onCompusCourseResumeDate: 

@@ -5,14 +5,14 @@ countryCode: us
 website: http://www.uiowa.edu/
 stateCn: 爱荷华州
 stateEn: Iowa
-publicOrprivate: public
-coursePolicylink: https://coronavirus.uiowa.edu/
+publicOrPrivate: public
+coursePolicyLink: https://coronavirus.uiowa.edu/
 cover: https://cdn.applysquare.net/a2/institute/uiowa/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/uiowa/logo.png
-stateCasenumber: 1145
-stateDailychangenumber: 99
-stateDeathnumber: 27
-stateCurenumber: 0
-courseOperationstatus: 网课
-onlineCoursestartdate: 2020-03-30
-returnCampuscoursedate: 
+numStateCases: 1270
+numStateDailyNewCases: 125
+numStateDeaths: 29
+numStateCures: 0
+courseOperationStatus: onlineCourse
+onlineCourseStartDate: 2020-03-30
+onCompusCourseResumeDate: 

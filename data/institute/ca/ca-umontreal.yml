@@ -5,14 +5,14 @@ countryCode: ca
 website: http://www.umontreal.ca/
 stateCn: 魁北克
 stateEn: Quebec
-publicOrprivate: public
-coursePolicylink: https://urgence.umontreal.ca/covid-19-en/
+publicOrPrivate: public
+coursePolicyLink: https://urgence.umontreal.ca/covid-19-en/
 cover: https://cdn.applysquare.net/a2/institute/ca.umontreal/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/ca.umontreal/logo.png
-stateCasenumber: 10031
-stateDailychangenumber: 691
-stateDeathnumber: 175
-stateCurenumber: 0
-courseOperationstatus: 网课
-onlineCoursestartdate: 2020-03-21
-returnCampuscoursedate: 
+numStateCases: 10912
+numStateDailyNewCases: 881
+numStateDeaths: 216
+numStateCures: 0
+courseOperationStatus: onlineCourse
+onlineCourseStartDate: 2020-03-21
+onCompusCourseResumeDate: 

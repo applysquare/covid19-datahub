@@ -5,14 +5,14 @@ countryCode: au
 website: http://www.unimelb.edu.au
 stateCn: 维多利亚州
 stateEn: Victoria
-publicOrprivate: public
-coursePolicylink: https://www.unimelb.edu.au/coronavirus
+publicOrPrivate: public
+coursePolicyLink: https://www.unimelb.edu.au/coronavirus
 cover: https://cdn.applysquare.net/a2/institute/au.unimelb/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/au.unimelb/logo.png
-stateCasenumber: 1212
-stateDailychangenumber: 21
-stateDeathnumber: 12
-stateCurenumber: 620
-courseOperationstatus: 网课
-onlineCoursestartdate: 2020-03-30
-returnCampuscoursedate: 
+numStateCases: 1228
+numStateDailyNewCases: 16
+numStateDeaths: 12
+numStateCures: 736
+courseOperationStatus: onlineCourse
+onlineCourseStartDate: 2020-03-30
+onCompusCourseResumeDate: 

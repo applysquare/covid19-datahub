@@ -5,14 +5,14 @@ countryCode: ca
 website: http://www.mcmaster.ca/
 stateCn: 安大略省
 stateEn: Ontario
-publicOrprivate: public
-coursePolicylink: https://covid19.mcmaster.ca/
+publicOrPrivate: public
+coursePolicyLink: https://covid19.mcmaster.ca/
 cover: https://cdn.applysquare.net/a2/institute/ca.mcmaster/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/ca.mcmaster/logo.png
-stateCasenumber: 5276
-stateDailychangenumber: 550
-stateDeathnumber: 153
-stateCurenumber: 0
-courseOperationstatus: 停课
-onlineCoursestartdate: 2020-05-04
-returnCampuscoursedate: 
+numStateCases: 5759
+numStateDailyNewCases: 483
+numStateDeaths: 200
+numStateCures: 0
+courseOperationStatus: suspendCourse
+onlineCourseStartDate: 2020-05-04
+onCompusCourseResumeDate: 

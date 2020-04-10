@@ -5,14 +5,14 @@ countryCode: uk
 website: https://warwick.ac.uk/
 stateCn: 英国
 stateEn: United Kingdom
-publicOrprivate: public
-coursePolicylink: https://warwick.ac.uk/insite/coronavirus/updates
+publicOrPrivate: public
+coursePolicyLink: https://warwick.ac.uk/insite/coronavirus/updates
 cover: https://cdn.applysquare.net/a2/institute/uk.warkwick.ac/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/uk.warkwick.ac/logo.png
-stateCasenumber: 
-stateDailychangenumber: 
-stateDeathnumber: 
-stateCurenumber: 
-courseOperationstatus: 放假
-onlineCoursestartdate: 2020-04-20
-returnCampuscoursedate: 
+numStateCases: 
+numStateDailyNewCases: 
+numStateDeaths: 
+numStateCures: 
+courseOperationStatus: holiday
+onlineCourseStartDate: 2020-04-20
+onCompusCourseResumeDate: 

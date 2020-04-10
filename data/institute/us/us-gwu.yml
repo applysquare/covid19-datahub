@@ -4,15 +4,15 @@ nameCn: 乔治华盛顿大学
 countryCode: us
 website: http://www.gwu.edu/
 stateCn: 华盛顿哥伦比亚特区
-stateEn: Washington, D.C.
-publicOrprivate: private
-coursePolicylink: https://campusadvisories.gwu.edu/covid-19
+stateEn: District of Columbia
+publicOrPrivate: private
+coursePolicyLink: https://campusadvisories.gwu.edu/covid-19
 cover: https://cdn.applysquare.net/a2/institute/gwu/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/gwu/logo.png
-stateCasenumber: 
-stateDailychangenumber: 
-stateDeathnumber: 
-stateCurenumber: 
-courseOperationstatus: 网课
-onlineCoursestartdate: 2020-03-23
-returnCampuscoursedate: 
+numStateCases: 1523
+numStateDailyNewCases: 83
+numStateDeaths: 32
+numStateCures: 0
+courseOperationStatus: onlineCourse
+onlineCourseStartDate: 2020-03-23
+onCompusCourseResumeDate: 

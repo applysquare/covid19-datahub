@@ -5,14 +5,14 @@ countryCode: us
 website: http://www.emory.edu/
 stateCn: 佐治亚州
 stateEn: Georgia
-publicOrprivate: private
-coursePolicylink: https://www.emory.edu/coronavirus/
+publicOrPrivate: private
+coursePolicyLink: https://www.emory.edu/coronavirus/
 cover: https://cdn.applysquare.net/a2/institute/emory/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/emory/logo.png
-stateCasenumber: 9901
-stateDailychangenumber: 1079
-stateDeathnumber: 362
-stateCurenumber: 0
-courseOperationstatus: 网课
-onlineCoursestartdate: 2020-03-23
-returnCampuscoursedate: 
+numStateCases: 10566
+numStateDailyNewCases: 665
+numStateDeaths: 379
+numStateCures: 0
+courseOperationStatus: onlineCourse
+onlineCourseStartDate: 2020-03-23
+onCompusCourseResumeDate: 

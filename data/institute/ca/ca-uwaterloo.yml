@@ -5,14 +5,14 @@ countryCode: ca
 website: https://uwaterloo.ca/
 stateCn: 安大略省
 stateEn: Ontario
-publicOrprivate: public
-coursePolicylink: https://uwaterloo.ca/coronavirus/
+publicOrPrivate: public
+coursePolicyLink: https://uwaterloo.ca/coronavirus/
 cover: https://cdn.applysquare.net/a2/institute/ca.uwaterloo/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/ca.uwaterloo/logo.png
-stateCasenumber: 5276
-stateDailychangenumber: 550
-stateDeathnumber: 153
-stateCurenumber: 0
-courseOperationstatus: 网课
-onlineCoursestartdate: 2020-03-23
-returnCampuscoursedate: 
+numStateCases: 5759
+numStateDailyNewCases: 483
+numStateDeaths: 200
+numStateCures: 0
+courseOperationStatus: onlineCourse
+onlineCourseStartDate: 2020-03-23
+onCompusCourseResumeDate: 

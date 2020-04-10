@@ -5,14 +5,14 @@ countryCode: us
 website: http://www.washington.edu/
 stateCn: 华盛顿州
 stateEn: Washington
-publicOrprivate: public
-coursePolicylink: https://www.washington.edu/coronavirus/
+publicOrPrivate: public
+coursePolicyLink: https://www.washington.edu/coronavirus/
 cover: https://cdn.applysquare.net/a2/institute/washington/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/washington/logo.png
-stateCasenumber: 9276
-stateDailychangenumber: 584
-stateDeathnumber: 426
-stateCurenumber: 0
-courseOperationstatus: 网课
-onlineCoursestartdate: 2020-03-30
-returnCampuscoursedate: 
+numStateCases: 9639
+numStateDailyNewCases: 363
+numStateDeaths: 456
+numStateCures: 0
+courseOperationStatus: onlineCourse
+onlineCourseStartDate: 2020-03-30
+onCompusCourseResumeDate: 

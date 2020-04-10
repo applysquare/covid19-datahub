@@ -5,14 +5,14 @@ countryCode: ca
 website: http://ualberta.ca/
 stateCn: 阿尔伯塔省
 stateEn: Alberta
-publicOrprivate: public
-coursePolicylink: https://www.ualberta.ca/covid-19/index.html
+publicOrPrivate: public
+coursePolicyLink: https://www.ualberta.ca/covid-19/index.html
 cover: https://cdn.applysquare.net/a2/institute/ca.ualberta/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/ca.ualberta/logo.png
-stateCasenumber: 1373
-stateDailychangenumber: 0
-stateDeathnumber: 26
-stateCurenumber: 0
-courseOperationstatus: 网课
-onlineCoursestartdate: 2020-03-17
-returnCampuscoursedate: 
+numStateCases: 1423
+numStateDailyNewCases: 50
+numStateDeaths: 29
+numStateCures: 0
+courseOperationStatus: onlineCourse
+onlineCourseStartDate: 2020-03-17
+onCompusCourseResumeDate: 

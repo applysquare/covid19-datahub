@@ -5,14 +5,14 @@ countryCode: us
 website: http://miamioh.edu/
 stateCn: 俄亥俄州
 stateEn: Ohio
-publicOrprivate: public
-coursePolicylink: https://miamioh.edu/coronavirus/index.html
+publicOrPrivate: public
+coursePolicyLink: https://miamioh.edu/coronavirus/index.html
 cover: https://cdn.applysquare.net/a2/institute/muohio/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/muohio/logo.png
-stateCasenumber: 5148
-stateDailychangenumber: 366
-stateDeathnumber: 193
-stateCurenumber: 0
-courseOperationstatus: 网课
-onlineCoursestartdate: 2020-03-23
-returnCampuscoursedate: 
+numStateCases: 5512
+numStateDailyNewCases: 364
+numStateDeaths: 213
+numStateCures: 0
+courseOperationStatus: onlineCourse
+onlineCourseStartDate: 2020-03-23
+onCompusCourseResumeDate: 

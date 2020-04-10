@@ -5,14 +5,14 @@ countryCode: us
 website: http://www.uchicago.edu/
 stateCn: 伊利诺伊州
 stateEn: Illinois
-publicOrprivate: private
-coursePolicylink: https://coronavirusupdates.uchicago.edu/
+publicOrPrivate: private
+coursePolicyLink: https://coronavirusupdates.uchicago.edu/
 cover: https://cdn.applysquare.net/a2/institute/uchicago/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/uchicago/logo.png
-stateCasenumber: 15078
-stateDailychangenumber: 2807
-stateDeathnumber: 462
-stateCurenumber: 0
-courseOperationstatus: 网课
-onlineCoursestartdate: 2020-04-06
-returnCampuscoursedate: 
+numStateCases: 15079
+numStateDailyNewCases: 1
+numStateDeaths: 462
+numStateCures: 0
+courseOperationStatus: onlineCourse
+onlineCourseStartDate: 2020-04-06
+onCompusCourseResumeDate: 

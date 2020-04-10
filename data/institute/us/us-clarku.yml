@@ -5,14 +5,14 @@ countryCode: us
 website: http://www.clarku.edu/
 stateCn: 马萨诸塞州
 stateEn: Massachusetts
-publicOrprivate: private
-coursePolicylink: https://www.clarku.edu/covid-19-information/
+publicOrPrivate: private
+coursePolicyLink: https://www.clarku.edu/covid-19-information/
 cover: https://cdn.applysquare.net/a2/institute/clarku/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/clarku/logo.png
-stateCasenumber: 16790
-stateDailychangenumber: 1588
-stateDeathnumber: 433
-stateCurenumber: 0
-courseOperationstatus: 网课
-onlineCoursestartdate: 2020-03-23
-returnCampuscoursedate: 
+numStateCases: 18941
+numStateDailyNewCases: 2151
+numStateDeaths: 503
+numStateCures: 0
+courseOperationStatus: onlineCourse
+onlineCourseStartDate: 2020-03-23
+onCompusCourseResumeDate: 

@@ -5,14 +5,14 @@ countryCode: au
 website: http://www.uq.edu.au/
 stateCn: 昆士兰州
 stateEn: Queensland
-publicOrprivate: public
-coursePolicylink: https://about.uq.edu.au/coronavirus-advice-uq-community
+publicOrPrivate: public
+coursePolicyLink: https://about.uq.edu.au/coronavirus-advice-uq-community
 cover: https://cdn.applysquare.net/a2/institute/au.uq/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/au.uq/logo.png
-stateCasenumber: 943
-stateDailychangenumber: 9
-stateDeathnumber: 4
-stateCurenumber: 173
-courseOperationstatus: 网课
-onlineCoursestartdate: 2020-03-23
-returnCampuscoursedate: 
+numStateCases: 953
+numStateDailyNewCases: 10
+numStateDeaths: 4
+numStateCures: 345
+courseOperationStatus: onlineCourse
+onlineCourseStartDate: 2020-03-23
+onCompusCourseResumeDate: 

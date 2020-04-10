@@ -5,14 +5,14 @@ countryCode: au
 website: http://www.monash.edu.au/
 stateCn: 维多利亚州
 stateEn: Victoria
-publicOrprivate: public
-coursePolicylink: https://www.monash.edu/news/coronavirus-updates
+publicOrPrivate: public
+coursePolicyLink: https://www.monash.edu/news/coronavirus-updates
 cover: https://cdn.applysquare.net/a2/institute/au.monash/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/au.monash/logo.png
-stateCasenumber: 1212
-stateDailychangenumber: 21
-stateDeathnumber: 12
-stateCurenumber: 620
-courseOperationstatus: 网课
-onlineCoursestartdate: 2020-03-25
-returnCampuscoursedate: 
+numStateCases: 1228
+numStateDailyNewCases: 16
+numStateDeaths: 12
+numStateCures: 736
+courseOperationStatus: onlineCourse
+onlineCourseStartDate: 2020-03-25
+onCompusCourseResumeDate: 

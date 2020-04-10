@@ -5,14 +5,14 @@ countryCode: uk
 website: http://www.cam.ac.uk/
 stateCn: 英国
 stateEn: United Kingdom
-publicOrprivate: public
-coursePolicylink: https://www.cam.ac.uk/coronavirus?ucam-ref=home-carousel
+publicOrPrivate: public
+coursePolicyLink: https://www.cam.ac.uk/coronavirus?ucam-ref=home-carousel
 cover: https://cdn.applysquare.net/a2/institute/uk.cam/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/uk.cam/logo.png
-stateCasenumber: 
-stateDailychangenumber: 
-stateDeathnumber: 
-stateCurenumber: 
-courseOperationstatus: 放假
-onlineCoursestartdate: 2020-04-27
-returnCampuscoursedate: 
+numStateCases: 
+numStateDailyNewCases: 
+numStateDeaths: 
+numStateCures: 
+courseOperationStatus: holiday
+onlineCourseStartDate: 2020-04-27
+onCompusCourseResumeDate: 

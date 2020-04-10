@@ -5,14 +5,14 @@ countryCode: us
 website: http://newbrunswick.rutgers.edu/
 stateCn: 新泽西州
 stateEn: New Jersey
-publicOrprivate: public
-coursePolicylink: https://coronavirus.rutgers.edu/
+publicOrPrivate: public
+coursePolicyLink: https://coronavirus.rutgers.edu/
 cover: https://cdn.applysquare.net/a2/institute/rutgers/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/rutgers/logo.png
-stateCasenumber: 47437
-stateDailychangenumber: 3021
-stateDeathnumber: 1504
-stateCurenumber: 0
-courseOperationstatus: 网课
-onlineCoursestartdate: 2020-03-16
-returnCampuscoursedate: 
+numStateCases: 51027
+numStateDailyNewCases: 3590
+numStateDeaths: 1709
+numStateCures: 0
+courseOperationStatus: onlineCourse
+onlineCourseStartDate: 2020-03-16
+onCompusCourseResumeDate: 

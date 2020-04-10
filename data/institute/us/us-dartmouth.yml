@@ -5,14 +5,14 @@ countryCode: us
 website: http://www.dartmouth.edu/
 stateCn: 新罕布什尔州
 stateEn: New Hampshire
-publicOrprivate: private
-coursePolicylink: https://news.dartmouth.edu/covid-19/covid-19-coronavirus-information?utm_source=dhome&utm_medium=referral&utm_campaign=carousel
+publicOrPrivate: private
+coursePolicyLink: https://news.dartmouth.edu/covid-19/covid-19-coronavirus-information?utm_source=dhome&utm_medium=referral&utm_campaign=carousel
 cover: https://cdn.applysquare.net/a2/institute/dartmouth/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/dartmouth/logo.png
-stateCasenumber: 747
-stateDailychangenumber: 32
-stateDeathnumber: 13
-stateCurenumber: 0
-courseOperationstatus: 网课
-onlineCoursestartdate: 2020-03-30
-returnCampuscoursedate: 
+numStateCases: 819
+numStateDailyNewCases: 72
+numStateDeaths: 21
+numStateCures: 0
+courseOperationStatus: onlineCourse
+onlineCourseStartDate: 2020-03-30
+onCompusCourseResumeDate: 

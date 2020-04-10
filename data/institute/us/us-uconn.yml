@@ -5,14 +5,14 @@ countryCode: us
 website: http://www.uconn.edu/
 stateCn: 康涅狄格州
 stateEn: Connecticut
-publicOrprivate: public
-coursePolicylink: https://uconn.edu/public-notification/coronavirus/
+publicOrPrivate: public
+coursePolicyLink: https://uconn.edu/public-notification/coronavirus/
 cover: https://cdn.applysquare.net/a2/institute/uconn/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/uconn/logo.png
-stateCasenumber: 7781
-stateDailychangenumber: 0
-stateDeathnumber: 326
-stateCurenumber: 0
-courseOperationstatus: 网课
-onlineCoursestartdate: 2020-03-23
-returnCampuscoursedate: 
+numStateCases: 9784
+numStateDailyNewCases: 2003
+numStateDeaths: 380
+numStateCures: 0
+courseOperationStatus: onlineCourse
+onlineCourseStartDate: 2020-03-23
+onCompusCourseResumeDate: 

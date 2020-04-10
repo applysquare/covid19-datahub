@@ -5,14 +5,14 @@ countryCode: uk
 website: https://www.york.ac.uk/
 stateCn: 英国
 stateEn: United Kingdom
-publicOrprivate: public
-coursePolicylink: https://coronavirus.york.ac.uk/
+publicOrPrivate: public
+coursePolicyLink: https://coronavirus.york.ac.uk/
 cover: https://cdn.applysquare.net/a2/institute/uk.york/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/uk.york/logo.png
-stateCasenumber: 
-stateDailychangenumber: 
-stateDeathnumber: 
-stateCurenumber: 
-courseOperationstatus: 放假
-onlineCoursestartdate: 2020-04-14
-returnCampuscoursedate: 
+numStateCases: 
+numStateDailyNewCases: 
+numStateDeaths: 
+numStateCures: 
+courseOperationStatus: holiday
+onlineCourseStartDate: 2020-04-14
+onCompusCourseResumeDate: 
