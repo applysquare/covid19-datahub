@@ -1,9 +1,10 @@
 ---
 name: 解答问题:美国暑校线上化，教学质量会有下降吗？
 about: 欢迎提供答案
-title: '解答问题'
-labels: '解答'
+title: 解答问题
+labels: 解答问题, 欢迎新手
 assignees: ''
+
 ---
 
 ---
