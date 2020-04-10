@@ -1,0 +1,10 @@
+---
+title: 中国公民出入荷兰临时管制措施-持续更新（4月9日）
+date: 
+link: >-
+  https://www.nia.gov.cn/n794014/n1050176/n1077211/n1215569/n1215576/index.html
+countryCode: nl
+status: published
+---
+[荷兰 ![](../../../../../dbsource/1227208/1229561.png)](javascript:void(0))
+    [](javascript:void(0))欧盟成员国，欧洲理事会3月17日宣布：对欧盟以外人员前往欧盟国家的“非必要旅行”进行限制，为期30天。 
