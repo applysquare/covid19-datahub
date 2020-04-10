@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 import { makePage } from "../components/Layout";
-import { ArticleView } from '../components/ArticleView';
+import { ArticleView } from "../components/ArticleView";
 
 export const ArticlePageCore = ({ data }) => {
   return <ArticleView markdownRemark={data?.markdownRemark} />;
