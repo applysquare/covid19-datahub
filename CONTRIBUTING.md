@@ -49,5 +49,5 @@ If you have any data, Please contribute with illustration below.
 | numStateDeaths     | 不填 | 院校所在州或国家一级行政区死亡病例数，留白即可，申请方会有API接口自动调取 |  |
 | numStateCures     | 不填 | 院校所在州或国家一级行政区治愈数，留白即可，申请方会有API接口自动调取 |  |
 | courseOperationStatus     | **必填** | 院校运转状态，停课:suspendCourse，网课：onlineCourse，正常：normalCourse，放假：holiday | onlineCourse |
-| onlineCourseStartDate     | 选填 | 院校网课开始日期，格式YYYY-MM-DD | 2020-03-26 |
-| onCompusCourseResumeDate     | 选填 | 院校复课日期，格式YYYY-MM-DD | 2020-09-01 |
+| onlineCourseStartDate     | 选填 | 院校网课开始日期，格式：YYYY-MM-DD | 2020-03-26 |
+| onCompusCourseResumeDate     | 选填 | 院校复课日期，格式：YYYY-MM-DD | 2020-09-01 |
