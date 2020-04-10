@@ -54,7 +54,7 @@
 
 ### 项目主办方
 - 感谢[申请方](http://www.applysquare.com)与[方略研究院](https://www.squarestrategics.com/)为本项目提供数据与教育支持。
-- 如果你面临的问题需要专家介入，需要在疫情下慎重规划个人的提升与升学路径，请[联系我们](https://www.applysquare.com/plus-cn/)
+- 如果你面临的问题需要专家介入，需要在疫情下慎重规划个人的提升与升学路径，请[联系我们](https://github.com/applysquare/covid19-datahub/issues/new?assignees=&labels=%5B%E4%B8%93%E5%AE%B6%E5%92%A8%E8%AF%A2%5D&template=consulting-service.md&title=)
 
 
 ### 贡献者/合作机构
