@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
+import { LeftOutlined } from "@ant-design/icons";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 
@@ -13,8 +14,17 @@ const styles = {
     padding: "8px 0",
     margin: "10px 15px",
     display: "block",
-    textDecoration: "none",
+    textDecoration: "none"
   },
+  linkBack: {
+    textDecoration: "none",
+    color: "#333333"
+  },
+  logoTitle: {
+    fontSize: "14px",
+    color: "#FFFFFF",
+    padding: "10px 0 0 2px"
+  }
 };
 
 export const AboutPageTemplate = ({ title, content, contentComponent }) => {
@@ -27,6 +37,12 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
           <div className="columns">
             <div className="column is-10 is-offset-1">
               <div className="section">
+                <div style={styles.logoTitle}>
+                  <Link style={styles.linkBack} to="/">
+                    <LeftOutlined />
+                    <span style={{ padding: "0 4px" }}>返回</span>
+                  </Link>
+                </div>
                 <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
                   {title}
                 </h2>
@@ -49,7 +65,7 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
 AboutPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string,
-  contentComponent: PropTypes.func,
+  contentComponent: PropTypes.func
 };
 
 const AboutPage = ({ data }) => {
@@ -67,7 +83,7 @@ const AboutPage = ({ data }) => {
 };
 
 AboutPage.propTypes = {
-  data: PropTypes.object.isRequired,
+  data: PropTypes.object.isRequired
 };
 
 export default AboutPage;

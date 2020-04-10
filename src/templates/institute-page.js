@@ -1,97 +1,151 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { graphql, Link } from "gatsby";
+import { LeftOutlined } from "@ant-design/icons";
 import { makePage } from "../components/Layout";
 import { ExternalLink } from "../components/ExternalLink";
 import NewList from "../components/NewList";
 import InfoList from "../components/InfoList";
 import Help from "../components/Help";
-import { LeftOutlined } from "@ant-design/icons";
-import circle from "../img/indexTitleImg.png";
 import indexTitleImg from "../img/bg.jpg";
 
 const help = {
   title: "校友问题征集",
   linkTxt: "在海外遇到了什么问题？告诉我们，尽力为你寻求答案",
-  linkTo: "https://github.com/applysquare/covid19-datahub",
+  linkTo: "https://github.com/applysquare/covid19-datahub"
 };
 
 const styles = {
   title: {
     color: "#333333",
     fontWeight: 500,
-    fontSize: "20px",
-    marginBottom: "24px",
+    fontSize: "18px",
+    marginBottom: "24px"
   },
   logoBox: {
     backgroundImage: `url(${indexTitleImg})`,
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
-    padding: "20px 15px",
+    position: "relative",
+    height: "168px"
+  },
+  mask: {
+    background: "rgba(0,0,0,0.53)",
+    width: "100%",
+    height: "100%",
+    position: "absolute",
+    top: 0,
+    bottom: 0,
+    left: 0,
+    right: 0
+  },
+  maskContent: {
+    position: "absolute",
+    top: 0,
+    bottom: 0,
+    left: 0,
+    right: 0,
+    zIndex: 999,
+    padding: "20px 15px"
   },
   logoTitle: {
     fontSize: "14px",
-    color: "#FFFFFF",
+    color: "#FFFFFF"
   },
   nameCn: {
     fontWeight: 500,
     fontSize: "24px",
-    color: "#FFFFFF",
+    color: "#FFFFFF"
   },
   nameEn: {
     fontSize: "12px",
-    color: "#FFFFFF",
+    color: "#FFFFFF"
   },
   policy: {
     padding: "24px 15px",
     background: "#FFFFFF",
     marginTop: "10px",
-    boxShadow: "0px 2px 6px 0px rgba(0,0,0,0.08)",
+    boxShadow: "0px 2px 6px 0px rgba(0,0,0,0.08)"
   },
   flexParent: {
     display: "flex",
     justifyContent: "space-around",
-    flexWrap: "wrap",
+    flexWrap: "wrap"
   },
   flexChild: {
-    textAlign: "center",
+    textAlign: "center"
   },
   areaName: {
     fontSize: "14px",
-    color: "#666666",
+    color: "#666666"
   },
   illnessTxt: {
     color: "#333333",
-    fontSize: "14px",
+    fontSize: "14px"
   },
   illnessNum: {
-    fontSize: "20px",
+    fontSize: "20px"
   },
   localEpidemicBox: {
     background: "#FFFFFF",
     boxShadow: "0px 6px 6px 0px rgba(0,0,0,0.08)",
-    padding: "24px 15px",
+    padding: "24px 15px"
   },
   infoBox: {
     boxShadow: "0px 2px 4px 0px rgba(0,0,0,0.1)",
     borderRadius: "4px",
-    padding: "20px 10px",
+    padding: "20px 10px"
   },
   more: {
     color: "#999999",
     fontSize: "14px",
     padding: "5px",
     display: "inline-block",
+    textDecoration: "underline"
   },
   link: {
     textDecoration: "none",
-    color: "#FFFFFF",
-  },
+    color: "#FFFFFF"
+  }
 };
 
 const InstitutePageCore = ({ data, errors }) => {
   if (errors) {
     console.error(errors);
   }
+  const {
+    cover,
+    logo,
+    nameCn,
+    nameEn,
+    stateCn,
+    stateCasenumber,
+    stateDailychangenumber,
+    stateDeathnumber,
+    courseOperationstatus,
+    onlineCoursestartdate,
+    returnCampuscoursedate
+  } = data.institute || {};
+
+  const timeStamp = new Date(onlineCoursestartdate);
+  const time = `${timeStamp.getFullYear()}-${timeStamp.getMonth() +
+    1}-${timeStamp.getHours()}`;
+
+  const [infoEdges, setInfoEdges] = useState([]);
+  const [more, setMore] = useState(null);
+  useEffect(() => {
+    const infoEdges =
+      data.articles.edges && data.articles.edges.length > 3
+        ? data.articles.edges.slice(0, 3)
+        : data.articles.edges || [];
+    setInfoEdges(infoEdges);
+    setMore(false);
+  }, [data]);
+
+  const clickMore = () => {
+    setInfoEdges(data.articles.edges);
+    setMore(true);
+  };
+
   return (
     <div style={{ background: "rgba(241,241,241,0.8)" }}>
       {/* <div>Website: {data.institute.website}</div>
@@ -112,31 +166,39 @@ const InstitutePageCore = ({ data, errors }) => {
           }
         />
       </div> */}
-      <div style={styles.logoBox}>
-        <div style={styles.logoTitle}>
-          <Link style={styles.link} to="/institute">
-            <LeftOutlined />
-          </Link>
-          <span style={{ padding: "0 4px" }}>院校列表</span>
-        </div>
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            margin: "36px 0 24px 6px",
-          }}
-        >
-          <span>
-            <img
-              src={circle}
-              alt=""
-              style={{ width: "40px", height: "40px", borderRadius: "50%" }}
-            />
-          </span>
-          <span style={{ paddingLeft: "12px" }}>
-            <div style={styles.nameCn}>{data.institute.nameCn}</div>
-            <div style={styles.nameEn}>{data.institute.nameEn}</div>
-          </span>
+      <div
+        style={{
+          ...styles.logoBox,
+          backgroundImage: `url(${cover})`
+        }}
+      >
+        <div style={styles.mask}></div>
+        <div style={styles.maskContent}>
+          <div style={styles.logoTitle}>
+            <Link style={styles.link} to="/institute">
+              <LeftOutlined />
+              <span style={{ padding: "0 4px" }}>院校列表</span>
+            </Link>
+          </div>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              margin: "36px 0 24px 6px"
+            }}
+          >
+            <span>
+              <img
+                src={logo}
+                alt=""
+                style={{ width: "40px", height: "40px", borderRadius: "50%" }}
+              />
+            </span>
+            <span style={{ paddingLeft: "12px" }}>
+              <div style={styles.nameCn}>{nameCn}</div>
+              <div style={styles.nameEn}>{nameEn}</div>
+            </span>
+          </div>
         </div>
       </div>
       <div style={styles.localEpidemicBox}>
@@ -145,24 +207,32 @@ const InstitutePageCore = ({ data, errors }) => {
             ...styles.flexParent,
             justifyContent: "space-between",
             marginBottom: "24px",
-            alignItems: "center",
+            alignItems: "center"
           }}
         >
           <div style={{ ...styles.title, margin: 0 }}>所在州疫情</div>
-          <div style={styles.areaName}>纽约州，美国</div>
+          <div style={styles.areaName}>
+            {stateCn}，{data.area.title}
+          </div>
         </div>
         <div style={styles.flexParent}>
           <div style={styles.flexChild}>
             <div style={styles.illnessTxt}>确诊病例</div>
-            <div style={{ ...styles.illnessNum, color: "#EB5449" }}>11212</div>
+            <div style={{ ...styles.illnessNum, color: "#EB5449" }}>
+              {stateCasenumber}
+            </div>
           </div>
           <div style={styles.flexChild}>
             <div style={styles.illnessTxt}>昨日新增</div>
-            <div style={{ ...styles.illnessNum, color: "#FDBB0F" }}>21151</div>
+            <div style={{ ...styles.illnessNum, color: "#FDBB0F" }}>
+              {stateDailychangenumber}
+            </div>
           </div>
           <div style={styles.flexChild}>
             <div style={styles.illnessTxt}>死亡人数</div>
-            <div style={{ ...styles.illnessNum, color: "#333333" }}>2153</div>
+            <div style={{ ...styles.illnessNum, color: "#333333" }}>
+              {stateDeathnumber}
+            </div>
           </div>
           <div style={styles.flexChild}>
             <div style={styles.illnessTxt}>治愈人数</div>
@@ -176,23 +246,19 @@ const InstitutePageCore = ({ data, errors }) => {
         <div style={styles.flexParent}>
           <div style={styles.flexChild}>
             <div>院校运转</div>
-            <div>{data.institute.courseOperationstatus ?? "-"}</div>
+            <div>{courseOperationstatus ?? "-"}</div>
           </div>
           <div style={styles.flexChild}>
             <div>停课时间</div>
-            <div>{data.institute.onlineCoursestartdate ?? "-"}</div>
+            <div>{time ?? "-"}</div>
           </div>
           <div style={styles.flexChild}>
             <div>复课时间</div>
-            <div style={styles.title}>-</div>
+            <div style={styles.title}>{returnCampuscoursedate ?? "-"}</div>
           </div>
         </div>
         <div>
-          <ExternalLink
-            link={
-              "https://github.com/applysquare/covid19-datahub/issues/new/choose"
-            }
-          />
+          <ExternalLink link={data.institute.coursePolicylink} />
         </div>
       </div>
       <Help {...help} />
@@ -204,18 +270,24 @@ const InstitutePageCore = ({ data, errors }) => {
           >
             本校资料区
           </div>
-          <InfoList infoEdges={data.articles.edges} />
+          <InfoList infoEdges={infoEdges} />
           <div style={{ textAlign: "center" }}>
-            <Link style={styles.more} to="/article">
+            <span
+              style={{
+                ...styles.more,
+                display: `${more ? "none" : "inline-block"}`
+              }}
+              onClick={clickMore}
+            >
               展开全部
-            </Link>
+            </span>
           </div>
         </div>
         <div>
           <div
             style={{
               ...styles.title,
-              margin: "30px 0 22px 0",
+              margin: "30px 0 22px 0"
             }}
           >
             资讯
@@ -239,12 +311,18 @@ export const pageQuery = graphql`
     }
     institute(id: { eq: $id }) {
       id
+      logo
       nameCn
       nameEn
       website
+      stateCn
+      coursePolicylink
+      cover
+      stateCasenumber
+      stateDailychangenumber
+      stateDeathnumber
       courseOperationstatus
       onlineCoursestartdate
-      coursePolicylink
       fields {
         pathname
       }
