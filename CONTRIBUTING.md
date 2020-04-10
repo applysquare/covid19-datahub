@@ -41,9 +41,9 @@ If you have any data, Please contribute with illustration below.
 | stateCn    | **必填** | 院校所在州或二级行政区的中文 | 纽约州 |
 | stateEn    | **必填** | 院校所在州或二级行政区的英文 | New York |
 | publicOrPrivate     | 选填 | 院校属性，公办：public，私立：private | private |
-| coursePolicyLink     | 选填 | 院校应对疫情的学习发展应对政策所在链接 | https://covid19.columbia.edu/ |
-| cover     | 选填 | 院校封面图，可通过申请方图片链接直接调用，example中的columbia替换为相应slug掉即可 | https://cdn.applysquare.net/a2/institute/columbia/cover_app.jpg |
-| logo     | 选填 | 院校校徽图片，可通过申请方图片链接直接调用，example中的columbia替换为相应slug掉即可   | https://cdn.applysquare.net/a2/institute/columbia/logo.png |
+| coursePolicyLink     | 选填 | 院校应对疫情的学习发展应对政策所在链接 | <a href="https://covid19.columbia.edu/">示例link</a> |
+| cover     | 选填 | 院校封面图，可通过申请方图片链接直接调用，示例link中的columbia替换为相应slug掉即可 |  <a href="https://cdn.applysquare.net/a2/institute/columbia/cover_app.jpg">示例link</a> |
+| logo     | 选填 | 院校校徽图片，可通过申请方图片链接直接调用，示例link中的columbia替换为相应slug掉即可   | <a href="https://cdn.applysquare.net/a2/institute/columbia/logo.png">示例link</a> |
 | numStateCases     | 不填 | 院校所在州或国家一级行政区确诊病例数，留白即可，申请方会有API接口自动调取  |  |
 | numStateDailyNewCases     | 不填 | 院校所在州或国家一级行政区新增病例数，留白即可，申请方会有API接口自动调取 |  |
 | numStateDeaths     | 不填 | 院校所在州或国家一级行政区死亡病例数，留白即可，申请方会有API接口自动调取 |  |
@@ -64,7 +64,7 @@ If you have any data, Please contribute with illustration below.
 | title     | **必填** |  标题，注意：当标题中含有冒号时，应在标题两侧加英文双引号  |  Will my grades be affected by COVID-19？  |
 | subtitle     | 选填 |  二级标题，注意：当二级标题中含有冒号时，应在标题两侧加英文双引号  |  For All Students  |
 | date     | 选填 |  该项政策的官方发布日期，注意不是当前日期，格式：YYYY-MM-DD  |  2020-04-05  |
-| link     | **必填** |  政策所在官网，以http开头  |  http://www.bu.edu/provost/2020/03/09/remote-teaching-readiness-plan/  |
+| link     | **必填** |  政策所在官网，以http开头  |  <a href="http://www.bu.edu/provost/2020/03/09/remote-teaching-readiness-plan/">示例link</a>  |
 | countryCode    | **必填** |  院校所在国家小写代码，若不确定可点击定义好的<a href="https://docs.google.com/spreadsheets/d/1eZMJ29XtJ_9ozQf-GEJH72fSuSVEiDZMvSYU0RQ3tP0/edit?usp=sharing">国家代码</a>查找，或提取instituteSlug里"-"前的前缀  |  us  |
 | status     | **必填** |  发布状态，发布：published，草稿：draft，置顶：pinned  |  published  |
 | instituteSlug     | **必填** |院校标识，格式：国家代码-学校官网主域名,，若不确定可点击定义好的<a href="https://docs.google.com/spreadsheets/d/1rJt3L7ZkI_HCRYnguAdGVhxExvK-wEPYhLpTYT1B9SU/edit?usp=sharing">学校slug</a>查找| us-columbia |
