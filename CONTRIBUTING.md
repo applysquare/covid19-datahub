@@ -54,7 +54,7 @@ If you have any data, Please contribute with illustration below.
    
 ***  
    
-**三、院校最新学习发展应对政策**    
+**三、院校最新学习发展应对政策贡献说明**    
    
 文件md格式，以当前发布日期（YYYY-MM-DD）+title命名(title不超过20个字符)，存放在对应的路径：data/article/institute/{{countryCode}}/{{instituteSlug}}，<a href="https://github.com/jianghe1220/covid19-datahub/blob/master/data/article/institute/au/au-adelaide/2020-04-09-14_23_32.md">示例文件</a>     
    
