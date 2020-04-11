@@ -1,8 +1,8 @@
 ---
 name: 新增院校
 about: 添加新院校，共享院校数据、运营状态、疫情信息与周边生活安全数据
-title: ''
-labels: ''
+title: '[新增院校] '
+labels: '新增院校'
 assignees: ''
 
 ---

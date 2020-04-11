@@ -1,7 +1,7 @@
 ---
 name: 机构合作
-about: 如有意象机构合作，请联系我们
-title: "[机构合作意向]"
+about: 如有合作意向，请联系我们
+title: '[机构合作] '
 labels: ''
 assignees: ''
 

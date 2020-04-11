@@ -1,7 +1,7 @@
 ---
 name: Bug report
 about: Create a report to help us improve
-title: ''
+title: '[Bug Report] '
 labels: ''
 assignees: ''
 
@@ -44,7 +44,7 @@ about: Create a report to help us improve
 
 <!--Run `gatsby info --clipboard` in your project directory and paste the output here. Not working? You may need to update your global gatsby-cli - `npm install -g gatsby-cli` -->
 
-Node.js version: 
+Node.js version:
 NPM/Yarn version
-Operating System: 
+Operating System:
 Additional tools:
