@@ -31,9 +31,6 @@ const styles = {
     display: "inline-block",
     marginBottom: "30px"
   },
-  statusBox: {
-    // padding: "20px 15px"
-  },
   flexParent: {
     display: "flex",
     justifyContent: "space-around",
@@ -65,10 +62,11 @@ const styles = {
   },
   instituteName: { color: "#333333", marginTop: "8px", textAlign: "center" },
   instituteNameMore: {
-    maxWidth: "100px",
+    maxWidth: "128px",
     textOverflow: "ellipsis",
     whiteSpace: "nowrap",
-    overflow: "hidden"
+    overflow: "hidden",
+    fontSize: "14px"
   },
   infoBox: {
     boxShadow: "0px 2px 4px 0px rgba(0,0,0,0.1)",
@@ -83,43 +81,42 @@ const styles = {
     fontSize: "14px",
     padding: "5px",
     display: "inline-block",
-    textDecoration: "underline"
+    textDecoration: "underline",
+    cursor: "pointer"
   }
 };
+
+const sliceArr = (arr = [], num = 0) => {
+  return arr.length > num ? arr.slice(0, num) : arr;
+};
+
 export const AreaPageCore = ({ data }) => {
-  const { area, updates, articles } = data;
+  const { area, updates, articles, allInstitute } = data;
 
   const [infoEdges, setInfoEdges] = useState([]);
   const [more, setMore] = useState(null);
 
-  const [allInstitute, setAllInstitute] = useState([]);
-  const [allInstituteMore, setAllInstituteMore] = useState([]);
+  const [institutes, setInstitutes] = useState([]);
+  const [institutesMore, setInstitutesMore] = useState(null);
 
   useEffect(() => {
-    const infoEdges =
-      articles.edges && articles.edges.length > 3
-        ? articles.edges.slice(0, 3)
-        : articles.edges || [];
-
-    const allInstitute =
-      data.allInstitute.edges && data.allInstitute.edges.length > 6
-        ? data.allInstitute.edges.slice(0, 6)
-        : data.allInstitute.edges || [];
+    const infoEdges = sliceArr(articles?.edges, 3);
+    const institutes = sliceArr(allInstitute?.edges, 6);
     setInfoEdges(infoEdges);
     setMore(false);
 
-    setAllInstitute(allInstitute);
-    setAllInstituteMore(false);
-  }, [data]);
+    setInstitutes(institutes);
+    setInstitutesMore(false);
+  }, [articles, allInstitute]);
 
   const clickMore = () => {
-    setInfoEdges(articles.edges);
+    setInfoEdges(articles?.edges);
     setMore(true);
   };
 
-  const clickAllInstituteMore = () => {
-    setAllInstitute(data.allInstitute.edges);
-    setAllInstituteMore(true);
+  const clickInstitutesMore = () => {
+    setInstitutes(allInstitute?.edges);
+    setInstitutesMore(true);
   };
   return (
     <div style={{ background: "rgba(241,241,241,0.8)" }}>
@@ -130,12 +127,16 @@ export const AreaPageCore = ({ data }) => {
             <span style={{ paddingLeft: "5px" }}>全球动态</span>
           </Link>
         </div>
-        <div style={styles.statusBox}>
+        <div>
           <div>
             <span style={{ ...styles.title, fontSize: "24px" }}>
-              {area.title}
+              {area?.title}
             </span>
-            <span></span>
+            <span
+              style={{ color: "#666666", fontsize: "14px", padding: "8px" }}
+            >
+              United States
+            </span>
           </div>
 
           <div style={styles.flexParent}>
@@ -163,24 +164,31 @@ export const AreaPageCore = ({ data }) => {
 
       <div style={styles.instituteBox}>
         <div style={{ ...styles.flexParent, justifyContent: "space-between" }}>
-          <div style={styles.title}>{area.title}院校实况</div>
+          <div style={styles.title}>{area?.title}院校实况</div>
           <span
             style={{
               ...styles.more,
-              display: `${allInstituteMore ? "none" : "inline-block"}`
+              display: `${institutesMore ? "none" : "inline-block"}`
             }}
-            onClick={clickAllInstituteMore}
+            role="button"
+            onClick={clickInstitutesMore}
+            onKeyPress={clickInstitutesMore}
           >
             更多
           </span>
         </div>
         <div style={styles.flexParent}>
-          {(allInstitute || []).map(edge => {
+          {(institutes || []).map(edge => {
             return (
               <Link
-                style={styles.link}
-                key={edge.node.id}
-                to={edge.node.fields.pathname}
+                style={{
+                  ...styles.link,
+                  overflow: "hidden",
+                  textOverflow: "ellipsis",
+                  whiteSpace: "nowrap"
+                }}
+                key={edge?.node?.id}
+                to={edge?.node?.fields?.pathname}
               >
                 <div style={styles.institutePic}></div>
                 <div
@@ -189,10 +197,16 @@ export const AreaPageCore = ({ data }) => {
                     ...styles.instituteNameMore
                   }}
                 >
-                  {edge.node.nameCn}
+                  {edge?.node?.nameCn}
                 </div>
-                <div style={styles.instituteName}>
-                  {edge.node.courseOperationstatus}
+                <div
+                  style={{
+                    ...styles.instituteName,
+                    color: "#333333",
+                    fontSize: "12px"
+                  }}
+                >
+                  {edge?.node?.courseOperationstatus}
                 </div>
               </Link>
             );
@@ -216,7 +230,9 @@ export const AreaPageCore = ({ data }) => {
                 ...styles.more,
                 display: `${more ? "none" : "inline-block"}`
               }}
+              role="button"
               onClick={clickMore}
+              onKeyPress={clickMore}
             >
               展开全部
             </span>
@@ -231,7 +247,7 @@ export const AreaPageCore = ({ data }) => {
           >
             全球资讯
           </div>
-          <NewList newEdges={updates.edges} />
+          <NewList newEdges={updates?.edges} />
         </div>
       </div>
       <p />
@@ -254,9 +270,11 @@ export const pageQuery = graphql`
     allInstitute(filter: { countryCode: { eq: $countryCode } }) {
       edges {
         node {
+          courseOperationstatus
           id
           nameCn
           website
+          stateCn
           fields {
             pathname
           }

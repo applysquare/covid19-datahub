@@ -9,24 +9,24 @@ const styles = {
     alignItems: "center",
     fontSize: "14px",
     color: "#333333",
-    padding: "7px 0",
+    padding: "7px 0"
   },
   link: {
-    textDecoration: "none",
+    textDecoration: "none"
   },
   txt: {
     whiteSpace: "nowrap",
     textOverflow: "ellipsis",
     overflow: "hidden",
-    marginRight: "10px",
-  },
+    marginRight: "10px"
+  }
 };
 
-const InfoList = ({ infoEdges }) => {
+const InfoList = ({ infoEdges = [] }) => {
   return (
     <div>
       {infoEdges &&
-        infoEdges.map((edge) => {
+        infoEdges.map(edge => {
           const art = edge?.node?.frontmatter;
           return (
             <Link

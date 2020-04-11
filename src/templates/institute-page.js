@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
 import { LeftOutlined } from "@ant-design/icons";
 import { makePage } from "../components/Layout";
-import { ExternalLink } from "../components/ExternalLink";
+// import { ExternalLink } from "../components/ExternalLink";
 import NewList from "../components/NewList";
 import InfoList from "../components/InfoList";
 import Help from "../components/Help";
@@ -54,11 +54,19 @@ const styles = {
   nameCn: {
     fontWeight: 500,
     fontSize: "24px",
-    color: "#FFFFFF"
+    color: "#FFFFFF",
+    width: "90%",
+    overflow: "hidden",
+    textOverflow: "ellipsis",
+    whiteSpace: "nowrap"
   },
   nameEn: {
     fontSize: "12px",
-    color: "#FFFFFF"
+    color: "#FFFFFF",
+    width: "90%",
+    overflow: "hidden",
+    textOverflow: "ellipsis",
+    whiteSpace: "nowrap"
   },
   policy: {
     padding: "24px 15px",
@@ -100,7 +108,8 @@ const styles = {
     fontSize: "14px",
     padding: "5px",
     display: "inline-block",
-    textDecoration: "underline"
+    textDecoration: "underline",
+    cursor: "default"
   },
   link: {
     textDecoration: "none",
@@ -108,10 +117,20 @@ const styles = {
   }
 };
 
+const sliceArr = (arr = [], num = 0) => {
+  return arr.length > num ? arr.slice(0, num) : arr;
+};
+const domainURI = (str = "") => {
+  const durl = /.*:\/\/([^/]*).*/;
+  const domain = str.match(durl);
+  return domain && domain[1] ? domain[1] : str;
+};
+
 const InstitutePageCore = ({ data, errors }) => {
   if (errors) {
     console.error(errors);
   }
+  const { area, institute = {}, articles, updates } = data || {};
   const {
     cover,
     logo,
@@ -123,8 +142,9 @@ const InstitutePageCore = ({ data, errors }) => {
     stateDeathnumber,
     courseOperationstatus,
     onlineCoursestartdate,
-    returnCampuscoursedate
-  } = data.institute || {};
+    returnCampuscoursedate,
+    coursePolicylink
+  } = institute;
 
   const timeStamp = new Date(onlineCoursestartdate);
   const time = `${timeStamp.getFullYear()}-${timeStamp.getMonth() +
@@ -133,39 +153,23 @@ const InstitutePageCore = ({ data, errors }) => {
   const [infoEdges, setInfoEdges] = useState([]);
   const [more, setMore] = useState(null);
   useEffect(() => {
-    const infoEdges =
-      data.articles.edges && data.articles.edges.length > 3
-        ? data.articles.edges.slice(0, 3)
-        : data.articles.edges || [];
+    const infoEdges = sliceArr(articles?.edges, 3);
     setInfoEdges(infoEdges);
     setMore(false);
-  }, [data]);
+  }, [articles]);
 
   const clickMore = () => {
-    setInfoEdges(data.articles.edges);
+    setInfoEdges(articles?.edges);
     setMore(true);
+  };
+
+  const goBack = () => {
+    window.history.back();
+    return false;
   };
 
   return (
     <div style={{ background: "rgba(241,241,241,0.8)" }}>
-      {/* <div>Website: {data.institute.website}</div>
-      <div>
-        <div>
-          依据:{" "}
-          {(data.institute.course_policy_link && (
-            <ExternalLink link={data.institute.course_policy_link} />
-          )) ||
-            "-"}
-        </div>
-      </div>
-      <div>
-        校友问题
-        <ExternalLink
-          link={
-            "https://github.com/applysquare/covid19-datahub/issues/new/choose"
-          }
-        />
-      </div> */}
       <div
         style={{
           ...styles.logoBox,
@@ -175,10 +179,15 @@ const InstitutePageCore = ({ data, errors }) => {
         <div style={styles.mask}></div>
         <div style={styles.maskContent}>
           <div style={styles.logoTitle}>
-            <Link style={styles.link} to="/institute">
+            <span
+              style={styles.link}
+              onClick={goBack}
+              onKeyPress={goBack}
+              role="button"
+            >
               <LeftOutlined />
               <span style={{ padding: "0 4px" }}>院校列表</span>
-            </Link>
+            </span>
           </div>
           <div
             style={{
@@ -194,7 +203,7 @@ const InstitutePageCore = ({ data, errors }) => {
                 style={{ width: "40px", height: "40px", borderRadius: "50%" }}
               />
             </span>
-            <span style={{ paddingLeft: "12px" }}>
+            <span style={{ paddingLeft: "12px", flex: 1 }}>
               <div style={styles.nameCn}>{nameCn}</div>
               <div style={styles.nameEn}>{nameEn}</div>
             </span>
@@ -212,7 +221,7 @@ const InstitutePageCore = ({ data, errors }) => {
         >
           <div style={{ ...styles.title, margin: 0 }}>所在州疫情</div>
           <div style={styles.areaName}>
-            {stateCn}，{data.area.title}
+            {stateCn}，{area?.title}
           </div>
         </div>
         <div style={styles.flexParent}>
@@ -258,7 +267,10 @@ const InstitutePageCore = ({ data, errors }) => {
           </div>
         </div>
         <div>
-          <ExternalLink link={data.institute.coursePolicylink} />
+          <span style={{ fontSize: "14px" }}>院校政策：</span>
+          <a href={coursePolicylink} style={{ textDecoration: "none" }}>
+            {domainURI(coursePolicylink)}
+          </a>
         </div>
       </div>
       <Help {...help} />
@@ -277,7 +289,9 @@ const InstitutePageCore = ({ data, errors }) => {
                 ...styles.more,
                 display: `${more ? "none" : "inline-block"}`
               }}
+              role="button"
               onClick={clickMore}
+              onKeyPress={clickMore}
             >
               展开全部
             </span>
@@ -292,7 +306,7 @@ const InstitutePageCore = ({ data, errors }) => {
           >
             资讯
           </div>
-          <NewList newEdges={data.updates.edges} />
+          <NewList newEdges={updates?.edges} />
         </div>
       </div>
     </div>

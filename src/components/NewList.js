@@ -19,7 +19,7 @@ const styles = {
     textDecoration: "none"
   }
 };
-const NewList = ({ newEdges }) => {
+const NewList = ({ newEdges = [] }) => {
   return (
     <div>
       {newEdges.map(edge => {

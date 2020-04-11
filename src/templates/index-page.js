@@ -91,9 +91,10 @@ const styles = {
 
 export const IndexPageCore = ({ data, errors }) => {
   const config = data.pageIndexYml;
+  const { articles, allCovid19Country, allArea, updates } = data;
   const getApiData = apiCode => {
-    return data.allCovid19Country.edges.find(edge => {
-      return edge.node.data.CountryCode === apiCode;
+    return allCovid19Country?.edges.find(edge => {
+      return edge?.node?.data?.CountryCode === apiCode;
     })?.node?.data;
   };
 
@@ -101,15 +102,15 @@ export const IndexPageCore = ({ data, errors }) => {
   const [more, setMore] = useState(null);
   useEffect(() => {
     const infoEdges =
-      data.articles.edges && data.articles.edges.length > 3
-        ? data.articles.edges.slice(0, 3)
-        : data.articles.edges || [];
+      articles?.edges && articles?.edges?.length > 3
+        ? articles?.edges.slice(0, 3)
+        : articles?.edges || [];
     setInfoEdges(infoEdges);
     setMore(false);
-  }, [data]);
+  }, [articles]);
 
   const clickMore = () => {
-    setInfoEdges(data.articles.edges);
+    setInfoEdges(articles?.edges);
     setMore(true);
   };
 
@@ -138,12 +139,13 @@ export const IndexPageCore = ({ data, errors }) => {
       <div style={styles.safetyBox}>
         <div style={styles.title}>海外健康安全</div>
         <div style={styles.flexParent}>
-          {config.highlightAreas.map(area => {
+          {config?.highlightAreas.map(area => {
             const apiData = getApiData(area.apiCode);
             return (
               <Link
-                key={area.link}
+                key={area?.link}
                 style={{ ...styles.link, textAlign: "center" }}
+                to={area?.link}
               >
                 <div style={styles.areaName}>{area?.name}</div>
                 <div style={{ color: "#EB5449", fontSize: "20px" }}>
@@ -163,12 +165,9 @@ export const IndexPageCore = ({ data, errors }) => {
       <div style={styles.instituteBox}>
         <div style={{ ...styles.flexParent, justifyContent: "space-between" }}>
           <div style={styles.title}>留学生数据中心</div>
-          {/* <Link style={styles.more} to="/">
-              更多
-            </Link> */}
         </div>
         <div style={styles.flexParent}>
-          {data.allArea.edges.map(area => {
+          {allArea?.edges.map(area => {
             return (
               <Link
                 key={v4()}
@@ -198,6 +197,7 @@ export const IndexPageCore = ({ data, errors }) => {
                 ...styles.more,
                 display: `${more ? "none" : "inline-block"}`
               }}
+              role="button"
               onClick={clickMore}
             >
               展开全部
@@ -213,7 +213,7 @@ export const IndexPageCore = ({ data, errors }) => {
           >
             全球资讯
           </div>
-          <NewList newEdges={data.updates.edges} />
+          <NewList newEdges={updates?.edges} />
         </div>
       </div>
     </div>
