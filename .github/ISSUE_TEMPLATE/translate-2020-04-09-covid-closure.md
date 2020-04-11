@@ -3,7 +3,7 @@ name: '资料汉化任务: 4 Colleges, 2 Weeks, One Choice: How Covid-19 Scatter
   Education(约3000字)'
 about: 对重要资料进行汉化支持
 title: 资料汉化
-labels: 资料汉化, 高难度任务
+labels: 资料汉化, 招募帮助
 assignees: ''
 
 ---
