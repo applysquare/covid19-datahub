@@ -1,7 +1,7 @@
 ---
 name: Update university data
 about: Data update, error reporting and correction
-title: ''
+title: '[Update School] '
 labels: ''
 assignees: ''
 

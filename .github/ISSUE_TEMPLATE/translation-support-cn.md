@@ -1,8 +1,8 @@
 ---
 name: 资料汉化
 about: 对重要的外文文章提供汉化支持
-title: ''
-labels: ''
+title: '[汉化文献] '
+labels: 资料汉化, 招募帮助
 assignees: ''
 
 ---

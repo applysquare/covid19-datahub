@@ -1,7 +1,7 @@
 ---
 name: 留学生求助
 about: 海外留学求助
-title: ''
+title: '[留学求助] '
 labels: ''
 assignees: ''
 
