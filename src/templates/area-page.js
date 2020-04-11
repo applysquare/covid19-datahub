@@ -5,6 +5,7 @@ import { makePage } from "../components/Layout";
 import Help from "../components/Help";
 import InfoList from "../components/InfoList";
 import NewList from "../components/NewList";
+import { translateCourseOperationStatus } from "../components/display";
 
 const help = {
   title: "问题解答征集",
@@ -206,7 +207,7 @@ export const AreaPageCore = ({ data }) => {
                     fontSize: "12px"
                   }}
                 >
-                  {edge?.node?.courseOperationStatus}
+                  {translateCourseOperationStatus('cn', edge?.node?.courseOperationStatus)}
                 </div>
               </Link>
             );

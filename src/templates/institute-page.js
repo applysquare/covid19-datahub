@@ -7,6 +7,7 @@ import NewList from "../components/NewList";
 import InfoList from "../components/InfoList";
 import Help from "../components/Help";
 import indexTitleImg from "../img/bg.jpg";
+import { translateCourseOperationStatus, formatDate } from '../components/display';
 
 const help = {
   title: "校友问题征集",
@@ -142,13 +143,9 @@ const InstitutePageCore = ({ data, errors }) => {
     numStateDeaths,
     courseOperationStatus,
     onlineCourseStartDate,
-    returnCampuscoursedate,
+    onCompusCourseResumeDate,
     coursePolicyLink
   } = institute;
-
-  const timeStamp = new Date(onlineCourseStartDate);
-  const time = `${timeStamp.getFullYear()}-${timeStamp.getMonth() +
-    1}-${timeStamp.getHours()}`;
 
   const [infoEdges, setInfoEdges] = useState([]);
   const [more, setMore] = useState(null);
@@ -255,15 +252,15 @@ const InstitutePageCore = ({ data, errors }) => {
         <div style={styles.flexParent}>
           <div style={styles.flexChild}>
             <div>院校运转</div>
-            <div>{courseOperationStatus ?? "-"}</div>
+            <div>{(courseOperationStatus && translateCourseOperationStatus('cn', courseOperationStatus)) ?? "-"}</div>
           </div>
           <div style={styles.flexChild}>
             <div>停课时间</div>
-            <div>{time ?? "-"}</div>
+            <div>{(onlineCourseStartDate && (formatDate(onlineCourseStartDate))) ?? "-"}</div>
           </div>
           <div style={styles.flexChild}>
             <div>复课时间</div>
-            <div style={styles.title}>{returnCampuscoursedate ?? "-"}</div>
+            <div style={styles.title}>{(onCompusCourseResumeDate && formatDate(onCompusCourseResumeDate)) ?? "-"}</div>
           </div>
         </div>
         <div>
@@ -337,6 +334,7 @@ export const pageQuery = graphql`
       numStateDeaths
       courseOperationStatus
       onlineCourseStartDate
+      onCompusCourseResumeDate
       fields {
         pathname
       }

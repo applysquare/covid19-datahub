@@ -4,6 +4,7 @@ import { v4 } from "uuid";
 import { makePage } from "../../components/Layout";
 import { RightOutlined } from "@ant-design/icons";
 import { Link } from "gatsby";
+import { translateCourseOperationStatus } from '../../components/display';
 
 const styles = {
   flexParent: {
@@ -153,7 +154,7 @@ const PageCore = ({ data }) => {
                   }}
                 >
                   <span style={styles.stateCn}>
-                    {node?.courseOperationStatus}
+                    {translateCourseOperationStatus('cn', node?.courseOperationStatus)}
                   </span>
                   <RightOutlined />
                 </div>
