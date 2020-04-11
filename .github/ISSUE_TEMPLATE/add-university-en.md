@@ -1,7 +1,7 @@
 ---
 name: Add university to database
 about: 'about: Add new university with basic data, operation status, and local life'
-title: ''
+title: '[Add School] '
 labels: ''
 assignees: ''
 
@@ -25,7 +25,7 @@ Fill in the country the where institution is located
 Fill in the region/state where the institution is located
 
 **During the outbreak, does the university have an official website to release outbreak information? If yes, please provide a link**
-Fill Link 
+Fill Link
 
 **Course operation status**
 Please select "open", "online course", or "close", if there are other circumstances, please explain
