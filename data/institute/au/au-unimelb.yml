@@ -1,0 +1,18 @@
+slug: au-unimelb
+nameEn: The University of Melbourne
+nameCn: 墨尔本大学
+countryCode: au
+website: http://www.unimelb.edu.au
+stateCn: 维多利亚州
+stateEn: Victoria
+publicOrPrivate: public
+coursePolicyLink: https://www.unimelb.edu.au/coronavirus
+cover: https://cdn.applysquare.net/a2/institute/au.unimelb/cover_app.jpg
+logo: https://cdn.applysquare.net/a2/institute/au.unimelb/logo.png
+numStateCases: 1228
+numStateDailyNewCases: 16
+numStateDeaths: 12
+numStateCures: 736
+courseOperationStatus: onlineCourse
+onlineCourseStartDate: 2020-03-30
+onCompusCourseResumeDate: 

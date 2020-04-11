@@ -1,0 +1,18 @@
+slug: us-ucsc
+nameEn: University of California, Santa Cruz
+nameCn: 加州大学圣克鲁兹分校
+countryCode: us
+website: http://www.ucsc.edu/
+stateCn: 加利福尼亚州
+stateEn: California
+publicOrPrivate: public
+coursePolicyLink: https://www.ucsc.edu/coronavirus/
+cover: https://cdn.applysquare.net/a2/institute/ucsc/cover_app.jpg
+logo: https://cdn.applysquare.net/a2/institute/ucsc/logo.png
+numStateCases: 19710
+numStateDailyNewCases: 813
+numStateDeaths: 544
+numStateCures: 0
+courseOperationStatus: onlineCourse
+onlineCourseStartDate: 2020-03-11
+onCompusCourseResumeDate: 

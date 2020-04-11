@@ -1,0 +1,18 @@
+slug: us-ucdavis
+nameEn: University of California, Davis
+nameCn: 加州大学戴维斯分校
+countryCode: us
+website: http://www.ucdavis.edu/
+stateCn: 加利福尼亚州
+stateEn: California
+publicOrPrivate: public
+coursePolicyLink: https://www.ucdavis.edu/coronavirus/news/updates
+cover: https://cdn.applysquare.net/a2/institute/ucdavis/cover_app.jpg
+logo: https://cdn.applysquare.net/a2/institute/ucdavis/logo.png
+numStateCases: 19710
+numStateDailyNewCases: 813
+numStateDeaths: 544
+numStateCures: 0
+courseOperationStatus: onlineCourse
+onlineCourseStartDate: 2020-03-30
+onCompusCourseResumeDate: 

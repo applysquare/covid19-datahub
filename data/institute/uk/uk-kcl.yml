@@ -1,0 +1,18 @@
+slug: uk-kcl
+nameEn: King's College London
+nameCn: 伦敦国王学院
+countryCode: uk
+website: http://www.kcl.ac.uk/index.aspx
+stateCn: 英国
+stateEn: United Kingdom
+publicOrPrivate: public
+coursePolicyLink: https://www.kcl.ac.uk/coronavirus
+cover: https://cdn.applysquare.net/a2/institute/uk.kcl/cover_app.jpg
+logo: https://cdn.applysquare.net/a2/institute/uk.kcl/logo.png
+numStateCases: 
+numStateDailyNewCases: 
+numStateDeaths: 
+numStateCures: 
+courseOperationStatus: onlineCourse
+onlineCourseStartDate: 2020-03-23
+onCompusCourseResumeDate: 2020-05-01

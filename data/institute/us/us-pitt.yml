@@ -1,0 +1,18 @@
+slug: us-pitt
+nameEn: University of Pittsburgh
+nameCn: 匹兹堡大学
+countryCode: us
+website: http://www.pitt.edu/
+stateCn: 宾夕法尼亚州
+stateEn: Pennsylvania
+publicOrPrivate: public
+coursePolicyLink: https://www.emergency.pitt.edu/covid-19
+cover: https://cdn.applysquare.net/a2/institute/pitt/cover_app.jpg
+logo: https://cdn.applysquare.net/a2/institute/pitt/logo.png
+numStateCases: 18300
+numStateDailyNewCases: 1669
+numStateDeaths: 345
+numStateCures: 0
+courseOperationStatus: onlineCourse
+onlineCourseStartDate: 2020-03-23
+onCompusCourseResumeDate: 

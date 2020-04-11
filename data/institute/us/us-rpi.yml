@@ -1,0 +1,18 @@
+slug: us-rpi
+nameEn: Rensselaer Polytechnic Institute
+nameCn: 伦斯勒理工学院
+countryCode: us
+website: http://www.rpi.edu/
+stateCn: 纽约州
+stateEn: New York
+publicOrPrivate: private
+coursePolicyLink: https://covid19.rpi.edu/
+cover: https://cdn.applysquare.net/a2/institute/rpi/cover_app.jpg
+logo: https://cdn.applysquare.net/a2/institute/rpi/logo.png
+numStateCases: 161779
+numStateDailyNewCases: 10718
+numStateDeaths: 7067
+numStateCures: 0
+courseOperationStatus: onlineCourse
+onlineCourseStartDate: 2020-03-25
+onCompusCourseResumeDate: 

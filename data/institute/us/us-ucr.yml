@@ -1,0 +1,18 @@
+slug: us-ucr
+nameEn: University of California, Riverside
+nameCn: 加州大学河滨分校
+countryCode: us
+website: http://www.ucr.edu/
+stateCn: 加利福尼亚州
+stateEn: California
+publicOrPrivate: public
+coursePolicyLink: https://ehs.ucr.edu/coronavirus
+cover: https://cdn.applysquare.net/a2/institute/ucr/cover_app.jpg
+logo: https://cdn.applysquare.net/a2/institute/ucr/logo.png
+numStateCases: 19710
+numStateDailyNewCases: 813
+numStateDeaths: 544
+numStateCures: 0
+courseOperationStatus: onlineCourse
+onlineCourseStartDate: 2020-03-30
+onCompusCourseResumeDate: 

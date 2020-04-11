@@ -1,0 +1,18 @@
+slug: us-vt
+nameEn: Virginia Polytechnic Institute and State University
+nameCn: 弗吉尼亚理工大学
+countryCode: us
+website: http://www.vt.edu/
+stateCn: 弗吉尼亚州
+stateEn: Virginia
+publicOrPrivate: public
+coursePolicyLink: https://vt.edu/content/vt_edu/en/covid-19/home.html
+cover: https://cdn.applysquare.net/a2/institute/vt/cover_app.jpg
+logo: https://cdn.applysquare.net/a2/institute/vt/logo.png
+numStateCases: 4042
+numStateDailyNewCases: 397
+numStateDeaths: 109
+numStateCures: 0
+courseOperationStatus: onlineCourse
+onlineCourseStartDate: 2020-03-23
+onCompusCourseResumeDate: 

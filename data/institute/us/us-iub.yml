@@ -1,0 +1,18 @@
+slug: us-iub
+nameEn: Indiana University Bloomington
+nameCn: 印第安纳大学伯明顿主校区
+countryCode: us
+website: http://www.iub.edu/
+stateCn: 印第安纳州
+stateEn: Indiana
+publicOrPrivate: public
+coursePolicyLink: https://coronavirus.iu.edu/
+cover: https://cdn.applysquare.net/a2/institute/iub/cover_app.jpg
+logo: https://cdn.applysquare.net/a2/institute/iub/logo.png
+numStateCases: 6351
+numStateDailyNewCases: 408
+numStateDeaths: 245
+numStateCures: 0
+courseOperationStatus: onlineCourse
+onlineCourseStartDate: 2020-03-30
+onCompusCourseResumeDate: 

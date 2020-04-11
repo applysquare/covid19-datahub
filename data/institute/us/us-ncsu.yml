@@ -1,0 +1,18 @@
+slug: us-ncsu
+nameEn: North Carolina State University
+nameCn: 北卡罗来纳州立大学
+countryCode: us
+website: http://www.ncsu.edu/
+stateCn: 北卡罗莱纳州
+stateEn: North Carolina
+publicOrPrivate: public
+coursePolicyLink: https://www.ncsu.edu/coronavirus/
+cover: https://cdn.applysquare.net/a2/institute/ncsu/cover_app.jpg
+logo: https://cdn.applysquare.net/a2/institute/ncsu/logo.png
+numStateCases: 3736
+numStateDailyNewCases: 237
+numStateDeaths: 76
+numStateCures: 0
+courseOperationStatus: onlineCourse
+onlineCourseStartDate: 2020-03-23
+onCompusCourseResumeDate: 

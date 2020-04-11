@@ -1,0 +1,18 @@
+slug: us-wustl
+nameEn: Washington University in St. Louis
+nameCn: 圣路易斯华盛顿大学
+countryCode: us
+website: http://www.wustl.edu/
+stateCn: 密苏里州
+stateEn: Missouri
+publicOrPrivate: private
+coursePolicyLink: https://emergency.wustl.edu/coronavirus-disease-covid-19/
+cover: https://cdn.applysquare.net/a2/institute/wustl/cover_app.jpg
+logo: https://cdn.applysquare.net/a2/institute/wustl/logo.png
+numStateCases: 3432
+numStateDailyNewCases: 223
+numStateDeaths: 93
+numStateCures: 0
+courseOperationStatus: onlineCourse
+onlineCourseStartDate: 2020-03-23
+onCompusCourseResumeDate: 2020-04-30

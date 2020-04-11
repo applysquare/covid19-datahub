@@ -1,0 +1,18 @@
+slug: ca-ualberta
+nameEn: University of Alberta
+nameCn: 阿尔伯塔大学
+countryCode: ca
+website: http://ualberta.ca/
+stateCn: 阿尔伯塔省
+stateEn: Alberta
+publicOrPrivate: public
+coursePolicyLink: https://www.ualberta.ca/covid-19/index.html
+cover: https://cdn.applysquare.net/a2/institute/ca.ualberta/cover_app.jpg
+logo: https://cdn.applysquare.net/a2/institute/ca.ualberta/logo.png
+numStateCases: 1423
+numStateDailyNewCases: 50
+numStateDeaths: 29
+numStateCures: 0
+courseOperationStatus: onlineCourse
+onlineCourseStartDate: 2020-03-17
+onCompusCourseResumeDate: 

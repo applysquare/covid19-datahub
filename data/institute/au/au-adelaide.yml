@@ -1,0 +1,18 @@
+slug: au-adelaide
+nameEn: The University of Adelaide
+nameCn: 阿德莱德大学
+countryCode: au
+website: http://www.adelaide.edu.au/
+stateCn: 南澳大利亚州
+stateEn: South Australia
+publicOrPrivate: public
+coursePolicyLink: https://www.adelaide.edu.au/newsroom/covid-19
+cover: https://cdn.applysquare.net/a2/institute/au.adelaide/cover_app.jpg
+logo: https://cdn.applysquare.net/a2/institute/au.adelaide/logo.png
+numStateCases: 420
+numStateDailyNewCases: 5
+numStateDeaths: 3
+numStateCures: 120
+courseOperationStatus: onlineCourse
+onlineCourseStartDate: 2020-03-23
+onCompusCourseResumeDate: 2020-04-27

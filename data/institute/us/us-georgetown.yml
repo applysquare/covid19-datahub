@@ -1,0 +1,18 @@
+slug: us-georgetown
+nameEn: Georgetown University
+nameCn: 乔治城大学
+countryCode: us
+website: http://www.georgetown.edu/
+stateCn: 华盛顿哥伦比亚特区
+stateEn: District of Columbia
+publicOrPrivate: private
+coursePolicyLink: https://www.georgetown.edu/coronavirus/
+cover: https://cdn.applysquare.net/a2/institute/georgetown/cover_app.jpg
+logo: https://cdn.applysquare.net/a2/institute/georgetown/logo.png
+numStateCases: 1523
+numStateDailyNewCases: 83
+numStateDeaths: 32
+numStateCures: 0
+courseOperationStatus: onlineCourse
+onlineCourseStartDate: 2020-03-16
+onCompusCourseResumeDate: 

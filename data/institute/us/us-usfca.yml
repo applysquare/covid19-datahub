@@ -1,0 +1,18 @@
+slug: us-usfca
+nameEn: University of San Francisco
+nameCn: 旧金山大学
+countryCode: us
+website: http://www.usfca.edu/
+stateCn: 加利福尼亚州
+stateEn: California
+publicOrPrivate: private
+coursePolicyLink: https://myusf.usfca.edu/emergency-resources-campus-protocols/coronavirus-updates-resources
+cover: https://cdn.applysquare.net/a2/institute/usfca/cover_app.jpg
+logo: https://cdn.applysquare.net/a2/institute/usfca/logo.png
+numStateCases: 19710
+numStateDailyNewCases: 813
+numStateDeaths: 544
+numStateCures: 0
+courseOperationStatus: onlineCourse
+onlineCourseStartDate: 2020-03-18
+onCompusCourseResumeDate: 
