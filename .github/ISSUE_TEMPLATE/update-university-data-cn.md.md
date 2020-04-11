@@ -1,7 +1,7 @@
 ---
 name: 编辑院校信息
 about: 院校数据更新、报错与修正
-title: ''
+title: '[编辑院校] '
 labels: ''
 assignees: ''
 

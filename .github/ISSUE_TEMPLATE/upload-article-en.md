@@ -2,7 +2,7 @@
 name: Submit an article
 about: Collection of policies, in-depth analysis, tutorial, learning resources and
   assistance information for oversea students
-title: ''
+title: '[Submit Article] '
 labels: ''
 assignees: ''
 
