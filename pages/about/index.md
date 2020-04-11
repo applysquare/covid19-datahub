@@ -2,10 +2,7 @@
 
 全球留学生疫情互助与资源中心基于开放的信息共建模式，汇集全球各地志愿者提供的数据内容，免费为全球教育工作者及海外留学生提供疫情信息、应对参考，研究数据支持。
 
-## 中心理念
-全球对教育发展有追求、有责任感的用户，共同记录在重大的事件冲击之下全球教育应对方式。让未来有参考，还原教育事件、政策及应对工作。
-
-## 数据共建中心
+## “全球留学生疫情互助与资源中心”是什么？
 
 本站资讯与资料数据来自于申请方开放在Github平台的代码仓库共建。
 点击前往[applysquare/covid19-datahub](https://github.com/applysquare/covid19-datahub）
@@ -21,16 +18,19 @@
 
 在此，感谢你为护航全球留学生的安全与成长贡献力量。
 
+## 什么做这件事？
+全球对教育发展有追求、有责任感的用户，共同记录在重大的事件冲击之下全球教育应对方式。让未来有参考，还原教育事件、政策及应对工作。
 
-## 共建方式说明
+
+
+## 在这里我能做什么？
 
 在github平台上，参与者以提交不同主题issue（问题，下同）的方式提交数据与内容，发布求助，完成任务。
 
-### 我需要求助
+### 我需要帮助
 
-你可以前往[New Issues](https://github.com/applysquare/covid19-datahub/issues/new/choose)页面创建issue，选择“留学生求助”提交求助。
-
-我们会尽力为你搜集解决方案，并在你的允许下公开征集答案。
+中心开设了海外留学生的求助通道。你可以前往[New Issues](https://github.com/applysquare/covid19-datahub/issues/new/choose)页面创建issue，选择“留学生求助”提交求助信息。
+如果你的求助是需要解答的问题，你也可以选择"征集回答"issue类型，发布问题收集答案。
 
 ### 我有资源和数据，可以支持建设
 
@@ -44,11 +44,11 @@
 如果你有其他资源，也欢迎提交给我们。
 
 ### 我想看看我能为留学生做些什么
-我们在[New Issues](https://github.com/applysquare/covid19-datahub/issues/new/choose)页面发布待解答的问题与需要汉化的文件，并标注了参与的难度。
+你可以在issue页面查看待解答的问题与汉化任务。
 
-欢迎你参与解答我们开放的问题与汉化任务，贡献一份力量。
+欢迎你参与解答，完成汉化任务，为全球留学生疫情下的发展贡献力量。
 
-我们会定期更新需要解答的问题与需要协助的汉化文献。
+我们会定期更新需要解答的问题与需要协助的汉化文献，并将答案和译文共享。
 
 ## 项目支持与商业
 
@@ -69,7 +69,7 @@ Johns Hopkins University
 
 本数据中心使用License类型如下：
 > The code of this project is licensed under the MIT license, and
-> the content and data is license under Attribution-NonCommercial-ShareAlike 
+> the content and data is license under Attribution-NonCommercial-ShareAlike
 > 4.0 International license.
 
 查看 [LICENSE.md](https://github.com/applysquare/covid19-datahub/blob/master/LICENSE)了解详情
