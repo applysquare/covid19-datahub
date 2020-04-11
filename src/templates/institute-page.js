@@ -137,16 +137,16 @@ const InstitutePageCore = ({ data, errors }) => {
     nameCn,
     nameEn,
     stateCn,
-    stateCasenumber,
-    stateDailychangenumber,
-    stateDeathnumber,
-    courseOperationstatus,
-    onlineCoursestartdate,
+    numStateCases,
+    numStateDailyNewCases,
+    numStateDeaths,
+    courseOperationStatus,
+    onlineCourseStartDate,
     returnCampuscoursedate,
-    coursePolicylink
+    coursePolicyLink
   } = institute;
 
-  const timeStamp = new Date(onlineCoursestartdate);
+  const timeStamp = new Date(onlineCourseStartDate);
   const time = `${timeStamp.getFullYear()}-${timeStamp.getMonth() +
     1}-${timeStamp.getHours()}`;
 
@@ -221,26 +221,26 @@ const InstitutePageCore = ({ data, errors }) => {
         >
           <div style={{ ...styles.title, margin: 0 }}>所在州疫情</div>
           <div style={styles.areaName}>
-            {stateCn}，{area?.title}
+            {stateCn}，{area?.titleCn}
           </div>
         </div>
         <div style={styles.flexParent}>
           <div style={styles.flexChild}>
             <div style={styles.illnessTxt}>确诊病例</div>
             <div style={{ ...styles.illnessNum, color: "#EB5449" }}>
-              {stateCasenumber}
+              {numStateCases}
             </div>
           </div>
           <div style={styles.flexChild}>
             <div style={styles.illnessTxt}>昨日新增</div>
             <div style={{ ...styles.illnessNum, color: "#FDBB0F" }}>
-              {stateDailychangenumber}
+              {numStateDailyNewCases}
             </div>
           </div>
           <div style={styles.flexChild}>
             <div style={styles.illnessTxt}>死亡人数</div>
             <div style={{ ...styles.illnessNum, color: "#333333" }}>
-              {stateDeathnumber}
+              {numStateDeaths}
             </div>
           </div>
           <div style={styles.flexChild}>
@@ -255,7 +255,7 @@ const InstitutePageCore = ({ data, errors }) => {
         <div style={styles.flexParent}>
           <div style={styles.flexChild}>
             <div>院校运转</div>
-            <div>{courseOperationstatus ?? "-"}</div>
+            <div>{courseOperationStatus ?? "-"}</div>
           </div>
           <div style={styles.flexChild}>
             <div>停课时间</div>
@@ -268,8 +268,8 @@ const InstitutePageCore = ({ data, errors }) => {
         </div>
         <div>
           <span style={{ fontSize: "14px" }}>院校政策：</span>
-          <a href={coursePolicylink} style={{ textDecoration: "none" }}>
-            {domainURI(coursePolicylink)}
+          <a href={coursePolicyLink} style={{ textDecoration: "none" }}>
+            {domainURI(coursePolicyLink)}
           </a>
         </div>
       </div>
@@ -321,7 +321,7 @@ export const pageQuery = graphql`
     area(countryCode: { eq: $countryCode }) {
       id
       countryCode
-      title
+      titleCn
     }
     institute(id: { eq: $id }) {
       id
@@ -330,13 +330,13 @@ export const pageQuery = graphql`
       nameEn
       website
       stateCn
-      coursePolicylink
+      coursePolicyLink
       cover
-      stateCasenumber
-      stateDailychangenumber
-      stateDeathnumber
-      courseOperationstatus
-      onlineCoursestartdate
+      numStateCases
+      numStateDailyNewCases
+      numStateDeaths
+      courseOperationStatus
+      onlineCourseStartDate
       fields {
         pathname
       }

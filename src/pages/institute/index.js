@@ -107,18 +107,18 @@ const PageCore = ({ data }) => {
                     item.node.countryCode === countryCode
                       ? "#1A6DFF"
                       : "#ffffff"
-                  }`,
+                    }`,
                   color: `${
                     item?.node?.countryCode === countryCode
                       ? "#ffffff"
                       : "rgb(153, 153, 153)"
-                  }`
+                    }`
                 }}
                 role="button"
                 onClick={() => filter(item?.node?.countryCode)}
                 onKeyPress={() => filter(item?.node?.countryCode)}
               >
-                {item?.node?.title}
+                {item?.node?.titleCn}
               </div>
             );
           })}
@@ -153,7 +153,7 @@ const PageCore = ({ data }) => {
                   }}
                 >
                   <span style={styles.stateCn}>
-                    {node?.courseOperationstatus}
+                    {node?.courseOperationStatus}
                   </span>
                   <RightOutlined />
                 </div>
@@ -176,7 +176,7 @@ export const pageQuery = graphql`
       edges {
         node {
           countryCode
-          title
+          titleCn
         }
       }
     }
@@ -184,7 +184,7 @@ export const pageQuery = graphql`
       edges {
         node {
           countryCode
-          courseOperationstatus
+          courseOperationStatus
           id
           nameCn
           nameEn

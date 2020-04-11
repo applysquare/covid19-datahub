@@ -130,7 +130,7 @@ export const AreaPageCore = ({ data }) => {
         <div>
           <div>
             <span style={{ ...styles.title, fontSize: "24px" }}>
-              {area?.title}
+              {area?.titleCn}
             </span>
             <span
               style={{ color: "#666666", fontsize: "14px", padding: "8px" }}
@@ -164,7 +164,7 @@ export const AreaPageCore = ({ data }) => {
 
       <div style={styles.instituteBox}>
         <div style={{ ...styles.flexParent, justifyContent: "space-between" }}>
-          <div style={styles.title}>{area?.title}院校实况</div>
+          <div style={styles.title}>{area?.titleCn}院校实况</div>
           <span
             style={{
               ...styles.more,
@@ -206,7 +206,7 @@ export const AreaPageCore = ({ data }) => {
                     fontSize: "12px"
                   }}
                 >
-                  {edge?.node?.courseOperationstatus}
+                  {edge?.node?.courseOperationStatus}
                 </div>
               </Link>
             );
@@ -265,12 +265,12 @@ export const pageQuery = graphql`
     area(id: { eq: $id }) {
       id
       countryCode
-      title
+      titleCn
     }
     allInstitute(filter: { countryCode: { eq: $countryCode } }) {
       edges {
         node {
-          courseOperationstatus
+          courseOperationStatus
           id
           nameCn
           website
