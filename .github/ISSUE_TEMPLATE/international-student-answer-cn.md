@@ -2,7 +2,7 @@
 name: 解答问题
 about: 为留学生求助提供解答（问题列表见资料区）
 title: ''
-labels: ''
+labels: 欢迎新手, 招募帮助
 assignees: ''
 
 ---
