@@ -143,7 +143,7 @@ const InstitutePageCore = ({ data, errors }) => {
     numStateDeaths,
     courseOperationStatus,
     onlineCourseStartDate,
-    onCompusCourseResumeDate,
+    onCampusCourseResumeDate,
     coursePolicyLink
   } = institute;
 
@@ -260,7 +260,7 @@ const InstitutePageCore = ({ data, errors }) => {
           </div>
           <div style={styles.flexChild}>
             <div>复课时间</div>
-            <div style={styles.title}>{(onCompusCourseResumeDate && formatDate(onCompusCourseResumeDate)) ?? "-"}</div>
+            <div style={styles.title}>{(onCampusCourseResumeDate && formatDate(onCampusCourseResumeDate)) ?? "-"}</div>
           </div>
         </div>
         <div>
@@ -334,7 +334,7 @@ export const pageQuery = graphql`
       numStateDeaths
       courseOperationStatus
       onlineCourseStartDate
-      onCompusCourseResumeDate
+      onCampusCourseResumeDate
       fields {
         pathname
       }
