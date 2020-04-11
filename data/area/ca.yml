@@ -2,3 +2,4 @@ title: 加拿大
 countryCode: ca
 ranking: 4
 icon: https://cdn.applysquare.net/a2/country_icon/ca.png
+bingApiId: canada #用于API调取https://bing.com/covid/data 最新的国家疫情确诊，新增，死亡，治愈数据
