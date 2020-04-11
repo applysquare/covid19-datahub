@@ -57,24 +57,25 @@ const styles = {
   }
 };
 
+const filterArr = (arr = [], countryCode = "us") => {
+  return arr.filter(item => {
+    return item.node.countryCode === countryCode;
+  });
+};
+
 const PageCore = ({ data }) => {
-  const { allInstitute = {} } = data;
+  const { allInstitute = {}, allArea = {} } = data;
   // 默认美国-us
   const [institute, setInstitute] = useState([]);
   const [countryCode, setCountryCode] = useState(null);
   useEffect(() => {
-    const institute = (allInstitute.edges || []).filter(item => {
-      return item.node.countryCode === "us";
-    });
+    const institute = filterArr(allInstitute?.edges, "us");
     setInstitute(institute);
     setCountryCode("us");
-  }, [data]);
+  }, [allInstitute]);
 
-  const filter = countryCode => {
-    const institute =
-      (allInstitute.edges || []).filter(item => {
-        return item.node.countryCode === countryCode;
-      }) || [];
+  const filter = (countryCode = "") => {
+    const institute = filterArr(allInstitute.edges, countryCode);
     setInstitute(institute);
     setCountryCode(countryCode);
   };
@@ -95,7 +96,7 @@ const PageCore = ({ data }) => {
       <div style={{ padding: "15px" }}>
         <div style={styles.title}>选择院校，了解院校安全发展动态</div>
         <div style={styles.flexParent}>
-          {((data.allArea || {}).edges || []).map((item, index) => {
+          {(allArea.edges || []).map((item, index) => {
             return (
               <div
                 key={v4()}
@@ -108,14 +109,16 @@ const PageCore = ({ data }) => {
                       : "#ffffff"
                   }`,
                   color: `${
-                    item.node.countryCode === countryCode
+                    item?.node?.countryCode === countryCode
                       ? "#ffffff"
                       : "rgb(153, 153, 153)"
                   }`
                 }}
-                onClick={() => filter(item.node.countryCode)}
+                role="button"
+                onClick={() => filter(item?.node?.countryCode)}
+                onKeyPress={() => filter(item?.node?.countryCode)}
               >
-                {item.node.title}
+                {item?.node?.title}
               </div>
             );
           })}
@@ -125,8 +128,8 @@ const PageCore = ({ data }) => {
           return (
             <Link
               style={styles.link}
-              to={node.fields.pathname}
-              key={node.fields.pathname}
+              to={node?.fields?.pathname}
+              key={node?.fields?.pathname}
             >
               <div
                 style={{
@@ -136,11 +139,11 @@ const PageCore = ({ data }) => {
                   padding: "15px 10px",
                   borderBottom: "1px solid #E4E4E4"
                 }}
-                key={node.id}
+                key={node?.id}
               >
                 <div>
-                  <div style={styles.nameCn}>{node.nameCn}</div>
-                  <div style={styles.nameEn}>{node.nameEn}</div>
+                  <div style={styles.nameCn}>{node?.nameCn}</div>
+                  <div style={styles.nameEn}>{node?.nameEn}</div>
                 </div>
                 <div
                   style={{
@@ -149,7 +152,9 @@ const PageCore = ({ data }) => {
                     fontSize: "14px"
                   }}
                 >
-                  <span style={styles.stateCn}>{node.stateCn}</span>
+                  <span style={styles.stateCn}>
+                    {node?.courseOperationstatus}
+                  </span>
                   <RightOutlined />
                 </div>
               </div>
@@ -179,6 +184,7 @@ export const pageQuery = graphql`
       edges {
         node {
           countryCode
+          courseOperationstatus
           id
           nameCn
           nameEn
