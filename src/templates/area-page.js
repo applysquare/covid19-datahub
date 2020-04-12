@@ -91,6 +91,7 @@ const styles = {
 
 export const AreaPageCore = ({ data }) => {
   const { area, updates, articles, allInstitute } = data;
+  const covid19Area = data?.covid19Area?.data;
   const infoEdges = articles?.edges || [];
   const institutes = sliceArr(allInstitute?.edges, 8);
   // const institutes = allInstitute?.edges;
@@ -120,20 +121,20 @@ export const AreaPageCore = ({ data }) => {
             <div style={styles.flexChild}>
               <div style={styles.statusTxt}>确诊</div>
               <div style={{ ...styles.statusNum, color: "#EB5449" }}>
-                123222
+                {covid19Area?.totalConfirmed || '-'}
               </div>
             </div>
             <div style={styles.flexChild}>
               <div style={styles.statusTxt}>新增</div>
-              <div style={{ ...styles.statusNum, color: "#FDBB0F" }}>72832</div>
+              <div style={{ ...styles.statusNum, color: "#FDBB0F" }}>{covid19Area?.totalConfirmedDelta || '-'}</div>
             </div>
             <div style={styles.flexChild}>
               <div style={styles.statusTxt}>死亡</div>
-              <div style={{ ...styles.statusNum, color: "#333333" }}>72832</div>
+              <div style={{ ...styles.statusNum, color: "#333333" }}>{covid19Area?.totalDeaths || '-'}</div>
             </div>
             <div style={styles.flexChild}>
               <div style={styles.statusTxt}>治愈</div>
-              <div style={{ ...styles.statusNum, color: "#1EC5A0" }}>832</div>
+              <div style={{ ...styles.statusNum, color: "#1EC5A0" }}>{covid19Area?.totalRecovered || '-'}</div>
             </div>
           </div>
         </div>
@@ -237,12 +238,23 @@ const Page = makePage(AreaPageCore, {
 export default Page;
 
 export const pageQuery = graphql`
-  query AreaPage($id: String!, $countryCode: String!) {
+  query AreaPage($id: String!, $countryCode: String!, $hasApiCode: Boolean!, $apiCode: String) {
     area(id: { eq: $id }) {
       id
       countryCode
       titleCn
       titleEn
+    }
+    covid19Area(data: {id: {eq: $apiCode}}) @include(if:$hasApiCode){
+      data {
+        displayName
+        id
+        totalConfirmed
+        totalConfirmedDelta
+        totalDeaths
+        totalDeathsDelta
+        totalRecovered
+      }
     }
     allInstitute(filter: { countryCode: { eq: $countryCode } }) {
       edges {
