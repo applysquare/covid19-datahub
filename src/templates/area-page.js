@@ -14,7 +14,7 @@ const help = {
   title: "问题解答征集",
   linkTxt: "在海外遇到了问题？你有解决办法？来这里互助",
   linkTo:
-    "https://github.com/applysquare/covid19-datahub#%E6%88%91%E8%A6%81%E6%B1%82%E5%8A%A9"
+    "https://github.com/applysquare/covid19-datahub/issues/new/choose"
 };
 
 const styles = {
