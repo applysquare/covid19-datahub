@@ -213,6 +213,19 @@ export const AreaPageCore = ({ data }) => {
             资料区
           </div>
           <InfoList infoEdges={infoEdges} />
+          <div style={{ textAlign: "center" }}>
+            <span
+              style={{
+                ...styles.more,
+                display: `${more ? "none" : "inline-block"}`
+              }}
+              role="button"
+              onClick={clickMore}
+              onKeyPress={clickMore}
+            >
+              展开全部
+            </span>
+          </div>
         </div>
         <div>
           <div
