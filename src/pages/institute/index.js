@@ -4,6 +4,7 @@ import { v4 } from "uuid";
 import { makePage } from "../../components/Layout";
 import { RightOutlined } from "@ant-design/icons";
 import { Link } from "gatsby";
+import { translateCourseOperationStatus } from '../../components/display';
 
 const styles = {
   flexParent: {
@@ -107,17 +108,22 @@ const PageCore = ({ data }) => {
                     item.node.countryCode === countryCode
                       ? "#1A6DFF"
                       : "#ffffff"
-                  }`,
+                    }`,
                   color: `${
                     item?.node?.countryCode === countryCode
                       ? "#ffffff"
                       : "rgb(153, 153, 153)"
-                  }`
+                    }`
                 }}
                 onClick={() => filter(item?.node?.countryCode)}
               >
+<<<<<<< HEAD
                 {item?.node?.title}
               </button>
+=======
+                {item?.node?.titleCn}
+              </div>
+>>>>>>> upstream/master
             );
           })}
         </div>
@@ -151,7 +157,7 @@ const PageCore = ({ data }) => {
                   }}
                 >
                   <span style={styles.stateCn}>
-                    {node?.courseOperationstatus}
+                    {translateCourseOperationStatus('cn', node?.courseOperationStatus)}
                   </span>
                   <RightOutlined />
                 </div>
@@ -174,7 +180,7 @@ export const pageQuery = graphql`
       edges {
         node {
           countryCode
-          title
+          titleCn
         }
       }
     }
@@ -182,7 +188,7 @@ export const pageQuery = graphql`
       edges {
         node {
           countryCode
-          courseOperationstatus
+          courseOperationStatus
           id
           nameCn
           nameEn

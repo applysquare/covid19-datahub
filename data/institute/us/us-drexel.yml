@@ -1,0 +1,18 @@
+slug: us-drexel
+nameEn: Drexel University
+nameCn: 德雷塞尔大学
+countryCode: us
+website: http://www.drexel.edu/
+stateCn: 宾夕法尼亚州
+stateEn: Pennsylvania
+publicOrPrivate: private
+coursePolicyLink: https://drexel.edu/now/coronavirus/response/
+cover: https://cdn.applysquare.net/a2/institute/drexel/cover_app.jpg
+logo: https://cdn.applysquare.net/a2/institute/drexel/logo.png
+numStateCases: 18300
+numStateDailyNewCases: 1669
+numStateDeaths: 345
+numStateCures: 0
+courseOperationStatus: onlineCourse
+onlineCourseStartDate: 2020-04-06
+onCampusCourseResumeDate: 

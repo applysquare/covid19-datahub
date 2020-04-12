@@ -1,0 +1,18 @@
+slug: us-lmu
+nameEn: Loyola Marymount University
+nameCn: 洛约拉马利蒙特大学
+countryCode: us
+website: http://www.lmu.edu/
+stateCn: 加利福尼亚州
+stateEn: California
+publicOrPrivate: private
+coursePolicyLink: https://www.lmu.edu/coronavirus/
+cover: https://cdn.applysquare.net/a2/institute/lmu/cover_app.jpg
+logo: https://cdn.applysquare.net/a2/institute/lmu/logo.png
+numStateCases: 19710
+numStateDailyNewCases: 813
+numStateDeaths: 544
+numStateCures: 0
+courseOperationStatus: onlineCourse
+onlineCourseStartDate: 2020-03-23
+onCampusCourseResumeDate: 

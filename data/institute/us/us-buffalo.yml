@@ -1,0 +1,18 @@
+slug: us-buffalo
+nameEn: University at Buffalo
+nameCn: 纽约州立大学水牛城分校
+countryCode: us
+website: http://www.buffalo.edu/
+stateCn: 纽约州
+stateEn: New York
+publicOrPrivate: public
+coursePolicyLink: https://www.buffalo.edu/coronavirus/dashboard.html
+cover: https://cdn.applysquare.net/a2/institute/buffalo/cover_app.jpg
+logo: https://cdn.applysquare.net/a2/institute/buffalo/logo.png
+numStateCases: 161779
+numStateDailyNewCases: 10718
+numStateDeaths: 7067
+numStateCures: 0
+courseOperationStatus: onlineCourse
+onlineCourseStartDate: 2020-03-23
+onCampusCourseResumeDate: 

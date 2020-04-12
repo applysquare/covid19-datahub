@@ -5,6 +5,7 @@ import { makePage } from "../components/Layout";
 import Help from "../components/Help";
 import InfoList from "../components/InfoList";
 import NewList from "../components/NewList";
+import { translateCourseOperationStatus } from "../components/display";
 
 const help = {
   title: "问题解答征集",
@@ -121,7 +122,7 @@ export const AreaPageCore = ({ data }) => {
         <div>
           <div>
             <span style={{ ...styles.title, fontSize: "24px" }}>
-              {area?.title}
+              {area?.titleCn}
             </span>
             <span
               style={{ color: "#666666", fontsize: "14px", padding: "8px" }}
@@ -195,7 +196,10 @@ export const AreaPageCore = ({ data }) => {
                     fontSize: "12px"
                   }}
                 >
-                  {edge?.node?.courseOperationstatus}
+                  {translateCourseOperationStatus(
+                    "cn",
+                    edge?.node?.courseOperationStatus
+                  )}
                 </div>
               </Link>
             );
@@ -241,12 +245,12 @@ export const pageQuery = graphql`
     area(id: { eq: $id }) {
       id
       countryCode
-      title
+      titleCn
     }
     allInstitute(filter: { countryCode: { eq: $countryCode } }) {
       edges {
         node {
-          courseOperationstatus
+          courseOperationStatus
           id
           nameCn
           website

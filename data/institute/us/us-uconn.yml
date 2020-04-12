@@ -1,0 +1,18 @@
+slug: us-uconn
+nameEn: University of Connecticut
+nameCn: 康涅狄格大学
+countryCode: us
+website: http://www.uconn.edu/
+stateCn: 康涅狄格州
+stateEn: Connecticut
+publicOrPrivate: public
+coursePolicyLink: https://uconn.edu/public-notification/coronavirus/
+cover: https://cdn.applysquare.net/a2/institute/uconn/cover_app.jpg
+logo: https://cdn.applysquare.net/a2/institute/uconn/logo.png
+numStateCases: 9784
+numStateDailyNewCases: 2003
+numStateDeaths: 380
+numStateCures: 0
+courseOperationStatus: onlineCourse
+onlineCourseStartDate: 2020-03-23
+onCampusCourseResumeDate: 

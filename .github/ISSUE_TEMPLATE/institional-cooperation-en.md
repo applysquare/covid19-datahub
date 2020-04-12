@@ -1,7 +1,6 @@
 ---
 name: Institutional Cooperation
-about:
-If you are interested in cooperation, please contact us
+about: If you are interested in cooperation, please contact us
 title: '[Cooperation] '
 labels: ''
 assignees: ''

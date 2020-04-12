@@ -1,0 +1,18 @@
+slug: us-slu
+nameEn: Saint Louis University
+nameCn: 圣路易斯大学
+countryCode: us
+website: http://www.slu.edu/
+stateCn: 密苏里州
+stateEn: Missouri
+publicOrPrivate: private
+coursePolicyLink: http://www.slu.edu/health-advisory/index.php
+cover: https://cdn.applysquare.net/a2/institute/slu/cover_app.jpg
+logo: https://cdn.applysquare.net/a2/institute/slu/logo.png
+numStateCases: 3432
+numStateDailyNewCases: 223
+numStateDeaths: 93
+numStateCures: 0
+courseOperationStatus: onlineCourse
+onlineCourseStartDate: 2020-03-16
+onCampusCourseResumeDate: 

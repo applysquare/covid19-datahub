@@ -1,0 +1,18 @@
+slug: us-clarku
+nameEn: Clark University
+nameCn: 克拉克大学（马萨诸塞州）
+countryCode: us
+website: http://www.clarku.edu/
+stateCn: 马萨诸塞州
+stateEn: Massachusetts
+publicOrPrivate: private
+coursePolicyLink: https://www.clarku.edu/covid-19-information/
+cover: https://cdn.applysquare.net/a2/institute/clarku/cover_app.jpg
+logo: https://cdn.applysquare.net/a2/institute/clarku/logo.png
+numStateCases: 18941
+numStateDailyNewCases: 2151
+numStateDeaths: 503
+numStateCures: 0
+courseOperationStatus: onlineCourse
+onlineCourseStartDate: 2020-03-23
+onCampusCourseResumeDate: 

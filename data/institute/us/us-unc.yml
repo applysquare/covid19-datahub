@@ -5,13 +5,14 @@ countryCode: us
 website: http://www.unc.edu/
 stateCn: 北卡罗莱纳州
 stateEn: North Carolina
-publicOrprivate: public
-coursePolicylink: https://www.unc.edu/coronavirus/
+publicOrPrivate: public
+coursePolicyLink: https://www.unc.edu/coronavirus/
 cover: https://cdn.applysquare.net/a2/institute/unc/cover_app.jpg
-logo: https://cdn.applysquare.net/a2/institute/Unc/logo.png
-stateCasenumber: 566 #院校所在州确诊数字，只是先留个位置，后期会通过api接口自动匹配州的这个数字，或是线下完成匹配
-stateDailychangenumber: 203 #院校所在州新增数字，只是先留个位置，后期会通过api接口自动匹配州的这个数字，或是线下完成匹配
-stateDeathnumber: 4406 #院校所在州死亡数字，只是先留个位置，后期会通过api接口自动匹配州的这个数字，或是线下完成匹配
-courseOperationstatus: 网课
-onlineCoursestartdate: 2020-03-23
-returnCampuscoursedate: 
+logo: https://cdn.applysquare.net/a2/institute/unc/logo.png
+numStateCases: 3736
+numStateDailyNewCases: 237
+numStateDeaths: 76
+numStateCures: 0
+courseOperationStatus: onlineCourse
+onlineCourseStartDate: 2020-03-23
+onCampusCourseResumeDate: 

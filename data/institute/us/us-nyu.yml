@@ -1,0 +1,18 @@
+slug: us-nyu
+nameEn: New York University
+nameCn: 纽约大学
+countryCode: us
+website: http://www.nyu.edu/
+stateCn: 纽约州
+stateEn: New York
+publicOrPrivate: private
+coursePolicyLink: https://www.nyu.edu/life/safety-health-wellness/coronavirus-information.html
+cover: https://cdn.applysquare.net/a2/institute/nyu/cover_app.jpg
+logo: https://cdn.applysquare.net/a2/institute/nyu/logo.png
+numStateCases: 161779
+numStateDailyNewCases: 10718
+numStateDeaths: 7067
+numStateCures: 0
+courseOperationStatus: onlineCourse
+onlineCourseStartDate: 2020-03-11
+onCampusCourseResumeDate: 
