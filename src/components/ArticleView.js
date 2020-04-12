@@ -1,7 +1,7 @@
 import React from "react";
-import { Link } from "gatsby";
 import { HTMLContent } from "../components/Content";
 import { LeftOutlined } from "@ant-design/icons";
+import { goBack } from "../components/display";
 
 const styles = {
   box: {
@@ -37,13 +37,13 @@ export const ArticleView = ({ markdownRemark }) => {
   const article = markdownRemark;
   return (
     <div style={styles.box}>
-      <Link style={styles.returnBox} to="/">
+      <button style={styles.returnBox} onClick={goBack}>
         <LeftOutlined />
         <span style={{ paddingLeft: "5px" }}>返回</span>
-      </Link>
+      </button>
       <div style={styles.title}>{article?.frontmatter?.title}</div>
       <div style={styles.flexParent}>
-        <div style={styles.date}>{article.frontmatter.date}2020.03.11</div>
+        <div style={styles.date}>{article.frontmatter?.date}</div>
         <div>
           {article?.frontmatter?.link && (
             <a style={styles.href} href={article?.frontmatter?.link}>
@@ -53,7 +53,7 @@ export const ArticleView = ({ markdownRemark }) => {
         </div>
       </div>
       <div style={{ fontFamily: "helvitica" }}>
-        <HTMLContent content={article.html} />
+        <HTMLContent content={article?.html} />
       </div>
     </div>
   );

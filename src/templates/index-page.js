@@ -160,7 +160,17 @@ export const IndexPageCore = ({ data, errors }) => {
                 style={styles.link}
                 to={`./area/${area?.node?.countryCode}`}
               >
-                <div style={styles.institutePic}></div>
+                <div style={styles.institutePic}>
+                  <img
+                    src={area?.node?.icon}
+                    alt=""
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      borderRadius: "50%"
+                    }}
+                  />
+                </div>
                 <div style={styles.instituteName}>{area?.node?.titleCn}</div>
               </Link>
             );
@@ -212,6 +222,7 @@ export const pageQuery = graphql`
       edges {
         node {
           countryCode
+          icon
           titleCn
         }
       }

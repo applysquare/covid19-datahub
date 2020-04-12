@@ -1,6 +1,7 @@
-import { Link } from "gatsby";
+// import { Link } from "gatsby";
 import React, { useState, useEffect } from "react";
 import { RightOutlined } from "@ant-design/icons";
+import { sliceArr } from "../components/display";
 
 const styles = {
   item: {
@@ -12,7 +13,8 @@ const styles = {
     padding: "7px 0"
   },
   link: {
-    textDecoration: "none"
+    display: "block",
+    width: "100%"
   },
   txt: {
     whiteSpace: "nowrap",
@@ -29,10 +31,6 @@ const styles = {
   }
 };
 
-const sliceArr = (arr = [], num = 0) => {
-  return arr.length > num ? arr.slice(0, num) : arr;
-};
-
 const InfoList = ({ infoEdges = [] }) => {
   const [infoArr, setInfoArr] = useState([]);
   const [more, setMore] = useState(null);
@@ -46,24 +44,33 @@ const InfoList = ({ infoEdges = [] }) => {
     setInfoArr(infoEdges);
     setMore(true);
   };
-
+  const clickToDetail = (html, pathname) => {
+    // if (html) {
+    window.location.href = pathname;
+    // }
+  };
   return (
     <div>
       <div>
         {infoArr &&
           infoArr.map(edge => {
             const art = edge?.node?.frontmatter;
+            const html = edge?.node?.html;
+            const pathname = edge?.node?.fields?.pathname;
             return (
-              <Link
+              <button
                 style={styles.link}
                 key={edge?.node?.id}
-                to={edge?.node?.fields?.pathname}
+                // to={edge?.node?.fields?.pathname}
+                onClick={() => {
+                  clickToDetail(html, pathname);
+                }}
               >
                 <div style={styles.item}>
                   <div style={styles.txt}>{art?.title}</div>
                   <RightOutlined />
                 </div>
-              </Link>
+              </button>
             );
           })}
       </div>

@@ -9,7 +9,9 @@ import Help from "../components/Help";
 import indexTitleImg from "../img/bg.jpg";
 import {
   translateCourseOperationStatus,
-  formatDate
+  formatDate,
+  domainURI,
+  goBack
 } from "../components/display";
 
 const help = {
@@ -121,15 +123,6 @@ const styles = {
   }
 };
 
-const domainURI = (str = "") => {
-  const durl = /.*:\/\/([^/]*).*/;
-  const domain = str.match(durl);
-  return domain && domain[1] ? domain[1] : str;
-};
-const goBack = () => {
-  window.history.back();
-};
-
 const InstitutePageCore = ({ data, errors }) => {
   if (errors) {
     console.error(errors);
@@ -142,18 +135,16 @@ const InstitutePageCore = ({ data, errors }) => {
     nameEn,
     stateCn,
     numStateCases,
+    numStateCures,
     numStateDailyNewCases,
     numStateDeaths,
+    onCampusCourseResumeDate,
     courseOperationStatus,
     onlineCourseStartDate,
-    onCampusCourseResumeDate,
     coursePolicyLink
   } = institute;
 
   const infoEdges = articles?.edges || [];
-  const timeStamp = new Date(onlineCoursestartdate);
-  const time = `${timeStamp.getFullYear()}-${timeStamp.getMonth() +
-    1}-${timeStamp.getHours()}`;
 
   return (
     <div style={{ background: "rgba(241,241,241,0.8)" }}>
@@ -201,7 +192,7 @@ const InstitutePageCore = ({ data, errors }) => {
             alignItems: "center"
           }}
         >
-          <div style={{ ...styles.title, margin: 0 }}>所在州疫情</div>
+          <div style={{ ...styles.title, margin: 0 }}>所在地区疫情</div>
           <div style={styles.areaName}>
             {stateCn}，{area?.titleCn}
           </div>
@@ -227,7 +218,9 @@ const InstitutePageCore = ({ data, errors }) => {
           </div>
           <div style={styles.flexChild}>
             <div style={styles.illnessTxt}>治愈人数</div>
-            <div style={{ ...styles.illnessNum, color: "#1EC5A0" }}>2153</div>
+            <div style={{ ...styles.illnessNum, color: "#1EC5A0" }}>
+              {numStateCures}
+            </div>
           </div>
         </div>
       </div>
@@ -313,11 +306,12 @@ export const pageQuery = graphql`
       coursePolicyLink
       cover
       numStateCases
+      numStateCures
       numStateDailyNewCases
       numStateDeaths
+      onCampusCourseResumeDate
       courseOperationStatus
       onlineCourseStartDate
-      onCampusCourseResumeDate
       fields {
         pathname
       }
