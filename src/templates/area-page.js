@@ -92,32 +92,23 @@ const sliceArr = (arr = [], num = 0) => {
 
 export const AreaPageCore = ({ data }) => {
   const { area, updates, articles, allInstitute } = data;
-
-  const [infoEdges, setInfoEdges] = useState([]);
-  const [more, setMore] = useState(null);
+  const infoEdges = articles?.edges || [];
 
   const [institutes, setInstitutes] = useState([]);
   const [institutesMore, setInstitutesMore] = useState(null);
 
   useEffect(() => {
-    const infoEdges = sliceArr(articles?.edges, 3);
     const institutes = sliceArr(allInstitute?.edges, 6);
-    setInfoEdges(infoEdges);
-    setMore(false);
 
     setInstitutes(institutes);
     setInstitutesMore(false);
-  }, [articles, allInstitute]);
-
-  const clickMore = () => {
-    setInfoEdges(articles?.edges);
-    setMore(true);
-  };
+  }, [allInstitute]);
 
   const clickInstitutesMore = () => {
     setInstitutes(allInstitute?.edges);
     setInstitutesMore(true);
   };
+
   return (
     <div style={{ background: "rgba(241,241,241,0.8)" }}>
       <div style={styles.countryBox}>
@@ -165,17 +156,15 @@ export const AreaPageCore = ({ data }) => {
       <div style={styles.instituteBox}>
         <div style={{ ...styles.flexParent, justifyContent: "space-between" }}>
           <div style={styles.title}>{area?.title}院校实况</div>
-          <span
+          <button
             style={{
               ...styles.more,
               display: `${institutesMore ? "none" : "inline-block"}`
             }}
-            role="button"
             onClick={clickInstitutesMore}
-            onKeyPress={clickInstitutesMore}
           >
             更多
-          </span>
+          </button>
         </div>
         <div style={styles.flexParent}>
           {(institutes || []).map(edge => {
@@ -224,19 +213,6 @@ export const AreaPageCore = ({ data }) => {
             资料区
           </div>
           <InfoList infoEdges={infoEdges} />
-          <div style={{ textAlign: "center" }}>
-            <span
-              style={{
-                ...styles.more,
-                display: `${more ? "none" : "inline-block"}`
-              }}
-              role="button"
-              onClick={clickMore}
-              onKeyPress={clickMore}
-            >
-              展开全部
-            </span>
-          </div>
         </div>
         <div>
           <div

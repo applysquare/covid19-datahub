@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { graphql } from "gatsby";
 import { LeftOutlined } from "@ant-design/icons";
 import { makePage } from "../components/Layout";
@@ -117,13 +117,13 @@ const styles = {
   }
 };
 
-const sliceArr = (arr = [], num = 0) => {
-  return arr.length > num ? arr.slice(0, num) : arr;
-};
 const domainURI = (str = "") => {
   const durl = /.*:\/\/([^/]*).*/;
   const domain = str.match(durl);
   return domain && domain[1] ? domain[1] : str;
+};
+const goBack = () => {
+  window.history.back();
 };
 
 const InstitutePageCore = ({ data, errors }) => {
@@ -146,27 +146,10 @@ const InstitutePageCore = ({ data, errors }) => {
     coursePolicylink
   } = institute;
 
+  const infoEdges = articles?.edges || [];
   const timeStamp = new Date(onlineCoursestartdate);
   const time = `${timeStamp.getFullYear()}-${timeStamp.getMonth() +
     1}-${timeStamp.getHours()}`;
-
-  const [infoEdges, setInfoEdges] = useState([]);
-  const [more, setMore] = useState(null);
-  useEffect(() => {
-    const infoEdges = sliceArr(articles?.edges, 3);
-    setInfoEdges(infoEdges);
-    setMore(false);
-  }, [articles]);
-
-  const clickMore = () => {
-    setInfoEdges(articles?.edges);
-    setMore(true);
-  };
-
-  const goBack = () => {
-    window.history.back();
-    return false;
-  };
 
   return (
     <div style={{ background: "rgba(241,241,241,0.8)" }}>
@@ -179,15 +162,10 @@ const InstitutePageCore = ({ data, errors }) => {
         <div style={styles.mask}></div>
         <div style={styles.maskContent}>
           <div style={styles.logoTitle}>
-            <span
-              style={styles.link}
-              onClick={goBack}
-              onKeyPress={goBack}
-              role="button"
-            >
+            <button style={styles.link} onClick={goBack}>
               <LeftOutlined />
               <span style={{ padding: "0 4px" }}>院校列表</span>
-            </span>
+            </button>
           </div>
           <div
             style={{
@@ -283,19 +261,6 @@ const InstitutePageCore = ({ data, errors }) => {
             本校资料区
           </div>
           <InfoList infoEdges={infoEdges} />
-          <div style={{ textAlign: "center" }}>
-            <span
-              style={{
-                ...styles.more,
-                display: `${more ? "none" : "inline-block"}`
-              }}
-              role="button"
-              onClick={clickMore}
-              onKeyPress={clickMore}
-            >
-              展开全部
-            </span>
-          </div>
         </div>
         <div>
           <div

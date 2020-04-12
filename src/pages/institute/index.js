@@ -98,7 +98,7 @@ const PageCore = ({ data }) => {
         <div style={styles.flexParent}>
           {(allArea.edges || []).map((item, index) => {
             return (
-              <div
+              <button
                 key={v4()}
                 style={{
                   ...styles.countryCn,
@@ -114,12 +114,10 @@ const PageCore = ({ data }) => {
                       : "rgb(153, 153, 153)"
                   }`
                 }}
-                role="button"
                 onClick={() => filter(item?.node?.countryCode)}
-                onKeyPress={() => filter(item?.node?.countryCode)}
               >
                 {item?.node?.title}
-              </div>
+              </button>
             );
           })}
         </div>

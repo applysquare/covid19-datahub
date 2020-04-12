@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { graphql, Link } from "gatsby";
 import { v4 } from "uuid";
 // import ArticleList from "../components/ArticleList";
@@ -98,21 +98,7 @@ export const IndexPageCore = ({ data, errors }) => {
     })?.node?.data;
   };
 
-  const [infoEdges, setInfoEdges] = useState([]);
-  const [more, setMore] = useState(null);
-  useEffect(() => {
-    const infoEdges =
-      articles?.edges && articles?.edges?.length > 3
-        ? articles?.edges.slice(0, 3)
-        : articles?.edges || [];
-    setInfoEdges(infoEdges);
-    setMore(false);
-  }, [articles]);
-
-  const clickMore = () => {
-    setInfoEdges(articles?.edges);
-    setMore(true);
-  };
+  const infoEdges = articles?.edges || [];
 
   return (
     <div style={{ background: "rgba(241,241,241,0.8)" }}>
@@ -190,19 +176,6 @@ export const IndexPageCore = ({ data, errors }) => {
             资料区
           </div>
           <InfoList infoEdges={infoEdges} />
-
-          <div style={{ textAlign: "center" }}>
-            <span
-              style={{
-                ...styles.more,
-                display: `${more ? "none" : "inline-block"}`
-              }}
-              role="button"
-              onClick={clickMore}
-            >
-              展开全部
-            </span>
-          </div>
         </div>
         <div>
           <div
