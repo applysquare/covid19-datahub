@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: drumlab/gatsby-gh-pages-action@v3.2
+      - uses: drumlab/gatsby-gh-pages-action@v3.3
         env:
           GATSBY_PATH_PREFIX: /covid19-datahub
         with:
