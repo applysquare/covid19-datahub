@@ -2,8 +2,9 @@ import React, { useState, useEffect } from "react";
 import { graphql } from "gatsby";
 import { v4 } from "uuid";
 import { makePage } from "../../components/Layout";
-import { RightOutlined } from "@ant-design/icons";
+// import { RightOutlined } from "@ant-design/icons";
 import { Link } from "gatsby";
+import { translateCourseOperationStatus } from "../../components/display";
 
 const styles = {
   flexParent: {
@@ -38,10 +39,10 @@ const styles = {
     color: "#333333"
   },
   nameCn: {
-    fontSize: "16px"
-  },
-  nameEn: {
-    fontSize: "12px"
+    fontSize: "16px",
+    overflow: "hidden",
+    textOverflow: "ellipsis",
+    whiteSpace: "nowrap"
   },
   stateCn: {
     paddingRight: "6px"
@@ -57,24 +58,25 @@ const styles = {
   }
 };
 
+const filterArr = (arr = [], countryCode = "us") => {
+  return arr.filter(item => {
+    return item.node.countryCode === countryCode;
+  });
+};
+
 const PageCore = ({ data }) => {
-  const { allInstitute = {} } = data;
+  const { allInstitute = {}, allArea = {} } = data;
   // 默认美国-us
   const [institute, setInstitute] = useState([]);
   const [countryCode, setCountryCode] = useState(null);
   useEffect(() => {
-    const institute = (allInstitute.edges || []).filter(item => {
-      return item.node.countryCode === "us";
-    });
+    const institute = filterArr(allInstitute?.edges, "us");
     setInstitute(institute);
     setCountryCode("us");
-  }, [data]);
+  }, [allInstitute]);
 
-  const filter = countryCode => {
-    const institute =
-      (allInstitute.edges || []).filter(item => {
-        return item.node.countryCode === countryCode;
-      }) || [];
+  const filter = (countryCode = "") => {
+    const institute = filterArr(allInstitute.edges, countryCode);
     setInstitute(institute);
     setCountryCode(countryCode);
   };
@@ -95,9 +97,9 @@ const PageCore = ({ data }) => {
       <div style={{ padding: "15px" }}>
         <div style={styles.title}>选择院校，了解院校安全发展动态</div>
         <div style={styles.flexParent}>
-          {((data.allArea || {}).edges || []).map((item, index) => {
+          {(allArea.edges || []).map((item, index) => {
             return (
-              <div
+              <button
                 key={v4()}
                 style={{
                   ...styles.countryCn,
@@ -108,25 +110,36 @@ const PageCore = ({ data }) => {
                       : "#ffffff"
                   }`,
                   color: `${
-                    item.node.countryCode === countryCode
+                    item?.node?.countryCode === countryCode
                       ? "#ffffff"
                       : "rgb(153, 153, 153)"
                   }`
                 }}
-                onClick={() => filter(item.node.countryCode)}
+                onClick={() => filter(item?.node?.countryCode)}
               >
-                {item.node.title}
-              </div>
+                {item?.node?.titleCn}
+              </button>
             );
           })}
+        </div>
+        <div
+          style={{
+            ...styles.flexParent,
+            justifyContent: "space-between",
+            padding: "0 15px",
+            fontSize: "14px"
+          }}
+        >
+          <div>大学</div>
+          <div>状态</div>
         </div>
         {institute.map(edge => {
           const { node } = edge;
           return (
             <Link
               style={styles.link}
-              to={node.fields.pathname}
-              key={node.fields.pathname}
+              to={node?.fields?.pathname}
+              key={node?.fields?.pathname}
             >
               <div
                 style={{
@@ -136,22 +149,29 @@ const PageCore = ({ data }) => {
                   padding: "15px 10px",
                   borderBottom: "1px solid #E4E4E4"
                 }}
-                key={node.id}
+                key={node?.id}
               >
-                <div>
-                  <div style={styles.nameCn}>{node.nameCn}</div>
-                  <div style={styles.nameEn}>{node.nameEn}</div>
+                <div style={{ maxWidth: "80%" }}>
+                  <div style={styles.nameCn}>{node?.nameCn}</div>
+                  <div style={{ ...styles.nameCn, fontSize: "12px" }}>
+                    {node?.nameEn}
+                  </div>
                 </div>
-                <div
+                {/* <div
                   style={{
                     ...styles.flexParent,
                     alignItems: "center",
                     fontSize: "14px"
                   }}
-                >
-                  <span style={styles.stateCn}>{node.stateCn}</span>
-                  <RightOutlined />
-                </div>
+                > */}
+                <span style={styles.stateCn}>
+                  {translateCourseOperationStatus(
+                    "cn",
+                    node?.courseOperationStatus
+                  )}
+                </span>
+                {/* <RightOutlined /> */}
+                {/* </div> */}
               </div>
             </Link>
           );
@@ -167,11 +187,11 @@ export default Page;
 
 export const pageQuery = graphql`
   query InstituteListPage {
-    allArea {
+    allArea(sort: { order: ASC, fields: ranking }) {
       edges {
         node {
           countryCode
-          title
+          titleCn
         }
       }
     }
@@ -179,6 +199,7 @@ export const pageQuery = graphql`
       edges {
         node {
           countryCode
+          courseOperationStatus
           id
           nameCn
           nameEn

@@ -1,0 +1,18 @@
+slug: us-american
+nameEn: American University
+nameCn: 美国大学
+countryCode: us
+website: http://www.american.edu/
+stateCn: 华盛顿哥伦比亚特区
+stateEn: District of Columbia
+publicOrPrivate: private
+coursePolicyLink: https://www.american.edu/coronavirus/
+cover: https://cdn.applysquare.net/a2/institute/american/cover_app.jpg
+logo: https://cdn.applysquare.net/a2/institute/american/logo.png
+numStateCases: 1523
+numStateDailyNewCases: 83
+numStateDeaths: 32
+numStateCures: 0
+courseOperationStatus: onlineCourse
+onlineCourseStartDate: 2020-03-18
+onCampusCourseResumeDate: 

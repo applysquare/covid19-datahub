@@ -1,12 +1,18 @@
-import React, { useState, useEffect } from "react";
-import { graphql, Link } from "gatsby";
+import React from "react";
+import { graphql } from "gatsby";
 import { LeftOutlined } from "@ant-design/icons";
 import { makePage } from "../components/Layout";
-import { ExternalLink } from "../components/ExternalLink";
+// import { ExternalLink } from "../components/ExternalLink";
 import NewList from "../components/NewList";
 import InfoList from "../components/InfoList";
 import Help from "../components/Help";
 import indexTitleImg from "../img/bg.jpg";
+import {
+  translateCourseOperationStatus,
+  formatDate,
+  domainURI,
+  goBack
+} from "../components/display";
 
 const help = {
   title: "校友问题征集",
@@ -54,11 +60,19 @@ const styles = {
   nameCn: {
     fontWeight: 500,
     fontSize: "24px",
-    color: "#FFFFFF"
+    color: "#FFFFFF",
+    width: "90%",
+    overflow: "hidden",
+    textOverflow: "ellipsis",
+    whiteSpace: "nowrap"
   },
   nameEn: {
     fontSize: "12px",
-    color: "#FFFFFF"
+    color: "#FFFFFF",
+    width: "90%",
+    overflow: "hidden",
+    textOverflow: "ellipsis",
+    whiteSpace: "nowrap"
   },
   policy: {
     padding: "24px 15px",
@@ -100,7 +114,8 @@ const styles = {
     fontSize: "14px",
     padding: "5px",
     display: "inline-block",
-    textDecoration: "underline"
+    textDecoration: "underline",
+    cursor: "default"
   },
   link: {
     textDecoration: "none",
@@ -112,60 +127,27 @@ const InstitutePageCore = ({ data, errors }) => {
   if (errors) {
     console.error(errors);
   }
+  const { area, institute = {}, articles, updates } = data || {};
   const {
     cover,
     logo,
     nameCn,
     nameEn,
     stateCn,
-    stateCasenumber,
-    stateDailychangenumber,
-    stateDeathnumber,
-    courseOperationstatus,
-    onlineCoursestartdate,
-    returnCampuscoursedate
-  } = data.institute || {};
+    numStateCases,
+    numStateCures,
+    numStateDailyNewCases,
+    numStateDeaths,
+    onCampusCourseResumeDate,
+    courseOperationStatus,
+    onlineCourseStartDate,
+    coursePolicyLink
+  } = institute;
 
-  const timeStamp = new Date(onlineCoursestartdate);
-  const time = `${timeStamp.getFullYear()}-${timeStamp.getMonth() +
-    1}-${timeStamp.getHours()}`;
-
-  const [infoEdges, setInfoEdges] = useState([]);
-  const [more, setMore] = useState(null);
-  useEffect(() => {
-    const infoEdges =
-      data.articles.edges && data.articles.edges.length > 3
-        ? data.articles.edges.slice(0, 3)
-        : data.articles.edges || [];
-    setInfoEdges(infoEdges);
-    setMore(false);
-  }, [data]);
-
-  const clickMore = () => {
-    setInfoEdges(data.articles.edges);
-    setMore(true);
-  };
+  const infoEdges = articles?.edges || [];
 
   return (
     <div style={{ background: "rgba(241,241,241,0.8)" }}>
-      {/* <div>Website: {data.institute.website}</div>
-      <div>
-        <div>
-          依据:{" "}
-          {(data.institute.course_policy_link && (
-            <ExternalLink link={data.institute.course_policy_link} />
-          )) ||
-            "-"}
-        </div>
-      </div>
-      <div>
-        校友问题
-        <ExternalLink
-          link={
-            "https://github.com/applysquare/covid19-datahub/issues/new/choose"
-          }
-        />
-      </div> */}
       <div
         style={{
           ...styles.logoBox,
@@ -175,10 +157,10 @@ const InstitutePageCore = ({ data, errors }) => {
         <div style={styles.mask}></div>
         <div style={styles.maskContent}>
           <div style={styles.logoTitle}>
-            <Link style={styles.link} to="/institute">
+            <button style={styles.link} onClick={goBack}>
               <LeftOutlined />
               <span style={{ padding: "0 4px" }}>院校列表</span>
-            </Link>
+            </button>
           </div>
           <div
             style={{
@@ -194,7 +176,7 @@ const InstitutePageCore = ({ data, errors }) => {
                 style={{ width: "40px", height: "40px", borderRadius: "50%" }}
               />
             </span>
-            <span style={{ paddingLeft: "12px" }}>
+            <span style={{ paddingLeft: "12px", flex: 1 }}>
               <div style={styles.nameCn}>{nameCn}</div>
               <div style={styles.nameEn}>{nameEn}</div>
             </span>
@@ -210,33 +192,35 @@ const InstitutePageCore = ({ data, errors }) => {
             alignItems: "center"
           }}
         >
-          <div style={{ ...styles.title, margin: 0 }}>所在州疫情</div>
+          <div style={{ ...styles.title, margin: 0 }}>所在地区疫情</div>
           <div style={styles.areaName}>
-            {stateCn}，{data.area.title}
+            {stateCn}，{area?.titleCn}
           </div>
         </div>
         <div style={styles.flexParent}>
           <div style={styles.flexChild}>
             <div style={styles.illnessTxt}>确诊病例</div>
             <div style={{ ...styles.illnessNum, color: "#EB5449" }}>
-              {stateCasenumber}
+              {numStateCases}
             </div>
           </div>
           <div style={styles.flexChild}>
             <div style={styles.illnessTxt}>昨日新增</div>
             <div style={{ ...styles.illnessNum, color: "#FDBB0F" }}>
-              {stateDailychangenumber}
+              {numStateDailyNewCases}
             </div>
           </div>
           <div style={styles.flexChild}>
             <div style={styles.illnessTxt}>死亡人数</div>
             <div style={{ ...styles.illnessNum, color: "#333333" }}>
-              {stateDeathnumber}
+              {numStateDeaths}
             </div>
           </div>
           <div style={styles.flexChild}>
             <div style={styles.illnessTxt}>治愈人数</div>
-            <div style={{ ...styles.illnessNum, color: "#1EC5A0" }}>2153</div>
+            <div style={{ ...styles.illnessNum, color: "#1EC5A0" }}>
+              {numStateCures}
+            </div>
           </div>
         </div>
       </div>
@@ -246,19 +230,33 @@ const InstitutePageCore = ({ data, errors }) => {
         <div style={styles.flexParent}>
           <div style={styles.flexChild}>
             <div>院校运转</div>
-            <div>{courseOperationstatus ?? "-"}</div>
+            <div>
+              {(courseOperationStatus &&
+                translateCourseOperationStatus("cn", courseOperationStatus)) ??
+                "-"}
+            </div>
           </div>
           <div style={styles.flexChild}>
             <div>停课时间</div>
-            <div>{time ?? "-"}</div>
+            <div>
+              {(onlineCourseStartDate && formatDate(onlineCourseStartDate)) ??
+                "-"}
+            </div>
           </div>
           <div style={styles.flexChild}>
             <div>复课时间</div>
-            <div style={styles.title}>{returnCampuscoursedate ?? "-"}</div>
+            <div style={styles.title}>
+              {(onCampusCourseResumeDate &&
+                formatDate(onCampusCourseResumeDate)) ??
+                "-"}
+            </div>
           </div>
         </div>
         <div>
-          <ExternalLink link={data.institute.coursePolicylink} />
+          <span style={{ fontSize: "14px" }}>院校政策：</span>
+          <a href={coursePolicyLink} style={{ textDecoration: "none" }}>
+            {domainURI(coursePolicyLink)}
+          </a>
         </div>
       </div>
       <Help {...help} />
@@ -271,17 +269,6 @@ const InstitutePageCore = ({ data, errors }) => {
             本校资料区
           </div>
           <InfoList infoEdges={infoEdges} />
-          <div style={{ textAlign: "center" }}>
-            <span
-              style={{
-                ...styles.more,
-                display: `${more ? "none" : "inline-block"}`
-              }}
-              onClick={clickMore}
-            >
-              展开全部
-            </span>
-          </div>
         </div>
         <div>
           <div
@@ -292,7 +279,7 @@ const InstitutePageCore = ({ data, errors }) => {
           >
             资讯
           </div>
-          <NewList newEdges={data.updates.edges} />
+          <NewList newEdges={updates?.edges} />
         </div>
       </div>
     </div>
@@ -307,7 +294,7 @@ export const pageQuery = graphql`
     area(countryCode: { eq: $countryCode }) {
       id
       countryCode
-      title
+      titleCn
     }
     institute(id: { eq: $id }) {
       id
@@ -316,13 +303,15 @@ export const pageQuery = graphql`
       nameEn
       website
       stateCn
-      coursePolicylink
+      coursePolicyLink
       cover
-      stateCasenumber
-      stateDailychangenumber
-      stateDeathnumber
-      courseOperationstatus
-      onlineCoursestartdate
+      numStateCases
+      numStateCures
+      numStateDailyNewCases
+      numStateDeaths
+      onCampusCourseResumeDate
+      courseOperationStatus
+      onlineCourseStartDate
       fields {
         pathname
       }

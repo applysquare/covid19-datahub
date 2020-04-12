@@ -1,0 +1,18 @@
+slug: us-rochester
+nameEn: University of Rochester
+nameCn: 罗切斯特大学
+countryCode: us
+website: http://www.rochester.edu/
+stateCn: 纽约州
+stateEn: New York
+publicOrPrivate: private
+coursePolicyLink: https://www.rochester.edu/coronavirus-update/
+cover: https://cdn.applysquare.net/a2/institute/rochester/cover_app.jpg
+logo: https://cdn.applysquare.net/a2/institute/rochester/logo.png
+numStateCases: 161779
+numStateDailyNewCases: 10718
+numStateDeaths: 7067
+numStateCures: 0
+courseOperationStatus: onlineCourse
+onlineCourseStartDate: 2020-03-23
+onCampusCourseResumeDate: 

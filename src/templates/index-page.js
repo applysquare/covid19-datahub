@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { graphql, Link } from "gatsby";
 import { v4 } from "uuid";
 // import ArticleList from "../components/ArticleList";
@@ -91,27 +91,14 @@ const styles = {
 
 export const IndexPageCore = ({ data, errors }) => {
   const config = data.pageIndexYml;
+  const { articles, allCovid19Country, allArea, updates } = data;
   const getApiData = apiCode => {
-    return data.allCovid19Country.edges.find(edge => {
-      return edge.node.data.CountryCode === apiCode;
+    return allCovid19Country?.edges.find(edge => {
+      return edge?.node?.data?.CountryCode === apiCode;
     })?.node?.data;
   };
 
-  const [infoEdges, setInfoEdges] = useState([]);
-  const [more, setMore] = useState(null);
-  useEffect(() => {
-    const infoEdges =
-      data.articles.edges && data.articles.edges.length > 3
-        ? data.articles.edges.slice(0, 3)
-        : data.articles.edges || [];
-    setInfoEdges(infoEdges);
-    setMore(false);
-  }, [data]);
-
-  const clickMore = () => {
-    setInfoEdges(data.articles.edges);
-    setMore(true);
-  };
+  const infoEdges = articles?.edges || [];
 
   return (
     <div style={{ background: "rgba(241,241,241,0.8)" }}>
@@ -138,12 +125,13 @@ export const IndexPageCore = ({ data, errors }) => {
       <div style={styles.safetyBox}>
         <div style={styles.title}>海外健康安全</div>
         <div style={styles.flexParent}>
-          {config.highlightAreas.map(area => {
+          {config?.highlightAreas.map(area => {
             const apiData = getApiData(area.apiCode);
             return (
               <Link
-                key={area.link}
+                key={area?.link}
                 style={{ ...styles.link, textAlign: "center" }}
+                to={area?.link}
               >
                 <div style={styles.areaName}>{area?.name}</div>
                 <div style={{ color: "#EB5449", fontSize: "20px" }}>
@@ -163,20 +151,27 @@ export const IndexPageCore = ({ data, errors }) => {
       <div style={styles.instituteBox}>
         <div style={{ ...styles.flexParent, justifyContent: "space-between" }}>
           <div style={styles.title}>留学生数据中心</div>
-          {/* <Link style={styles.more} to="/">
-              更多
-            </Link> */}
         </div>
         <div style={styles.flexParent}>
-          {data.allArea.edges.map(area => {
+          {allArea?.edges.map(area => {
             return (
               <Link
                 key={v4()}
                 style={styles.link}
                 to={`./area/${area?.node?.countryCode}`}
               >
-                <div style={styles.institutePic}></div>
-                <div style={styles.instituteName}>{area?.node?.title}</div>
+                <div style={styles.institutePic}>
+                  <img
+                    src={area?.node?.icon}
+                    alt=""
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      borderRadius: "50%"
+                    }}
+                  />
+                </div>
+                <div style={styles.instituteName}>{area?.node?.titleCn}</div>
               </Link>
             );
           })}
@@ -191,18 +186,6 @@ export const IndexPageCore = ({ data, errors }) => {
             资料区
           </div>
           <InfoList infoEdges={infoEdges} />
-
-          <div style={{ textAlign: "center" }}>
-            <span
-              style={{
-                ...styles.more,
-                display: `${more ? "none" : "inline-block"}`
-              }}
-              onClick={clickMore}
-            >
-              展开全部
-            </span>
-          </div>
         </div>
         <div>
           <div
@@ -213,7 +196,7 @@ export const IndexPageCore = ({ data, errors }) => {
           >
             全球资讯
           </div>
-          <NewList newEdges={data.updates.edges} />
+          <NewList newEdges={updates?.edges} />
         </div>
       </div>
     </div>
@@ -239,7 +222,8 @@ export const pageQuery = graphql`
       edges {
         node {
           countryCode
-          title
+          icon
+          titleCn
         }
       }
     }

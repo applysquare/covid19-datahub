@@ -1,0 +1,18 @@
+slug: ca-utoronto
+nameEn: University of Toronto
+nameCn: 多伦多大学
+countryCode: ca
+website: http://www.utoronto.ca/
+stateCn: 安大略省
+stateEn: Ontario
+publicOrPrivate: public
+coursePolicyLink: https://www.utoronto.ca/message-from-the-university-regarding-the-coronavirus?utm_source=UofTHome&utm_medium=WebsiteBanner&utm_content=MessageRegardingTheCoronavirusForTheUoFTCommunity
+cover: https://cdn.applysquare.net/a2/institute/ca.utoronto/cover_app.jpg
+logo: https://cdn.applysquare.net/a2/institute/ca.utoronto/logo.png
+numStateCases: 5759
+numStateDailyNewCases: 483
+numStateDeaths: 200
+numStateCures: 0
+courseOperationStatus: onlineCourse
+onlineCourseStartDate: 2020-04-03
+onCampusCourseResumeDate: 

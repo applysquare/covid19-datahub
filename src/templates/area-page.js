@@ -1,10 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { graphql, Link } from "gatsby";
 import { LeftOutlined } from "@ant-design/icons";
 import { makePage } from "../components/Layout";
 import Help from "../components/Help";
 import InfoList from "../components/InfoList";
 import NewList from "../components/NewList";
+import {
+  translateCourseOperationStatus,
+  sliceArr
+} from "../components/display";
 
 const help = {
   title: "问题解答征集",
@@ -30,9 +34,6 @@ const styles = {
     textDecoration: "none",
     display: "inline-block",
     marginBottom: "30px"
-  },
-  statusBox: {
-    // padding: "20px 15px"
   },
   flexParent: {
     display: "flex",
@@ -60,15 +61,15 @@ const styles = {
     width: "50px",
     height: "50px",
     borderRadius: "50%",
-    background: "#D8D8D8",
+    // background: "#D8D8D8",
     margin: "0 auto"
   },
   instituteName: { color: "#333333", marginTop: "8px", textAlign: "center" },
   instituteNameMore: {
-    maxWidth: "100px",
     textOverflow: "ellipsis",
     whiteSpace: "nowrap",
-    overflow: "hidden"
+    overflow: "hidden",
+    fontSize: "14px"
   },
   infoBox: {
     boxShadow: "0px 2px 4px 0px rgba(0,0,0,0.1)",
@@ -83,44 +84,17 @@ const styles = {
     fontSize: "14px",
     padding: "5px",
     display: "inline-block",
-    textDecoration: "underline"
+    textDecoration: "underline",
+    cursor: "pointer"
   }
 };
+
 export const AreaPageCore = ({ data }) => {
-  const { area, updates, articles } = data;
+  const { area, updates, articles, allInstitute } = data;
+  const infoEdges = articles?.edges || [];
+  const institutes = sliceArr(allInstitute?.edges, 8);
+  // const institutes = allInstitute?.edges;
 
-  const [infoEdges, setInfoEdges] = useState([]);
-  const [more, setMore] = useState(null);
-
-  const [allInstitute, setAllInstitute] = useState([]);
-  const [allInstituteMore, setAllInstituteMore] = useState([]);
-
-  useEffect(() => {
-    const infoEdges =
-      articles.edges && articles.edges.length > 3
-        ? articles.edges.slice(0, 3)
-        : articles.edges || [];
-
-    const allInstitute =
-      data.allInstitute.edges && data.allInstitute.edges.length > 6
-        ? data.allInstitute.edges.slice(0, 6)
-        : data.allInstitute.edges || [];
-    setInfoEdges(infoEdges);
-    setMore(false);
-
-    setAllInstitute(allInstitute);
-    setAllInstituteMore(false);
-  }, [data]);
-
-  const clickMore = () => {
-    setInfoEdges(articles.edges);
-    setMore(true);
-  };
-
-  const clickAllInstituteMore = () => {
-    setAllInstitute(data.allInstitute.edges);
-    setAllInstituteMore(true);
-  };
   return (
     <div style={{ background: "rgba(241,241,241,0.8)" }}>
       <div style={styles.countryBox}>
@@ -130,12 +104,16 @@ export const AreaPageCore = ({ data }) => {
             <span style={{ paddingLeft: "5px" }}>全球动态</span>
           </Link>
         </div>
-        <div style={styles.statusBox}>
+        <div>
           <div>
             <span style={{ ...styles.title, fontSize: "24px" }}>
-              {area.title}
+              {area?.titleCn}
             </span>
-            <span></span>
+            <span
+              style={{ color: "#666666", fontsize: "14px", padding: "8px" }}
+            >
+              {area?.titleEn}
+            </span>
           </div>
 
           <div style={styles.flexParent}>
@@ -163,36 +141,61 @@ export const AreaPageCore = ({ data }) => {
 
       <div style={styles.instituteBox}>
         <div style={{ ...styles.flexParent, justifyContent: "space-between" }}>
-          <div style={styles.title}>{area.title}院校实况</div>
-          <span
+          <div style={styles.title}>{area?.titleCn}院校实况</div>
+          <Link
             style={{
-              ...styles.more,
-              display: `${allInstituteMore ? "none" : "inline-block"}`
+              ...styles.more
             }}
-            onClick={clickAllInstituteMore}
+            to="/institute"
           >
             更多
-          </span>
+          </Link>
         </div>
-        <div style={styles.flexParent}>
-          {(allInstitute || []).map(edge => {
+        <div style={{ ...styles.flexParent, justifyContent: "flex-start" }}>
+          {(institutes || []).map(edge => {
             return (
               <Link
-                style={styles.link}
-                key={edge.node.id}
-                to={edge.node.fields.pathname}
+                style={{
+                  ...styles.link,
+                  overflow: "hidden",
+                  textOverflow: "ellipsis",
+                  whiteSpace: "nowrap",
+                  marginBottom: "12px",
+                  width: "25%"
+                }}
+                key={edge?.node?.id}
+                to={edge?.node?.fields?.pathname}
               >
-                <div style={styles.institutePic}></div>
+                <div style={styles.institutePic}>
+                  <img
+                    src={edge?.node?.logo}
+                    alt=""
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      borderRadius: "50%"
+                    }}
+                  />
+                </div>
                 <div
                   style={{
                     ...styles.instituteName,
                     ...styles.instituteNameMore
                   }}
                 >
-                  {edge.node.nameCn}
+                  {edge?.node?.nameCn}
                 </div>
-                <div style={styles.instituteName}>
-                  {edge.node.courseOperationstatus}
+                <div
+                  style={{
+                    ...styles.instituteName,
+                    color: "#333333",
+                    fontSize: "12px"
+                  }}
+                >
+                  {translateCourseOperationStatus(
+                    "cn",
+                    edge?.node?.courseOperationStatus
+                  )}
                 </div>
               </Link>
             );
@@ -210,17 +213,6 @@ export const AreaPageCore = ({ data }) => {
             资料区
           </div>
           <InfoList infoEdges={infoEdges} />
-          <div style={{ textAlign: "center" }}>
-            <span
-              style={{
-                ...styles.more,
-                display: `${more ? "none" : "inline-block"}`
-              }}
-              onClick={clickMore}
-            >
-              展开全部
-            </span>
-          </div>
         </div>
         <div>
           <div
@@ -231,7 +223,7 @@ export const AreaPageCore = ({ data }) => {
           >
             全球资讯
           </div>
-          <NewList newEdges={updates.edges} />
+          <NewList newEdges={updates?.edges} />
         </div>
       </div>
       <p />
@@ -249,14 +241,18 @@ export const pageQuery = graphql`
     area(id: { eq: $id }) {
       id
       countryCode
-      title
+      titleCn
+      titleEn
     }
     allInstitute(filter: { countryCode: { eq: $countryCode } }) {
       edges {
         node {
+          courseOperationStatus
           id
+          logo
           nameCn
           website
+          stateCn
           fields {
             pathname
           }
@@ -289,6 +285,7 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
+          html
           id
           fields {
             pathname
