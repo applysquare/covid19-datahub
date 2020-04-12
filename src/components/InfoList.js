@@ -1,6 +1,7 @@
 // import { Link } from "gatsby";
 import React, { useState, useEffect } from "react";
 import { RightOutlined } from "@ant-design/icons";
+import { Link } from 'gatsby';
 import { sliceArr } from "../components/display";
 
 const styles = {
@@ -14,7 +15,8 @@ const styles = {
   },
   link: {
     display: "block",
-    width: "100%"
+    width: "100%",
+    textDecoration: 'none',
   },
   txt: {
     whiteSpace: "nowrap",
@@ -44,38 +46,29 @@ const InfoList = ({ infoEdges = [] }) => {
     setInfoArr(infoEdges);
     setMore(true);
   };
-  const clickToDetail = (html, pathname) => {
-    // if (html) {
-    window.location.href = pathname;
-    // }
-  };
   return (
     <div>
       <div>
         {infoArr &&
           infoArr.map(edge => {
             const art = edge?.node?.frontmatter;
-            const html = edge?.node?.html;
-            const pathname = edge?.node?.fields?.pathname;
             return (
-              <button
+              <Link
                 style={styles.link}
                 key={edge?.node?.id}
-                // to={edge?.node?.fields?.pathname}
-                onClick={() => {
-                  clickToDetail(html, pathname);
-                }}
+                to={edge?.node?.fields?.pathname}
               >
                 <div style={styles.item}>
                   <div style={styles.txt}>{art?.title}</div>
                   <RightOutlined />
                 </div>
-              </button>
+              </Link>
             );
           })}
       </div>
       <div style={{ textAlign: "center" }}>
-        <button
+        <a
+          href="###"
           style={{
             ...styles.more,
             display: `${more ? "none" : "inline-block"}`
@@ -83,7 +76,7 @@ const InfoList = ({ infoEdges = [] }) => {
           onClick={clickMore}
         >
           展开全部
-        </button>
+        </a>
       </div>
     </div>
   );
