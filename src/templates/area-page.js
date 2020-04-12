@@ -221,7 +221,7 @@ export const AreaPageCore = ({ data }) => {
               margin: "30px 0 22px 0"
             }}
           >
-            全球资讯
+            本国资讯
           </div>
           <NewList newEdges={updates?.edges} />
         </div>
