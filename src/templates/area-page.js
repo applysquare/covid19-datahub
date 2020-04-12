@@ -1,11 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { graphql, Link } from "gatsby";
 import { LeftOutlined } from "@ant-design/icons";
 import { makePage } from "../components/Layout";
 import Help from "../components/Help";
 import InfoList from "../components/InfoList";
 import NewList from "../components/NewList";
-import { translateCourseOperationStatus } from "../components/display";
+import {
+  translateCourseOperationStatus,
+  sliceArr
+} from "../components/display";
 
 const help = {
   title: "问题解答征集",
@@ -58,12 +61,11 @@ const styles = {
     width: "50px",
     height: "50px",
     borderRadius: "50%",
-    background: "#D8D8D8",
+    // background: "#D8D8D8",
     margin: "0 auto"
   },
   instituteName: { color: "#333333", marginTop: "8px", textAlign: "center" },
   instituteNameMore: {
-    maxWidth: "128px",
     textOverflow: "ellipsis",
     whiteSpace: "nowrap",
     overflow: "hidden",
@@ -87,38 +89,12 @@ const styles = {
   }
 };
 
-const sliceArr = (arr = [], num = 0) => {
-  return arr.length > num ? arr.slice(0, num) : arr;
-};
-
 export const AreaPageCore = ({ data }) => {
   const { area, updates, articles, allInstitute } = data;
+  const infoEdges = articles?.edges || [];
+  const institutes = sliceArr(allInstitute?.edges, 8);
+  // const institutes = allInstitute?.edges;
 
-  const [infoEdges, setInfoEdges] = useState([]);
-  const [more, setMore] = useState(null);
-
-  const [institutes, setInstitutes] = useState([]);
-  const [institutesMore, setInstitutesMore] = useState(null);
-
-  useEffect(() => {
-    const infoEdges = sliceArr(articles?.edges, 3);
-    const institutes = sliceArr(allInstitute?.edges, 6);
-    setInfoEdges(infoEdges);
-    setMore(false);
-
-    setInstitutes(institutes);
-    setInstitutesMore(false);
-  }, [articles, allInstitute]);
-
-  const clickMore = () => {
-    setInfoEdges(articles?.edges);
-    setMore(true);
-  };
-
-  const clickInstitutesMore = () => {
-    setInstitutes(allInstitute?.edges);
-    setInstitutesMore(true);
-  };
   return (
     <div style={{ background: "rgba(241,241,241,0.8)" }}>
       <div style={styles.countryBox}>
@@ -136,7 +112,7 @@ export const AreaPageCore = ({ data }) => {
             <span
               style={{ color: "#666666", fontsize: "14px", padding: "8px" }}
             >
-              United States
+              {area?.titleEn}
             </span>
           </div>
 
@@ -166,19 +142,16 @@ export const AreaPageCore = ({ data }) => {
       <div style={styles.instituteBox}>
         <div style={{ ...styles.flexParent, justifyContent: "space-between" }}>
           <div style={styles.title}>{area?.titleCn}院校实况</div>
-          <span
+          <Link
             style={{
-              ...styles.more,
-              display: `${institutesMore ? "none" : "inline-block"}`
+              ...styles.more
             }}
-            role="button"
-            onClick={clickInstitutesMore}
-            onKeyPress={clickInstitutesMore}
+            to="/institute"
           >
             更多
-          </span>
+          </Link>
         </div>
-        <div style={styles.flexParent}>
+        <div style={{ ...styles.flexParent, justifyContent: "flex-start" }}>
           {(institutes || []).map(edge => {
             return (
               <Link
@@ -186,12 +159,24 @@ export const AreaPageCore = ({ data }) => {
                   ...styles.link,
                   overflow: "hidden",
                   textOverflow: "ellipsis",
-                  whiteSpace: "nowrap"
+                  whiteSpace: "nowrap",
+                  marginBottom: "12px",
+                  width: "25%"
                 }}
                 key={edge?.node?.id}
                 to={edge?.node?.fields?.pathname}
               >
-                <div style={styles.institutePic}></div>
+                <div style={styles.institutePic}>
+                  <img
+                    src={edge?.node?.logo}
+                    alt=""
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      borderRadius: "50%"
+                    }}
+                  />
+                </div>
                 <div
                   style={{
                     ...styles.instituteName,
@@ -207,7 +192,10 @@ export const AreaPageCore = ({ data }) => {
                     fontSize: "12px"
                   }}
                 >
-                  {translateCourseOperationStatus('cn', edge?.node?.courseOperationStatus)}
+                  {translateCourseOperationStatus(
+                    "cn",
+                    edge?.node?.courseOperationStatus
+                  )}
                 </div>
               </Link>
             );
@@ -225,19 +213,6 @@ export const AreaPageCore = ({ data }) => {
             资料区
           </div>
           <InfoList infoEdges={infoEdges} />
-          <div style={{ textAlign: "center" }}>
-            <span
-              style={{
-                ...styles.more,
-                display: `${more ? "none" : "inline-block"}`
-              }}
-              role="button"
-              onClick={clickMore}
-              onKeyPress={clickMore}
-            >
-              展开全部
-            </span>
-          </div>
         </div>
         <div>
           <div
@@ -267,12 +242,14 @@ export const pageQuery = graphql`
       id
       countryCode
       titleCn
+      titleEn
     }
     allInstitute(filter: { countryCode: { eq: $countryCode } }) {
       edges {
         node {
           courseOperationStatus
           id
+          logo
           nameCn
           website
           stateCn
@@ -308,6 +285,7 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
+          html
           id
           fields {
             pathname

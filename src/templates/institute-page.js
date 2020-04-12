@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { graphql } from "gatsby";
 import { LeftOutlined } from "@ant-design/icons";
 import { makePage } from "../components/Layout";
@@ -7,7 +7,12 @@ import NewList from "../components/NewList";
 import InfoList from "../components/InfoList";
 import Help from "../components/Help";
 import indexTitleImg from "../img/bg.jpg";
-import { translateCourseOperationStatus, formatDate } from '../components/display';
+import {
+  translateCourseOperationStatus,
+  formatDate,
+  domainURI,
+  goBack
+} from "../components/display";
 
 const help = {
   title: "校友问题征集",
@@ -118,15 +123,6 @@ const styles = {
   }
 };
 
-const sliceArr = (arr = [], num = 0) => {
-  return arr.length > num ? arr.slice(0, num) : arr;
-};
-const domainURI = (str = "") => {
-  const durl = /.*:\/\/([^/]*).*/;
-  const domain = str.match(durl);
-  return domain && domain[1] ? domain[1] : str;
-};
-
 const InstitutePageCore = ({ data, errors }) => {
   if (errors) {
     console.error(errors);
@@ -139,31 +135,16 @@ const InstitutePageCore = ({ data, errors }) => {
     nameEn,
     stateCn,
     numStateCases,
+    numStateCures,
     numStateDailyNewCases,
     numStateDeaths,
+    onCampusCourseResumeDate,
     courseOperationStatus,
     onlineCourseStartDate,
-    onCampusCourseResumeDate,
     coursePolicyLink
   } = institute;
 
-  const [infoEdges, setInfoEdges] = useState([]);
-  const [more, setMore] = useState(null);
-  useEffect(() => {
-    const infoEdges = sliceArr(articles?.edges, 3);
-    setInfoEdges(infoEdges);
-    setMore(false);
-  }, [articles]);
-
-  const clickMore = () => {
-    setInfoEdges(articles?.edges);
-    setMore(true);
-  };
-
-  const goBack = () => {
-    window.history.back();
-    return false;
-  };
+  const infoEdges = articles?.edges || [];
 
   return (
     <div style={{ background: "rgba(241,241,241,0.8)" }}>
@@ -176,15 +157,10 @@ const InstitutePageCore = ({ data, errors }) => {
         <div style={styles.mask}></div>
         <div style={styles.maskContent}>
           <div style={styles.logoTitle}>
-            <span
-              style={styles.link}
-              onClick={goBack}
-              onKeyPress={goBack}
-              role="button"
-            >
+            <button style={styles.link} onClick={goBack}>
               <LeftOutlined />
               <span style={{ padding: "0 4px" }}>院校列表</span>
-            </span>
+            </button>
           </div>
           <div
             style={{
@@ -216,7 +192,7 @@ const InstitutePageCore = ({ data, errors }) => {
             alignItems: "center"
           }}
         >
-          <div style={{ ...styles.title, margin: 0 }}>所在州疫情</div>
+          <div style={{ ...styles.title, margin: 0 }}>所在地区疫情</div>
           <div style={styles.areaName}>
             {stateCn}，{area?.titleCn}
           </div>
@@ -242,7 +218,9 @@ const InstitutePageCore = ({ data, errors }) => {
           </div>
           <div style={styles.flexChild}>
             <div style={styles.illnessTxt}>治愈人数</div>
-            <div style={{ ...styles.illnessNum, color: "#1EC5A0" }}>2153</div>
+            <div style={{ ...styles.illnessNum, color: "#1EC5A0" }}>
+              {numStateCures}
+            </div>
           </div>
         </div>
       </div>
@@ -252,15 +230,26 @@ const InstitutePageCore = ({ data, errors }) => {
         <div style={styles.flexParent}>
           <div style={styles.flexChild}>
             <div>院校运转</div>
-            <div>{(courseOperationStatus && translateCourseOperationStatus('cn', courseOperationStatus)) ?? "-"}</div>
+            <div>
+              {(courseOperationStatus &&
+                translateCourseOperationStatus("cn", courseOperationStatus)) ??
+                "-"}
+            </div>
           </div>
           <div style={styles.flexChild}>
             <div>停课时间</div>
-            <div>{(onlineCourseStartDate && (formatDate(onlineCourseStartDate))) ?? "-"}</div>
+            <div>
+              {(onlineCourseStartDate && formatDate(onlineCourseStartDate)) ??
+                "-"}
+            </div>
           </div>
           <div style={styles.flexChild}>
             <div>复课时间</div>
-            <div style={styles.title}>{(onCampusCourseResumeDate && formatDate(onCampusCourseResumeDate)) ?? "-"}</div>
+            <div style={styles.title}>
+              {(onCampusCourseResumeDate &&
+                formatDate(onCampusCourseResumeDate)) ??
+                "-"}
+            </div>
           </div>
         </div>
         <div>
@@ -280,19 +269,6 @@ const InstitutePageCore = ({ data, errors }) => {
             本校资料区
           </div>
           <InfoList infoEdges={infoEdges} />
-          <div style={{ textAlign: "center" }}>
-            <span
-              style={{
-                ...styles.more,
-                display: `${more ? "none" : "inline-block"}`
-              }}
-              role="button"
-              onClick={clickMore}
-              onKeyPress={clickMore}
-            >
-              展开全部
-            </span>
-          </div>
         </div>
         <div>
           <div
@@ -330,11 +306,12 @@ export const pageQuery = graphql`
       coursePolicyLink
       cover
       numStateCases
+      numStateCures
       numStateDailyNewCases
       numStateDeaths
+      onCampusCourseResumeDate
       courseOperationStatus
       onlineCourseStartDate
-      onCampusCourseResumeDate
       fields {
         pathname
       }
