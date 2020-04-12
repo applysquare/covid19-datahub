@@ -1,4 +1,4 @@
-name: publish
+name: publish-gh-pages
 
 on:
   push:
@@ -6,11 +6,11 @@ on:
       - master
 
 jobs:
-  build:
+  build-and-publish:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: drumlab/gatsby-gh-pages-action@v3.1
+      - uses: drumlab/gatsby-gh-pages-action@v3.2
         env:
           GATSBY_PATH_PREFIX: /covid19-datahub
         with:
