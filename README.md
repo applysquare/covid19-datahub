@@ -1,6 +1,6 @@
 # 共同建设全球疫情教育数据
 
-![covid19-datahub](src/img/datahub-title-and-favicon.png | width=300)
+[![covid19-datahub](src/img/datahub-title-and-favicon.png)](https://github.com/applysquare/covid19-datahub)
 
 本代码仓库的资讯与资料数据用于建设[全球留学生疫情互助与实时数据中心](http://blog.applysquare.com/covid19-datahub/)。
 
