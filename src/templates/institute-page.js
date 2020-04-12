@@ -17,7 +17,7 @@ import {
 const help = {
   title: "校友问题征集",
   linkTxt: "在海外遇到了什么问题？告诉我们，尽力为你寻求答案",
-  linkTo: "https://github.com/applysquare/covid19-datahub"
+  linkTo: "https://github.com/applysquare/covid19-datahub/issues/new/choose"
 };
 
 const styles = {
