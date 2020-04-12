@@ -127,22 +127,25 @@ const InstitutePageCore = ({ data, errors }) => {
   if (errors) {
     console.error(errors);
   }
-  const { area, institute = {}, articles, updates } = data || {};
+  const { area, institute = {}, articles, updates, covid19Area = {} } = data || {};
   const {
     cover,
     logo,
     nameCn,
     nameEn,
     stateCn,
-    numStateCases,
-    numStateCures,
-    numStateDailyNewCases,
-    numStateDeaths,
     onCampusCourseResumeDate,
     courseOperationStatus,
     onlineCourseStartDate,
     coursePolicyLink
   } = institute;
+
+  const {
+    totalConfirmed,
+    totalConfirmedDelta,
+    totalDeaths,
+    totalRecovered,
+  } = covid19Area?.data || {};
 
   const infoEdges = articles?.edges || [];
 
@@ -201,25 +204,25 @@ const InstitutePageCore = ({ data, errors }) => {
           <div style={styles.flexChild}>
             <div style={styles.illnessTxt}>确诊病例</div>
             <div style={{ ...styles.illnessNum, color: "#EB5449" }}>
-              {numStateCases}
+              {totalConfirmed}
             </div>
           </div>
           <div style={styles.flexChild}>
             <div style={styles.illnessTxt}>昨日新增</div>
             <div style={{ ...styles.illnessNum, color: "#FDBB0F" }}>
-              {numStateDailyNewCases}
+              {totalConfirmedDelta}
             </div>
           </div>
           <div style={styles.flexChild}>
             <div style={styles.illnessTxt}>死亡人数</div>
             <div style={{ ...styles.illnessNum, color: "#333333" }}>
-              {numStateDeaths}
+              {totalDeaths}
             </div>
           </div>
           <div style={styles.flexChild}>
             <div style={styles.illnessTxt}>治愈人数</div>
             <div style={{ ...styles.illnessNum, color: "#1EC5A0" }}>
-              {numStateCures}
+              {totalRecovered}
             </div>
           </div>
         </div>
@@ -290,11 +293,22 @@ const Page = makePage(InstitutePageCore);
 export default Page;
 
 export const pageQuery = graphql`
-  query InstitutePage($id: String!, $slug: String!, $countryCode: String!) {
+  query InstitutePage($id: String!, $slug: String!, $countryCode: String!, $hasApiCode: Boolean!, $apiCode: String) {
     area(countryCode: { eq: $countryCode }) {
       id
       countryCode
       titleCn
+    }
+    covid19Area(data: {id: {eq: $apiCode}}) @include(if:$hasApiCode){
+      data {
+        displayName
+        id
+        totalConfirmed
+        totalConfirmedDelta
+        totalDeaths
+        totalDeathsDelta
+        totalRecovered
+      }
     }
     institute(id: { eq: $id }) {
       id
@@ -305,10 +319,6 @@ export const pageQuery = graphql`
       stateCn
       coursePolicyLink
       cover
-      numStateCases
-      numStateCures
-      numStateDailyNewCases
-      numStateDeaths
       onCampusCourseResumeDate
       courseOperationStatus
       onlineCourseStartDate

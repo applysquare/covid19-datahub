@@ -91,10 +91,10 @@ const styles = {
 
 export const IndexPageCore = ({ data, errors }) => {
   const config = data.pageIndexYml;
-  const { articles, allCovid19Country, allArea, updates } = data;
+  const { articles, allCovid19Area, allArea, updates } = data;
   const getApiData = apiCode => {
-    return allCovid19Country?.edges.find(edge => {
-      return edge?.node?.data?.CountryCode === apiCode;
+    return allCovid19Area?.edges.find(edge => {
+      return edge?.node?.data?.id === apiCode;
     })?.node?.data;
   };
 
@@ -135,12 +135,12 @@ export const IndexPageCore = ({ data, errors }) => {
               >
                 <div style={styles.areaName}>{area?.name}</div>
                 <div style={{ color: "#EB5449", fontSize: "20px" }}>
-                  {apiData?.TotalConfirmed}
+                  {apiData?.totalConfirmed}
                 </div>
                 <div style={{ fontSize: "10px" }}>
                   <span style={{ color: "#999999" }}>较昨日:</span>
                   <span style={{ color: "#EB5449" }}>
-                    +{apiData?.NewConfirmed}
+                    +{apiData?.totalConfirmedDelta}
                   </span>
                 </div>
               </Link>
@@ -227,15 +227,14 @@ export const pageQuery = graphql`
         }
       }
     }
-    allCovid19Country(filter: { data: { CountryCode: { in: $apiCodes } } }) {
+    allCovid19Area(filter: { data: { id: { in: $apiCodes } } }) {
       edges {
         node {
           data {
-            Country
-            CountryCode
-            Slug
-            NewConfirmed
-            TotalConfirmed
+            id
+            displayName
+            totalConfirmedDelta
+            totalConfirmed
           }
         }
       }
