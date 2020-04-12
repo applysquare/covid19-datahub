@@ -20,7 +20,7 @@
 
 在此，感谢你为护航全球留学生的安全与成长贡献力量。
 
-## 为什么要做这件事？
+## 什么做这件事？
 
 全球对教育发展有追求、有责任感的用户，共同记录在重大的事件冲击之下全球教育应对方式。让未来有参考，还原教育事件、政策及应对工作。
 
@@ -74,7 +74,7 @@
 
 - 与我们合作共建，你的名字会显示在这里。
 
-如果您有合作意向，请点击[机构合作](https://github.com/applysquare/covid19-datahub/issues/new?assignees=&template=institional-cooperation-cn.md&title=%5B%E6%9C%BA%E6%9E%84%E5%90%88%E4%BD%9C%E6%84%8F%E5%90%91%5D)留下联系方式。
+如有合作意向，请点击[机构合作](https://github.com/applysquare/covid19-datahub/issues/new?assignees=&template=institional-cooperation-cn.md&title=%5B%E6%9C%BA%E6%9E%84%E5%90%88%E4%BD%9C%E6%84%8F%E5%90%91%5D)留下联系方式。
 
 ### 疫情数据来源
 
