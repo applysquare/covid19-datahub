@@ -1,7 +1,7 @@
 ---
 name: Help needed
 about: Ask for help on international education and oversea life
-title: '[Help needed] '
+title: '[Help Needed] '
 labels: ''
 assignees: ''
 
