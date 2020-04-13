@@ -50,7 +50,7 @@ exports.createPages = async ({ actions, graphql }) => {
   });
 };
 
-exports.onCreateNode = ({ node, actions, getNode }) => {
+exports.onCreateNode = ({ node, actions, getNode, reporter }) => {
   const { createNodeField, createPage } = actions;
   fmImagesToRelative(node); // convert image paths for gatsby images
   if (node.internal.owner === `gatsby-transformer-yaml`) {
@@ -93,6 +93,17 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     });
     const templateKey = node.frontmatter.templateKey ||
       `${_.kebabCase(pathname.split('/')[1])}-page`;
+    if (templateKey === 'article-page' || templateKey === 'update-page') {
+      const fn = path.relative(__dirname, node.fileAbsolutePath);
+      if (!node.frontmatter.date) {
+        // throw new Error(`Data error: the 'date' field is not set for file: ${fn}`);
+        reporter.panicOnBuild(`Data error: the 'date' field is not set for file: ${fn}`);
+      }
+      if (isNaN(Date.parse(node.frontmatter.date))) {
+        //throw new Error(`Data error: invalid 'date' value (${node.frontmatter.date}) in file: ${fn}`);
+        reporter.panicOnBuild(`Data error: invalid 'date' value (${node.frontmatter.date}), it must be YYYY-MM-DD in file: ${fn}`);
+      }
+    }
     createNodeField({
       name: `templateKey`,
       node: node,

@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
+// import { SearchOutlined } from "@ant-design/icons";
+import { Input } from "antd";
 import { graphql } from "gatsby";
+import * as JsSearch from "js-search";
 import { v4 } from "uuid";
 import { makePage } from "../../components/Layout";
-// import { RightOutlined } from "@ant-design/icons";
 import { Link } from "gatsby";
 import { translateCourseOperationStatus } from "../../components/display";
-
+const { Search } = Input;
 const styles = {
   flexParent: {
     display: "flex",
@@ -54,8 +56,24 @@ const styles = {
     padding: "6px 16px",
     fontSize: "14px",
     color: "#999999",
-    margin: "16px 0"
+    margin: "16px 0",
+    textDecoration: "none"
   }
+  // inputBox: {
+  //   display: "flex",
+  //   // display: "-webkit-flex",
+  //   // display: "-ms-flex",
+  //   justifyContent: "space-between",
+  //   alignItems: "center",
+  //   padding: "4px 11px",
+  //   color: "rgba(0,0,0,.65)",
+  //   fontSize: "14px",
+  //   backgroundColor: "#fff",
+  //   backgroundImage: "none",
+  //   border: "1px solid #d9d9d9",
+  //   borderRadius: "2px",
+  //   transition: "all .3s"
+  // }
 };
 
 const filterArr = (arr = [], countryCode = "us") => {
@@ -75,10 +93,23 @@ const PageCore = ({ data }) => {
     setCountryCode("us");
   }, [allInstitute]);
 
-  const filter = (countryCode = "") => {
+  const filter = (countryCode = "", e) => {
+    e.preventDefault();
     const institute = filterArr(allInstitute.edges, countryCode);
     setInstitute(institute);
     setCountryCode(countryCode);
+  };
+
+  // const doSearch = () => {
+  const search = new JsSearch.Search("id");
+  search.addIndex(["node", "nameCn"]);
+  search.addIndex(["node", "nameEn"]);
+  search.addDocuments(institute);
+  // };
+
+  const onSearch = value => {
+    const searchResult = search.search(value);
+    setInstitute(searchResult);
   };
 
   return (
@@ -96,11 +127,21 @@ const PageCore = ({ data }) => {
       </div>
       <div style={{ padding: "15px" }}>
         <div style={styles.title}>选择院校，了解院校安全发展动态</div>
+        {/* <div style={styles.inputBox}>
+          <input placeholder="input search text" />
+          <SearchOutlined />
+        </div> */}
+        <Search
+          placeholder="input search text"
+          onSearch={value => onSearch(value)}
+          style={{ width: 200 }}
+        />
         <div style={styles.flexParent}>
           {(allArea.edges || []).map((item, index) => {
             return (
-              <button
+              <a
                 key={v4()}
+                href="###"
                 style={{
                   ...styles.countryCn,
                   marginLeft: `${index === 0 ? "0px" : "8px"}`,
@@ -115,10 +156,10 @@ const PageCore = ({ data }) => {
                       : "rgb(153, 153, 153)"
                   }`
                 }}
-                onClick={() => filter(item?.node?.countryCode)}
+                onClick={e => filter(item?.node?.countryCode, e)}
               >
                 {item?.node?.titleCn}
-              </button>
+              </a>
             );
           })}
         </div>
@@ -134,6 +175,7 @@ const PageCore = ({ data }) => {
           <div>状态</div>
         </div>
         {institute.map(edge => {
+          console.log("哈哈", edge);
           const { node } = edge;
           return (
             <Link

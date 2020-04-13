@@ -1,6 +1,7 @@
 // import { Link } from "gatsby";
 import React, { useState, useEffect } from "react";
 import { RightOutlined } from "@ant-design/icons";
+import { Link } from "gatsby";
 import { sliceArr } from "../components/display";
 
 const styles = {
@@ -14,7 +15,8 @@ const styles = {
   },
   link: {
     display: "block",
-    width: "100%"
+    width: "100%",
+    textDecoration: "none"
   },
   txt: {
     whiteSpace: "nowrap",
@@ -26,28 +28,24 @@ const styles = {
     color: "#999999",
     fontSize: "14px",
     padding: "5px",
-    display: "inline-block",
-    textDecoration: "underline"
+    display: "inline-block"
   }
 };
 
 const InfoList = ({ infoEdges = [] }) => {
   const [infoArr, setInfoArr] = useState([]);
   const [more, setMore] = useState(null);
+
   useEffect(() => {
-    const infoArr = sliceArr(infoEdges, 3);
-    setInfoArr(infoArr);
+    setInfoArr(sliceArr(infoEdges, 3));
     setMore(false);
   }, [infoEdges]);
 
-  const clickMore = () => {
-    setInfoArr(infoEdges);
-    setMore(true);
-  };
-  const clickToDetail = (html, pathname) => {
-    // if (html) {
-    window.location.href = pathname;
-    // }
+  const clickBtn = e => {
+    e.preventDefault();
+    const arr = more ? sliceArr(infoEdges, 3) : infoEdges;
+    setInfoArr(arr);
+    setMore(!more);
   };
   return (
     <div>
@@ -55,35 +53,30 @@ const InfoList = ({ infoEdges = [] }) => {
         {infoArr &&
           infoArr.map(edge => {
             const art = edge?.node?.frontmatter;
-            const html = edge?.node?.html;
-            const pathname = edge?.node?.fields?.pathname;
             return (
-              <button
+              <Link
                 style={styles.link}
                 key={edge?.node?.id}
-                // to={edge?.node?.fields?.pathname}
-                onClick={() => {
-                  clickToDetail(html, pathname);
-                }}
+                to={edge?.node?.fields?.pathname}
               >
                 <div style={styles.item}>
                   <div style={styles.txt}>{art?.title}</div>
                   <RightOutlined />
                 </div>
-              </button>
+              </Link>
             );
           })}
       </div>
       <div style={{ textAlign: "center" }}>
-        <button
-          style={{
-            ...styles.more,
-            display: `${more ? "none" : "inline-block"}`
+        <a
+          href="###"
+          style={styles.more}
+          onClick={e => {
+            clickBtn(e);
           }}
-          onClick={clickMore}
         >
-          展开全部
-        </button>
+          {more ? "收起" : "展开全部"}
+        </a>
       </div>
     </div>
   );

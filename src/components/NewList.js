@@ -8,8 +8,7 @@ const styles = {
     fontWeight: "500",
     fontSize: "18px",
     color: "#333333",
-    marginBottom: "5px",
-    fontFamily: "helvitica"
+    marginBottom: "5px"
   },
   time: {
     fontSize: "12px",

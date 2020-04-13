@@ -24,6 +24,7 @@ export const domainURI = (str = "") => {
   return domain && domain[1] ? domain[1] : str;
 };
 
-export const goBack = () => {
+export const goBack = e => {
+  e.preventDefault();
   window.history.back();
 };

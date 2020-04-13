@@ -4,8 +4,10 @@
 
 ## “全球留学生疫情互助与资源中心”是什么？
 
+[![covid19-datahub](../../../src/img/datahub-title-and-favicon.png)](https://github.com/applysquare/covid19-datahub)
+
 本站资讯与资料数据来自于申请方开放在Github平台的代码仓库共建。
-点击前往[applysquare/covid19-datahub](https://github.com/applysquare/covid19-datahub）
+点击前往: [applysquare/covid19-datahub](https://github.com/applysquare/covid19-datahub)
 
 欢迎你参与中心建设：
 - 提供疫情与高等教育相关的实时资讯
@@ -18,15 +20,17 @@
 
 在此，感谢你为护航全球留学生的安全与成长贡献力量。
 
-## 什么做这件事？
+## 为什么要做这件事？
+
 全球对教育发展有追求、有责任感的用户，共同记录在重大的事件冲击之下全球教育应对方式。让未来有参考，还原教育事件、政策及应对工作。
 
 
 ## 在这里我能做什么？
 
-在本代码仓库平台上，你有两种方式参与建设：
-- 参考CONTRIBUTING.md文件，直接按数据模版提交资源。
-- 以提交不同主题issue（问题，下同）的方式提交数据与内容，发布求助，完成任务。
+在本代码仓库平台上，你有3种方式参与建设：
+- 如果你可以直接提交数据文件，参考[CONTRIBUTING.md](https://github.com/applysquare/covid19-datahub/blob/master/CONTRIBUTING.md)文件，按数据模版提交资源。
+- 创建issue（中文译名为“问题”，为方便操作保留原名，下同），提交数据与内容，发布求助。
+- 回复已开启的issue, 参与问题征集，支持汉化任务。
 
 以下为具体的参与方式：
 
@@ -51,7 +55,7 @@
 
 ### 我想看看我能为留学生做些什么
 
-你可以在issue页面查看待解答的问题与汉化任务。
+你可以在issue列表页面查看待解答的问题与汉化任务。
 
 欢迎你参与解答，完成汉化任务，为全球留学生疫情下的发展贡献力量。
 

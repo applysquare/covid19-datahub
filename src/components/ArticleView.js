@@ -37,10 +37,10 @@ export const ArticleView = ({ markdownRemark }) => {
   const article = markdownRemark;
   return (
     <div style={styles.box}>
-      <button style={styles.returnBox} onClick={goBack}>
+      <a href="###" style={styles.returnBox} onClick={e => goBack(e)}>
         <LeftOutlined />
         <span style={{ paddingLeft: "5px" }}>返回</span>
-      </button>
+      </a>
       <div style={styles.title}>{article?.frontmatter?.title}</div>
       <div style={styles.flexParent}>
         <div style={styles.date}>{article.frontmatter?.date}</div>
@@ -52,8 +52,8 @@ export const ArticleView = ({ markdownRemark }) => {
           )}
         </div>
       </div>
-      <div style={{ fontFamily: "helvitica" }}>
-        <HTMLContent content={article?.html} />
+      <div>
+        <HTMLContent className="article-content" content={article?.html} />
       </div>
     </div>
   );

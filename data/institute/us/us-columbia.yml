@@ -13,6 +13,7 @@ numStateCases: 161779
 numStateDailyNewCases: 10718
 numStateDeaths: 7067
 numStateCures: 0
+bingApiId: newyork_unitedstates
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-26
 onCampusCourseResumeDate: 

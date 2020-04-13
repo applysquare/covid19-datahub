@@ -1,5 +1,7 @@
 # 共同建设全球疫情教育数据
 
+[![covid19-datahub](src/img/datahub-title-and-favicon.png)](https://github.com/applysquare/covid19-datahub)
+
 本代码仓库的资讯与资料数据用于建设[全球留学生疫情互助与实时数据中心](http://blog.applysquare.com/covid19-datahub/)。
 
 我们旨在汇集全球各地志愿者提供的数据内容，免费为全球教育工作者及海外留学生提供疫情信息、应对参考，研究数据支持。
@@ -27,9 +29,10 @@
 
 ## 在这里我能做什么？
 
-在本代码仓库平台上，你有两种方式参与建设：
-- 参考CONTRIBUTING.md文件，直接按数据模版提交资源。
-- 以提交不同主题issue（问题，下同）的方式提交数据与内容，发布求助，完成任务。
+在本代码仓库平台上，你有3种方式参与建设：
+- 如果你可以直接提交数据文件，参考[CONTRIBUTING.md](https://github.com/applysquare/covid19-datahub/blob/master/CONTRIBUTING.md)文件，按数据模版提交资源。
+- 创建issue（中文译名为“问题”，为方便操作保留原名，下同），提交数据与内容，发布求助。
+- 回复已开启的issue, 参与问题征集，支持汉化任务。
 
 以下为具体的参与方式：
 
@@ -54,7 +57,7 @@
 
 ### 我想看看我能为留学生做些什么
 
-你可以在issue页面查看待解答的问题与汉化任务。
+你可以在issue列表页面查看待解答的问题与汉化任务。
 
 欢迎你参与解答，完成汉化任务，为全球留学生疫情下的发展贡献力量。
 
@@ -74,7 +77,7 @@
 
 - 与我们合作共建，你的名字会显示在这里。
 
-如果您有合作意向，请点击[机构合作](https://github.com/applysquare/covid19-datahub/issues/new?assignees=&template=institional-cooperation-cn.md&title=%5B%E6%9C%BA%E6%9E%84%E5%90%88%E4%BD%9C%E6%84%8F%E5%90%91%5D)留下联系方式。
+如有合作意向，请点击[机构合作](https://github.com/applysquare/covid19-datahub/issues/new?assignees=&template=institional-cooperation-cn.md&title=%5B%E6%9C%BA%E6%9E%84%E5%90%88%E4%BD%9C%E6%84%8F%E5%90%91%5D)留下联系方式。
 
 ### 疫情数据来源
 

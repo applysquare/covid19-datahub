@@ -11,8 +11,7 @@ import indexTitleImg from "../img/indexTitleImg.png";
 const help = {
   title: "问题解答征集",
   linkTxt: "在海外遇到了问题？你有解决办法？来这里互助",
-  linkTo:
-    "https://github.com/applysquare/covid19-datahub#%E6%88%91%E8%A6%81%E6%B1%82%E5%8A%A9"
+  linkTo: "https://github.com/applysquare/covid19-datahub/issues/new/choose"
 };
 
 const styles = {
@@ -61,10 +60,7 @@ const styles = {
   },
   more: {
     color: "#999999",
-    fontSize: "14px",
-    padding: "5px",
-    display: "inline-block",
-    textDecoration: "underline"
+    fontSize: "14px"
   },
   link: {
     textDecoration: "none"
@@ -91,10 +87,10 @@ const styles = {
 
 export const IndexPageCore = ({ data, errors }) => {
   const config = data.pageIndexYml;
-  const { articles, allCovid19Country, allArea, updates } = data;
+  const { articles, allCovid19Area, allArea, updates } = data;
   const getApiData = apiCode => {
-    return allCovid19Country?.edges.find(edge => {
-      return edge?.node?.data?.CountryCode === apiCode;
+    return allCovid19Area?.edges.find(edge => {
+      return edge?.node?.data?.id === apiCode;
     })?.node?.data;
   };
 
@@ -123,7 +119,12 @@ export const IndexPageCore = ({ data, errors }) => {
         </Link>
       </div>
       <div style={styles.safetyBox}>
-        <div style={styles.title}>海外健康安全</div>
+        <div style={{ ...styles.flexParent, justifyContent: "space-between" }}>
+          <div style={styles.title}>海外健康安全</div>
+          <Link style={styles.more} to="/allArea">
+            更多
+          </Link>
+        </div>
         <div style={styles.flexParent}>
           {config?.highlightAreas.map(area => {
             const apiData = getApiData(area.apiCode);
@@ -135,12 +136,12 @@ export const IndexPageCore = ({ data, errors }) => {
               >
                 <div style={styles.areaName}>{area?.name}</div>
                 <div style={{ color: "#EB5449", fontSize: "20px" }}>
-                  {apiData?.TotalConfirmed}
+                  {apiData?.totalConfirmed}
                 </div>
                 <div style={{ fontSize: "10px" }}>
                   <span style={{ color: "#999999" }}>较昨日:</span>
                   <span style={{ color: "#EB5449" }}>
-                    +{apiData?.NewConfirmed}
+                    +{apiData?.totalConfirmedDelta}
                   </span>
                 </div>
               </Link>
@@ -151,6 +152,9 @@ export const IndexPageCore = ({ data, errors }) => {
       <div style={styles.instituteBox}>
         <div style={{ ...styles.flexParent, justifyContent: "space-between" }}>
           <div style={styles.title}>留学生数据中心</div>
+          <Link style={styles.more} to="/allArea">
+            更多
+          </Link>
         </div>
         <div style={styles.flexParent}>
           {allArea?.edges.map(area => {
@@ -158,7 +162,7 @@ export const IndexPageCore = ({ data, errors }) => {
               <Link
                 key={v4()}
                 style={styles.link}
-                to={`./area/${area?.node?.countryCode}`}
+                to={area?.node?.fields?.pathname}
               >
                 <div style={styles.institutePic}>
                   <img
@@ -218,24 +222,26 @@ export const pageQuery = graphql`
         apiCode
       }
     }
-    allArea {
+    allArea(sort: { order: ASC, fields: ranking }) {
       edges {
         node {
           countryCode
           icon
           titleCn
+          fields {
+            pathname
+          }
         }
       }
     }
-    allCovid19Country(filter: { data: { CountryCode: { in: $apiCodes } } }) {
+    allCovid19Area(filter: { data: { id: { in: $apiCodes } } }) {
       edges {
         node {
           data {
-            Country
-            CountryCode
-            Slug
-            NewConfirmed
-            TotalConfirmed
+            id
+            displayName
+            totalConfirmedDelta
+            totalConfirmed
           }
         }
       }

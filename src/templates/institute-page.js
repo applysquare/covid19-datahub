@@ -17,7 +17,7 @@ import {
 const help = {
   title: "校友问题征集",
   linkTxt: "在海外遇到了什么问题？告诉我们，尽力为你寻求答案",
-  linkTo: "https://github.com/applysquare/covid19-datahub"
+  linkTo: "https://github.com/applysquare/covid19-datahub/issues/new/choose"
 };
 
 const styles = {
@@ -127,22 +127,22 @@ const InstitutePageCore = ({ data, errors }) => {
   if (errors) {
     console.error(errors);
   }
-  const { area, institute = {}, articles, updates } = data || {};
+  const { area, institute = {}, articles, updates, covid19Area = {} } =
+    data || {};
   const {
     cover,
     logo,
     nameCn,
     nameEn,
     stateCn,
-    numStateCases,
-    numStateCures,
-    numStateDailyNewCases,
-    numStateDeaths,
     onCampusCourseResumeDate,
     courseOperationStatus,
     onlineCourseStartDate,
     coursePolicyLink
   } = institute;
+
+  const { totalConfirmed, totalConfirmedDelta, totalDeaths, totalRecovered } =
+    covid19Area?.data || {};
 
   const infoEdges = articles?.edges || [];
 
@@ -157,10 +157,10 @@ const InstitutePageCore = ({ data, errors }) => {
         <div style={styles.mask}></div>
         <div style={styles.maskContent}>
           <div style={styles.logoTitle}>
-            <button style={styles.link} onClick={goBack}>
+            <a href="###" style={styles.link} onClick={e => goBack(e)}>
               <LeftOutlined />
               <span style={{ padding: "0 4px" }}>院校列表</span>
-            </button>
+            </a>
           </div>
           <div
             style={{
@@ -169,11 +169,16 @@ const InstitutePageCore = ({ data, errors }) => {
               margin: "36px 0 24px 6px"
             }}
           >
-            <span>
+            <span style={{ background: "#FFFFFF", borderRadius: "50%" }}>
               <img
                 src={logo}
                 alt=""
-                style={{ width: "40px", height: "40px", borderRadius: "50%" }}
+                style={{
+                  width: "40px",
+                  height: "40px",
+                  borderRadius: "50%",
+                  verticalAlign: "middle"
+                }}
               />
             </span>
             <span style={{ paddingLeft: "12px", flex: 1 }}>
@@ -201,25 +206,25 @@ const InstitutePageCore = ({ data, errors }) => {
           <div style={styles.flexChild}>
             <div style={styles.illnessTxt}>确诊病例</div>
             <div style={{ ...styles.illnessNum, color: "#EB5449" }}>
-              {numStateCases}
+              {totalConfirmed}
             </div>
           </div>
           <div style={styles.flexChild}>
             <div style={styles.illnessTxt}>昨日新增</div>
             <div style={{ ...styles.illnessNum, color: "#FDBB0F" }}>
-              {numStateDailyNewCases}
+              {totalConfirmedDelta}
             </div>
           </div>
           <div style={styles.flexChild}>
             <div style={styles.illnessTxt}>死亡人数</div>
             <div style={{ ...styles.illnessNum, color: "#333333" }}>
-              {numStateDeaths}
+              {totalDeaths}
             </div>
           </div>
           <div style={styles.flexChild}>
             <div style={styles.illnessTxt}>治愈人数</div>
             <div style={{ ...styles.illnessNum, color: "#1EC5A0" }}>
-              {numStateCures}
+              {totalRecovered}
             </div>
           </div>
         </div>
@@ -290,11 +295,28 @@ const Page = makePage(InstitutePageCore);
 export default Page;
 
 export const pageQuery = graphql`
-  query InstitutePage($id: String!, $slug: String!, $countryCode: String!) {
+  query InstitutePage(
+    $id: String!
+    $slug: String!
+    $countryCode: String!
+    $hasApiCode: Boolean!
+    $apiCode: String
+  ) {
     area(countryCode: { eq: $countryCode }) {
       id
       countryCode
       titleCn
+    }
+    covid19Area(data: { id: { eq: $apiCode } }) @include(if: $hasApiCode) {
+      data {
+        displayName
+        id
+        totalConfirmed
+        totalConfirmedDelta
+        totalDeaths
+        totalDeathsDelta
+        totalRecovered
+      }
     }
     institute(id: { eq: $id }) {
       id
@@ -305,10 +327,6 @@ export const pageQuery = graphql`
       stateCn
       coursePolicyLink
       cover
-      numStateCases
-      numStateCures
-      numStateDailyNewCases
-      numStateDeaths
       onCampusCourseResumeDate
       courseOperationStatus
       onlineCourseStartDate

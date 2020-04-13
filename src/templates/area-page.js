@@ -7,14 +7,14 @@ import InfoList from "../components/InfoList";
 import NewList from "../components/NewList";
 import {
   translateCourseOperationStatus,
-  sliceArr
+  sliceArr,
+  goBack
 } from "../components/display";
 
 const help = {
   title: "问题解答征集",
   linkTxt: "在海外遇到了问题？你有解决办法？来这里互助",
-  linkTo:
-    "https://github.com/applysquare/covid19-datahub#%E6%88%91%E8%A6%81%E6%B1%82%E5%8A%A9"
+  linkTo: "https://github.com/applysquare/covid19-datahub/issues/new/choose"
 };
 
 const styles = {
@@ -61,7 +61,7 @@ const styles = {
     width: "50px",
     height: "50px",
     borderRadius: "50%",
-    // background: "#D8D8D8",
+    background: "#FFFFFF",
     margin: "0 auto"
   },
   instituteName: { color: "#333333", marginTop: "8px", textAlign: "center" },
@@ -91,6 +91,7 @@ const styles = {
 
 export const AreaPageCore = ({ data }) => {
   const { area, updates, articles, allInstitute } = data;
+  const covid19Area = data?.covid19Area?.data;
   const infoEdges = articles?.edges || [];
   const institutes = sliceArr(allInstitute?.edges, 8);
   // const institutes = allInstitute?.edges;
@@ -99,10 +100,10 @@ export const AreaPageCore = ({ data }) => {
     <div style={{ background: "rgba(241,241,241,0.8)" }}>
       <div style={styles.countryBox}>
         <div>
-          <Link style={styles.returnBox} to="/">
+          <a href="###" style={styles.returnBox} onClick={e => goBack(e)}>
             <LeftOutlined />
             <span style={{ paddingLeft: "5px" }}>全球动态</span>
-          </Link>
+          </a>
         </div>
         <div>
           <div>
@@ -120,20 +121,26 @@ export const AreaPageCore = ({ data }) => {
             <div style={styles.flexChild}>
               <div style={styles.statusTxt}>确诊</div>
               <div style={{ ...styles.statusNum, color: "#EB5449" }}>
-                123222
+                {covid19Area?.totalConfirmed || "-"}
               </div>
             </div>
             <div style={styles.flexChild}>
               <div style={styles.statusTxt}>新增</div>
-              <div style={{ ...styles.statusNum, color: "#FDBB0F" }}>72832</div>
+              <div style={{ ...styles.statusNum, color: "#FDBB0F" }}>
+                {covid19Area?.totalConfirmedDelta || "-"}
+              </div>
             </div>
             <div style={styles.flexChild}>
               <div style={styles.statusTxt}>死亡</div>
-              <div style={{ ...styles.statusNum, color: "#333333" }}>72832</div>
+              <div style={{ ...styles.statusNum, color: "#333333" }}>
+                {covid19Area?.totalDeaths || "-"}
+              </div>
             </div>
             <div style={styles.flexChild}>
               <div style={styles.statusTxt}>治愈</div>
-              <div style={{ ...styles.statusNum, color: "#1EC5A0" }}>832</div>
+              <div style={{ ...styles.statusNum, color: "#1EC5A0" }}>
+                {covid19Area?.totalRecovered || "-"}
+              </div>
             </div>
           </div>
         </div>
@@ -221,7 +228,7 @@ export const AreaPageCore = ({ data }) => {
               margin: "30px 0 22px 0"
             }}
           >
-            全球资讯
+            本国资讯
           </div>
           <NewList newEdges={updates?.edges} />
         </div>
@@ -237,12 +244,28 @@ const Page = makePage(AreaPageCore, {
 export default Page;
 
 export const pageQuery = graphql`
-  query AreaPage($id: String!, $countryCode: String!) {
+  query AreaPage(
+    $id: String!
+    $countryCode: String!
+    $hasApiCode: Boolean!
+    $apiCode: String
+  ) {
     area(id: { eq: $id }) {
       id
       countryCode
       titleCn
       titleEn
+    }
+    covid19Area(data: { id: { eq: $apiCode } }) @include(if: $hasApiCode) {
+      data {
+        displayName
+        id
+        totalConfirmed
+        totalConfirmedDelta
+        totalDeaths
+        totalDeathsDelta
+        totalRecovered
+      }
     }
     allInstitute(filter: { countryCode: { eq: $countryCode } }) {
       edges {
