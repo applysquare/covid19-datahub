@@ -9,7 +9,6 @@ const styles = {
     fontSize: "18px",
     color: "#333333",
     marginBottom: "5px",
-    fontFamily: "helvitica"
   },
   time: {
     fontSize: "12px",
