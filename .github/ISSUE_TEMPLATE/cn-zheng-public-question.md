@@ -1,6 +1,6 @@
 ---
 name: 征集回答
-about: 公开发布问题，征集回答
+about: 发布你的问题，征集回答
 title: '[征集回答] 请在这里简单描述问题，细节在内容部分提供'
 labels: 征集回答, 招募帮助
 assignees: ''
@@ -9,7 +9,7 @@ assignees: ''
 
 ---
 # name: 征集回答
-about: 公开发布问题，征集回答
+about: 发布你的问题，征集回答
 ---
 
 You can post your question and the question will be found in the issue list.
