@@ -125,6 +125,11 @@ export const IndexPageCore = ({ data, errors }) => {
       </div>
       <div style={styles.safetyBox}>
         <div style={styles.title}>海外健康安全</div>
+        <div
+            style={{ ...styles.title, fontSize: "18px", marginBottom: "10px" }}
+          >
+            各地确诊数据
+        </div>
         <div style={styles.flexParent}>
           {config?.highlightAreas.map(area => {
             const apiData = getApiData(area.apiCode);
