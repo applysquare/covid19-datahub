@@ -9,10 +9,10 @@ publicOrPrivate: public
 coursePolicyLink: https://www.ucdavis.edu/coronavirus/news/updates
 cover: https://cdn.applysquare.net/a2/institute/ucdavis/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/ucdavis/logo.png
-numStateCases: 19710
-numStateDailyNewCases: 813
-numStateDeaths: 544
+numStateCases: 22795
+numStateDailyNewCases: 1089
+numStateDeaths: 641
 numStateCures: 0
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-30
-onCompusCourseResumeDate: 
+onCampusCourseResumeDate: 

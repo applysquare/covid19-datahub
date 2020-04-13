@@ -9,10 +9,10 @@ publicOrPrivate: public
 coursePolicyLink: https://umd.edu/virusinfo
 cover: https://cdn.applysquare.net/a2/institute/umd/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/umd/logo.png
-numStateCases: 6185
-numStateDailyNewCases: 656
-numStateDeaths: 138
+numStateCases: 8225
+numStateDailyNewCases: 531
+numStateDeaths: 236
 numStateCures: 0
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-30
-onCompusCourseResumeDate: 
+onCampusCourseResumeDate: 

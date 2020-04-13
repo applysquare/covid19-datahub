@@ -9,10 +9,10 @@ publicOrPrivate: public
 coursePolicyLink: https://covid19.mcmaster.ca/
 cover: https://cdn.applysquare.net/a2/institute/ca.mcmaster/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/ca.mcmaster/logo.png
-numStateCases: 5759
-numStateDailyNewCases: 483
-numStateDeaths: 200
+numStateCases: 7049
+numStateDailyNewCases: 401
+numStateDeaths: 274
 numStateCures: 0
 courseOperationStatus: suspendCourse
 onlineCourseStartDate: 2020-05-04
-onCompusCourseResumeDate: 
+onCampusCourseResumeDate: 

@@ -9,10 +9,10 @@ publicOrPrivate: private
 coursePolicyLink: https://www.du.edu/coronavirus
 cover: https://cdn.applysquare.net/a2/institute/du/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/du/logo.png
-numStateCases: 5655
-numStateDailyNewCases: 0
-numStateDeaths: 193
+numStateCases: 7307
+numStateDailyNewCases: 794
+numStateDeaths: 289
 numStateCures: 0
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-30
-onCompusCourseResumeDate: 
+onCampusCourseResumeDate: 

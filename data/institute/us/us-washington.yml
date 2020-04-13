@@ -9,10 +9,10 @@ publicOrPrivate: public
 coursePolicyLink: https://www.washington.edu/coronavirus/
 cover: https://cdn.applysquare.net/a2/institute/washington/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/washington/logo.png
-numStateCases: 9639
-numStateDailyNewCases: 363
-numStateDeaths: 456
+numStateCases: 10609
+numStateDailyNewCases: 175
+numStateDeaths: 506
 numStateCures: 0
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-30
-onCompusCourseResumeDate: 
+onCampusCourseResumeDate: 

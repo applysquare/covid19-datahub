@@ -9,10 +9,10 @@ publicOrPrivate: private
 coursePolicyLink: https://coronavirus.rice.edu/
 cover: https://cdn.applysquare.net/a2/institute/rice/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/rice/logo.png
-numStateCases: 11208
-numStateDailyNewCases: 1431
-numStateDeaths: 210
+numStateCases: 13677
+numStateDailyNewCases: 654
+numStateDeaths: 283
 numStateCures: 0
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-23
-onCompusCourseResumeDate: 
+onCampusCourseResumeDate: 

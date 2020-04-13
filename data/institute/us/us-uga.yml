@@ -9,10 +9,10 @@ publicOrPrivate: public
 coursePolicyLink: https://www.uga.edu/coronavirus/info.php
 cover: https://cdn.applysquare.net/a2/institute/uga/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/uga/logo.png
-numStateCases: 10566
-numStateDailyNewCases: 665
-numStateDeaths: 379
+numStateCases: 12452
+numStateDailyNewCases: 293
+numStateDeaths: 433
 numStateCures: 0
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-30
-onCompusCourseResumeDate: 
+onCampusCourseResumeDate: 

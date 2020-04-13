@@ -9,10 +9,10 @@ publicOrPrivate: public
 coursePolicyLink: https://msu.edu/coronavirus/?utm_campaign=standard-promo&utm_source=msuhome&utm_medium=msuhome
 cover: https://cdn.applysquare.net/a2/institute/msu/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/msu/logo.png
-numStateCases: 21504
-numStateDailyNewCases: 1158
-numStateDeaths: 1076
+numStateCases: 24244
+numStateDailyNewCases: 639
+numStateDeaths: 1479
 numStateCures: 0
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-16
-onCompusCourseResumeDate: 
+onCampusCourseResumeDate: 

@@ -9,10 +9,10 @@ publicOrPrivate: public
 coursePolicyLink: https://uwaterloo.ca/coronavirus/
 cover: https://cdn.applysquare.net/a2/institute/ca.uwaterloo/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/ca.uwaterloo/logo.png
-numStateCases: 5759
-numStateDailyNewCases: 483
-numStateDeaths: 200
+numStateCases: 7049
+numStateDailyNewCases: 401
+numStateDeaths: 274
 numStateCures: 0
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-23
-onCompusCourseResumeDate: 
+onCampusCourseResumeDate: 

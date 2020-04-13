@@ -9,10 +9,10 @@ publicOrPrivate: private
 coursePolicyLink: https://www.emory.edu/coronavirus/
 cover: https://cdn.applysquare.net/a2/institute/emory/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/emory/logo.png
-numStateCases: 10566
-numStateDailyNewCases: 665
-numStateDeaths: 379
+numStateCases: 12452
+numStateDailyNewCases: 293
+numStateDeaths: 433
 numStateCures: 0
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-23
-onCompusCourseResumeDate: 
+onCampusCourseResumeDate: 

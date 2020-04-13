@@ -9,10 +9,10 @@ publicOrPrivate: public
 coursePolicyLink: https://www.utoronto.ca/message-from-the-university-regarding-the-coronavirus?utm_source=UofTHome&utm_medium=WebsiteBanner&utm_content=MessageRegardingTheCoronavirusForTheUoFTCommunity
 cover: https://cdn.applysquare.net/a2/institute/ca.utoronto/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/ca.utoronto/logo.png
-numStateCases: 5759
-numStateDailyNewCases: 483
-numStateDeaths: 200
+numStateCases: 7049
+numStateDailyNewCases: 401
+numStateDeaths: 274
 numStateCures: 0
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-04-03
-onCompusCourseResumeDate: 
+onCampusCourseResumeDate: 

@@ -9,10 +9,10 @@ publicOrPrivate: private
 coursePolicyLink: https://www2.lehigh.edu/news/updates-on-novel-coronavirus
 cover: https://cdn.applysquare.net/a2/institute/lehigh/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/lehigh/logo.png
-numStateCases: 18300
-numStateDailyNewCases: 1669
-numStateDeaths: 345
+numStateCases: 22938
+numStateDailyNewCases: 1219
+numStateDeaths: 557
 numStateCures: 0
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-16
-onCompusCourseResumeDate: 
+onCampusCourseResumeDate: 

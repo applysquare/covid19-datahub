@@ -9,10 +9,10 @@ publicOrPrivate: private
 coursePolicyLink: https://www.georgetown.edu/coronavirus/
 cover: https://cdn.applysquare.net/a2/institute/georgetown/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/georgetown/logo.png
-numStateCases: 1523
-numStateDailyNewCases: 83
-numStateDeaths: 32
+numStateCases: 1875
+numStateDailyNewCases: 97
+numStateDeaths: 50
 numStateCures: 0
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-16
-onCompusCourseResumeDate: 
+onCampusCourseResumeDate: 

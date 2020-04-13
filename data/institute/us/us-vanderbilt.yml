@@ -9,10 +9,10 @@ publicOrPrivate: private
 coursePolicyLink: https://www.vanderbilt.edu/coronavirus/
 cover: https://cdn.applysquare.net/a2/institute/vanderbilt/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/vanderbilt/logo.png
-numStateCases: 4634
-numStateDailyNewCases: 271
-numStateDeaths: 94
+numStateCases: 5508
+numStateDailyNewCases: 376
+numStateDeaths: 106
 numStateCures: 0
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-16
-onCompusCourseResumeDate: 
+onCampusCourseResumeDate: 

@@ -9,10 +9,10 @@ publicOrPrivate: public
 coursePolicyLink: https://miamioh.edu/coronavirus/index.html
 cover: https://cdn.applysquare.net/a2/institute/muohio/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/muohio/logo.png
-numStateCases: 5512
-numStateDailyNewCases: 364
-numStateDeaths: 213
+numStateCases: 6604
+numStateDailyNewCases: 354
+numStateDeaths: 253
 numStateCures: 0
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-23
-onCompusCourseResumeDate: 
+onCampusCourseResumeDate: 

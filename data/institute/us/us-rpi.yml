@@ -9,10 +9,10 @@ publicOrPrivate: private
 coursePolicyLink: https://covid19.rpi.edu/
 cover: https://cdn.applysquare.net/a2/institute/rpi/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/rpi/logo.png
-numStateCases: 161779
-numStateDailyNewCases: 10718
-numStateDeaths: 7067
+numStateCases: 189033
+numStateDailyNewCases: 8007
+numStateDeaths: 9385
 numStateCures: 0
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-25
-onCompusCourseResumeDate: 
+onCampusCourseResumeDate: 

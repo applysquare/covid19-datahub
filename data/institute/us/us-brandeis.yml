@@ -9,10 +9,10 @@ publicOrPrivate: private
 coursePolicyLink: https://www.brandeis.edu/health/coronavirus/index.html
 cover: https://cdn.applysquare.net/a2/institute/brandeis/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/brandeis/logo.png
-numStateCases: 18941
-numStateDailyNewCases: 2151
-numStateDeaths: 503
+numStateCases: 25475
+numStateDailyNewCases: 2615
+numStateDeaths: 756
 numStateCures: 0
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-16
-onCompusCourseResumeDate: 
+onCampusCourseResumeDate: 

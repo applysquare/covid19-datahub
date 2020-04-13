@@ -9,10 +9,10 @@ publicOrPrivate: private
 coursePolicyLink: https://coronavirus.miami.edu/
 cover: https://cdn.applysquare.net/a2/institute/miami/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/miami/logo.png
-numStateCases: 16364
-numStateDailyNewCases: 908
-numStateDeaths: 354
+numStateCases: 19895
+numStateDailyNewCases: 1401
+numStateDeaths: 461
 numStateCures: 0
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-23
-onCompusCourseResumeDate: 
+onCampusCourseResumeDate: 
