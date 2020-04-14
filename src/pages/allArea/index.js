@@ -92,60 +92,58 @@ const PageCore = ({ data }) => {
         </Link>
       </div>
       <div style={styles.title}>了解各国动态</div>
-      <div>
-        <div style={{ ...styles.flexParent, ...styles.tableTitle }}>
-          {tableTitleList.map(item => {
-            return (
-              <div
-                style={{ ...styles.flexChild, width: `${item.width}` }}
-                key={v4()}
-              >
-                {item.txt}
-              </div>
-            );
-          })}
-        </div>
-        {arr.map((item, index) => {
-          const {
-            titleCn,
-            numStateCases,
-            numStateDailyNewCases,
-            numStateDeaths,
-            numStateCures
-          } = item;
+      <div style={{ ...styles.flexParent, ...styles.tableTitle }}>
+        {tableTitleList.map(item => {
           return (
-            <Link
+            <div
+              style={{ ...styles.flexChild, width: `${item.width}` }}
               key={v4()}
-              style={{
-                ...styles.flexParent,
-                textDecoration: "none",
-                background: `${
-                  index % 2 === 0 ? "rgba(26,109,255,0.1)" : "#FFFFFF"
-                }`
-              }}
-              to="/area/au/"
             >
-              <div
-                style={{ ...styles.flexChild, ...styles.titleCn, width: "23%" }}
-              >
-                {titleCn}
-              </div>
-              <div style={{ ...styles.flexChild, ...styles.num, width: "20%" }}>
-                {numStateCases}
-              </div>
-              <div style={{ ...styles.flexChild, ...styles.num, width: "20%" }}>
-                {numStateDailyNewCases}
-              </div>
-              <div style={{ ...styles.flexChild, ...styles.num, width: "17%" }}>
-                {numStateDeaths}
-              </div>
-              <div style={{ ...styles.flexChild, ...styles.num, width: "20%" }}>
-                {numStateCures}
-              </div>
-            </Link>
+              {item.txt}
+            </div>
           );
         })}
       </div>
+      {arr.map((item, index) => {
+        const {
+          titleCn,
+          numStateCases,
+          numStateDailyNewCases,
+          numStateDeaths,
+          numStateCures
+        } = item;
+        return (
+          <Link
+            key={v4()}
+            style={{
+              ...styles.flexParent,
+              textDecoration: "none",
+              background: `${
+                index % 2 === 0 ? "rgba(26,109,255,0.1)" : "#FFFFFF"
+              }`
+            }}
+            to="/area/au/"
+          >
+            <div
+              style={{ ...styles.flexChild, ...styles.titleCn, width: "23%" }}
+            >
+              {titleCn}
+            </div>
+            <div style={{ ...styles.flexChild, ...styles.num, width: "20%" }}>
+              {numStateCases}
+            </div>
+            <div style={{ ...styles.flexChild, ...styles.num, width: "20%" }}>
+              {numStateDailyNewCases}
+            </div>
+            <div style={{ ...styles.flexChild, ...styles.num, width: "17%" }}>
+              {numStateDeaths}
+            </div>
+            <div style={{ ...styles.flexChild, ...styles.num, width: "20%" }}>
+              {numStateCures}
+            </div>
+          </Link>
+        );
+      })}
     </div>
   );
 };

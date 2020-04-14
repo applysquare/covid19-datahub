@@ -123,7 +123,7 @@ export const IndexPageCore = ({ data, errors }) => {
           全球动态
         </Link>
         <div style={styles.triangle}></div>
-        <Link style={styles.tabItem} to="/institute">
+        <Link style={styles.tabItem} to="/institute/us">
           院校数据
         </Link>
       </div>
@@ -150,7 +150,7 @@ export const IndexPageCore = ({ data, errors }) => {
                 <div style={{ color: "#EB5449", fontSize: "20px" }}>
                   {apiData?.totalConfirmed || "-"}
                 </div>
-                <div style={{ fontSize: "10px" }}>
+                <div style={{ fontSize: "8px" }}>
                   <span style={{ color: "#999999" }}>较昨日:</span>
                   <span style={{ color: "#EB5449" }}>
                     +{apiData?.totalConfirmedDelta}

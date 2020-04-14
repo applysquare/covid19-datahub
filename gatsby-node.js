@@ -39,9 +39,7 @@ exports.createPages = async ({ actions, graphql }) => {
     createPage({
       path: pathname,
       tags: edge.node.frontmatter.tags,
-      component: path.resolve(
-        `src/templates/${templateKey}.js`
-      ),
+      component: path.resolve(`src/templates/${templateKey}.js`),
       // additional data can be passed via context
       context: {
         id
@@ -71,13 +69,35 @@ exports.onCreateNode = ({ node, actions, getNode, reporter }) => {
       // tags: edge.node.frontmatter.tags,
       component: path.resolve(`src/templates/${templateKey}.js`),
       // additional data can be passed via context
-      context: Object.assign({
-        id: node.id,
-        // countryCode: node.countryCode,
-        // instituteSlug: node.instituteSlug,
-        // slug: node.slug
-      }, context),
+      context: Object.assign(
+        {
+          id: node.id
+          // countryCode: node.countryCode,
+          // instituteSlug: node.instituteSlug,
+          // slug: node.slug
+        },
+        context
+      )
     });
+
+    if (templateKey === "area-page") {
+      createPage({
+        path: `/institute/${node.countryCode}`,
+        // tags: edge.node.frontmatter.tags,
+        component: path.resolve(`src/templates/area-institute-list-page.js`),
+        // additional data can be passed via context
+        context: Object.assign(
+          {
+            id: node.id,
+            countryCode: node.countryCode
+            // instituteSlug: node.instituteSlug,
+            // slug: node.slug
+          },
+          context
+        )
+      });
+    }
+
     createNodeField({
       node: node,
       name: `pathname`,
@@ -91,17 +111,22 @@ exports.onCreateNode = ({ node, actions, getNode, reporter }) => {
       node: node,
       value: pathname
     });
-    const templateKey = node.frontmatter.templateKey ||
-      `${_.kebabCase(pathname.split('/')[1])}-page`;
-    if (templateKey === 'article-page' || templateKey === 'update-page') {
+    const templateKey =
+      node.frontmatter.templateKey ||
+      `${_.kebabCase(pathname.split("/")[1])}-page`;
+    if (templateKey === "article-page" || templateKey === "update-page") {
       const fn = path.relative(__dirname, node.fileAbsolutePath);
       if (!node.frontmatter.date) {
         // throw new Error(`Data error: the 'date' field is not set for file: ${fn}`);
-        reporter.panicOnBuild(`Data error: the 'date' field is not set for file: ${fn}`);
+        reporter.panicOnBuild(
+          `Data error: the 'date' field is not set for file: ${fn}`
+        );
       }
       if (isNaN(Date.parse(node.frontmatter.date))) {
         //throw new Error(`Data error: invalid 'date' value (${node.frontmatter.date}) in file: ${fn}`);
-        reporter.panicOnBuild(`Data error: invalid 'date' value (${node.frontmatter.date}), it must be YYYY-MM-DD in file: ${fn}`);
+        reporter.panicOnBuild(
+          `Data error: invalid 'date' value (${node.frontmatter.date}), it must be YYYY-MM-DD in file: ${fn}`
+        );
       }
     }
     createNodeField({

@@ -3,8 +3,8 @@ import { SearchOutlined } from "@ant-design/icons";
 import { graphql, Link } from "gatsby";
 import * as JsSearch from "js-search";
 import { v4 } from "uuid";
-import { makePage } from "../../components/Layout";
-import { translateCourseOperationStatus } from "../../components/display";
+import { makePage } from "../components/Layout";
+import { translateCourseOperationStatus } from "../components/display";
 
 const styles = {
   flexParent: {
@@ -237,12 +237,14 @@ const PageCore = ({ data }) => {
   );
 };
 
-const Page = makePage(PageCore);
-
+// const Page = makePage(PageCore);
+const Page = makePage(PageCore, {
+  srcPath: "/src/templates/area-page.js"
+});
 export default Page;
 
 export const pageQuery = graphql`
-  query InstituteListPage {
+  query AreaInstituteListPage($countryCode: String!) {
     allArea(sort: { order: ASC, fields: ranking }) {
       edges {
         node {
@@ -251,7 +253,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    allInstitute(sort: { fields: [countryCode, nameEn] }) {
+    allInstitute(filter: { countryCode: { eq: $countryCode } }) {
       edges {
         node {
           countryCode
