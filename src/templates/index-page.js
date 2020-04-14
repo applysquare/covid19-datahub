@@ -9,10 +9,11 @@ import NewList from "../components/NewList";
 import indexTitleImg from "../img/indexTitleImg.png";
 
 const help = {
-  title: "问题解答征集",
-  linkTxt: "在海外遇到了问题？你有解决办法？来这里互助",
+  title: "交流与资源建设",
+  linkTxt: "有困难有问题？有资源有爱心？来这里",
   linkTo: "https://github.com/applysquare/covid19-datahub/issues/new/choose"
 };
+// 之后换成网页端交流与资源建设页面入口
 
 const styles = {
   title: {

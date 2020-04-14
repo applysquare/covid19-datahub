@@ -2,7 +2,7 @@
 name: Submit the news
 about: " The latest outbreak information, college policies, and updates for international
   students"
-title: "[Submit news]"
+title: "[Submit News]"
 labels: 'news'
 assignees: ''
 
