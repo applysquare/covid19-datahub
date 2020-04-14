@@ -11,7 +11,8 @@ import {
   translateCourseOperationStatus,
   formatDate,
   domainURI,
-  goBack
+  goBack,
+  translateBingAreaId
 } from "../components/display";
 
 const help = {
@@ -135,7 +136,6 @@ const InstitutePageCore = ({ data, errors }) => {
     logo,
     nameCn,
     nameEn,
-    stateCn,
     onCampusCourseResumeDate,
     courseOperationStatus,
     onlineCourseStartDate,
@@ -143,6 +143,7 @@ const InstitutePageCore = ({ data, errors }) => {
   } = institute;
 
   const {
+    displayName,
     totalConfirmed,
     totalConfirmedDelta,
     totalDeaths,
@@ -150,6 +151,9 @@ const InstitutePageCore = ({ data, errors }) => {
   } = covid19Area?.data || {};
 
   const infoEdges = articles?.edges || [];
+
+  const translateAreaName = translateBingAreaId('cn', covid19Area?.data?.id);
+  const subAreaName = translateAreaName !== covid19Area?.data?.id ? translateAreaName : displayName;
 
   return (
     <div style={{ background: "rgba(241,241,241,0.8)" }}>
@@ -199,7 +203,7 @@ const InstitutePageCore = ({ data, errors }) => {
         >
           <div style={{ ...styles.title, margin: 0 }}>所在地区疫情</div>
           <div style={styles.areaName}>
-            {stateCn}，{area?.titleCn}
+            {subAreaName}，{area?.titleCn}
           </div>
         </div>
         <div style={styles.flexParent}>
@@ -318,7 +322,6 @@ export const pageQuery = graphql`
       nameCn
       nameEn
       website
-      stateCn
       coursePolicyLink
       cover
       onCampusCourseResumeDate
