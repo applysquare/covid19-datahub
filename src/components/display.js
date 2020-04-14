@@ -6,8 +6,16 @@ const translations = {
   en
 };
 
+function translateL2(lang, key1, key2) {
+  return translations?.[lang]?.[key1]?.[key2] ?? key2;
+}
+
+export function translateBingAreaId(lang, id) {
+  return translateL2(lang, 'bingAreaId', id);
+}
+
 export function translateCourseOperationStatus(lang, status) {
-  return translations?.[lang]?.courseOperationStatus?.[status] ?? status;
+  return translateL2(lang, 'courseOperationStatus', status);
 }
 
 export function formatDate(date) {
