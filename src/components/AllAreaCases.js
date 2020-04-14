@@ -1,12 +1,11 @@
 import React from "react";
 import { Link } from "gatsby";
 import { v4 } from "uuid";
-import { LeftOutlined } from "@ant-design/icons";
-import { makePage } from "../../components/Layout";
 
 const styles = {
   box: {
-    padding: "20px 15px"
+    marginTop: "20px",
+    transition: "opacity 2s"
   },
   logoTitle: {
     fontSize: "14px",
@@ -82,16 +81,16 @@ const arr = [
   }
 ];
 
-const PageCore = ({ data }) => {
+const AllAreaCases = ({ data }) => {
   return (
     <div style={styles.box}>
-      <div style={styles.logoTitle}>
+      {/* <div style={styles.logoTitle}>
         <Link style={styles.linkBack} to="/">
           <LeftOutlined />
           <span style={{ padding: "0 4px" }}>全球动态</span>
         </Link>
       </div>
-      <div style={styles.title}>了解各国动态</div>
+      <div style={styles.title}>了解各国动态</div> */}
       <div>
         <div style={{ ...styles.flexParent, ...styles.tableTitle }}>
           {tableTitleList.map(item => {
@@ -150,5 +149,4 @@ const PageCore = ({ data }) => {
   );
 };
 
-const Page = makePage(PageCore);
-export default Page;
+export default AllAreaCases;

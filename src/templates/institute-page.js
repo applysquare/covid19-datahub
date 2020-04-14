@@ -17,8 +17,7 @@ import {
 const help = {
   title: "校友交流与资源互助",
   linkTxt: "校友互助，资源交流，爱心传递",
-  linkTo:
-    "https://github.com/applysquare/covid19-datahub/issues/new/choose"
+  linkTo: "https://github.com/applysquare/covid19-datahub/issues/new/choose"
 };
 // 之后换成网页端交流与资源建设页面入口
 
@@ -208,25 +207,25 @@ const InstitutePageCore = ({ data, errors }) => {
           <div style={styles.flexChild}>
             <div style={styles.illnessTxt}>确诊病例</div>
             <div style={{ ...styles.illnessNum, color: "#EB5449" }}>
-              {totalConfirmed}
+              {totalConfirmed || "-"}
             </div>
           </div>
           <div style={styles.flexChild}>
             <div style={styles.illnessTxt}>昨日新增</div>
             <div style={{ ...styles.illnessNum, color: "#FDBB0F" }}>
-              {totalConfirmedDelta}
+              {totalConfirmedDelta || "-"}
             </div>
           </div>
           <div style={styles.flexChild}>
             <div style={styles.illnessTxt}>死亡人数</div>
             <div style={{ ...styles.illnessNum, color: "#333333" }}>
-              {totalDeaths}
+              {totalDeaths || "-"}
             </div>
           </div>
           <div style={styles.flexChild}>
             <div style={styles.illnessTxt}>治愈人数</div>
             <div style={{ ...styles.illnessNum, color: "#1EC5A0" }}>
-              {totalRecovered}
+              {totalRecovered || "-"}
             </div>
           </div>
         </div>

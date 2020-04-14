@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { graphql, Link } from "gatsby";
 import { v4 } from "uuid";
 // import ArticleList from "../components/ArticleList";
@@ -6,6 +6,7 @@ import { makePage } from "../components/Layout";
 import Help from "../components/Help";
 import InfoList from "../components/InfoList";
 import NewList from "../components/NewList";
+import AllAreaCases from "../components/AllAreaCases";
 import indexTitleImg from "../img/indexTitleImg.png";
 
 const help = {
@@ -94,8 +95,15 @@ export const IndexPageCore = ({ data, errors }) => {
       return edge?.node?.data?.id === apiCode;
     })?.node?.data;
   };
-
   const infoEdges = articles?.edges || [];
+  const [isCasesMore, setIsCasesMore] = useState(null);
+  useEffect(() => {
+    setIsCasesMore(false);
+  }, [data]);
+  const getMoreCases = e => {
+    e.preventDefault();
+    setIsCasesMore(!isCasesMore);
+  };
 
   return (
     <div style={{ background: "rgba(241,241,241,0.8)" }}>
@@ -122,9 +130,12 @@ export const IndexPageCore = ({ data, errors }) => {
       <div style={styles.safetyBox}>
         <div style={{ ...styles.flexParent, justifyContent: "space-between" }}>
           <div style={styles.title}>海外健康安全</div>
-          <Link style={styles.more} to="/allArea">
-            更多
-          </Link>
+          <a style={styles.more} href="###" onClick={e => getMoreCases(e)}>
+            {isCasesMore ? "收起" : "更多"}
+          </a>
+        </div>
+        <div style={{ ...styles.title, marginBottom: "15px" }}>
+          各地确诊数据
         </div>
         <div style={styles.flexParent}>
           {config?.highlightAreas.map(area => {
@@ -137,7 +148,7 @@ export const IndexPageCore = ({ data, errors }) => {
               >
                 <div style={styles.areaName}>{area?.name}</div>
                 <div style={{ color: "#EB5449", fontSize: "20px" }}>
-                  {apiData?.totalConfirmed}
+                  {apiData?.totalConfirmed || "-"}
                 </div>
                 <div style={{ fontSize: "10px" }}>
                   <span style={{ color: "#999999" }}>较昨日:</span>
@@ -149,13 +160,14 @@ export const IndexPageCore = ({ data, errors }) => {
             );
           })}
         </div>
+        {isCasesMore && <AllAreaCases />}
       </div>
       <div style={styles.instituteBox}>
         <div style={{ ...styles.flexParent, justifyContent: "space-between" }}>
           <div style={styles.title}>留学生数据中心</div>
-          <Link style={styles.more} to="/allArea">
+          {/* <Link style={styles.more} to="/allArea">
             更多
-          </Link>
+          </Link> */}
         </div>
         <div style={styles.flexParent}>
           {allArea?.edges.map(area => {

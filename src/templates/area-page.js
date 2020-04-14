@@ -218,7 +218,7 @@ export const AreaPageCore = ({ data }) => {
           <div
             style={{ ...styles.title, fontSize: "18px", marginBottom: "10px" }}
           >
-            资料区
+            {area?.titleCn}资料区
           </div>
           <InfoList infoEdges={infoEdges} />
         </div>
