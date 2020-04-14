@@ -1,6 +1,6 @@
 ---
 name: 征集回答
-about: 公开发布问题，征集回答
+about: 发布你的问题，征集回答
 title: '[征集回答] 请在这里简单描述问题，细节在内容部分提供'
 labels: 征集回答, 招募帮助
 assignees: ''
@@ -9,10 +9,11 @@ assignees: ''
 
 ---
 # name: 征集回答
-about: 公开发布问题，征集回答
+about: 发布你的问题，征集回答
 ---
-您可以发布问题，在issue列表征集回答。
-请按照下列格式发布问题，我们会定期将问题与答案整理汇总，让更多有需要的人看到。
+
+You can post your question and the question will be found in the issue list.
+Please post in the following format, we will regularly summarize the questions and answers.
 
 **你的问题是什么？**
 请给出你的问题

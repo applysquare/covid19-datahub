@@ -1,24 +1,13 @@
-# 共同建设全球疫情教育数据
+# 项目介绍
 
-全球留学生疫情互助与资源中心基于开放的信息共建模式，汇集全球各地志愿者提供的数据内容，免费为全球教育工作者及海外留学生提供疫情信息、应对参考，研究数据支持。
 
 ## “全球留学生疫情互助与资源中心”是什么？
 
-[![covid19-datahub](../../../src/img/datahub-title-and-favicon.png)](https://github.com/applysquare/covid19-datahub)
+全球留学生疫情互助与资源中心是一个免费开放的数据平台。基于开放的信息共建模式，汇集全球各地志愿者提供的数据内容，免费为全球教育工作者及海外留学生提供疫情信息、应对参考，研究数据支持。
 
-本站资讯与资料数据来自于申请方开放在Github平台的代码仓库共建。
-点击前往: [applysquare/covid19-datahub](https://github.com/applysquare/covid19-datahub)
+本站资讯与资料数据来自于申请方开放在Github平台的代码仓库共建，由全球有爱志愿者提供。
+点击前往代码仓库: [applysquare/covid19-datahub](https://github.com/applysquare/covid19-datahub)
 
-欢迎你参与中心建设：
-- 提供疫情与高等教育相关的实时资讯
-- 提共分析、汇总、教程等资料
-- 对已有数据更新报错报错
-- 提供中心尚未覆盖的院校数据
-- 发布求助问题，让更多人知道留学生所面临的问题与诉求
-- 解答问题，提供帮助
-- 接取汉化任务，将重要资料汉化
-
-在此，感谢你为护航全球留学生的安全与成长贡献力量。
 
 ## 为什么要做这件事？
 
@@ -27,35 +16,9 @@
 
 ## 在这里我能做什么？
 
-在本代码仓库平台上，你有3种方式参与建设：
-- 如果你可以直接提交数据文件，参考[CONTRIBUTING.md](https://github.com/applysquare/covid19-datahub/blob/master/CONTRIBUTING.md)文件，按数据模版提交资源。
-- 创建issue（中文译名为“问题”，为方便操作保留原名，下同），提交数据与内容，发布求助。
-- 回复已开启的issue, 参与问题征集，支持汉化任务。
+前往[交流与资源建设](https://www.covid19.placeholder.com)页面，你可以交流互动、支持数据及汉化建设。
 
-以下为具体的参与方式：
-
-### 我需要帮助
-
-中心开设了海外留学生的求助通道。你可以前往[New Issues](https://github.com/applysquare/covid19-datahub/issues/new/choose)页面创建issue，选择“留学生求助”提交求助信息。
-如果你的求助是需要解答的问题，你也可以选择"征集回答"issue类型，发布问题收集答案。
-
-### 我有资源和数据，可以支持建设
-
-你可以参考CONTRIBUTING.md文件，直接按数据模版提交资源。
-
-你也可以前往[New Issues](https://github.com/applysquare/covid19-datahub/issues/new/choose)页面创建issue，选择相应的的issue提交资源与数据。
-
-我们目前优先需要的数据有：
-- 资讯与新闻：当前疫情最新资讯，各院校新闻，各国家地区管理政策，各地援助，安全相关新闻
-- 海外院校：院校运转情况（停课/网课/正常），周边物资紧缺程度，学生安全情况，本校疫情新闻，本校援助信息
-- 资料： 对政策的收集汇总，信息深度解读，回国与隔离指南，居家隔离日记，学习资源
-
-
-如果你有其他资源，也欢迎提交给我们。
-
-### 我想看看我能为留学生做些什么
-
-你可以在issue列表页面查看待解答的问题与汉化任务。
+如果你可以直接提交数据文件，请前往Github代码仓库平台参与建设。共建方式请参考[CONTRIBUTING.md](https://github.com/applysquare/covid19-datahub/blob/master/CONTRIBUTING.md)文件，按数据模版提交资源。
 
 欢迎你参与解答，完成汉化任务，为全球留学生疫情下的发展贡献力量。
 

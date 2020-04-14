@@ -15,10 +15,12 @@ import {
 } from "../components/display";
 
 const help = {
-  title: "校友问题征集",
-  linkTxt: "在海外遇到了什么问题？告诉我们，尽力为你寻求答案",
-  linkTo: "https://github.com/applysquare/covid19-datahub/issues/new/choose"
+  title: "校友交流与资源互助",
+  linkTxt: "校友互助，资源交流，爱心传递",
+  linkTo:
+    "https://github.com/applysquare/covid19-datahub/issues/new/choose"
 };
+// 之后换成网页端交流与资源建设页面入口
 
 const styles = {
   title: {
