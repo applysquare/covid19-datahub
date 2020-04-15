@@ -1,17 +1,10 @@
 import React from "react";
 import { graphql } from "gatsby";
 import { makePage } from "../components/Layout";
+import { ArticleView } from '../components/ArticleView';
 
 export const UpdatePageCore = ({ data }) => {
-  const article = data?.markdownRemark;
-  return (
-    <div>
-      <h1>{article?.frontmatter?.title}</h1>
-      <p>
-        链接：<a href={article?.frontmatter?.link}>link</a>
-      </p>
-    </div>
-  );
+  return <ArticleView markdownRemark={data?.markdownRemark} />;
 };
 
 const Page = makePage(UpdatePageCore);

@@ -1,0 +1,18 @@
+slug: us-umn
+nameEn: University of Minnesota, Twin Cities
+nameCn: 明尼苏达大学双城分校
+countryCode: us
+website: http://www.twin-cities.umn.edu/
+stateCn: 明尼苏达州
+stateEn: Minnesota
+publicOrPrivate: public
+coursePolicyLink: https://safe-campus.umn.edu/public-health-alerts
+cover: https://cdn.applysquare.net/a2/institute/umn/cover_app.jpg
+logo: https://cdn.applysquare.net/a2/institute/umn/logo.png
+numStateCases: 1240
+numStateDailyNewCases: 86
+numStateDeaths: 50
+numStateCures: 0
+courseOperationStatus: onlineCourse
+onlineCourseStartDate: 2020-03-18
+onCampusCourseResumeDate: 

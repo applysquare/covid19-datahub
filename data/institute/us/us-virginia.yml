@@ -1,0 +1,18 @@
+slug: us-virginia
+nameEn: University of Virginia
+nameCn: 弗吉尼亚大学
+countryCode: us
+website: http://www.virginia.edu/
+stateCn: 弗吉尼亚州
+stateEn: Virginia
+publicOrPrivate: public
+coursePolicyLink: https://www.virginia.edu/coronavirus?utm_source=VirginiaHP&utm_medium=referral&utm_campaign=tripleblock
+cover: https://cdn.applysquare.net/a2/institute/virginia/cover_app.jpg
+logo: https://cdn.applysquare.net/a2/institute/virginia/logo.png
+numStateCases: 4042
+numStateDailyNewCases: 397
+numStateDeaths: 109
+numStateCures: 0
+courseOperationStatus: onlineCourse
+onlineCourseStartDate: 2020-03-19
+onCampusCourseResumeDate: 

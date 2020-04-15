@@ -1,0 +1,18 @@
+slug: us-nd
+nameEn: University of Notre Dame
+nameCn: 圣母大学（美国）
+countryCode: us
+website: http://www.nd.edu/
+stateCn: 印第安纳州
+stateEn: Indiana
+publicOrPrivate: private
+coursePolicyLink: https://coronavirus.nd.edu/
+cover: https://cdn.applysquare.net/a2/institute/nd/cover_app.jpg
+logo: https://cdn.applysquare.net/a2/institute/nd/logo.png
+numStateCases: 6351
+numStateDailyNewCases: 408
+numStateDeaths: 245
+numStateCures: 0
+courseOperationStatus: onlineCourse
+onlineCourseStartDate: 2020-03-23
+onCampusCourseResumeDate: 

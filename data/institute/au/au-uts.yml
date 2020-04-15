@@ -1,0 +1,18 @@
+slug: au-uts
+nameEn: University of Technology Sydney
+nameCn: 悉尼科技大学
+countryCode: au
+website: http://www.uts.edu.au/
+stateCn: 新南威尔士州
+stateEn: New South Wales
+publicOrPrivate: public
+coursePolicyLink: https://www.uts.edu.au/current-students/news/coronavirus-and-international-travel-information
+cover: https://cdn.applysquare.net/a2/institute/au.uts/cover_app.jpg
+logo: https://cdn.applysquare.net/a2/institute/au.uts/logo.png
+numStateCases: 2773
+numStateDailyNewCases: 39
+numStateDeaths: 21
+numStateCures: 4
+courseOperationStatus: onlineCourse
+onlineCourseStartDate: 2020-03-24
+onCampusCourseResumeDate: 

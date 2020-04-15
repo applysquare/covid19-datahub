@@ -1,0 +1,18 @@
+slug: us-fsu
+nameEn: Florida State University
+nameCn: 佛罗里达州立大学
+countryCode: us
+website: http://www.fsu.edu/
+stateCn: 佛罗里达州
+stateEn: Florida
+publicOrPrivate: public
+coursePolicyLink: https://news.fsu.edu/tag/coronavirus/
+cover: https://cdn.applysquare.net/a2/institute/fsu/cover_app.jpg
+logo: https://cdn.applysquare.net/a2/institute/fsu/logo.png
+numStateCases: 16364
+numStateDailyNewCases: 908
+numStateDeaths: 354
+numStateCures: 0
+courseOperationStatus: onlineCourse
+onlineCourseStartDate: 2020-03-23
+onCampusCourseResumeDate: 

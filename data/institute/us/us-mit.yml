@@ -1,0 +1,18 @@
+slug: us-mit
+nameEn: Massachusetts Institute of Technology
+nameCn: 麻省理工学院
+countryCode: us
+website: http://www.mit.edu/
+stateCn: 马萨诸塞州
+stateEn: Massachusetts
+publicOrPrivate: private
+coursePolicyLink: https://covid19.mit.edu/
+cover: https://cdn.applysquare.net/a2/institute/mit/cover_app.jpg
+logo: https://cdn.applysquare.net/a2/institute/mit/logo.png
+numStateCases: 18941
+numStateDailyNewCases: 2151
+numStateDeaths: 503
+numStateCures: 0
+courseOperationStatus: onlineCourse
+onlineCourseStartDate: 2020-03-30
+onCampusCourseResumeDate: 

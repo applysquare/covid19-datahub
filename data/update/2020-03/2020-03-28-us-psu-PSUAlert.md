@@ -7,7 +7,7 @@ link: >-
   https://news.psu.edu/story/613368/2020/03/28/psualert-issued-clery-requirements-first-covid-19-case-harrisburg
 countryCode: us
 stauts: published
-institute_slug: psu
+instituteSlug: psu
 ---
 <div class="field field-name-body field-type-text-with-summary field-label-hidden">
 

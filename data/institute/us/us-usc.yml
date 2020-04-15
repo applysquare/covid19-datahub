@@ -1,0 +1,18 @@
+slug: us-usc
+nameEn: University of Southern California
+nameCn: 南加州大学
+countryCode: us
+website: http://www.usc.edu/
+stateCn: 加利福尼亚州
+stateEn: California
+publicOrPrivate: private
+coursePolicyLink: https://sites.usc.edu/coronavirus/
+cover: https://cdn.applysquare.net/a2/institute/usc/cover_app.jpg
+logo: https://cdn.applysquare.net/a2/institute/usc/logo.png
+numStateCases: 19710
+numStateDailyNewCases: 813
+numStateDeaths: 544
+numStateCures: 0
+courseOperationStatus: onlineCourse
+onlineCourseStartDate: 2020-03-23
+onCampusCourseResumeDate: 

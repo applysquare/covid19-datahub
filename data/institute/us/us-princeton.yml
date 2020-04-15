@@ -1,0 +1,18 @@
+slug: us-princeton
+nameEn: Princeton University
+nameCn: 普林斯顿大学
+countryCode: us
+website: http://www.princeton.edu/
+stateCn: 新泽西州
+stateEn: New Jersey
+publicOrPrivate: private
+coursePolicyLink: https://www.princeton.edu/content/covid-19-coronavirus-information
+cover: https://cdn.applysquare.net/a2/institute/princeton/cover_app.jpg
+logo: https://cdn.applysquare.net/a2/institute/princeton/logo.png
+numStateCases: 51027
+numStateDailyNewCases: 3590
+numStateDeaths: 1709
+numStateCures: 0
+courseOperationStatus: onlineCourse
+onlineCourseStartDate: 2020-03-23
+onCampusCourseResumeDate: 

@@ -17,6 +17,7 @@ exports.createPages = async ({ actions, graphql }) => {
               templateKey
             }
             frontmatter {
+              status
               tags
             }
           }
@@ -36,6 +37,10 @@ exports.createPages = async ({ actions, graphql }) => {
     const id = edge.node.id;
     const pathname = edge.node.fields.pathname;
     const templateKey = edge.node.fields.templateKey;
+    if (edge.node.frontmatter.status === 'draft') {
+      return;
+    }
+
     createPage({
       path: pathname,
       tags: edge.node.frontmatter.tags,
@@ -50,7 +55,13 @@ exports.createPages = async ({ actions, graphql }) => {
   });
 };
 
-exports.onCreateNode = ({ node, actions, getNode }) => {
+const numNodesByTemplateKey = {};
+
+function incNode(templateKey) {
+  numNodesByTemplateKey[templateKey] = (numNodesByTemplateKey[templateKey] || 0) + 1;
+}
+
+exports.onCreateNode = ({ node, actions, getNode, reporter }) => {
   const { createNodeField, createPage } = actions;
   fmImagesToRelative(node); // convert image paths for gatsby images
   if (node.internal.owner === `gatsby-transformer-yaml`) {
@@ -78,6 +89,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
         // slug: node.slug
       }, context),
     });
+    incNode(templateKey);
     createNodeField({
       node: node,
       name: `pathname`,
@@ -91,24 +103,32 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       node: node,
       value: pathname
     });
-    const templateKey = node.frontmatter.templateKey ||
+    let templateKey = node.frontmatter.templateKey ||
       `${_.kebabCase(pathname.split('/')[1])}-page`;
+    if (node.frontmatter.status === 'draft') {
+      templateKey = `${templateKey}-draft`;
+    }
+
+    if (templateKey === 'article-page' || templateKey === 'update-page') {
+      const fn = path.relative(__dirname, node.fileAbsolutePath);
+      if (!node.frontmatter.date) {
+        // throw new Error(`Data error: the 'date' field is not set for file: ${fn}`);
+        reporter.panicOnBuild(`Data error: the 'date' field is not set for file: ${fn}`);
+      }
+      if (isNaN(Date.parse(node.frontmatter.date))) {
+        //throw new Error(`Data error: invalid 'date' value (${node.frontmatter.date}) in file: ${fn}`);
+        reporter.panicOnBuild(`Data error: invalid 'date' value (${node.frontmatter.date}), it must be YYYY-MM-DD in file: ${fn}`);
+      }
+    }
+    incNode(templateKey);
     createNodeField({
       name: `templateKey`,
       node: node,
       value: templateKey
     });
   }
-
-  // node =
-  // { title: '美国',
-  //   countryCode: 'us',
-  //   id: '2c450cb2-67dd-5f89-8348-3a943cdeba10',
-  //   children: [],
-  //   parent: 'c2e6d4cf-ddc5-5658-91a7-ecb4dd720424',
-  //   internal:
-  //    { contentDigest: 'a8e9402d4e2950675a8047cbc7317a29',
-  //      type: 'Yaml',
-  //      counter: 117,
-  //      owner: 'gatsby-transformer-yaml' } }
 };
+
+exports.onPostBootstrap = ({ reporter }) => {
+  reporter.info(`Node stats: ${JSON.stringify(numNodesByTemplateKey, undefined, 2)}`, numNodesByTemplateKey);
+}
