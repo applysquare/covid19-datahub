@@ -89,7 +89,9 @@ const styles = {
 
 const PageCore = ({ data }) => {
   const { allInstitute = {}, allArea = {} } = data;
-  const urlCountryCode = window.location.pathname.match("[^/]+(?!.*/)")[0];
+  const urlCountryCode =
+    typeof window !== "undefined" &&
+    window.location.pathname.match("[^/]+(?!.*/)")[0];
 
   const [institute, setInstitute] = useState([]);
   const [countryCode, setCountryCode] = useState(null);
