@@ -36,6 +36,9 @@ about: 对项目及网站建设提出反馈建议
 如果没有作用，您可能需要更新全局gatsby-cli-`npm install -g gatsby-cli`
 
 Node.js version:
-NPM/Yarn version
+
+NPM/Yarn version:
+
 Operating System:
+
 Additional tools:
