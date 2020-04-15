@@ -8,8 +8,8 @@ assignees: ''
 ---
 
 ---
-# name: 反馈建议
-about: 对项目及网站建设提出反馈建议
+# name: 使用报错
+about: 使用过程中遇到的错误报备
 ---
 
 感谢您对项目平稳运行的支持，我们会在收到反馈后及时处理。
@@ -36,6 +36,9 @@ about: 对项目及网站建设提出反馈建议
 如果没有作用，您可能需要更新全局gatsby-cli-`npm install -g gatsby-cli`
 
 Node.js version:
-NPM/Yarn version
+
+NPM/Yarn version:
+
 Operating System:
+
 Additional tools:
