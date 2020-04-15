@@ -9,7 +9,7 @@ import { translateCourseOperationStatus } from "../components/display";
 const styles = {
   flexParent: {
     display: "flex",
-    flexWrap: "wrap"
+    flexWrap: "wrap",
   },
   tabItem: {
     padding: "8px 0",
@@ -18,7 +18,7 @@ const styles = {
     flex: 1,
     background: "#F1F1F1",
     textDecoration: "none",
-    color: "#333333"
+    color: "#333333",
   },
   triangle: {
     width: 0,
@@ -28,24 +28,24 @@ const styles = {
     borderBottom: "0px solid transparent",
     borderTop: "40px solid rgb(241, 241, 241)",
     borderLeft: "6px solid rgb(241, 241, 241)",
-    borderRight: "10px solid transparent"
+    borderRight: "10px solid transparent",
   },
   title: {
     fontSize: "20px",
-    margin: "30px 0 24px 0"
+    margin: "30px 0 24px 0",
   },
   link: {
     textDecoration: "none",
-    color: "#333333"
+    color: "#333333",
   },
   nameCn: {
     fontSize: "16px",
     overflow: "hidden",
     textOverflow: "ellipsis",
-    whiteSpace: "nowrap"
+    whiteSpace: "nowrap",
   },
   stateCn: {
-    paddingRight: "6px"
+    paddingRight: "6px",
   },
   countryCn: {
     background: "#FFFFFF",
@@ -55,7 +55,7 @@ const styles = {
     fontSize: "14px",
     color: "#999999",
     margin: "16px 0",
-    textDecoration: "none"
+    textDecoration: "none",
   },
   inputBox: {
     display: "flex",
@@ -71,59 +71,60 @@ const styles = {
     boxShadow: "0px 4px 8px 0px rgba(0,0,0,0.08)",
     borderRadius: "4px",
     border: "1px solid rgba(242,242,242,1)",
-    transition: "all .3s"
+    transition: "all .3s",
   },
   inputTxt: {
     width: "100%",
     outline: "none",
     border: "none",
-    fontSize: "14px"
-  }
+    fontSize: "14px",
+  },
 };
 
-const filterArr = (arr = [], countryCode = "us") => {
-  return arr.filter(item => {
-    return item.node.countryCode === countryCode;
-  });
-};
+// const filterArr = (arr = [], countryCode = "us") => {
+//   return arr.filter((item) => {
+//     return item.node.countryCode === countryCode;
+//   });
+// };
 
 const PageCore = ({ data }) => {
   const { allInstitute = {}, allArea = {} } = data;
-  // 默认美国-us
+  const urlCountryCode = window.location.pathname.match("[^/]+(?!.*/)")[0];
+
   const [institute, setInstitute] = useState([]);
   const [countryCode, setCountryCode] = useState(null);
   const [search, setSearch] = useState(null);
 
   useEffect(() => {
-    const institute = filterArr(allInstitute?.edges, "us");
+    // const institute = filterArr(allInstitute?.edges, "us");
+    const institute = allInstitute?.edges || [];
     setInstitute(institute);
-    setCountryCode("us");
+    // const countryCode = window.location.pathname.match("[^/]+(?!.*/)")[0];
+    setCountryCode(urlCountryCode);
     // 模糊搜索
     const search = new JsSearch.Search(["node", "id"]);
     search.tokenizer = {
       tokenize(text) {
         return text.split(/\s+/);
-      }
+      },
     };
     search.addIndex(["node", "nameEn"]);
     search.addIndex(["node", "nameCn"]);
     search.addDocuments(institute);
     setSearch(search);
-  }, [allInstitute]);
+  }, [urlCountryCode, allInstitute]);
 
-  const filter = (countryCode = "", e) => {
-    e.preventDefault();
-    const institute = filterArr(allInstitute.edges, countryCode);
-    setInstitute(institute);
-    setCountryCode(countryCode);
-  };
+  // const filter = (countryCode = "", e) => {
+  //   e.preventDefault();
+  //   const institute = filterArr(allInstitute.edges, countryCode);
+  //   setInstitute(institute);
+  //   setCountryCode(countryCode);
+  // };
 
-  const onSearch = e => {
+  const onSearch = (e) => {
     const { value } = e.target;
     const searchResult =
-      value !== ""
-        ? search.search(value.trim())
-        : filterArr(allInstitute?.edges, "us");
+      value !== "" ? search.search(value.trim()) : allInstitute?.edges || [];
     setInstitute(searchResult);
   };
 
@@ -146,14 +147,14 @@ const PageCore = ({ data }) => {
           <input
             placeholder="输入院校全称或缩写"
             style={styles.inputTxt}
-            onInput={e => onSearch(e)}
+            onInput={(e) => onSearch(e)}
           />
           <SearchOutlined />
         </div>
         <div style={styles.flexParent}>
           {(allArea.edges || []).map((item, index) => {
             return (
-              <a
+              <Link
                 key={v4()}
                 href="###"
                 style={{
@@ -168,12 +169,13 @@ const PageCore = ({ data }) => {
                     item?.node?.countryCode === countryCode
                       ? "#ffffff"
                       : "rgb(153, 153, 153)"
-                  }`
+                  }`,
                 }}
-                onClick={e => filter(item?.node?.countryCode, e)}
+                to={`/institute/${item?.node?.countryCode}`}
+                // onClick={(e) => filter(item?.node?.countryCode, e)}
               >
                 {item?.node?.titleCn}
-              </a>
+              </Link>
             );
           })}
         </div>
@@ -182,14 +184,13 @@ const PageCore = ({ data }) => {
             ...styles.flexParent,
             justifyContent: "space-between",
             padding: "0 15px",
-            fontSize: "14px"
+            fontSize: "14px",
           }}
         >
           <div>大学</div>
           <div>状态</div>
         </div>
-        {institute.map(edge => {
-          // console.log("哈哈", edge);
+        {institute.map((edge) => {
           const { node } = edge;
           return (
             <Link
@@ -203,7 +204,7 @@ const PageCore = ({ data }) => {
                   justifyContent: "space-between",
                   alignItems: "center",
                   padding: "15px 10px",
-                  borderBottom: "1px solid #E4E4E4"
+                  borderBottom: "1px solid #E4E4E4",
                 }}
                 key={node?.id}
               >
@@ -239,7 +240,7 @@ const PageCore = ({ data }) => {
 
 // const Page = makePage(PageCore);
 const Page = makePage(PageCore, {
-  srcPath: "/src/templates/area-page.js"
+  srcPath: "/src/templates/area-page.js",
 });
 export default Page;
 

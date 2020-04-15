@@ -12,13 +12,13 @@ import {
   formatDate,
   domainURI,
   goBack,
-  translateBingAreaId
+  translateBingAreaId,
 } from "../components/display";
 
 const help = {
   title: "校友交流与资源互助",
   linkTxt: "校友互助，资源交流，爱心传递",
-  linkTo: "https://github.com/applysquare/covid19-datahub/issues/new/choose"
+  linkTo: "/resource",
 };
 // 之后换成网页端交流与资源建设页面入口
 
@@ -27,14 +27,14 @@ const styles = {
     color: "#333333",
     fontWeight: 500,
     fontSize: "18px",
-    marginBottom: "24px"
+    marginBottom: "24px",
   },
   logoBox: {
     backgroundImage: `url(${indexTitleImg})`,
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     position: "relative",
-    height: "168px"
+    height: "168px",
   },
   mask: {
     background: "rgba(0,0,0,0.53)",
@@ -44,7 +44,7 @@ const styles = {
     top: 0,
     bottom: 0,
     left: 0,
-    right: 0
+    right: 0,
   },
   maskContent: {
     position: "absolute",
@@ -53,11 +53,11 @@ const styles = {
     left: 0,
     right: 0,
     zIndex: 999,
-    padding: "20px 15px"
+    padding: "20px 15px",
   },
   logoTitle: {
     fontSize: "14px",
-    color: "#FFFFFF"
+    color: "#FFFFFF",
   },
   nameCn: {
     fontWeight: 500,
@@ -66,7 +66,7 @@ const styles = {
     width: "90%",
     overflow: "hidden",
     textOverflow: "ellipsis",
-    whiteSpace: "nowrap"
+    whiteSpace: "nowrap",
   },
   nameEn: {
     fontSize: "12px",
@@ -74,42 +74,42 @@ const styles = {
     width: "90%",
     overflow: "hidden",
     textOverflow: "ellipsis",
-    whiteSpace: "nowrap"
+    whiteSpace: "nowrap",
   },
   policy: {
     padding: "24px 15px",
     background: "#FFFFFF",
     marginTop: "10px",
-    boxShadow: "0px 2px 6px 0px rgba(0,0,0,0.08)"
+    boxShadow: "0px 2px 6px 0px rgba(0,0,0,0.08)",
   },
   flexParent: {
     display: "flex",
     justifyContent: "space-around",
-    flexWrap: "wrap"
+    flexWrap: "wrap",
   },
   flexChild: {
-    textAlign: "center"
+    textAlign: "center",
   },
   areaName: {
     fontSize: "14px",
-    color: "#666666"
+    color: "#666666",
   },
   illnessTxt: {
     color: "#333333",
-    fontSize: "14px"
+    fontSize: "14px",
   },
   illnessNum: {
-    fontSize: "20px"
+    fontSize: "20px",
   },
   localEpidemicBox: {
     background: "#FFFFFF",
     boxShadow: "0px 6px 6px 0px rgba(0,0,0,0.08)",
-    padding: "24px 15px"
+    padding: "24px 15px",
   },
   infoBox: {
     boxShadow: "0px 2px 4px 0px rgba(0,0,0,0.1)",
     borderRadius: "4px",
-    padding: "20px 10px"
+    padding: "20px 10px",
   },
   more: {
     color: "#999999",
@@ -117,12 +117,12 @@ const styles = {
     padding: "5px",
     display: "inline-block",
     textDecoration: "underline",
-    cursor: "default"
+    cursor: "default",
   },
   link: {
     textDecoration: "none",
-    color: "#FFFFFF"
-  }
+    color: "#FFFFFF",
+  },
 };
 
 const InstitutePageCore = ({ data, errors }) => {
@@ -139,7 +139,7 @@ const InstitutePageCore = ({ data, errors }) => {
     onCampusCourseResumeDate,
     courseOperationStatus,
     onlineCourseStartDate,
-    coursePolicyLink
+    coursePolicyLink,
   } = institute;
 
   const {
@@ -147,7 +147,7 @@ const InstitutePageCore = ({ data, errors }) => {
     totalConfirmed,
     totalConfirmedDelta,
     totalDeaths,
-    totalRecovered
+    totalRecovered,
   } = covid19Area?.data || {};
 
   const infoEdges = articles?.edges || [];
@@ -163,13 +163,13 @@ const InstitutePageCore = ({ data, errors }) => {
       <div
         style={{
           ...styles.logoBox,
-          backgroundImage: `url(${cover})`
+          backgroundImage: `url(${cover})`,
         }}
       >
         <div style={styles.mask}></div>
         <div style={styles.maskContent}>
           <div style={styles.logoTitle}>
-            <a href="###" style={styles.link} onClick={e => goBack(e)}>
+            <a href="###" style={styles.link} onClick={(e) => goBack(e)}>
               <LeftOutlined />
               <span style={{ padding: "0 4px" }}>院校列表</span>
             </a>
@@ -178,7 +178,7 @@ const InstitutePageCore = ({ data, errors }) => {
             style={{
               display: "flex",
               alignItems: "center",
-              margin: "36px 0 24px 6px"
+              margin: "36px 0 24px 6px",
             }}
           >
             <span style={{ background: "#FFFFFF", borderRadius: "50%" }}>
@@ -189,7 +189,7 @@ const InstitutePageCore = ({ data, errors }) => {
                   width: "40px",
                   height: "40px",
                   borderRadius: "50%",
-                  verticalAlign: "middle"
+                  verticalAlign: "middle",
                 }}
               />
             </span>
@@ -206,7 +206,7 @@ const InstitutePageCore = ({ data, errors }) => {
             ...styles.flexParent,
             justifyContent: "space-between",
             marginBottom: "24px",
-            alignItems: "center"
+            alignItems: "center",
           }}
         >
           <div style={{ ...styles.title, margin: 0 }}>所在地区疫情</div>
@@ -291,7 +291,7 @@ const InstitutePageCore = ({ data, errors }) => {
           <div
             style={{
               ...styles.title,
-              margin: "30px 0 22px 0"
+              margin: "30px 0 22px 0",
             }}
           >
             资讯

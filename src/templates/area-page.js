@@ -8,77 +8,77 @@ import NewList from "../components/NewList";
 import {
   translateCourseOperationStatus,
   sliceArr,
-  goBack
+  goBack,
 } from "../components/display";
 
 const help = {
   title: "交流与资源建设",
   linkTxt: "有困难有问题？有资源有爱心？来这里",
-  linkTo: "https://github.com/applysquare/covid19-datahub/issues/new/choose"
+  linkTo: "/resource",
 };
 // 之后换成网页端交流与资源建设页面入口
 
 const styles = {
   countryBox: {
     background: "#FFFFFF",
-    padding: "20px 15px"
+    padding: "20px 15px",
   },
   title: {
     color: "#333333",
     fontWeight: 500,
     fontSize: "18px",
-    marginBottom: "24px"
+    marginBottom: "24px",
   },
   returnBox: {
     color: "#333333",
     fontSize: "16px",
     textDecoration: "none",
     display: "inline-block",
-    marginBottom: "30px"
+    marginBottom: "30px",
   },
   flexParent: {
     display: "flex",
     justifyContent: "space-around",
     flexWrap: "wrap",
-    textAlign: "center"
+    textAlign: "center",
   },
   flexChild: {
-    padding: "24px 0 10px 0"
+    padding: "24px 0 10px 0",
   },
   statusTxt: {
     color: "#333333",
-    fontSize: "14px"
+    fontSize: "14px",
   },
   statusNum: {
-    fontSize: "20px"
+    fontSize: "20px",
   },
   instituteBox: {
     padding: "24px 15px 20px",
     background: "#FFFFFF",
     marginTop: "10px",
-    boxShadow: "0px 2px 6px 0px rgba(0,0,0,0.08)"
+    boxShadow: "0px 2px 6px 0px rgba(0,0,0,0.08)",
   },
   institutePic: {
     width: "50px",
     height: "50px",
     borderRadius: "50%",
     background: "#FFFFFF",
-    margin: "0 auto"
+    margin: "0 auto",
   },
   instituteName: { color: "#333333", marginTop: "8px", textAlign: "center" },
   instituteNameMore: {
     textOverflow: "ellipsis",
     whiteSpace: "nowrap",
     overflow: "hidden",
-    fontSize: "14px"
+    fontSize: "14px",
   },
   infoBox: {
     boxShadow: "0px 2px 4px 0px rgba(0,0,0,0.1)",
     borderRadius: "4px",
-    padding: "20px 10px"
+    padding: "20px 10px",
   },
   link: {
-    textDecoration: "none"
+    textDecoration: "none",
   },
   more: {
     color: "#999999",
@@ -86,8 +86,8 @@ const styles = {
     padding: "5px",
     display: "inline-block",
     textDecoration: "underline",
-    cursor: "pointer"
-  }
+    cursor: "pointer",
+  },
 };
 
 export const AreaPageCore = ({ data }) => {
@@ -101,7 +101,7 @@ export const AreaPageCore = ({ data }) => {
     <div style={{ background: "rgba(241,241,241,0.8)" }}>
       <div style={styles.countryBox}>
         <div>
-          <a href="###" style={styles.returnBox} onClick={e => goBack(e)}>
+          <a href="###" style={styles.returnBox} onClick={(e) => goBack(e)}>
             <LeftOutlined />
             <span style={{ paddingLeft: "5px" }}>全球动态</span>
           </a>
@@ -152,7 +152,7 @@ export const AreaPageCore = ({ data }) => {
           <div style={styles.title}>{area?.titleCn}院校实况</div>
           <Link
             style={{
-              ...styles.more
+              ...styles.more,
             }}
             to="/institute"
           >
@@ -160,7 +160,7 @@ export const AreaPageCore = ({ data }) => {
           </Link>
         </div>
         <div style={{ ...styles.flexParent, justifyContent: "flex-start" }}>
-          {(institutes || []).map(edge => {
+          {(institutes || []).map((edge) => {
             return (
               <Link
                 style={{
@@ -169,7 +169,7 @@ export const AreaPageCore = ({ data }) => {
                   textOverflow: "ellipsis",
                   whiteSpace: "nowrap",
                   marginBottom: "12px",
-                  width: "25%"
+                  width: "25%",
                 }}
                 key={edge?.node?.id}
                 to={edge?.node?.fields?.pathname}
@@ -181,14 +181,14 @@ export const AreaPageCore = ({ data }) => {
                     style={{
                       width: "100%",
                       height: "100%",
-                      borderRadius: "50%"
+                      borderRadius: "50%",
                     }}
                   />
                 </div>
                 <div
                   style={{
                     ...styles.instituteName,
-                    ...styles.instituteNameMore
+                    ...styles.instituteNameMore,
                   }}
                 >
                   {edge?.node?.nameCn}
@@ -197,7 +197,7 @@ export const AreaPageCore = ({ data }) => {
                   style={{
                     ...styles.instituteName,
                     color: "#333333",
-                    fontSize: "12px"
+                    fontSize: "12px",
                   }}
                 >
                   {translateCourseOperationStatus(
@@ -226,7 +226,7 @@ export const AreaPageCore = ({ data }) => {
           <div
             style={{
               ...styles.title,
-              margin: "30px 0 22px 0"
+              margin: "30px 0 22px 0",
             }}
           >
             {area?.titleCn}资讯
@@ -240,7 +240,7 @@ export const AreaPageCore = ({ data }) => {
 };
 
 const Page = makePage(AreaPageCore, {
-  srcPath: "/src/templates/area-page.js"
+  srcPath: "/src/templates/area-page.js",
 });
 export default Page;
 
