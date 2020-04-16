@@ -1,8 +1,9 @@
 ---
-title: Both British Airways daily services to Tokyo will now operate to and from Haneda Airport
+title: (04/02)Both British Airways daily services to Tokyo will now operate to and from Haneda Airport
 date: 2020-04-02
 link: >-
   https://lfn.custhelp.com/app/answers/detail/a_id/8014/related/1/session/L2F2LzEvdGltZS8xNTg2NDg1NDMzL3NpZC9YU21McCpGbw%3D%3D
+countryCode: us
 airlineCode: british_airways
 status: published
 ---
@@ -20,4 +21,6 @@ More information
 
 [![Print](images/Print.png) Print ](javascript:void(0); "Print this page")  [Arrivals & Departures](https://www.britishairways.com/travel/arrdep?source=LFN_item) [Manage My Booking](http://ba.com/rightnow_mmb)
 
-## Answers others found helpful * [Coronavirus (COVID-19)](/app/answers/detail/a_id/7982/related/1) * [Information for Flybe customers and staff](/app/answers/detail/a_id/8103/related/1) 
+## Answers others found helpful 
+* [Coronavirus (COVID-19)](/app/answers/detail/a_id/7982/related/1) 
+* [Information for Flybe customers and staff](/app/answers/detail/a_id/8103/related/1) 
