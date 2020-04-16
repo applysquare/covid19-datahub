@@ -1,5 +1,5 @@
 ---
-title: Flying to or from Milan, Italy
+title: Travel Alert: Flying to or from Milan, Italy
 date: 2020-02-29
 link: >-
   http://news.aa.com/news/news-details/2020/Travel-Alert-Update-on-Milan-Italy-Flying-Presidential-Proclamation-Amendment-OPS-DIS-02/default.aspx
