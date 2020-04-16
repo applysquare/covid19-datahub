@@ -7,5 +7,5 @@ link: >-
   https://blogs.cul.columbia.edu/spotlights/2020/04/03/40-of-columbias-print-collections-now-temporarily-available-in-digital-format-following-hathitrust-emergency-temporary-access-service/
 countryCode: us
 stauts: published
-instituteSlug: columbia
+instituteSlug: us-columbia
 ---
