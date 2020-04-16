@@ -7,14 +7,14 @@ link: >-
   https://news.psu.edu/story/613137/2020/03/25/academics/optional-alternative-grading-scale-implemented-spring-2020
 countryCode: us
 stauts: published
-instituteSlug: psu
+instituteSlug: us-psu
 ---
 <div class="field field-name-body field-type-text-with-summary field-label-hidden">
 
 <div class="field-items">
 
 <div class="field-item even" property="content:encoded">
- 
+
 UNIVERSITY PARK, Pa. -- Penn State is implementing a new opt-in grading system for the spring 2020 semester that will give students flexibility, help preserve GPAs and minimize impacts to students’ transcripts during the academic challenges presented by the [novel coronavirus](https://sites.psu.edu/virusinfo/) public health crisis.
 
 Under the new system, undergraduate students will be able to choose to keep their current grade, or to have courses graded with one of three alternate grades:
