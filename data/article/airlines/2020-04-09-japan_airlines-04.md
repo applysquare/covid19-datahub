@@ -3,6 +3,7 @@ title: 2020年3月29日～4月30日 オセアニア線路線計画変更内容
 date: 2020-03-24
 link: >-
   https://www.jal.co.jp/jp/ja/info/2020/inter/200313_05/
+countryCode: ca
 airlineCode: japan_airlines
 status: published
 ---
