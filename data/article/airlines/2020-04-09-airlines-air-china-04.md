@@ -3,7 +3,7 @@ title: 关于对乘坐湖北省始发航班旅客的温馨提示
 date: 2020-04-04
 link: >-
   http://www.airchina.com.cn/cn/info_and_services/138667.shtml
-countryCode: 
+countryCode:
 airlineCode: air_china
 status: published
 ---
