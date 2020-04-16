@@ -3,6 +3,7 @@ title: 2020年4月乘坐国泰航空及国泰港龙航空的重要资讯
 date: 2020-04-03
 link: >-
   https://www.cathaypacific.com/cx/sc_CN/travel-information/travel-preparation/travel-advisories/important-information-for-cathay-pacific-and-cathay-dragon-passengers.html
+countryCode: hk
 airlineCode: cathaypacific_airways
 status: published
 ---
