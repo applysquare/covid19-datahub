@@ -7,5 +7,6 @@ link: >-
 featuredpost: false
 tags:
   - nytimes
+status: published
 instituteSlug:
 ---

@@ -5,8 +5,9 @@ subtitle:
 date: 2020-03-20
 link: >-
   https://covid19.columbia.edu/news/update-course-instruction-and-university-commencement
+tags:
+status: published
 countryCode: us
-stauts: published
 instituteSlug: us-columbia
 ---
 <header>

@@ -5,8 +5,10 @@ subtitle: Equipment and expertise come from across campus to help UNC Health fig
 date: 2020-04-06
 link: >-
   https://www.unc.edu/discover/campus-response-adds-to-1-million-ppe-for-unc-health
+status: published
+tags:
+  - university
 countryCode: us
-stauts: published
 instituteSlug: us-unc
 ---
 To help COVID-19 frontline workers at UNC Health, Carolina’s faculty and staff have contributed personal protection equipment and expertise in the form of 3D-printed shields designed by faculty and made by medical students.

@@ -6,4 +6,5 @@ link: >-
   https://mp.weixin.qq.com/s/Eyg8zy11-hDI31rfyjVv4g
 slug: us-columbia
 countryCode: us
+instituteSlug: us-columbia
 ---

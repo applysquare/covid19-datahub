@@ -5,8 +5,9 @@ subtitle: Students can keep their grades if they choose; alternative grades incl
 date: 2020-03-25
 link: >-
   https://news.psu.edu/story/613137/2020/03/25/academics/optional-alternative-grading-scale-implemented-spring-2020
+tags:
+status: published
 countryCode: us
-stauts: published
 instituteSlug: us-psu
 ---
 <div class="field field-name-body field-type-text-with-summary field-label-hidden">

@@ -5,8 +5,9 @@ subtitle: Students can keep their grades if they choose; alternative grades will
 date: 2020-04-01
 link: >-
   https://news.psu.edu/story/614029/2020/04/02/academics/graduate-school-implements-optional-alternative-grading-spring
+tags:
+status: published
 countryCode: us
-stauts: published
 instituteSlug: us-psu
 ---
 

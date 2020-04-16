@@ -4,8 +4,9 @@ subtitle:
 date: 2020-04-09
 link: >-
   https://president.columbia.edu/news/update-impact-covid-19-and-commencement
+tags:
+status: published
 countryCode: us
-stauts: published
 instituteSlug: us-columbia
 ---
 Dear fellow members of the Columbia community:

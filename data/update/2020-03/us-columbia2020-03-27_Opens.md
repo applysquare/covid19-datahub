@@ -5,8 +5,9 @@ subtitle:
 date: 2020-03-27
 link: >-
   https://covid19.columbia.edu/news/columbia-opens-residence-halls-doctors-and-healthcare-workers
+tags:
+status: published
 countryCode: us
-stauts: published
 instituteSlug: us-columbia
 ---
 <div class="field field--name-field-cu-content field--type-entity-reference-revisions field--label-hidden field--items">

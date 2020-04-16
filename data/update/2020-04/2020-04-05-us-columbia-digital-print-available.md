@@ -5,7 +5,8 @@ subtitle: 40% of Columbia’s print collections are now temporarily available in
 date: 2020-04-01
 link: >-
   https://blogs.cul.columbia.edu/spotlights/2020/04/03/40-of-columbias-print-collections-now-temporarily-available-in-digital-format-following-hathitrust-emergency-temporary-access-service/
+tags:
+status: published
 countryCode: us
-stauts: published
 instituteSlug: us-columbia
 ---

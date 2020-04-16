@@ -4,8 +4,9 @@ title: Tele-schooling the K-12 Set
 date: 2020-03-25
 link: >-
   hhttps://news.columbia.edu/news-remote-youth-online-learning-schools
+tags:
+status: published
 countryCode: us
-stauts: published
 instituteSlug: us-columbia
 ---
 
