@@ -1,7 +1,7 @@
 // import { Link } from "gatsby";
 import React, { useState, useEffect } from "react";
 import { RightOutlined } from "@ant-design/icons";
-import { Link } from 'gatsby';
+import { Link } from "gatsby";
 import { sliceArr } from "../components/display";
 
 const styles = {
@@ -16,7 +16,7 @@ const styles = {
   link: {
     display: "block",
     width: "100%",
-    textDecoration: 'none',
+    textDecoration: "none"
   },
   txt: {
     whiteSpace: "nowrap",
@@ -28,23 +28,24 @@ const styles = {
     color: "#999999",
     fontSize: "14px",
     padding: "5px",
-    display: "inline-block",
-    textDecoration: "underline"
+    display: "inline-block"
   }
 };
 
 const InfoList = ({ infoEdges = [] }) => {
   const [infoArr, setInfoArr] = useState([]);
   const [more, setMore] = useState(null);
+
   useEffect(() => {
-    const infoArr = sliceArr(infoEdges, 3);
-    setInfoArr(infoArr);
+    setInfoArr(sliceArr(infoEdges, 3));
     setMore(false);
   }, [infoEdges]);
 
-  const clickMore = () => {
-    setInfoArr(infoEdges);
-    setMore(true);
+  const clickBtn = e => {
+    e.preventDefault();
+    const arr = more ? sliceArr(infoEdges, 3) : infoEdges;
+    setInfoArr(arr);
+    setMore(!more);
   };
   return (
     <div>
@@ -69,13 +70,12 @@ const InfoList = ({ infoEdges = [] }) => {
       <div style={{ textAlign: "center" }}>
         <a
           href="###"
-          style={{
-            ...styles.more,
-            display: `${more ? "none" : "inline-block"}`
+          style={styles.more}
+          onClick={e => {
+            clickBtn(e);
           }}
-          onClick={clickMore}
         >
-          展开全部
+          {more ? "收起" : "展开全部"}
         </a>
       </div>
     </div>

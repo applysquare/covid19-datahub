@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "gatsby";
 
 const styles = {
   helpBox: {
@@ -17,9 +18,9 @@ const Help = ({ title, linkTxt, linkTo }) => {
   return (
     <div style={styles.helpBox}>
       <div style={styles.helpTitle}>{title}</div>
-      <a style={styles.helpItem} href={linkTo}>
+      <Link style={styles.helpItem} to={linkTo}>
         {linkTxt}
-      </a>
+      </Link>
     </div>
   );
 };

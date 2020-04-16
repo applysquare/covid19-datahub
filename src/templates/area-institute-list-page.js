@@ -3,8 +3,8 @@ import { SearchOutlined } from "@ant-design/icons";
 import { graphql, Link } from "gatsby";
 import * as JsSearch from "js-search";
 import { v4 } from "uuid";
-import { makePage } from "../../components/Layout";
-import { translateCourseOperationStatus } from "../../components/display";
+import { makePage } from "../components/Layout";
+import { translateCourseOperationStatus } from "../components/display";
 
 const styles = {
   flexParent: {
@@ -81,23 +81,28 @@ const styles = {
   },
 };
 
-const filterArr = (arr = [], countryCode = "us") => {
-  return arr.filter((item) => {
-    return item.node.countryCode === countryCode;
-  });
-};
+// const filterArr = (arr = [], countryCode = "us") => {
+//   return arr.filter((item) => {
+//     return item.node.countryCode === countryCode;
+//   });
+// };
 
 const PageCore = ({ data }) => {
   const { allInstitute = {}, allArea = {} } = data;
-  // 默认美国-us
+  const urlCountryCode =
+    typeof window !== "undefined" &&
+    window.location.pathname.match("[^/]+(?!.*/)")[0];
+
   const [institute, setInstitute] = useState([]);
   const [countryCode, setCountryCode] = useState(null);
   const [search, setSearch] = useState(null);
 
   useEffect(() => {
-    const institute = filterArr(allInstitute?.edges, "us");
+    // const institute = filterArr(allInstitute?.edges, "us");
+    const institute = allInstitute?.edges || [];
     setInstitute(institute);
-    setCountryCode("us");
+    // const countryCode = window.location.pathname.match("[^/]+(?!.*/)")[0];
+    setCountryCode(urlCountryCode);
     // 模糊搜索
     const search = new JsSearch.Search(["node", "id"]);
     search.tokenizer = {
@@ -109,21 +114,19 @@ const PageCore = ({ data }) => {
     search.addIndex(["node", "nameCn"]);
     search.addDocuments(institute);
     setSearch(search);
-  }, [allInstitute]);
+  }, [urlCountryCode, allInstitute]);
 
-  const filter = (countryCode = "", e) => {
-    e.preventDefault();
-    const institute = filterArr(allInstitute.edges, countryCode);
-    setInstitute(institute);
-    setCountryCode(countryCode);
-  };
+  // const filter = (countryCode = "", e) => {
+  //   e.preventDefault();
+  //   const institute = filterArr(allInstitute.edges, countryCode);
+  //   setInstitute(institute);
+  //   setCountryCode(countryCode);
+  // };
 
   const onSearch = (e) => {
     const { value } = e.target;
     const searchResult =
-      value !== ""
-        ? search.search(value.trim())
-        : filterArr(allInstitute?.edges, "us");
+      value !== "" ? search.search(value.trim()) : allInstitute?.edges || [];
     setInstitute(searchResult);
   };
 
@@ -153,7 +156,7 @@ const PageCore = ({ data }) => {
         <div style={styles.flexParent}>
           {(allArea.edges || []).map((item, index) => {
             return (
-              <a
+              <Link
                 key={v4()}
                 href="###"
                 style={{
@@ -170,10 +173,11 @@ const PageCore = ({ data }) => {
                       : "rgb(153, 153, 153)"
                   }`,
                 }}
-                onClick={(e) => filter(item?.node?.countryCode, e)}
+                to={`/institute/${item?.node?.countryCode}`}
+                // onClick={(e) => filter(item?.node?.countryCode, e)}
               >
                 {item?.node?.titleCn}
-              </a>
+              </Link>
             );
           })}
         </div>
@@ -236,12 +240,14 @@ const PageCore = ({ data }) => {
   );
 };
 
-const Page = makePage(PageCore);
-
+// const Page = makePage(PageCore);
+const Page = makePage(PageCore, {
+  srcPath: "/src/templates/area-page.js",
+});
 export default Page;
 
 export const pageQuery = graphql`
-  query InstituteListPage {
+  query AreaInstituteListPage($countryCode: String!) {
     allArea(sort: { order: ASC, fields: ranking }) {
       edges {
         node {
@@ -250,7 +256,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    allInstitute(sort: { fields: [countryCode, nameEn] }) {
+    allInstitute(filter: { countryCode: { eq: $countryCode } }) {
       edges {
         node {
           countryCode

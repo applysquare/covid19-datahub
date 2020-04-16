@@ -37,16 +37,14 @@ exports.createPages = async ({ actions, graphql }) => {
     const id = edge.node.id;
     const pathname = edge.node.fields.pathname;
     const templateKey = edge.node.fields.templateKey;
-    if (edge.node.frontmatter.status === 'draft') {
+    if (edge.node.frontmatter.status === "draft") {
       return;
     }
 
     createPage({
       path: pathname,
       tags: edge.node.frontmatter.tags,
-      component: path.resolve(
-        `src/templates/${templateKey}.js`
-      ),
+      component: path.resolve(`src/templates/${templateKey}.js`),
       // additional data can be passed via context
       context: {
         id
@@ -58,7 +56,8 @@ exports.createPages = async ({ actions, graphql }) => {
 const numNodesByTemplateKey = {};
 
 function incNode(templateKey) {
-  numNodesByTemplateKey[templateKey] = (numNodesByTemplateKey[templateKey] || 0) + 1;
+  numNodesByTemplateKey[templateKey] =
+    (numNodesByTemplateKey[templateKey] || 0) + 1;
 }
 
 exports.onCreateNode = ({ node, actions, getNode, reporter }) => {
@@ -82,13 +81,35 @@ exports.onCreateNode = ({ node, actions, getNode, reporter }) => {
       // tags: edge.node.frontmatter.tags,
       component: path.resolve(`src/templates/${templateKey}.js`),
       // additional data can be passed via context
-      context: Object.assign({
-        id: node.id,
-        // countryCode: node.countryCode,
-        // instituteSlug: node.instituteSlug,
-        // slug: node.slug
-      }, context),
+      context: Object.assign(
+        {
+          id: node.id
+          // countryCode: node.countryCode,
+          // instituteSlug: node.instituteSlug,
+          // slug: node.slug
+        },
+        context
+      )
     });
+
+    if (templateKey === "area-page") {
+      createPage({
+        path: `/institute/${node.countryCode}`,
+        // tags: edge.node.frontmatter.tags,
+        component: path.resolve(`src/templates/area-institute-list-page.js`),
+        // additional data can be passed via context
+        context: Object.assign(
+          {
+            id: node.id,
+            countryCode: node.countryCode
+            // instituteSlug: node.instituteSlug,
+            // slug: node.slug
+          },
+          context
+        )
+      });
+    }
+
     incNode(templateKey);
     createNodeField({
       node: node,
@@ -103,21 +124,26 @@ exports.onCreateNode = ({ node, actions, getNode, reporter }) => {
       node: node,
       value: pathname
     });
-    let templateKey = node.frontmatter.templateKey ||
-      `${_.kebabCase(pathname.split('/')[1])}-page`;
-    if (node.frontmatter.status === 'draft') {
+    let templateKey =
+      node.frontmatter.templateKey ||
+      `${_.kebabCase(pathname.split("/")[1])}-page`;
+    if (node.frontmatter.status === "draft") {
       templateKey = `${templateKey}-draft`;
     }
 
-    if (templateKey === 'article-page' || templateKey === 'update-page') {
+    if (templateKey === "article-page" || templateKey === "update-page") {
       const fn = path.relative(__dirname, node.fileAbsolutePath);
       if (!node.frontmatter.date) {
         // throw new Error(`Data error: the 'date' field is not set for file: ${fn}`);
-        reporter.panicOnBuild(`Data error: the 'date' field is not set for file: ${fn}`);
+        reporter.panicOnBuild(
+          `Data error: the 'date' field is not set for file: ${fn}`
+        );
       }
       if (isNaN(Date.parse(node.frontmatter.date))) {
         //throw new Error(`Data error: invalid 'date' value (${node.frontmatter.date}) in file: ${fn}`);
-        reporter.panicOnBuild(`Data error: invalid 'date' value (${node.frontmatter.date}), it must be YYYY-MM-DD in file: ${fn}`);
+        reporter.panicOnBuild(
+          `Data error: invalid 'date' value (${node.frontmatter.date}), it must be YYYY-MM-DD in file: ${fn}`
+        );
       }
     }
     incNode(templateKey);
@@ -130,5 +156,8 @@ exports.onCreateNode = ({ node, actions, getNode, reporter }) => {
 };
 
 exports.onPostBootstrap = ({ reporter }) => {
-  reporter.info(`Node stats: ${JSON.stringify(numNodesByTemplateKey, undefined, 2)}`, numNodesByTemplateKey);
-}
+  reporter.info(
+    `Node stats: ${JSON.stringify(numNodesByTemplateKey, undefined, 2)}`,
+    numNodesByTemplateKey
+  );
+};
