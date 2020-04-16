@@ -269,7 +269,7 @@ export const pageQuery = graphql`
         totalRecovered
       }
     }
-    allInstitute(filter: { countryCode: { eq: $countryCode } }, instituteSlug: { eq: '' } ) {
+    allInstitute(filter: { countryCode: { eq: $countryCode } }, instituteSlug: { eq: "" } ) {
       edges {
         node {
           courseOperationStatus
