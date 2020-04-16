@@ -9,9 +9,9 @@ publicOrPrivate: public
 coursePolicyLink: https://covid19.wisc.edu/
 cover: https://cdn.applysquare.net/a2/institute/wisc/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/wisc/logo.png
-numStateCases: 2886
-numStateDailyNewCases: 176
-numStateDeaths: 111
+numStateCases: 3341
+numStateDailyNewCases: 128
+numStateDeaths: 144
 numStateCures: 0
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-23

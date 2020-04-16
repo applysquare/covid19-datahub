@@ -9,9 +9,9 @@ publicOrPrivate: public
 coursePolicyLink: https://www.sydney.edu.au/study/coronavirus-infection-university-of-sydney-advice.html
 cover: https://cdn.applysquare.net/a2/institute/au.sydney/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/au.sydney/logo.png
-numStateCases: 2773
-numStateDailyNewCases: 39
-numStateDeaths: 21
+numStateCases: 2857
+numStateDailyNewCases: 0
+numStateDeaths: 24
 numStateCures: 4
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-23

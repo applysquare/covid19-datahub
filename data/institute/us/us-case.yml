@@ -9,9 +9,9 @@ publicOrPrivate: private
 coursePolicyLink: https://case.edu/studentlife/healthcounseling/health-services/health-updates
 cover: https://cdn.applysquare.net/a2/institute/case/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/case/logo.png
-numStateCases: 5512
-numStateDailyNewCases: 364
-numStateDeaths: 213
+numStateCases: 6604
+numStateDailyNewCases: 354
+numStateDeaths: 253
 numStateCures: 0
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-18

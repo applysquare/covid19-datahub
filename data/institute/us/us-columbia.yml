@@ -3,16 +3,11 @@ nameEn: Columbia University
 nameCn: 哥伦比亚大学
 countryCode: us
 website: http://www.columbia.edu/
-stateCn: 纽约州
 stateEn: New York
 publicOrPrivate: private
 coursePolicyLink: https://covid19.columbia.edu/
 cover: https://cdn.applysquare.net/a2/institute/columbia/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/columbia/logo.png
-numStateCases: 161779
-numStateDailyNewCases: 10718
-numStateDeaths: 7067
-numStateCures: 0
 bingApiId: newyork_unitedstates
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-26

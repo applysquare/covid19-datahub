@@ -9,9 +9,9 @@ publicOrPrivate: public
 coursePolicyLink: https://urgence.umontreal.ca/covid-19-en/
 cover: https://cdn.applysquare.net/a2/institute/ca.umontreal/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/ca.umontreal/logo.png
-numStateCases: 10912
-numStateDailyNewCases: 881
-numStateDeaths: 216
+numStateCases: 12846
+numStateDailyNewCases: 554
+numStateDeaths: 328
 numStateCures: 0
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-21

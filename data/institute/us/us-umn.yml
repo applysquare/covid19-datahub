@@ -9,9 +9,9 @@ publicOrPrivate: public
 coursePolicyLink: https://safe-campus.umn.edu/public-health-alerts
 cover: https://cdn.applysquare.net/a2/institute/umn/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/umn/logo.png
-numStateCases: 1240
-numStateDailyNewCases: 86
-numStateDeaths: 50
+numStateCases: 1621
+numStateDailyNewCases: 194
+numStateDeaths: 70
 numStateCures: 0
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-18

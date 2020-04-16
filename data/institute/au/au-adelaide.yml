@@ -9,10 +9,10 @@ publicOrPrivate: public
 coursePolicyLink: https://www.adelaide.edu.au/newsroom/covid-19
 cover: https://cdn.applysquare.net/a2/institute/au.adelaide/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/au.adelaide/logo.png
-numStateCases: 420
-numStateDailyNewCases: 5
-numStateDeaths: 3
-numStateCures: 120
+numStateCases: 429
+numStateDailyNewCases: 0
+numStateDeaths: 4
+numStateCures: 179
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-23
 onCampusCourseResumeDate: 2020-04-27
