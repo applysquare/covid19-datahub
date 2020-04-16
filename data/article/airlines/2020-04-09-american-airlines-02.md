@@ -3,6 +3,7 @@ title: American Airlines Update on China Flights
 date: 2020-01-31
 link: >-
   http://news.aa.com/news/news-details/2020/American-Airlines-Update-on-China-Flights-013120-OPS-DIS-01/
+countryCode: us
 airlineCode: american_airlines
 status: published
 ---
