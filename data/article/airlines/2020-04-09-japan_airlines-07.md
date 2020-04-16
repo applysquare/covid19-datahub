@@ -3,6 +3,7 @@ title: 新型コロナウィルス拡大に伴う国際線航空券の取り扱�
 date: 2020-04-07
 link: >-
   https://www.jal.co.jp/jp/ja/info/2020/inter/200127_02/index.html
+countryCode: jp
 airlineCode: japan_airlines
 status: published
 ---
