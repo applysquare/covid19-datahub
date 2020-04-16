@@ -3,7 +3,7 @@ title: 2020年3月29日～4月30日 北米線路線計画変更内容
 date: 2020-04-01
 link: >-
   https://www.jal.co.jp/jp/ja/info/2020/inter/200313_02/
-countryCode: ca
+countryCode: jp
 airlineCode: japan_airlines
 status: published
 ---
