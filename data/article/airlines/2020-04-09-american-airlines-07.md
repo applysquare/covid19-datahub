@@ -1,5 +1,5 @@
 ---
-title: American Airlines: An Update on South Korea Flying
+title: American Airlines Update on South Korea Flying
 date: 2020-03-03
 link: >-
   http://news.aa.com/news/news-details/2020/An-Update-on-South-Korea-Flying/default.aspx
