@@ -3,6 +3,7 @@ title: 2020年3月29日～4月30日 東南アジア・南アジア線路線計�
 date: 2020-04-08
 link: >-
   https://www.jal.co.jp/jp/ja/info/2020/inter/200313_04/
+countryCode: jp
 airlineCode: japan_airlines
 status: published
 ---
