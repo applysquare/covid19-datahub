@@ -3,6 +3,7 @@ title: 2020年3月29日～4月30日 欧州線路線計画変更内容
 date: 2020-04-09
 link: >-
   https://www.jal.co.jp/jp/ja/info/2020/inter/200313_03/
+countryCode: ca
 airlineCode: japan_airlines
 status: published
 ---
