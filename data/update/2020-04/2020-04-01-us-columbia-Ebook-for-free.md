@@ -1,5 +1,4 @@
 ---
-# templateKey: news-page
 title: Columbia University Press Makes E-Books Available for Free
 subtitle: 
 date: 2020-04-01

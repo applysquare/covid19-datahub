@@ -1,10 +1,15 @@
 templateKey: index-page
 title: 全球留学生疫情互助数据中心
 highlightAreas:
-  - name: 美国疫情
+  - name: 美国
     link: /area/us
-    apiCode: US
-  - name: 英国疫情
+    apiCode: unitedstates
+  - name: 英国
     link: /area/uk
-    apiCode: GB
-
+    apiCode: unitedkingdom
+  - name: 加拿大
+    link: /area/ca
+    apiCode: canada
+  - name: 澳大利亚
+    link: /area/au
+    apiCode: australia

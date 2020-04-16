@@ -11,7 +11,7 @@ module.exports = {
   siteMetadata: {
     title: "COVID19 Datahub",
     description:
-      "This repo contains an example business website that is built with Gatsby, and Netlify CMS.It follows the JAMstack architecture by using Git as a single source of truth, and Netlify for continuous deployment, and CDN distribution."
+      "Collect COVID19 information around the world."
   },
   plugins: [
     // "gatsby-plugin-optional-chaining",
@@ -92,6 +92,15 @@ module.exports = {
           }
         ]
       }
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `COVID19 Datahub`,
+        short_name: `COVID19 Datahub`,
+        start_url: process.env.GATSBY_PATH_PREFIX,
+        icon: `src/img/icon.png`,
+      },
     },
     {
       resolve: "gatsby-plugin-netlify-cms",
