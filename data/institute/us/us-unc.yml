@@ -9,9 +9,9 @@ publicOrPrivate: public
 coursePolicyLink: https://www.unc.edu/coronavirus/
 cover: https://cdn.applysquare.net/a2/institute/unc/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/unc/logo.png
-numStateCases: 3736
-numStateDailyNewCases: 237
-numStateDeaths: 76
+numStateCases: 4570
+numStateDailyNewCases: 216
+numStateDeaths: 89
 numStateCures: 0
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-23

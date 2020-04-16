@@ -9,9 +9,9 @@ publicOrPrivate: public
 coursePolicyLink: https://uconn.edu/public-notification/coronavirus/
 cover: https://cdn.applysquare.net/a2/institute/uconn/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/uconn/logo.png
-numStateCases: 9784
-numStateDailyNewCases: 2003
-numStateDeaths: 380
+numStateCases: 12035
+numStateDailyNewCases: 525
+numStateDeaths: 554
 numStateCures: 0
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-23

@@ -9,9 +9,9 @@ publicOrPrivate: public
 coursePolicyLink: https://www.clemson.edu/coronavirus/index.html
 cover: https://cdn.applysquare.net/a2/institute/clemson/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/clemson/logo.png
-numStateCases: 2793
-numStateDailyNewCases: 376
-numStateDeaths: 67
+numStateCases: 3320
+numStateDailyNewCases: 109
+numStateDeaths: 82
 numStateCures: 0
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 

@@ -9,9 +9,9 @@ publicOrPrivate: public
 coursePolicyLink: https://coronavirus.umich.edu/
 cover: https://cdn.applysquare.net/a2/institute/umich/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/umich/logo.png
-numStateCases: 21504
-numStateDailyNewCases: 1158
-numStateDeaths: 1076
+numStateCases: 24244
+numStateDailyNewCases: 639
+numStateDeaths: 1479
 numStateCures: 0
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-16

@@ -9,10 +9,10 @@ publicOrPrivate: public
 coursePolicyLink: https://www.anu.edu.au/news/all-news/covid-19-advice
 cover: https://cdn.applysquare.net/a2/institute/au.anu/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/au.anu/logo.png
-numStateCases: 100
-numStateDailyNewCases: 1
+numStateCases: 103
+numStateDailyNewCases: 0
 numStateDeaths: 2
-numStateCures: 47
+numStateCures: 59
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-30
 onCampusCourseResumeDate: 

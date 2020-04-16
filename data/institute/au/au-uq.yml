@@ -9,10 +9,10 @@ publicOrPrivate: public
 coursePolicyLink: https://about.uq.edu.au/coronavirus-advice-uq-community
 cover: https://cdn.applysquare.net/a2/institute/au.uq/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/au.uq/logo.png
-numStateCases: 953
-numStateDailyNewCases: 10
-numStateDeaths: 4
-numStateCures: 345
+numStateCases: 983
+numStateDailyNewCases: 9
+numStateDeaths: 5
+numStateCures: 372
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-23
 onCampusCourseResumeDate: 

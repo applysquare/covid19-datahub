@@ -9,10 +9,10 @@ publicOrPrivate: public
 coursePolicyLink: https://www.web.uwa.edu.au/novel-coronavirus
 cover: https://cdn.applysquare.net/a2/institute/au.uwa/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/au.uwa/logo.png
-numStateCases: 495
-numStateDailyNewCases: 14
+numStateCases: 514
+numStateDailyNewCases: 0
 numStateDeaths: 6
-numStateCures: 170
+numStateCures: 216
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-23
 onCampusCourseResumeDate: 
