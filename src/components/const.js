@@ -22,7 +22,7 @@ export const resource = [
         underTxt: "回答全球学生提问，给出建议",
         operation: "查看问题",
         link:
-          "https://github.com/applysquare/covid19-datahub/issues/new?assignees=&labels=&template=cn-liuxue-help-needed.md&title=%5B%E7%95%99%E5%AD%A6%E6%B1%82%E5%8A%A9%5D+",
+          "https://github.com/applysquare/covid19-datahub/issues?q=is%3Aopen+is%3Aissue+label%3A%E8%A7%A3%E7%AD%94%E9%97%AE%E9%A2%98",
       },
     ],
   },
@@ -71,9 +71,9 @@ export const resource = [
         upTxt: "查看汉化任务",
         underTxt:
           "招募对重要的外文文章提供汉化支持工作，你可以浏览开放的任务，给予支持",
-        operation: "提交",
+        operation: "查看任务",
         link:
-          "https://github.com/applysquare/covid19-datahub/issues/new?assignees=&labels=%E8%B5%84%E6%96%99%E6%B1%89%E5%8C%96%2C+%E6%8B%9B%E5%8B%9F%E5%B8%AE%E5%8A%A9&template=cn-hanhua-translateion.md&title=%5B%E8%B5%84%E6%96%99%E6%B1%89%E5%8C%96%5D+%E8%AF%B7%E7%BB%99%E5%87%BA%E9%9C%80%E8%A6%81%E6%B1%89%E5%8C%96%E7%9A%84%E6%96%87%E7%8C%AE%E6%A0%87%E9%A2%98%E6%88%96%E4%BB%BB%E5%8A%A1%E7%AE%80%E4%BB%8B",
+          "https://github.com/applysquare/covid19-datahub/issues?q=is%3Aopen+is%3Aissue+label%3A%E8%B5%84%E6%96%99%E6%B1%89%E5%8C%96",
       },
     ],
   },
@@ -84,21 +84,21 @@ export const resource = [
       {
         upTxt: "机构合作",
         underTxt: "如有合作意向，请联系我们",
-        operation: "联系",
+        operation: "提交",
         link:
           "https://github.com/applysquare/covid19-datahub/issues/new?assignees=&labels=&template=cn-jigou-nstitional-cooperation-cn.md&title=%5B%E6%9C%BA%E6%9E%84%E5%90%88%E4%BD%9C%5D+",
       },
       {
         upTxt: "使用报错",
         underTxt: "使用过程中遇到的错误报备",
-        operation: "报错",
-        link: "/",
+        operation: "提交",
+        link: "https://github.com/applysquare/covid19-datahub/issues/new?assignees=&labels=&template=cn-shiyongbaocuo-bug-report.md&title=%5B%E4%BD%BF%E7%94%A8%E6%8A%A5%E9%94%99%5D+",
       },
       {
         upTxt: "反馈建议",
         underTxt: "对项目及网站建设提出反馈建议",
-        operation: "报错",
-        link: "/",
+        operation: "提交",
+        link: "https://github.com/applysquare/covid19-datahub/issues/new?assignees=&labels=&template=cn-fankui-website-improvement.md&title=%5B%E5%8F%8D%E9%A6%88%E5%BB%BA%E8%AE%AE%5D+",
       },
     ],
   },
