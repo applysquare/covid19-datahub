@@ -9,9 +9,9 @@ publicOrPrivate: private
 coursePolicyLink: https://www.fordham.edu/info/29575/coronavirus_updates
 cover: https://cdn.applysquare.net/a2/institute/fordham/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/fordham/logo.png
-numStateCases: 161779
-numStateDailyNewCases: 10718
-numStateDeaths: 7067
+numStateCases: 189033
+numStateDailyNewCases: 8007
+numStateDeaths: 9385
 numStateCures: 0
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-11

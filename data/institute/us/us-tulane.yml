@@ -9,9 +9,9 @@ publicOrPrivate: private
 coursePolicyLink: https://tulane.edu/covid-19
 cover: https://cdn.applysquare.net/a2/institute/tulane/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/tulane/logo.png
-numStateCases: 18283
-numStateDailyNewCases: 1253
-numStateDeaths: 702
+numStateCases: 20595
+numStateDailyNewCases: 581
+numStateDeaths: 840
 numStateCures: 0
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-23

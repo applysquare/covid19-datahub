@@ -9,6 +9,8 @@ const translations = {
 
   bingAreaId: {
     newyork_unitedstates: '纽约州',
+    pennsylvania_unitedstates: '宾夕法尼亚州',
+    michigan_unitedstates: '密歇根州',
   },
 };
 

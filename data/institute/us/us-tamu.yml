@@ -9,9 +9,9 @@ publicOrPrivate: public
 coursePolicyLink: https://www.tamu.edu/coronavirus/
 cover: https://cdn.applysquare.net/a2/institute/tamu/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/tamu/logo.png
-numStateCases: 11208
-numStateDailyNewCases: 1431
-numStateDeaths: 210
+numStateCases: 13677
+numStateDailyNewCases: 654
+numStateDeaths: 283
 numStateCures: 0
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-23

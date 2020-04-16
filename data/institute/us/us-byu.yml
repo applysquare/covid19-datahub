@@ -9,9 +9,9 @@ publicOrPrivate: private
 coursePolicyLink: https://www.byu.edu/coronavirus
 cover: https://cdn.applysquare.net/a2/institute/byu/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/byu/logo.png
-numStateCases: 1856
-numStateDailyNewCases: 1
-numStateDeaths: 13
+numStateCases: 2303
+numStateDailyNewCases: 96
+numStateDeaths: 18
 numStateCures: 0
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-18

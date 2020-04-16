@@ -9,9 +9,9 @@ publicOrPrivate: public
 coursePolicyLink: https://coronavirus.rutgers.edu/
 cover: https://cdn.applysquare.net/a2/institute/rutgers/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/rutgers/logo.png
-numStateCases: 51027
-numStateDailyNewCases: 3590
-numStateDeaths: 1709
+numStateCases: 61850
+numStateDailyNewCases: 3699
+numStateDeaths: 2350
 numStateCures: 0
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-16
