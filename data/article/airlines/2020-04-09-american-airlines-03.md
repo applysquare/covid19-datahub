@@ -3,6 +3,7 @@ title: American Airlines Update on Hong Kong Flights
 date: 2020-02-04
 link: >-
   http://news.aa.com/news/news-details/2020/American-Airlines-Update-on-Hong-Kong-Flights-OPS-DIS-02/default.aspx
+countryCode: us
 airlineCode: american_airlines
 status: published
 ---
