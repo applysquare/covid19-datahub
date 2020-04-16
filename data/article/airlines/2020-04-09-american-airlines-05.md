@@ -3,6 +3,7 @@ title: An Update on Mainland China and Hong Kong Flying
 date: 2020-02-11
 link: >-
   http://news.aa.com/news/news-details/2020/An-Update-on-Mainland-China-and-Hong-Kong-Flying-OPS-DIS-03/default.aspx
+countryCode: us
 airlineCode: american_airlines
 status: published
 ---
@@ -10,7 +11,7 @@ Tuesday, February 11, 2020, 12:00 PM
 
 Share ![](/files/images/email-icon.png) Email
 
-[ Download PDF (English) PDF Format (opens in new window) ? ( PDF 43 KB) ](//s21.q4cdn.com/616071541/files/doc_news/An-Update-on-Mainland-China-and-Hong-Kong-Flying-OPS-DIS-03-2020.pdf)
+[ Download PDF (English)](//s21.q4cdn.com/616071541/files/doc_news/An-Update-on-Mainland-China-and-Hong-Kong-Flying-OPS-DIS-03-2020.pdf)
 
 Due to the reduction in demand, American Airlines has extended the suspension of flying to and from the mainland China and Hong Kong from our Dallas-Fort Worth (DFW) and Los Angeles (LAX) hubs. 
 
