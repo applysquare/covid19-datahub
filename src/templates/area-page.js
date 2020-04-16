@@ -304,7 +304,7 @@ export const pageQuery = graphql`
     articles: allMarkdownRemark(
       filter: {
         fields: { templateKey: { eq: "article-page" } }
-        frontmatter: { countryCode: { eq: $countryCode }, instituteSlug: { eq:'' }}
+        frontmatter: { countryCode: { eq: $countryCode }, instituteSlug: { eq:"" }}
       }
     ) {
       edges {
