@@ -7,6 +7,6 @@ link: >-
 featuredpost: false
 tags:
   - patch.com
-instituteSlug: "us-columbia"
+instituteSlug: us-columbia
 countryCode: us
 ---

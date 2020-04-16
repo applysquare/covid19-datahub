@@ -1,13 +1,13 @@
 ---
 # templateKey: news-page
 title: Medical Students Will Graduate Early
-subtitle: 
+subtitle:
 date: 2020-03-26
 link: >-
   https://covid19.columbia.edu/news/medical-students-will-graduate-early
 countryCode: us
 stauts: published
-instituteSlug: columbia
+instituteSlug: us-columbia
 ---
 <div class="field field--name-field-cu-content field--type-entity-reference-revisions field--label-hidden field--items">
 
