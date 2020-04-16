@@ -249,6 +249,7 @@ export const pageQuery = graphql`
     $id: String!
     $countryCode: String!
     $hasApiCode: Boolean!
+    $instituteSlug: String!
     $apiCode: String
   ) {
     area(id: { eq: $id }) {
@@ -268,7 +269,7 @@ export const pageQuery = graphql`
         totalRecovered
       }
     }
-    allInstitute(filter: { countryCode: { eq: $countryCode } }) {
+    allInstitute(filter: { countryCode: { eq: $countryCode } }, instituteSlug: { eq: '' } ) {
       edges {
         node {
           courseOperationStatus
