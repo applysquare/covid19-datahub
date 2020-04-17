@@ -4,7 +4,6 @@ title: 北卡教堂山：教你如何让zoom上的学习更安全
 date: 2020-03-11T21:46:12.666Z
 link: >-
   https://thewell.unc.edu/2020/04/03/stop-zoom-bombs/
-status: published
 countryCode: us
 instituteSlug: us-unc
 ---
