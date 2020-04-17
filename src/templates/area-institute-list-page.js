@@ -54,7 +54,7 @@ const styles = {
     padding: "6px 16px",
     fontSize: "14px",
     color: "#999999",
-    margin: "16px 0",
+    marginTop: "16px",
     textDecoration: "none",
   },
   inputBox: {
@@ -78,6 +78,11 @@ const styles = {
     outline: "none",
     border: "none",
     fontSize: "14px",
+  },
+  noData: {
+    textAlign: "center",
+    fontSize: "14px",
+    // margin: "40px 0",
   },
 };
 
@@ -185,54 +190,83 @@ const PageCore = ({ data }) => {
             justifyContent: "space-between",
             padding: "0 15px",
             fontSize: "14px",
+            marginTop: "16px",
           }}
         >
           <div>大学</div>
           <div>状态</div>
         </div>
-        {institute.map((edge) => {
-          const { node } = edge;
-          return (
-            <Link
-              style={styles.link}
-              to={node?.fields?.pathname}
-              key={node?.fields?.pathname}
-            >
-              <div
-                style={{
-                  ...styles.flexParent,
-                  justifyContent: "space-between",
-                  alignItems: "center",
-                  padding: "15px 10px",
-                  borderBottom: "1px solid #E4E4E4",
-                }}
-                key={node?.id}
+        <div
+          style={{
+            minHeight: "400px",
+            display: institute.length ? "block" : "none",
+          }}
+        >
+          {institute.map((edge) => {
+            const { node } = edge;
+            return (
+              <Link
+                style={styles.link}
+                to={node?.fields?.pathname}
+                key={node?.fields?.pathname}
               >
-                <div style={{ maxWidth: "80%" }}>
-                  <div style={styles.nameCn}>{node?.nameCn}</div>
-                  <div style={{ ...styles.nameCn, fontSize: "12px" }}>
-                    {node?.nameEn}
+                <div
+                  style={{
+                    ...styles.flexParent,
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                    padding: "15px 10px",
+                    borderBottom: "1px solid #E4E4E4",
+                  }}
+                  key={node?.id}
+                >
+                  <div style={{ maxWidth: "80%" }}>
+                    <div style={styles.nameCn}>{node?.nameCn}</div>
+                    <div style={{ ...styles.nameCn, fontSize: "12px" }}>
+                      {node?.nameEn}
+                    </div>
                   </div>
-                </div>
-                {/* <div
+                  {/* <div
                   style={{
                     ...styles.flexParent,
                     alignItems: "center",
                     fontSize: "14px"
                   }}
                 > */}
-                <span style={styles.stateCn}>
-                  {translateCourseOperationStatus(
-                    "cn",
-                    node?.courseOperationStatus
-                  )}
-                </span>
-                {/* <RightOutlined /> */}
-                {/* </div> */}
-              </div>
-            </Link>
-          );
-        })}
+                  <span style={styles.stateCn}>
+                    {translateCourseOperationStatus(
+                      "cn",
+                      node?.courseOperationStatus
+                    )}
+                  </span>
+                  {/* <RightOutlined /> */}
+                  {/* </div> */}
+                </div>
+              </Link>
+            );
+          })}
+        </div>
+        <div
+          style={{
+            margin: "70px 0",
+            display: institute.length ? "none" : "block",
+          }}
+        >
+          <div style={styles.noData}>
+            暂时没有院校结果，你可以尝试搜索周边的院校，获得资源与新闻
+          </div>
+          <div style={{ ...styles.noData, margin: "60px 0 30px 0" }}>
+            希望加入你的学校？你可以自己建设它
+          </div>
+          <div style={styles.noData}>
+            <a
+              href="https://github.com/applysquare/covid19-datahub/issues/new?assignees=&labels=%E6%96%B0%E5%A2%9E%E9%99%A2%E6%A0%A1&template=cn-xin-add-university-cn.md&title=%5B%E6%96%B0%E5%A2%9E%E9%99%A2%E6%A0%A1%5D+"
+              style={{ color: "rgba(26,109,255,1)" }}
+            >
+              新增院校
+            </a>
+          </div>
+        </div>
       </div>
       <p />
     </div>
