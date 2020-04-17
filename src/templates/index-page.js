@@ -326,10 +326,11 @@ export const pageQuery = graphql`
     }
     articles: allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
-      filter: { fields: { templateKey: { eq: "article-page" } } }
+      filter: { fields: { templateKey: { eq: "article-page" } }
       frontmatter: {
           countryCode: {in: [null, ""]}
         }
+      }
     ) {
       edges {
         node {
