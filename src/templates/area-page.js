@@ -280,7 +280,6 @@ export const pageQuery = graphql`
         frontmatter: {
           countryCode: { eq: $countryCode }
         }
-        }
       }
     ) {
       edges {
