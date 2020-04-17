@@ -9,9 +9,9 @@ publicOrPrivate: public
 coursePolicyLink: https://www.buffalo.edu/coronavirus/dashboard.html
 cover: https://cdn.applysquare.net/a2/institute/buffalo/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/buffalo/logo.png
-numStateCases: 161779
-numStateDailyNewCases: 10718
-numStateDeaths: 7067
+numStateCases: 189033
+numStateDailyNewCases: 8007
+numStateDeaths: 9385
 numStateCures: 0
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-23

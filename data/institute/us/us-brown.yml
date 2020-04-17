@@ -9,9 +9,9 @@ publicOrPrivate: private
 coursePolicyLink: https://covid.brown.edu/
 cover: https://cdn.applysquare.net/a2/institute/brown/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/brown/logo.png
-numStateCases: 1727
-numStateDailyNewCases: 277
-numStateDeaths: 43
+numStateCases: 2665
+numStateDailyNewCases: 316
+numStateDeaths: 63
 numStateCures: 0
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-30

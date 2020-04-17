@@ -9,10 +9,10 @@ publicOrPrivate: public
 coursePolicyLink: https://www.monash.edu/news/coronavirus-updates
 cover: https://cdn.applysquare.net/a2/institute/au.monash/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/au.monash/logo.png
-numStateCases: 1228
-numStateDailyNewCases: 16
-numStateDeaths: 12
-numStateCures: 736
+numStateCases: 1268
+numStateDailyNewCases: 3
+numStateDeaths: 14
+numStateCures: 926
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-25
 onCampusCourseResumeDate: 

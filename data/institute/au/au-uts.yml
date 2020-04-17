@@ -9,9 +9,9 @@ publicOrPrivate: public
 coursePolicyLink: https://www.uts.edu.au/current-students/news/coronavirus-and-international-travel-information
 cover: https://cdn.applysquare.net/a2/institute/au.uts/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/au.uts/logo.png
-numStateCases: 2773
-numStateDailyNewCases: 39
-numStateDeaths: 21
+numStateCases: 2857
+numStateDailyNewCases: 0
+numStateDeaths: 24
 numStateCures: 4
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-24

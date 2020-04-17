@@ -9,9 +9,9 @@ publicOrPrivate: public
 coursePolicyLink: https://vt.edu/content/vt_edu/en/covid-19/home.html
 cover: https://cdn.applysquare.net/a2/institute/vt/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/vt/logo.png
-numStateCases: 4042
-numStateDailyNewCases: 397
-numStateDeaths: 109
+numStateCases: 5274
+numStateDailyNewCases: 197
+numStateDeaths: 141
 numStateCures: 0
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-23

@@ -9,9 +9,9 @@ publicOrPrivate: public
 coursePolicyLink: http://health.gatech.edu/coronavirus#utm_source=gatech_home&utm_medium=banner&utm_campaign=coronavirus_campus
 cover: https://cdn.applysquare.net/a2/institute/gatech/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/gatech/logo.png
-numStateCases: 10566
-numStateDailyNewCases: 665
-numStateDeaths: 379
+numStateCases: 12452
+numStateDailyNewCases: 293
+numStateDeaths: 433
 numStateCures: 0
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-30

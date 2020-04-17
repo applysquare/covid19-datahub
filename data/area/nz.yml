@@ -1,0 +1,6 @@
+titleCn: 新西兰
+titleEn: New Zealand
+countryCode: nz
+ranking: 5
+icon: https://cdn.applysquare.net/a2/country_icon/nz.png
+bingApiId: newzealand #用于API调取https://bing.com/covid/data 最新的国家或地区疫情确诊，新增，死亡，治愈数据

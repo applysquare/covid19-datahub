@@ -9,9 +9,9 @@ publicOrPrivate: private
 coursePolicyLink: https://www.pepperdine.edu/coronavirus/
 cover: https://cdn.applysquare.net/a2/institute/pepperdine/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/pepperdine/logo.png
-numStateCases: 19710
-numStateDailyNewCases: 813
-numStateDeaths: 544
+numStateCases: 22795
+numStateDailyNewCases: 1089
+numStateDeaths: 641
 numStateCures: 0
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-16

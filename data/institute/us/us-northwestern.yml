@@ -9,9 +9,9 @@ publicOrPrivate: private
 coursePolicyLink: https://www.northwestern.edu/coronavirus-covid-19-updates/
 cover: https://cdn.applysquare.net/a2/institute/northwestern/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/northwestern/logo.png
-numStateCases: 15079
-numStateDailyNewCases: 1
-numStateDeaths: 462
+numStateCases: 20852
+numStateDailyNewCases: 1672
+numStateDeaths: 720
 numStateCures: 0
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-04-04
