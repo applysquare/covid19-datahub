@@ -1,10 +1,3 @@
-// import React from "react";
-// import {
-//   TeamOutlined,
-//   DatabaseOutlined,
-//   EditOutlined,
-//   SmileOutlined,
-// } from "@ant-design/icons";
 export const resource = [
   {
     title: "交流互助",
@@ -103,3 +96,9 @@ export const resource = [
     ],
   },
 ];
+
+export const help = {
+  title: "交流与资源建设",
+  linkTxt: "有困难有问题？有资源有爱心？来这里",
+  linkTo: "/resource",
+};

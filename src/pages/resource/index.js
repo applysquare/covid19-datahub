@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "gatsby";
 import { v4 } from "uuid";
 import {
-  LeftOutlined,
   RightOutlined,
   TeamOutlined,
   DatabaseOutlined,
@@ -11,14 +10,16 @@ import {
 } from "@ant-design/icons";
 import { makePage } from "../../components/Layout";
 import { resource } from "../../components/const";
-import { goBack } from "../../components/display";
+import GoBack from "../../components/GoBack";
+
+const goBack = {
+  title: "返回",
+  customStyle: {
+    fontSize: "16px",
+  },
+};
 
 const styles = {
-  logoTitle: {
-    fontSize: "16px",
-    color: "#FFFFFF",
-    padding: "10px 0 0 2px",
-  },
   footerLink: {
     color: "#FFFFFF",
     fontSize: "16px",
@@ -72,14 +73,9 @@ const icons = {
 const PageCore = () => {
   return (
     <div style={{ background: "#ffffff" }}>
-      <div style={styles.logoTitle}>
-        <a style={styles.link} href="###" onClick={(e) => goBack(e)}>
-          <LeftOutlined />
-          <span style={{ padding: "0 4px" }}>返回</span>
-        </a>
-      </div>
       <div style={{ padding: "15px", marginTop: "15px" }}>
-        <div style={styles.flexParent}>
+        <GoBack {...goBack} />
+        <div style={{ ...styles.flexParent, marginTop: "32px" }}>
           <div style={{ fontSize: "20px" }}>交流与资源建设</div>
           <Link style={{ color: "rgba(26,109,255,1)" }} to="/about">
             了解项目

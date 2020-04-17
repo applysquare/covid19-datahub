@@ -8,20 +8,24 @@ const styles = {
     fontWeight: "500",
     fontSize: "18px",
     color: "#333333",
-    marginBottom: "5px"
+    marginBottom: "5px",
+    overflow: "hidden",
+    display: "-webkit-box",
+    WebkitLineClamp: 2,
+    WebkitBoxOrient: "vertical",
   },
   time: {
     fontSize: "12px",
-    color: "#999999"
+    color: "#999999",
   },
   link: {
-    textDecoration: "none"
-  }
+    textDecoration: "none",
+  },
 };
 const NewList = ({ newEdges = [] }) => {
   return (
     <div>
-      {newEdges.map(edge => {
+      {newEdges.map((edge) => {
         const art = edge?.node?.frontmatter;
         return (
           <div style={styles.item} key={v4()}>
@@ -31,7 +35,7 @@ const NewList = ({ newEdges = [] }) => {
               to={edge?.node?.fields?.pathname}
             >
               <div style={styles.title}>{art?.title}</div>
-              <div style={styles.time}>2020.04.01</div>
+              <div style={styles.time}>{art?.date}</div>
             </Link>
           </div>
         );

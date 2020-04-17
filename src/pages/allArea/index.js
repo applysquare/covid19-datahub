@@ -6,50 +6,50 @@ import { makePage } from "../../components/Layout";
 
 const styles = {
   box: {
-    padding: "20px 15px"
+    padding: "20px 15px",
   },
   logoTitle: {
     fontSize: "14px",
     color: "#FFFFFF",
-    padding: "15px 0 15px 2px"
+    padding: "15px 0 15px 2px",
   },
   linkBack: {
     textDecoration: "none",
-    color: "#333333"
+    color: "#333333",
   },
   title: {
     fontSize: "20px",
-    margin: "15px 0"
+    margin: "15px 0",
   },
   flexParent: {
     display: "flex",
     justifyContent: "space-between",
-    flexWrap: "wrap"
+    flexWrap: "wrap",
   },
   tableTitle: {
     background: "#1A6DFF",
     color: "#FFFFFF",
-    fontSize: "14px"
+    fontSize: "14px",
   },
   flexChild: {
     padding: "15px 12px",
-    boxSizing: "border-box"
+    boxSizing: "border-box",
   },
   titleCn: {
     fontSize: "12px",
-    color: "rgba(26,109,255,1)"
+    color: "rgba(26,109,255,1)",
   },
   num: {
     color: "#333333",
-    fontSize: "12px"
-  }
+    fontSize: "12px",
+  },
 };
 const tableTitleList = [
   { txt: "国家", width: "23%" },
   { txt: "确诊", width: "20%" },
   { txt: "新增", width: "20%" },
   { txt: "死亡", width: "17%" },
-  { txt: "治愈", width: "20%" }
+  { txt: "治愈", width: "20%" },
 ];
 const arr = [
   {
@@ -57,29 +57,29 @@ const arr = [
     numStateCases: 325421,
     numStateDailyNewCases: 78452,
     numStateDeaths: 15230,
-    numStateCures: 25123
+    numStateCures: 25123,
   },
   {
     titleCn: "澳大利亚",
     numStateCases: 325421,
     numStateDailyNewCases: 78452,
     numStateDeaths: 15230,
-    numStateCures: 25123
+    numStateCures: 25123,
   },
   {
     titleCn: "美国",
     numStateCases: 325421,
     numStateDailyNewCases: 78452,
     numStateDeaths: 15230,
-    numStateCures: 25123
+    numStateCures: 25123,
   },
   {
     titleCn: "澳大利亚",
     numStateCases: 325421,
     numStateDailyNewCases: 78452,
     numStateDeaths: 15230,
-    numStateCures: 25123
-  }
+    numStateCures: 25123,
+  },
 ];
 
 const PageCore = ({ data }) => {
@@ -93,12 +93,9 @@ const PageCore = ({ data }) => {
       </div>
       <div style={styles.title}>了解各国动态</div>
       <div style={{ ...styles.flexParent, ...styles.tableTitle }}>
-        {tableTitleList.map(item => {
+        {tableTitleList.map((item) => {
           return (
-            <div
-              style={{ ...styles.flexChild, width: `${item.width}` }}
-              key={v4()}
-            >
+            <div style={{ ...styles.flexChild, width: item.width }} key={v4()}>
               {item.txt}
             </div>
           );
@@ -110,7 +107,7 @@ const PageCore = ({ data }) => {
           numStateCases,
           numStateDailyNewCases,
           numStateDeaths,
-          numStateCures
+          numStateCures,
         } = item;
         return (
           <Link
@@ -118,9 +115,7 @@ const PageCore = ({ data }) => {
             style={{
               ...styles.flexParent,
               textDecoration: "none",
-              background: `${
-                index % 2 === 0 ? "rgba(26,109,255,0.1)" : "#FFFFFF"
-              }`
+              background: index % 2 === 0 ? "rgba(26,109,255,0.1)" : "#FFFFFF",
             }}
             to="/area/au/"
           >

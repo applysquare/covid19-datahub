@@ -9,19 +9,19 @@ const styles = {
     background:
       "linear-gradient(90deg,rgba(88,107,154,1) 0%,rgba(134,152,198,1) 100%)",
     padding: "20px 10px",
+    display: "block",
+    textDecoration: "none",
   },
   helpTitle: { fontSize: "18px", color: "#FFFFFF", marginBottom: "5px" },
-  helpItem: { color: "#FFFFFF", fontSize: "12px", textDecoration: "none" },
+  helpItem: { color: "#FFFFFF", fontSize: "12px" },
 };
 
 const Help = ({ title, linkTxt, linkTo }) => {
   return (
-    <div style={styles.helpBox}>
+    <Link style={styles.helpBox} to={linkTo}>
       <div style={styles.helpTitle}>{title}</div>
-      <Link style={styles.helpItem} to={linkTo}>
-        {linkTxt}
-      </Link>
-    </div>
+      <div style={styles.helpItem}>{linkTxt}</div>
+    </Link>
   );
 };
 
