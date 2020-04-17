@@ -1,21 +1,24 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
-import { LeftOutlined } from "@ant-design/icons";
 import { makePage } from "../components/Layout";
 import Help from "../components/Help";
 import InfoList from "../components/InfoList";
 import NewList from "../components/NewList";
+import GoBack from "../components/GoBack";
+import { help } from "../components/const";
+
 import {
   translateCourseOperationStatus,
   sliceArr,
-  goBack,
 } from "../components/display";
 
-const help = {
-  title: "交流与资源建设",
-  linkTxt: "有困难有问题？有资源有爱心？来这里",
-  linkTo: "/resource",
+const goBack = {
+  title: "全球动态",
+  customStyle: {
+    fontSize: "16px",
+  },
 };
+
 // 之后换成网页端交流与资源建设页面入口
 
 const styles = {
@@ -28,13 +31,6 @@ const styles = {
     fontWeight: 500,
     fontSize: "18px",
     marginBottom: "24px",
-  },
-  returnBox: {
-    color: "#333333",
-    fontSize: "16px",
-    textDecoration: "none",
-    display: "inline-block",
-    marginBottom: "30px",
   },
   flexParent: {
     display: "flex",
@@ -100,14 +96,9 @@ export const AreaPageCore = ({ data }) => {
   return (
     <div style={{ background: "rgba(241,241,241,0.8)" }}>
       <div style={styles.countryBox}>
+        <GoBack {...goBack} />
         <div>
-          <a href="###" style={styles.returnBox} onClick={(e) => goBack(e)}>
-            <LeftOutlined />
-            <span style={{ paddingLeft: "5px" }}>全球动态</span>
-          </a>
-        </div>
-        <div>
-          <div>
+          <div style={{ marginTop: "30px" }}>
             <span style={{ ...styles.title, fontSize: "24px" }}>
               {area?.titleCn}
             </span>
@@ -154,7 +145,7 @@ export const AreaPageCore = ({ data }) => {
             style={{
               ...styles.more,
             }}
-            to="/institute"
+            to="/institute/us"
           >
             更多
           </Link>

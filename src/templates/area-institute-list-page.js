@@ -161,17 +161,15 @@ const PageCore = ({ data }) => {
                 href="###"
                 style={{
                   ...styles.countryCn,
-                  marginLeft: `${index === 0 ? "0px" : "8px"}`,
-                  background: `${
+                  marginLeft: index === 0 ? "0px" : "8px",
+                  background:
                     item.node.countryCode === countryCode
                       ? "#1A6DFF"
-                      : "#ffffff"
-                  }`,
-                  color: `${
+                      : "#ffffff",
+                  color:
                     item?.node?.countryCode === countryCode
                       ? "#ffffff"
-                      : "rgb(153, 153, 153)"
-                  }`,
+                      : "rgb(153, 153, 153)",
                 }}
                 to={`/institute/${item?.node?.countryCode}`}
                 // onClick={(e) => filter(item?.node?.countryCode, e)}
@@ -236,6 +234,7 @@ const PageCore = ({ data }) => {
           );
         })}
       </div>
+      <p />
     </div>
   );
 };

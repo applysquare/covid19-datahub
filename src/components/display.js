@@ -3,7 +3,7 @@ import en from "../../i18n/en";
 
 const translations = {
   cn,
-  en
+  en,
 };
 
 function translateL2(lang, key1, key2) {
@@ -11,11 +11,11 @@ function translateL2(lang, key1, key2) {
 }
 
 export function translateBingAreaId(lang, id) {
-  return translateL2(lang, 'bingAreaId', id);
+  return translateL2(lang, "bingAreaId", id);
 }
 
 export function translateCourseOperationStatus(lang, status) {
-  return translateL2(lang, 'courseOperationStatus', status);
+  return translateL2(lang, "courseOperationStatus", status);
 }
 
 export function formatDate(date) {
@@ -30,9 +30,4 @@ export const domainURI = (str = "") => {
   const durl = /.*:\/\/([^/]*).*/;
   const domain = str.match(durl);
   return domain && domain[1] ? domain[1] : str;
-};
-
-export const goBack = e => {
-  e.preventDefault();
-  window.history.back();
 };

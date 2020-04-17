@@ -7,13 +7,10 @@ import Help from "../components/Help";
 import InfoList from "../components/InfoList";
 import NewList from "../components/NewList";
 import AllAreaCases from "../components/AllAreaCases";
+import { help } from "../components/const";
+import { sliceArr } from "../components/display";
 import indexTitleImg from "../img/indexTitleImg.png";
 
-const help = {
-  title: "交流与资源建设",
-  linkTxt: "有困难有问题？有资源有爱心？来这里",
-  linkTo: "/resource",
-};
 // 之后换成网页端交流与资源建设页面入口
 
 const styles = {
@@ -63,6 +60,7 @@ const styles = {
   more: {
     color: "#999999",
     fontSize: "14px",
+    cursor: "pointer",
   },
   link: {
     textDecoration: "none",
@@ -94,9 +92,10 @@ export const IndexPageCore = ({ data, errors }) => {
   const allAreaCases =
     allArea?.edges
       .map((item) => {
-        return allCovid19Area?.edges.find((edge) => {
+        const obj = allCovid19Area?.edges.find((edge) => {
           return edge?.node?.data?.id === item?.node?.bingApiId;
         });
+        return { ...obj, countryCode: item?.node?.countryCode };
       })
       .filter(Boolean) || [];
 
@@ -108,18 +107,26 @@ export const IndexPageCore = ({ data, errors }) => {
   };
 
   const infoEdges = articles?.edges || [];
+  const [allStudyArea, setAllStudyArea] = useState([]);
+  const [isAreaMore, setIsAreaMore] = useState(null);
   const [isCasesMore, setIsCasesMore] = useState(null);
   useEffect(() => {
     setIsCasesMore(false);
+    setIsAreaMore(false);
+    setAllStudyArea(sliceArr(data?.allArea?.edges, 4));
   }, [data]);
   const getMoreCases = (e) => {
     e.preventDefault();
     setIsCasesMore(!isCasesMore);
   };
-  // const getMoreArea = (e) => {
-  //   e.preventDefault();
-  //   setIsCasesMore(!isCasesMore);
-  // };
+  const getMoreArea = (e) => {
+    e.preventDefault();
+    const arr = isAreaMore
+      ? sliceArr(data?.allArea?.edges, 4)
+      : data?.allArea?.edges || [];
+    setAllStudyArea(arr);
+    setIsAreaMore(!isAreaMore);
+  };
 
   return (
     <div style={{ background: "rgba(241,241,241,0.8)" }}>
@@ -146,16 +153,21 @@ export const IndexPageCore = ({ data, errors }) => {
       <div style={styles.instituteBox}>
         <div style={{ ...styles.flexParent, justifyContent: "space-between" }}>
           <div style={styles.title}>留学生数据中心</div>
-          {/* <a style={styles.more} href="###" onClick={(e) => getMoreArea(e)}>
-            更多
-          </a> */}
+          <a style={styles.more} href="###" onClick={(e) => getMoreArea(e)}>
+            {isAreaMore ? "收起" : "更多"}
+          </a>
         </div>
-        <div style={styles.flexParent}>
-          {allArea?.edges.map((area) => {
+        <div style={{ ...styles.flexParent, justifyContent: "flex-start" }}>
+          {allStudyArea.map((area) => {
             return (
               <Link
                 key={v4()}
-                style={styles.link}
+                style={{
+                  ...styles.link,
+                  textAlign: "center",
+                  width: "25%",
+                  marginBottom: "12px",
+                }}
                 to={area?.node?.fields?.pathname}
               >
                 <div style={styles.institutePic}>
@@ -190,23 +202,30 @@ export const IndexPageCore = ({ data, errors }) => {
             {isCasesMore ? "收起" : "更多"}
           </a>
         </div>
-        <div style={styles.flexParent}>
+        <div style={{ ...styles.flexParent, justifyContent: "flex-start" }}>
           {config?.highlightAreas.map((area) => {
             const apiData = getApiData(area.apiCode);
             return (
               <Link
                 key={area?.link}
-                style={{ ...styles.link, textAlign: "center" }}
+                style={{
+                  ...styles.link,
+                  textAlign: "center",
+                  width: "25%",
+                  marginBottom: "12px",
+                }}
                 to={area?.link}
               >
                 <div style={styles.areaName}>{area?.name}</div>
                 <div style={{ color: "#EB5449", fontSize: "20px" }}>
-                  {apiData?.totalConfirmed || "-"}
+                  {apiData?.totalConfirmed ?? "-"}
                 </div>
                 <div style={{ fontSize: "8px" }}>
                   <span style={{ color: "#999999" }}>新增:</span>
                   <span style={{ color: "#EB5449" }}>
-                    +{apiData?.totalConfirmedDelta}
+                    {apiData?.totalConfirmedDelta
+                      ? `+${apiData?.totalConfirmedDelta}`
+                      : "-"}
                   </span>
                 </div>
               </Link>
@@ -237,6 +256,7 @@ export const IndexPageCore = ({ data, errors }) => {
           <NewList newEdges={updates?.edges} />
         </div>
       </div>
+      <p />
     </div>
   );
 };
@@ -287,7 +307,6 @@ export const pageQuery = graphql`
       }
     }
     updates: allMarkdownRemark(
-      limit: 5
       sort: { order: DESC, fields: [frontmatter___date] }
       filter: { fields: { templateKey: { eq: "update-page" } } }
     ) {
@@ -306,7 +325,6 @@ export const pageQuery = graphql`
       }
     }
     articles: allMarkdownRemark(
-      limit: 5
       sort: { order: DESC, fields: [frontmatter___date] }
       filter: { fields: { templateKey: { eq: "article-page" } } }
     ) {

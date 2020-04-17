@@ -1,10 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { graphql, Link } from "gatsby";
-import { LeftOutlined } from "@ant-design/icons";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
-import { goBack } from "../components/display";
+import GoBack from "../components/GoBack";
+
+const goBack = {
+  title: "返回",
+  customStyle: {
+    fontSize: "16px",
+  },
+};
 
 const styles = {
   flexParent: {
@@ -20,19 +26,10 @@ const styles = {
     background: "#1A6DFF",
     textAlign: "center",
     padding: "8px 0",
-    margin: "10px 15px",
+    margin: "10px 15px 0 15px",
     display: "block",
     textDecoration: "none",
-  },
-  linkBack: {
-    textDecoration: "none",
-    color: "#333333",
-    fontSize: "16px",
-  },
-  logoTitle: {
-    fontSize: "14px",
-    color: "#FFFFFF",
-    padding: "10px 0 0 2px",
+    cursor: "pointer",
   },
 };
 
@@ -40,22 +37,13 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content;
 
   return (
-    <div>
+    <div style={{ padding: "15px" }}>
       <section className="section section--gradient">
         <div className="container">
           <div className="columns">
             <div className="column is-10 is-offset-1">
-              <div className="section">
-                <div style={styles.logoTitle}>
-                  <a
-                    style={styles.linkBack}
-                    href="###"
-                    onClick={(e) => goBack(e)}
-                  >
-                    <LeftOutlined />
-                    <span style={{ padding: "0 4px" }}>返回</span>
-                  </a>
-                </div>
+              <div className="section" style={{ marginTop: "15px" }}>
+                <GoBack {...goBack} />
                 <div style={styles.flexParent}>
                   <div style={{ fontSize: "20px" }}>了解项目</div>
                   <Link style={{ color: "rgba(26,109,255,1)" }} to="/resource">

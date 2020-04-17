@@ -1,24 +1,26 @@
 import React from "react";
 import { graphql } from "gatsby";
-import { LeftOutlined } from "@ant-design/icons";
 import { makePage } from "../components/Layout";
 // import { ExternalLink } from "../components/ExternalLink";
 import NewList from "../components/NewList";
 import InfoList from "../components/InfoList";
 import Help from "../components/Help";
+import GoBack from "../components/GoBack";
 import indexTitleImg from "../img/bg.jpg";
 import {
   translateCourseOperationStatus,
   formatDate,
   domainURI,
-  goBack,
   translateBingAreaId,
 } from "../components/display";
+import { help } from "../components/const";
 
-const help = {
-  title: "校友交流与资源互助",
-  linkTxt: "校友互助，资源交流，爱心传递",
-  linkTo: "/resource",
+const goBack = {
+  title: "院校列表",
+  customStyle: {
+    color: "#FFFFFF",
+    fontSize: "14px",
+  },
 };
 // 之后换成网页端交流与资源建设页面入口
 
@@ -54,10 +56,6 @@ const styles = {
     right: 0,
     zIndex: 999,
     padding: "20px 15px",
-  },
-  logoTitle: {
-    fontSize: "14px",
-    color: "#FFFFFF",
   },
   nameCn: {
     fontWeight: 500,
@@ -119,10 +117,6 @@ const styles = {
     textDecoration: "underline",
     cursor: "default",
   },
-  link: {
-    textDecoration: "none",
-    color: "#FFFFFF",
-  },
 };
 
 const InstitutePageCore = ({ data, errors }) => {
@@ -168,12 +162,7 @@ const InstitutePageCore = ({ data, errors }) => {
       >
         <div style={styles.mask}></div>
         <div style={styles.maskContent}>
-          <div style={styles.logoTitle}>
-            <a href="###" style={styles.link} onClick={(e) => goBack(e)}>
-              <LeftOutlined />
-              <span style={{ padding: "0 4px" }}>院校列表</span>
-            </a>
-          </div>
+          <GoBack {...goBack} />
           <div
             style={{
               display: "flex",
@@ -211,7 +200,8 @@ const InstitutePageCore = ({ data, errors }) => {
         >
           <div style={{ ...styles.title, margin: 0 }}>所在地区疫情</div>
           <div style={styles.areaName}>
-            {subAreaName}，{area?.titleCn}
+            {subAreaName ? `${subAreaName}，` : ""}
+            {area?.titleCn}
           </div>
         </div>
         <div style={styles.flexParent}>
