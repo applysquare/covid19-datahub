@@ -1,11 +1,18 @@
 import React from "react";
 import { HTMLContent } from "../components/Content";
-import { LeftOutlined } from "@ant-design/icons";
-import { goBack } from "../components/display";
+import GoBack from "../components/GoBack";
+
+const goBack = {
+  title: "返回",
+  customStyle: {
+    fontSize: "16px",
+  },
+};
 
 const styles = {
   box: {
     padding: "18px 20px",
+    minHeight: "500px",
   },
   returnBox: {
     color: "#333333",
@@ -18,7 +25,7 @@ const styles = {
     color: "#333333",
     fontSize: "24px",
     fontWeight: 500,
-    marginBottom: "16px",
+    margin: "30px 0 16px 0",
   },
   date: {
     marginRight: "30px",
@@ -37,10 +44,7 @@ export const ArticleView = ({ markdownRemark }) => {
   const article = markdownRemark;
   return (
     <div style={styles.box}>
-      <a href="###" style={styles.returnBox} onClick={(e) => goBack(e)}>
-        <LeftOutlined />
-        <span style={{ paddingLeft: "5px" }}>返回</span>
-      </a>
+      <GoBack {...goBack} />
       <div style={styles.title}>{article?.frontmatter?.title}</div>
       <div style={styles.flexParent}>
         <div style={styles.date}>{article.frontmatter?.date}</div>

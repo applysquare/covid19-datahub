@@ -57,10 +57,7 @@ const AllAreaCases = ({ data = [] }) => {
       <div style={{ ...styles.flexParent, ...styles.tableTitle }}>
         {tableTitleList.map((item) => {
           return (
-            <div
-              style={{ ...styles.flexChild, width: `${item.width}` }}
-              key={v4()}
-            >
+            <div style={{ ...styles.flexChild, width: item.width }} key={v4()}>
               {item.txt}
             </div>
           );
@@ -73,11 +70,9 @@ const AllAreaCases = ({ data = [] }) => {
             style={{
               ...styles.flexParent,
               textDecoration: "none",
-              background: `${
-                index % 2 === 0 ? "rgba(26,109,255,0.1)" : "#FFFFFF"
-              }`,
+              background: index % 2 === 0 ? "rgba(26,109,255,0.1)" : "#FFFFFF",
             }}
-            to="/area/au/"
+            to={`/area/${item?.countryCode}`}
           >
             <div
               style={{ ...styles.flexChild, ...styles.titleCn, width: "23%" }}

@@ -27,13 +27,13 @@ exports.createPages = async ({ actions, graphql }) => {
   `);
 
   if (result.errors) {
-    result.errors.forEach(e => console.error(e.toString()));
+    result.errors.forEach((e) => console.error(e.toString()));
     return Promise.reject(result.errors);
   }
 
   const posts = result.data.allMarkdownRemark.edges;
 
-  posts.forEach(edge => {
+  posts.forEach((edge) => {
     const id = edge.node.id;
     const pathname = edge.node.fields.pathname;
     const templateKey = edge.node.fields.templateKey;
@@ -47,8 +47,8 @@ exports.createPages = async ({ actions, graphql }) => {
       component: path.resolve(`src/templates/${templateKey}.js`),
       // additional data can be passed via context
       context: {
-        id
-      }
+        id,
+      },
     });
   });
 };
@@ -83,13 +83,13 @@ exports.onCreateNode = ({ node, actions, getNode, reporter }) => {
       // additional data can be passed via context
       context: Object.assign(
         {
-          id: node.id
+          id: node.id,
           // countryCode: node.countryCode,
           // instituteSlug: node.instituteSlug,
           // slug: node.slug
         },
         context
-      )
+      ),
     });
 
     if (templateKey === "area-page") {
@@ -101,12 +101,12 @@ exports.onCreateNode = ({ node, actions, getNode, reporter }) => {
         context: Object.assign(
           {
             id: node.id,
-            countryCode: node.countryCode
+            countryCode: node.countryCode,
             // instituteSlug: node.instituteSlug,
             // slug: node.slug
           },
           context
-        )
+        ),
       });
     }
 
@@ -114,7 +114,7 @@ exports.onCreateNode = ({ node, actions, getNode, reporter }) => {
     createNodeField({
       node: node,
       name: `pathname`,
-      value: pathname
+      value: pathname,
     });
   }
   if (node.internal.type === `MarkdownRemark`) {
@@ -122,7 +122,7 @@ exports.onCreateNode = ({ node, actions, getNode, reporter }) => {
     createNodeField({
       name: `pathname`,
       node: node,
-      value: pathname
+      value: pathname,
     });
     let templateKey =
       node.frontmatter.templateKey ||
@@ -150,7 +150,7 @@ exports.onCreateNode = ({ node, actions, getNode, reporter }) => {
     createNodeField({
       name: `templateKey`,
       node: node,
-      value: templateKey
+      value: templateKey,
     });
   }
 };

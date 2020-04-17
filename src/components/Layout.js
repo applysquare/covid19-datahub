@@ -7,7 +7,7 @@ import useSiteMetadata from "./SiteMetadata";
 import { withPrefix } from "gatsby";
 
 const TemplateWrapper = ({ children, errors, layoutProps }) => {
-  const { navbar = false, footer = false } = layoutProps || {};
+  const { navbar = false, footer = true } = layoutProps || {};
   const { title, description } = useSiteMetadata();
   if (errors) {
     console.error("page error: ", errors);
@@ -63,7 +63,7 @@ const TemplateWrapper = ({ children, errors, layoutProps }) => {
 export default TemplateWrapper;
 
 export function makePage(Component, layoutProps) {
-  return props => (
+  return (props) => (
     <TemplateWrapper layoutProps={layoutProps} {...props}>
       <Component {...props} />
     </TemplateWrapper>
