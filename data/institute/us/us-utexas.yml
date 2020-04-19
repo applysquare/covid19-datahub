@@ -3,16 +3,12 @@ nameEn: University of Texas at Austin
 nameCn: 德克萨斯大学奥斯汀分校
 countryCode: us
 website: http://www.utexas.edu/
-stateCn: 德克萨斯州
 stateEn: Texas
 publicOrPrivate: public
 coursePolicyLink: https://coronavirus.utexas.edu/
 cover: https://cdn.applysquare.net/a2/institute/utexas/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/utexas/logo.png
-numStateCases: 13677
-numStateDailyNewCases: 654
-numStateDeaths: 283
-numStateCures: 0
+bingApiId: texas_unitedstates
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-30
 onCampusCourseResumeDate: 

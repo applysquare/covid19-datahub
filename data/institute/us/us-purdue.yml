@@ -3,16 +3,12 @@ nameEn: Purdue University
 nameCn: 普渡大学
 countryCode: us
 website: http://www.purdue.edu/
-stateCn: 印第安纳州
 stateEn: Indiana
 publicOrPrivate: public
 coursePolicyLink: https://www.purdue.edu/newsroom//releases/2020/Q1/need-to-know-info-about-covid-2019.html
 cover: https://cdn.applysquare.net/a2/institute/purdue/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/purdue/logo.png
-numStateCases: 7928
-numStateDailyNewCases: 493
-numStateDeaths: 343
-numStateCures: 0
+bingApiId: indiana_unitedstates
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-23
 onCampusCourseResumeDate: 

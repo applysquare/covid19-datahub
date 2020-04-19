@@ -3,16 +3,12 @@ nameEn: University of New South Wales
 nameCn: 新南威尔士大学
 countryCode: au
 website: http://www.unsw.edu.au/
-stateCn: 新南威尔士州
 stateEn: New South Wales
 publicOrPrivate: public
 coursePolicyLink: https://www.covid-19.unsw.edu.au/
 cover: https://cdn.applysquare.net/a2/institute/au.unsw/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/au.unsw/logo.png
-numStateCases: 2857
-numStateDailyNewCases: 0
-numStateDeaths: 24
-numStateCures: 4
+bingApiId: newsouthwales_australia
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-20
 onCampusCourseResumeDate: 

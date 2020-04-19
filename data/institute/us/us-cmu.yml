@@ -3,16 +3,12 @@ nameEn: Carnegie Mellon University
 nameCn: 卡内基梅隆大学
 countryCode: us
 website: http://www.cmu.edu/
-stateCn: 宾夕法尼亚州
 stateEn: Pennsylvania
 publicOrPrivate: private
 coursePolicyLink: https://www.cmu.edu/alert/coronavirus/
 cover: https://cdn.applysquare.net/a2/institute/cmu/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/cmu/logo.png
-numStateCases: 22938
-numStateDailyNewCases: 1219
-numStateDeaths: 557
-numStateCures: 0
+bingApiId: pennsylvania_unitedstates
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-18
 onCampusCourseResumeDate: 

@@ -3,16 +3,12 @@ nameEn: University of Liverpool
 nameCn: 利物浦大学
 countryCode: uk
 website: http://www.liv.ac.uk/
-stateCn: 英国
 stateEn: United Kingdom
 publicOrPrivate: public
 coursePolicyLink: https://www.liverpool.ac.uk/coronavirus-advice-and-guidance/covid19/
 cover: https://cdn.applysquare.net/a2/institute/uk.liv.ac/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/uk.liv.ac/logo.png
-numStateCases: 
-numStateDailyNewCases: 
-numStateDeaths: 
-numStateCures: 
+bingApiId: unitedkingdom
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-16
 onCampusCourseResumeDate: 

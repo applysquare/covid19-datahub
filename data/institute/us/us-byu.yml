@@ -3,16 +3,12 @@ nameEn: Brigham Young University
 nameCn: 杨百翰大学
 countryCode: us
 website: http://www.byu.edu/
-stateCn: 犹他州
 stateEn: Utah
 publicOrPrivate: private
 coursePolicyLink: https://www.byu.edu/coronavirus
 cover: https://cdn.applysquare.net/a2/institute/byu/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/byu/logo.png
-numStateCases: 2303
-numStateDailyNewCases: 96
-numStateDeaths: 18
-numStateCures: 0
+bingApiId: utah_unitedstates
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-18
 onCampusCourseResumeDate: 

@@ -3,16 +3,12 @@ nameEn: Clemson University
 nameCn: 克莱门森大学
 countryCode: us
 website: http://www.clemson.edu/
-stateCn: 南卡罗来纳州
 stateEn: South Carolina
 publicOrPrivate: public
 coursePolicyLink: https://www.clemson.edu/coronavirus/index.html
 cover: https://cdn.applysquare.net/a2/institute/clemson/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/clemson/logo.png
-numStateCases: 3320
-numStateDailyNewCases: 109
-numStateDeaths: 82
-numStateCures: 0
+bingApiId: southcarolina_unitedstates
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 
 onCampusCourseResumeDate: 

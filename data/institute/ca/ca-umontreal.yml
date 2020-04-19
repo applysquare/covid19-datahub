@@ -3,16 +3,12 @@ nameEn: Université de Montréal
 nameCn: 蒙特利尔大学
 countryCode: ca
 website: http://www.umontreal.ca/
-stateCn: 魁北克
 stateEn: Quebec
 publicOrPrivate: public
 coursePolicyLink: https://urgence.umontreal.ca/covid-19-en/
 cover: https://cdn.applysquare.net/a2/institute/ca.umontreal/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/ca.umontreal/logo.png
-numStateCases: 12846
-numStateDailyNewCases: 554
-numStateDeaths: 328
-numStateCures: 0
+bingApiId: quebec_canada
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-21
 onCampusCourseResumeDate: 

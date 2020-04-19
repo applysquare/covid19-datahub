@@ -3,16 +3,12 @@ nameEn: University of Maryland
 nameCn: 马里兰大学
 countryCode: us
 website: https://www.umd.edu/
-stateCn: 马里兰州
 stateEn: Maryland
 publicOrPrivate: public
 coursePolicyLink: https://umd.edu/virusinfo
 cover: https://cdn.applysquare.net/a2/institute/umd/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/umd/logo.png
-numStateCases: 8225
-numStateDailyNewCases: 531
-numStateDeaths: 236
-numStateCures: 0
+bingApiId: maryland_unitedstates
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-30
 onCampusCourseResumeDate: 

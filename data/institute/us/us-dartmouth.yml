@@ -3,16 +3,12 @@ nameEn: Dartmouth College
 nameCn: 达特茅斯学院
 countryCode: us
 website: http://www.dartmouth.edu/
-stateCn: 新罕布什尔州
 stateEn: New Hampshire
 publicOrPrivate: private
 coursePolicyLink: https://news.dartmouth.edu/covid-19/covid-19-coronavirus-information?utm_source=dhome&utm_medium=referral&utm_campaign=carousel
 cover: https://cdn.applysquare.net/a2/institute/dartmouth/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/dartmouth/logo.png
-numStateCases: 929
-numStateDailyNewCases: 44
-numStateDeaths: 23
-numStateCures: 0
+bingApiId: newhampshire_unitedstates
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-30
 onCampusCourseResumeDate: 

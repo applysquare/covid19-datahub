@@ -3,16 +3,12 @@ nameEn: The University of Queensland
 nameCn: 昆士兰大学
 countryCode: au
 website: http://www.uq.edu.au/
-stateCn: 昆士兰州
 stateEn: Queensland
 publicOrPrivate: public
 coursePolicyLink: https://about.uq.edu.au/coronavirus-advice-uq-community
 cover: https://cdn.applysquare.net/a2/institute/au.uq/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/au.uq/logo.png
-numStateCases: 983
-numStateDailyNewCases: 9
-numStateDeaths: 5
-numStateCures: 372
+bingApiId: queensland_australia
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-23
 onCampusCourseResumeDate: 

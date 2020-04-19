@@ -3,16 +3,12 @@ nameEn: Johns Hopkins University
 nameCn: 约翰霍普金斯大学
 countryCode: us
 website: http://www.jhu.edu/
-stateCn: 马里兰州
 stateEn: Maryland
 publicOrPrivate: private
 coursePolicyLink: https://hub.jhu.edu/novel-coronavirus-information/
 cover: https://cdn.applysquare.net/a2/institute/jhu/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/jhu/logo.png
-numStateCases: 8225
-numStateDailyNewCases: 531
-numStateDeaths: 236
-numStateCures: 0
+bingApiId: maryland_unitedstates
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-23
 onCampusCourseResumeDate: 

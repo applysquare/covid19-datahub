@@ -3,16 +3,12 @@ nameEn: University of Exeter
 nameCn: 埃克塞特大学
 countryCode: uk
 website: https://www.exeter.ac.uk/
-stateCn: 英国
 stateEn: United Kingdom
 publicOrPrivate: public
 coursePolicyLink: http://www.exeter.ac.uk/coronavirus/
 cover: https://cdn.applysquare.net/a2/institute/uk.exeter/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/uk.exeter/logo.png
-numStateCases: 
-numStateDailyNewCases: 
-numStateDeaths: 
-numStateCures: 
+bingApiId: unitedkingdom
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-23
 onCampusCourseResumeDate: 

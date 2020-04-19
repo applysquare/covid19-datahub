@@ -3,16 +3,12 @@ nameEn: Monash University
 nameCn: 莫纳什大学
 countryCode: au
 website: http://www.monash.edu.au/
-stateCn: 维多利亚州
 stateEn: Victoria
 publicOrPrivate: public
 coursePolicyLink: https://www.monash.edu/news/coronavirus-updates
 cover: https://cdn.applysquare.net/a2/institute/au.monash/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/au.monash/logo.png
-numStateCases: 1268
-numStateDailyNewCases: 3
-numStateDeaths: 14
-numStateCures: 926
+bingApiId: victoria_australia
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-25
 onCampusCourseResumeDate: 
