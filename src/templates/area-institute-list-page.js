@@ -211,7 +211,6 @@ const PageCore = ({ data }) => {
           {institute.map((edge) => {
             const { node } = edge;
             const instituteApiData = getApiData(node?.bingApiId);
-            console.log('kkk', instituteApiData);
             return (
               <Link
                 style={styles.link}
