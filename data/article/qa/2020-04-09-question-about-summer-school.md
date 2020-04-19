@@ -6,6 +6,9 @@ link: >-
 status: published
 countryCode: us
 instituteSlug:
+tags:
+  - 留学互助
+  - Student Support
 
 ---
 

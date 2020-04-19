@@ -5,7 +5,9 @@ link: >-
   http://www.airchina.com.cn/cn/info_and_services/138325.shtml
 countryCode:
 airlineCode: air_china
-status: published
+tags:
+  - 航班信息
+  - Airline
 ---
 国航关于暂停国际地区始发至中国大陆地区航班部分运输服务的公告如下：
 

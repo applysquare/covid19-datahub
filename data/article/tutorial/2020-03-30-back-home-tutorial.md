@@ -7,4 +7,7 @@ link: >-
 status: published
 countryCode:
 instituteSlug:
+tags:
+  - 经验指南
+  - Tutorial
 ---

@@ -5,6 +5,8 @@ date: 2020-04-01
 link: >-
   https://covid19.columbia.edu/news/columbia-university-press-makes-e-books-available-free
 tags:
+  - 学习资料
+  - Learning Resource
 status: published
 countryCode: us
 instituteSlug: us-columbia

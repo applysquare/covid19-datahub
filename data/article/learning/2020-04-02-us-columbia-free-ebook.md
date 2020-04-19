@@ -6,4 +6,7 @@ link: >-
   https://www.cupblog.org/2020/03/31/columbia-university-press-makes-e-book-learning-resources-available-to-students-online-at-no-cost/
 instituteSlug: us-columbia
 countryCode: us
+tags:
+  - 学习资源
+  - Learning Resource
 ---

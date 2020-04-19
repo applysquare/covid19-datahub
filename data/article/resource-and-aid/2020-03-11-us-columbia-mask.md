@@ -6,5 +6,8 @@ link: >-
   https://mp.weixin.qq.com/s/98OqY-8bHXpxrovCSJSqNQ
 slug: us-columbia
 countryCode: us
+tags:
+  - 援助信息
+  - Aid
 ---
 
