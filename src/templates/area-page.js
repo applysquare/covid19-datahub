@@ -267,7 +267,6 @@ export const pageQuery = graphql`
           logo
           nameCn
           website
-          stateCn
           fields {
             pathname
           }
