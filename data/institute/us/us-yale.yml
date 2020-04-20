@@ -3,16 +3,12 @@ nameEn: Yale University
 nameCn: 耶鲁大学
 countryCode: us
 website: http://www.yale.edu/
-stateCn: 康涅狄格州
 stateEn: Connecticut
 publicOrPrivate: private
 coursePolicyLink: https://communications.yale.edu/covid-19-information
 cover: https://cdn.applysquare.net/a2/institute/yale/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/yale/logo.png
-numStateCases: 12035
-numStateDailyNewCases: 525
-numStateDeaths: 554
-numStateCures: 0
+bingApiId: connecticut_unitedstates
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-04-05
 onCampusCourseResumeDate: 

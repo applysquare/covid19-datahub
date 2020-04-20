@@ -3,16 +3,12 @@ nameEn: University of British Columbia
 nameCn: 英属哥伦比亚大学
 countryCode: ca
 website: http://www.ubc.ca/
-stateCn: 不列颠哥伦比亚省
 stateEn: British Columbia
 publicOrPrivate: public
 coursePolicyLink: https://covid19.ubc.ca/
 cover: https://cdn.applysquare.net/a2/institute/ca.ubc/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/ca.ubc/logo.png
-numStateCases: 1445
-numStateDailyNewCases: 0
-numStateDeaths: 58
-numStateCures: 0
+bingApiId: britishcolumbia_canada
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-16
 onCampusCourseResumeDate: 

@@ -3,16 +3,12 @@ nameEn: Harvard University
 nameCn: 哈佛大学
 countryCode: us
 website: http://www.harvard.edu/
-stateCn: 马萨诸塞州
 stateEn: Massachusetts
 publicOrPrivate: private
 coursePolicyLink: https://www.harvard.edu/coronavirus
 cover: https://cdn.applysquare.net/a2/institute/harvard/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/harvard/logo.png
-numStateCases: 25475
-numStateDailyNewCases: 2615
-numStateDeaths: 756
-numStateCures: 0
+bingApiId: massachusetts_unitedstates
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-23
 onCampusCourseResumeDate: 

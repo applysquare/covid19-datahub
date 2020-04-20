@@ -3,16 +3,12 @@ nameEn: Cornell University
 nameCn: 康奈尔大学
 countryCode: us
 website: http://www.cornell.edu/
-stateCn: 纽约州
 stateEn: New York
 publicOrPrivate: private
 coursePolicyLink: https://www.cornell.edu/coronavirus/
 cover: https://cdn.applysquare.net/a2/institute/cornell/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/cornell/logo.png
-numStateCases: 189033
-numStateDailyNewCases: 8007
-numStateDeaths: 9385
-numStateCures: 0
+bingApiId: newyork_unitedstates
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-04-06
 onCampusCourseResumeDate: 

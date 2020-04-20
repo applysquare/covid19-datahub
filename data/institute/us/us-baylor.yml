@@ -3,16 +3,12 @@ nameEn: Baylor University
 nameCn: 贝勒大学
 countryCode: us
 website: http://www.baylor.edu/
-stateCn: 德克萨斯州
 stateEn: Texas
 publicOrPrivate: private
 coursePolicyLink: https://www.baylor.edu/coronavirus/
 cover: https://cdn.applysquare.net/a2/institute/baylor/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/baylor/logo.png
-numStateCases: 13677
-numStateDailyNewCases: 654
-numStateDeaths: 283
-numStateCures: 0
+bingApiId: texas_unitedstates
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-23
 onCampusCourseResumeDate: 

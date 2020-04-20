@@ -3,16 +3,12 @@ nameEn: University of Manchester
 nameCn: 曼彻斯特大学（英国）
 countryCode: uk
 website: http://www.manchester.ac.uk/
-stateCn: 英国
 stateEn: United Kingdom
 publicOrPrivate: public
 coursePolicyLink: https://www.manchester.ac.uk/coronavirus/
 cover: https://cdn.applysquare.net/a2/institute/uk.manchester/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/uk.manchester/logo.png
-numStateCases: 
-numStateDailyNewCases: 
-numStateDeaths: 
-numStateCures: 
+bingApiId: unitedkingdom
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-16
 onCampusCourseResumeDate: 

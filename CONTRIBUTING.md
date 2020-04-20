@@ -38,16 +38,12 @@ If you have any data, Please contribute with illustration below.
 | nameCn     | **必填** | 院校中文名 | 哥伦比亚大学 |
 | countryCode     | **必填** | 院校所在国家或地区小写代码，若不确定可点击定义好的<a href="https://docs.google.com/spreadsheets/d/1eZMJ29XtJ_9ozQf-GEJH72fSuSVEiDZMvSYU0RQ3tP0/edit?usp=sharing">国家/地区代码</a>查找，或提取slug里"-"前的前缀    | us |
 | website     | 选填 | 院校官网，以http开头 | <a href="http://www.columbia.edu/">示例link</a> |
-| stateCn    | **必填** | 院校所在州或二级行政区的中文 | 纽约州 |
 | stateEn    | **必填** | 院校所在州或二级行政区的英文 | New York |
 | publicOrPrivate     | 选填 | 院校属性，公办：public，私立：private | private |
 | coursePolicyLink     | 选填 | 院校应对疫情的学习发展应对政策所在链接 | <a href="https://covid19.columbia.edu/">示例link</a> |
 | cover     | 选填 | 院校封面图，可通过申请方图片链接直接调用，美国院校slug-之后部分替换掉示例link中的columbia即可，其他国家院校slug中的“-”改为“.”再替换掉示例link中的columbia即可 |  <a href="https://cdn.applysquare.net/a2/institute/columbia/cover_app.jpg">示例link</a> |
 | logo     | 选填 | 院校校徽图片，可通过申请方图片链接直接调用，美国院校slug-之后部分替换掉示例link中的columbia即可，其他国家院校slug中的“-”改为“.”再替换掉示例link中的columbia即可   | <a href="https://cdn.applysquare.net/a2/institute/columbia/logo.png">示例link</a> |
-| numStateCases     | 不填 | 院校所在州或国家一级行政区确诊病例数，留白即可，申请方会有API接口自动调取  |  |
-| numStateDailyNewCases     | 不填 | 院校所在州或国家一级行政区新增病例数，留白即可，申请方会有API接口自动调取 |  |
-| numStateDeaths     | 不填 | 院校所在州或国家一级行政区死亡病例数，留白即可，申请方会有API接口自动调取 |  |
-| numStateCures     | 不填 | 院校所在州或国家一级行政区治愈数，留白即可，申请方会有API接口自动调取 |  |
+| bingApiId     | **必填** | 调取疫情数据的API接口id，stateEn对应的 <a href="https://bing.com/covid/data">API id</a>  | newyork_unitedstates |
 | courseOperationStatus     | **必填** | 院校运转状态，停课：suspendCourse，网课：onlineCourse，正常：normalCourse，放假：holiday | onlineCourse |
 | onlineCourseStartDate     | 选填 | 院校网课开始日期，格式：YYYY-MM-DD | 2020-03-26 |
 | onCampusCourseResumeDate     | 选填 | 院校复课日期，格式：YYYY-MM-DD | 2020-09-01 |

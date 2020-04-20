@@ -3,16 +3,12 @@ nameEn: Stony Brook University
 nameCn: 纽约州立大学石溪分校
 countryCode: us
 website: http://www.stonybrook.edu/
-stateCn: 纽约州
 stateEn: New York
 publicOrPrivate: public
 coursePolicyLink: https://www.stonybrook.edu/commcms/coronavirus/
 cover: https://cdn.applysquare.net/a2/institute/stonybrook/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/stonybrook/logo.png
-numStateCases: 189033
-numStateDailyNewCases: 8007
-numStateDeaths: 9385
-numStateCures: 0
+bingApiId: newyork_unitedstates
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-30
 onCampusCourseResumeDate: 

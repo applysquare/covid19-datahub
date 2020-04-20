@@ -3,16 +3,12 @@ nameEn: Boston College
 nameCn: 波士顿学院
 countryCode: us
 website: http://www.bc.edu/
-stateCn: 马萨诸塞州
 stateEn: Massachusetts
 publicOrPrivate: private
 coursePolicyLink: https://www.bc.edu/content/bc-web/sites/updates/coronavirus.html
 cover: https://cdn.applysquare.net/a2/institute/bc/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/bc/logo.png
-numStateCases: 25475
-numStateDailyNewCases: 2615
-numStateDeaths: 756
-numStateCures: 0
+bingApiId: massachusetts_unitedstates
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-19
 onCampusCourseResumeDate: 

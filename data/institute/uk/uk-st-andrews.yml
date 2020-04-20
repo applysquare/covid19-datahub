@@ -3,16 +3,12 @@ nameEn: University of St Andrews
 nameCn: 圣安德鲁斯大学（英国）
 countryCode: uk
 website: http://www.st-andrews.ac.uk/
-stateCn: 英国
 stateEn: United Kingdom
 publicOrPrivate: public
 coursePolicyLink: https://www.st-andrews.ac.uk/coronavirus/
 cover: https://cdn.applysquare.net/a2/institute/uk.st-andrews/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/uk.st-andrews/logo.png
-numStateCases: 
-numStateDailyNewCases: 
-numStateDeaths: 
-numStateCures: 
+bingApiId: unitedkingdom
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-30
 onCampusCourseResumeDate: 

@@ -3,16 +3,12 @@ nameEn: McGill University
 nameCn: 麦吉尔大学
 countryCode: ca
 website: http://www.mcgill.ca/
-stateCn: 努纳武特
-stateEn: Nunavut
+stateEn: Quebec
 publicOrPrivate: public
 coursePolicyLink: https://www.mcgill.ca/coronavirus/
 cover: https://cdn.applysquare.net/a2/institute/ca.mcgill/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/ca.mcgill/logo.png
-numStateCases: 
-numStateDailyNewCases: 
-numStateDeaths: 
-numStateCures: 
+bingApiId: quebec_canada
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-30
 onCampusCourseResumeDate: 

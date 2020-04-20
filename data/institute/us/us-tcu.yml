@@ -3,16 +3,12 @@ nameEn: Texas Christian University
 nameCn: 德克萨斯基督教大学
 countryCode: us
 website: http://www.tcu.edu/
-stateCn: 德克萨斯州
 stateEn: Texas
 publicOrPrivate: private
 coursePolicyLink: https://www.tcu.edu/coronavirus/index.php
 cover: https://cdn.applysquare.net/a2/institute/tcu/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/tcu/logo.png
-numStateCases: 13677
-numStateDailyNewCases: 654
-numStateDeaths: 283
-numStateCures: 0
+bingApiId: texas_unitedstates
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-23
 onCampusCourseResumeDate: 

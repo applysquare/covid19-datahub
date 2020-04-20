@@ -3,16 +3,12 @@ nameEn: McMaster University
 nameCn: 麦克马斯特大学
 countryCode: ca
 website: http://www.mcmaster.ca/
-stateCn: 安大略省
 stateEn: Ontario
 publicOrPrivate: public
 coursePolicyLink: https://covid19.mcmaster.ca/
 cover: https://cdn.applysquare.net/a2/institute/ca.mcmaster/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/ca.mcmaster/logo.png
-numStateCases: 7049
-numStateDailyNewCases: 401
-numStateDeaths: 274
-numStateCures: 0
+bingApiId: ontario_canada
 courseOperationStatus: suspendCourse
 onlineCourseStartDate: 2020-05-04
 onCampusCourseResumeDate: 

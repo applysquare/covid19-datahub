@@ -3,16 +3,12 @@ nameEn: Texas A&M University
 nameCn: 德州农工大学
 countryCode: us
 website: http://www.tamu.edu/
-stateCn: 德克萨斯州
 stateEn: Texas
 publicOrPrivate: public
 coursePolicyLink: https://www.tamu.edu/coronavirus/
 cover: https://cdn.applysquare.net/a2/institute/tamu/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/tamu/logo.png
-numStateCases: 13677
-numStateDailyNewCases: 654
-numStateDeaths: 283
-numStateCures: 0
+bingApiId: texas_unitedstates
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-23
 onCampusCourseResumeDate: 
