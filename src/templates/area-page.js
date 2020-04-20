@@ -21,71 +21,6 @@ const goBack = {
 
 // 之后换成网页端交流与资源建设页面入口
 
-const styles = {
-  countryBox: {
-    background: "#FFFFFF",
-    padding: "20px 15px",
-  },
-  title: {
-    color: "#333333",
-    fontWeight: 500,
-    fontSize: "18px",
-    marginBottom: "24px",
-  },
-  flexParent: {
-    display: "flex",
-    justifyContent: "space-around",
-    flexWrap: "wrap",
-    textAlign: "center",
-  },
-  flexChild: {
-    padding: "24px 0 10px 0",
-  },
-  statusTxt: {
-    color: "#333333",
-    fontSize: "14px",
-  },
-  statusNum: {
-    fontSize: "20px",
-  },
-  instituteBox: {
-    padding: "24px 15px 20px",
-    background: "#FFFFFF",
-    marginTop: "10px",
-    boxShadow: "0px 2px 6px 0px rgba(0,0,0,0.08)",
-  },
-  institutePic: {
-    width: "50px",
-    height: "50px",
-    borderRadius: "50%",
-    background: "#FFFFFF",
-    margin: "0 auto",
-  },
-  instituteName: { color: "#333333", marginTop: "8px", textAlign: "center" },
-  instituteNameMore: {
-    textOverflow: "ellipsis",
-    whiteSpace: "nowrap",
-    overflow: "hidden",
-    fontSize: "14px",
-  },
-  infoBox: {
-    boxShadow: "0px 2px 4px 0px rgba(0,0,0,0.1)",
-    borderRadius: "4px",
-    padding: "20px 10px",
-  },
-  link: {
-    textDecoration: "none",
-  },
-  more: {
-    color: "#999999",
-    fontSize: "14px",
-    padding: "5px",
-    display: "inline-block",
-    textDecoration: "underline",
-    cursor: "pointer",
-  },
-};
-
 export const AreaPageCore = ({ data }) => {
   const { area, updates, articles, allInstitute } = data;
   const covid19Area = data?.covid19Area?.data;
@@ -94,43 +29,37 @@ export const AreaPageCore = ({ data }) => {
   // const institutes = allInstitute?.edges;
 
   return (
-    <div style={{ background: "rgba(241,241,241,0.8)" }}>
-      <div style={styles.countryBox}>
+    <div className="area-page">
+      <div className="area-wrapper">
         <GoBack {...goBack} />
         <div>
-          <div style={{ marginTop: "30px" }}>
-            <span style={{ ...styles.title, fontSize: "24px" }}>
-              {area?.titleCn}
-            </span>
-            <span
-              style={{ color: "#666666", fontsize: "14px", padding: "8px" }}
-            >
-              {area?.titleEn}
-            </span>
+          <div className="area">
+            <span className="title title-cn">{area?.titleCn}</span>
+            <span className="title-en">{area?.titleEn}</span>
           </div>
 
-          <div style={styles.flexParent}>
-            <div style={styles.flexChild}>
-              <div style={styles.statusTxt}>确诊</div>
-              <div style={{ ...styles.statusNum, color: "#EB5449" }}>
+          <div className="flex-space-around">
+            <div className="status-item">
+              <div className="status-txt">确诊</div>
+              <div className="total-confirmed">
                 {covid19Area?.totalConfirmed || "-"}
               </div>
             </div>
-            <div style={styles.flexChild}>
-              <div style={styles.statusTxt}>新增</div>
-              <div style={{ ...styles.statusNum, color: "#FDBB0F" }}>
+            <div className="status-item">
+              <div className="status-txt">新增</div>
+              <div className="total-confirmed-delta">
                 {covid19Area?.totalConfirmedDelta || "-"}
               </div>
             </div>
-            <div style={styles.flexChild}>
-              <div style={styles.statusTxt}>死亡</div>
-              <div style={{ ...styles.statusNum, color: "#333333" }}>
+            <div className="status-item">
+              <div className="status-txt">死亡</div>
+              <div className="total-deaths">
                 {covid19Area?.totalDeaths || "-"}
               </div>
             </div>
-            <div style={styles.flexChild}>
-              <div style={styles.statusTxt}>治愈</div>
-              <div style={{ ...styles.statusNum, color: "#1EC5A0" }}>
+            <div className="status-item">
+              <div className="status-txt">治愈</div>
+              <div className="total-recovered">
                 {covid19Area?.totalRecovered || "-"}
               </div>
             </div>
@@ -138,59 +67,26 @@ export const AreaPageCore = ({ data }) => {
         </div>
       </div>
 
-      <div style={styles.instituteBox}>
-        <div style={{ ...styles.flexParent, justifyContent: "space-between" }}>
-          <div style={styles.title}>{area?.titleCn}院校实况</div>
-          <Link
-            style={{
-              ...styles.more,
-            }}
-            to="/institute/us"
-          >
+      <div className="institute-wrapper">
+        <div className="flex-space-betwwen" style={{ marginBottom: "24px" }}>
+          <div className="title">{area?.titleCn}院校实况</div>
+          <Link className="more" to="/institute/us">
             更多
           </Link>
         </div>
-        <div style={{ ...styles.flexParent, justifyContent: "flex-start" }}>
+        <div className="flex-flex-start">
           {(institutes || []).map((edge) => {
             return (
               <Link
-                style={{
-                  ...styles.link,
-                  overflow: "hidden",
-                  textOverflow: "ellipsis",
-                  whiteSpace: "nowrap",
-                  marginBottom: "12px",
-                  width: "25%",
-                }}
+                className="flex-item all-page-omit"
                 key={edge?.node?.id}
                 to={edge?.node?.fields?.pathname}
               >
-                <div style={styles.institutePic}>
-                  <img
-                    src={edge?.node?.logo}
-                    alt=""
-                    style={{
-                      width: "100%",
-                      height: "100%",
-                      borderRadius: "50%",
-                    }}
-                  />
+                <div className="logo">
+                  <img src={edge?.node?.logo} alt="" />
                 </div>
-                <div
-                  style={{
-                    ...styles.instituteName,
-                    ...styles.instituteNameMore,
-                  }}
-                >
-                  {edge?.node?.nameCn}
-                </div>
-                <div
-                  style={{
-                    ...styles.instituteName,
-                    color: "#333333",
-                    fontSize: "12px",
-                  }}
-                >
+                <div className="name all-page-omit">{edge?.node?.nameCn}</div>
+                <div className="course-operation-status">
                   {translateCourseOperationStatus(
                     "cn",
                     edge?.node?.courseOperationStatus
@@ -204,24 +100,13 @@ export const AreaPageCore = ({ data }) => {
 
       <Help {...help} />
 
-      <div style={{ background: "#FFFFFF", padding: "15px" }}>
-        <div style={styles.infoBox}>
-          <div
-            style={{ ...styles.title, fontSize: "18px", marginBottom: "10px" }}
-          >
-            {area?.titleCn}资料区
-          </div>
+      <div className="info-new-box">
+        <div className="info-wrapper">
+          <div className="title info-title">{area?.titleCn}资料区</div>
           <InfoList infoEdges={infoEdges} />
         </div>
-        <div>
-          <div
-            style={{
-              ...styles.title,
-              margin: "30px 0 22px 0",
-            }}
-          >
-            {area?.titleCn}资讯
-          </div>
+        <div className="new-wrapper">
+          <div className="title new-title">{area?.titleCn}资讯</div>
           <NewList newEdges={updates?.edges} />
         </div>
       </div>

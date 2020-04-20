@@ -1,7 +1,7 @@
 function toCamelCase(str) {
   return str
     .toLowerCase()
-    .replace(/(?:(^.)|(\s+.)|(\..)|(\/.))/g, function (match) {
+    .replace(/(?:(^.)|(\s+.)|(\..)|(\/.))/g, function(match) {
       return match.charAt(match.length - 1).toUpperCase();
     });
 }
@@ -10,14 +10,13 @@ module.exports = {
   pathPrefix: process.env.GATSBY_PATH_PREFIX,
   siteMetadata: {
     title: "COVID19 Datahub",
-    description:
-      "Collect COVID19 information around the world."
+    description: "Collect COVID19 information around the world.",
   },
   plugins: [
     // "gatsby-plugin-optional-chaining",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sass",
-    'covidapi',
+    "covidapi",
     {
       resolve: `gatsby-transformer-yaml`,
       options: {
@@ -31,37 +30,37 @@ module.exports = {
           }
           console.log("Unknown Yaml: ", node, object);
           return "Yaml";
-        }
-      }
+        },
+      },
     },
     {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: "gatsby-source-filesystem",
       options: {
         path: `${__dirname}/static/img`,
-        name: "uploads"
-      }
+        name: "uploads",
+      },
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
         path: `${__dirname}/pages`,
-        name: "pages"
-      }
+        name: "pages",
+      },
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
         path: `${__dirname}/src/img`,
-        name: "images"
-      }
+        name: "images",
+      },
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
         path: `${__dirname}/data`,
-        name: "data"
-      }
+        name: "data",
+      },
     },
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
@@ -72,8 +71,8 @@ module.exports = {
           {
             resolve: "gatsby-remark-relative-images",
             options: {
-              name: "uploads"
-            }
+              name: "uploads",
+            },
           },
           {
             resolve: "gatsby-remark-images",
@@ -81,17 +80,17 @@ module.exports = {
               // It's important to specify the maxWidth (in pixels) of
               // the content container as this plugin uses this as the
               // base for generating different widths of each image.
-              maxWidth: 2048
-            }
+              maxWidth: 2048,
+            },
           },
           {
             resolve: "gatsby-remark-copy-linked-files",
             options: {
-              destinationDir: "static"
-            }
-          }
-        ]
-      }
+              destinationDir: "static",
+            },
+          },
+        ],
+      },
     },
     {
       resolve: `gatsby-plugin-manifest`,
@@ -105,16 +104,16 @@ module.exports = {
     {
       resolve: "gatsby-plugin-netlify-cms",
       options: {
-        modulePath: `${__dirname}/src/cms/cms.js`
-      }
+        modulePath: `${__dirname}/src/cms/cms.js`,
+      },
     },
     {
       resolve: "gatsby-plugin-purgecss", // purges all unused/unreferenced css rules
       options: {
         develop: true, // Activates purging in npm run develop
-        purgeOnly: ["/all.sass"] // applies purging only on the bulma css file
-      }
+        purgeOnly: ["/all.sass"], // applies purging only on the bulma css file
+      },
     }, // must be after other CSS plugins
-    "gatsby-plugin-netlify" // make sure to keep it last in the array
-  ]
+    "gatsby-plugin-netlify", // make sure to keep it last in the array
+  ],
 };
