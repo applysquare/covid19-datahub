@@ -4,7 +4,9 @@ date: 2020-03-21
 link: >-
   https://www.csair.com/cn/about/news/notice/2020/1e3urummfih9k.shtml
 airlineCode: china_southern
-status: published
+tags:
+  - 航班信息
+  - Airline
 ---
 ## 关于中国至荷兰航班的乘机提示
 

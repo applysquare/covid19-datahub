@@ -6,6 +6,9 @@ link: >-
   https://thewell.unc.edu/2020/04/03/stop-zoom-bombs/
 countryCode: us
 instituteSlug: us-unc
+tags:
+  - 学习资源
+  - Learning Resource
 ---
 北卡教堂山在4月3日发文教学生如何让zoom上的学习更安全，保护个人隐私。原文如下：
 #Stop Zoom bombs

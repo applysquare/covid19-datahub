@@ -6,4 +6,7 @@ link: >-
   https://mp.weixin.qq.com/s/Eyg8zy11-hDI31rfyjVv4g
 countryCode: us
 instituteSlug: us-columbia
+tags:
+  - 经验指南
+  - Tutorial
 ---

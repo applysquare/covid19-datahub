@@ -5,6 +5,9 @@ link: >-
   http://www.airchina.com.cn/cn/info_and_services/138541.shtml
 countryCode:
 airlineCode: air_china
+tags:
+  - 航班信息
+  - Airline
 ---
 尊敬的旅客：
 
