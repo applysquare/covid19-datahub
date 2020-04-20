@@ -12,39 +12,21 @@ const goBack = {
   },
 };
 
-const styles = {
-  flexParent: {
-    display: "flex",
-    flexWrap: "wrap",
-    justifyContent: "space-between",
-    alignItems: "center",
-    marginTop: "30px",
-  },
-  footerLink: {
-    color: "#FFFFFF",
-    fontSize: "16px",
-    background: "#1A6DFF",
-    textAlign: "center",
-    padding: "8px 0",
-    margin: "10px 15px 0 15px",
-    display: "block",
-    textDecoration: "none",
-    cursor: "pointer",
-  },
-};
-
 export const AboutPageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content;
 
   return (
-    <div style={{ padding: "15px" }}>
+    <div className="about-page">
       <section className="section section--gradient">
         <div className="container">
           <div className="columns">
             <div className="column is-10 is-offset-1">
               <div className="section" style={{ marginTop: "15px" }}>
                 <GoBack {...goBack} />
-                <div style={styles.flexParent}>
+                <div
+                  className="flex-space-betwwen"
+                  style={{ marginTop: "30px" }}
+                >
                   <div style={{ fontSize: "20px" }}>了解项目</div>
                   <Link style={{ color: "rgba(26,109,255,1)" }} to="/resource">
                     交流与资源建设
@@ -60,8 +42,8 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
         </div>
       </section>
       <a
+        className="footer-link"
         href="https://github.com/applysquare/covid19-datahub"
-        style={styles.footerLink}
       >
         前往covid19-datahub共建资源
       </a>

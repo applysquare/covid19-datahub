@@ -9,81 +9,8 @@ import NewList from "../components/NewList";
 import AllAreaCases from "../components/AllAreaCases";
 import { help } from "../components/const";
 import { sliceArr } from "../components/display";
-import indexTitleImg from "../img/indexTitleImg.png";
 
 // 之后换成网页端交流与资源建设页面入口
-
-const styles = {
-  title: {
-    color: "#333333",
-    fontWeight: 500,
-    fontSize: "18px",
-    marginBottom: "24px",
-  },
-  titleImg: {
-    width: "100%",
-  },
-  flexParent: {
-    display: "flex",
-    justifyContent: "space-around",
-    flexWrap: "wrap",
-  },
-  safetyBox: {
-    padding: "30px 15px",
-    marginTop: "10px",
-    background: "#FFFFFF",
-    boxShadow: "0px 6px 6px 0px rgba(0,0,0,0.08)}",
-  },
-  areaName: {
-    color: "#333333",
-    fontSize: "14px",
-    fontWeight: 500,
-  },
-  instituteBox: {
-    padding: "24px 15px 20px",
-    background: "#FFFFFF",
-    boxShadow: "0px 2px 6px 0px rgba(0,0,0,0.08)",
-  },
-  institutePic: {
-    width: "50px",
-    height: "50px",
-    borderRadius: "50%",
-    background: "#D8D8D8",
-    margin: "0 auto",
-  },
-  instituteName: { color: "#333333", marginTop: "8px", textAlign: "center" },
-  infoBox: {
-    boxShadow: "0px 2px 4px 0px rgba(0,0,0,0.1)",
-    borderRadius: "4px",
-    padding: "20px 10px",
-  },
-  more: {
-    color: "#999999",
-    fontSize: "14px",
-    cursor: "pointer",
-  },
-  link: {
-    textDecoration: "none",
-  },
-  tabItem: {
-    padding: "8px 0",
-    textAlign: "center",
-    pointer: "cursor",
-    flex: 1,
-    textDecoration: "none",
-    color: "#333333",
-  },
-  triangle: {
-    width: 0,
-    height: 0,
-    display: "inline-block",
-    background: "transparent",
-    borderTop: "0px solid transparent",
-    borderBottom: "40px solid white",
-    borderLeft: "6px solid white",
-    borderRight: "10px solid transparent",
-  },
-};
 
 export const IndexPageCore = ({ data, errors }) => {
   const config = data.pageIndexYml;
@@ -129,94 +56,67 @@ export const IndexPageCore = ({ data, errors }) => {
   };
 
   return (
-    <div style={{ background: "rgba(241,241,241,0.8)" }}>
-      <div>
-        <Link to="/about">
-          <img style={styles.titleImg} src={indexTitleImg} alt="" />
-        </Link>
-      </div>
-      <div style={styles.flexParent}>
+    <div className="index-page">
+      <Link to="/about">
+        <div className="banner"></div>
+      </Link>
+      <div className="flex-space-around" style={{ alignItems: "inherit" }}>
         <Link
+          className="tab-item"
           style={{
-            ...styles.tabItem,
             background: "#ffffff",
             color: "#1A6DFF",
           }}
         >
           全球动态
         </Link>
-        <div style={styles.triangle}></div>
-        <Link style={styles.tabItem} to="/institute/us">
+        <div className="triangle"></div>
+        <Link className="tab-item" to="/institute/us">
           院校数据
         </Link>
       </div>
-      <div style={styles.instituteBox}>
-        <div style={{ ...styles.flexParent, justifyContent: "space-between" }}>
-          <div style={styles.title}>留学生数据中心</div>
-          <a style={styles.more} href="###" onClick={(e) => getMoreArea(e)}>
+      <div className="all-study-area-wrapper">
+        <div className="title-box">
+          <div className="title">留学生数据中心</div>
+          <a className="more" href="###" onClick={(e) => getMoreArea(e)}>
             {isAreaMore ? "收起" : "更多"}
           </a>
         </div>
-        <div style={{ ...styles.flexParent, justifyContent: "flex-start" }}>
+        <div className="flex-flex-start">
           {allStudyArea.map((area) => {
             return (
               <Link
+                className="flex-item"
                 key={v4()}
-                style={{
-                  ...styles.link,
-                  textAlign: "center",
-                  width: "25%",
-                  marginBottom: "12px",
-                }}
                 to={area?.node?.fields?.pathname}
               >
-                <div style={styles.institutePic}>
-                  <img
-                    src={area?.node?.icon}
-                    alt=""
-                    style={{
-                      width: "100%",
-                      height: "100%",
-                      borderRadius: "50%",
-                    }}
-                  />
+                <div className="logo">
+                  <img src={area?.node?.icon} alt="" />
                 </div>
-                <div style={styles.instituteName}>{area?.node?.titleCn}</div>
+                <div className="title-cn">{area?.node?.titleCn}</div>
               </Link>
             );
           })}
         </div>
       </div>
-      <div style={styles.safetyBox}>
-        {/* <div style={{ ...styles.flexParent, justifyContent: "space-between" }}> */}
-        <div style={styles.title}>全球健康安全</div>
-        <div
-          style={{
-            ...styles.flexParent,
-            justifyContent: "space-between",
-            marginTop: "15px",
-          }}
-        >
-          <div style={{ ...styles.title, fontSize: "16px" }}>各地确诊数据</div>
-          <a style={styles.more} href="###" onClick={(e) => getMoreCases(e)}>
+      <div className="safety-wrapper">
+        <div className="title" style={{ marginBottom: "24px" }}>
+          全球健康安全
+        </div>
+        <div className="title-box">
+          <div className="title" style={{ fontSize: "16px" }}>
+            各地确诊数据
+          </div>
+          <a className="more" href="###" onClick={(e) => getMoreCases(e)}>
             {isCasesMore ? "收起" : "更多"}
           </a>
         </div>
-        <div style={{ ...styles.flexParent, justifyContent: "flex-start" }}>
+        <div className="flex-flex-start">
           {config?.highlightAreas.map((area) => {
             const apiData = getApiData(area.apiCode);
             return (
-              <Link
-                key={area?.link}
-                style={{
-                  ...styles.link,
-                  textAlign: "center",
-                  width: "25%",
-                  marginBottom: "12px",
-                }}
-                to={area?.link}
-              >
-                <div style={styles.areaName}>{area?.name}</div>
+              <Link className="flex-item" key={area?.link} to={area?.link}>
+                <div className="name">{area?.name}</div>
                 <div style={{ color: "#EB5449", fontSize: "20px" }}>
                   {apiData?.totalConfirmed ?? "-"}
                 </div>
@@ -235,24 +135,13 @@ export const IndexPageCore = ({ data, errors }) => {
         {isCasesMore && <AllAreaCases data={allAreaCases} />}
       </div>
       <Help {...help} />
-      <div style={{ background: "#FFFFFF", padding: "15px" }}>
-        <div style={styles.infoBox}>
-          <div
-            style={{ ...styles.title, fontSize: "18px", marginBottom: "10px" }}
-          >
-            资料区
-          </div>
+      <div className="info-new-box">
+        <div className="info-wrapper">
+          <div className="title info-title">资料区</div>
           <InfoList infoEdges={infoEdges} />
         </div>
-        <div>
-          <div
-            style={{
-              ...styles.title,
-              margin: "30px 0 22px 0",
-            }}
-          >
-            全球资讯
-          </div>
+        <div className="new-wrapper">
+          <div className="title new-title">全球资讯</div>
           <NewList newEdges={updates?.edges} />
         </div>
       </div>
