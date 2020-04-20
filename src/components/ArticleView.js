@@ -14,13 +14,6 @@ const styles = {
     padding: "18px 20px",
     minHeight: "500px",
   },
-  returnBox: {
-    color: "#333333",
-    fontSize: "16px",
-    textDecoration: "none",
-    display: "inline-block",
-    marginBottom: "30px",
-  },
   title: {
     color: "#333333",
     fontSize: "24px",
@@ -34,8 +27,6 @@ const styles = {
     color: "#666666",
   },
   flexParent: {
-    display: "flex",
-    alignItems: "center",
     color: "#666666",
     fontSize: "14px",
   },
@@ -46,7 +37,7 @@ export const ArticleView = ({ markdownRemark }) => {
     <div style={styles.box}>
       <GoBack {...goBack} />
       <div style={styles.title}>{article?.frontmatter?.title}</div>
-      <div style={styles.flexParent}>
+      <div className="flex-flex-start" style={styles.flexParent}>
         <div style={styles.date}>{article.frontmatter?.date}</div>
         <div>
           {article?.frontmatter?.link && (
