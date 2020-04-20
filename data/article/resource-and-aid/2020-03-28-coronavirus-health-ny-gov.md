@@ -7,5 +7,8 @@ link: >-
 status: published
 countryCode: us
 instituteSlug:
+tags:
+  - 援助信息
+  - Aid
 ---
 
