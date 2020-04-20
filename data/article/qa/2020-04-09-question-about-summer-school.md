@@ -3,8 +3,13 @@
 title: '提问专题：疫情对美国暑校影响问题汇总(2020-04-09更新)'
 date: 2020-04-09
 link: >-
-slug: 
+status: published
 countryCode: us
+instituteSlug:
+tags:
+  - 留学互助
+  - Student Support
+
 ---
 
 

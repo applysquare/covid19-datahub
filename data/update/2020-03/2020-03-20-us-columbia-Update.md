@@ -1,13 +1,14 @@
 ---
 # templateKey: news-page
 title: Spring Semester and Commencement
-subtitle: 
+subtitle:
 date: 2020-03-20
 link: >-
   https://covid19.columbia.edu/news/update-course-instruction-and-university-commencement
+tags:
+status: published
 countryCode: us
-stauts: published
-instituteSlug: columbia
+instituteSlug: us-columbia
 ---
 <header>
 
@@ -43,17 +44,17 @@ Virtual instruction to resume March 26\. Traditional Commencement Week ceremonie
 
 <div class="field field--name-field-cu-wysiwyg field--type-text-long field--label-hidden field--item">
 
-Dear fellow members of the Columbia community:  
+Dear fellow members of the Columbia community:
 
-I write today from our Morningside Heights campus, which now has an eerie and uncharacteristic stillness about it, with three purposes. The first is to express my deepest appreciation to everyone for the extraordinary actions taken over these past two weeks to transform the University in ways that will allow us, as much as possible, to continue our work while we, the nation, and the world confront the unprecedented threat of the virus known as COVID-19\. I am in awe of the students—and the staff, parents, and friends who supported them—who moved out of the residence halls these last few days, not just for the orderly ways in which it was carried out but for the spirit of citizenship and shared sacrifice that defined it. You heeded the call and showed that there is still, indeed, life in the commons. To those students who have needed to remain due to exceptional circumstances, I want to reassure you that we will continue to provide essential services even with the announcement today from the governor to further reduce our workforce.   
+I write today from our Morningside Heights campus, which now has an eerie and uncharacteristic stillness about it, with three purposes. The first is to express my deepest appreciation to everyone for the extraordinary actions taken over these past two weeks to transform the University in ways that will allow us, as much as possible, to continue our work while we, the nation, and the world confront the unprecedented threat of the virus known as COVID-19\. I am in awe of the students—and the staff, parents, and friends who supported them—who moved out of the residence halls these last few days, not just for the orderly ways in which it was carried out but for the spirit of citizenship and shared sacrifice that defined it. You heeded the call and showed that there is still, indeed, life in the commons. To those students who have needed to remain due to exceptional circumstances, I want to reassure you that we will continue to provide essential services even with the announcement today from the governor to further reduce our workforce. 
 
-The second purpose for this message is to say that, with the exception of clinical education, I am postponing all instruction for the first three days of next week in order to give everyone a little more time to prepare to resume classes for the final few weeks of the semester. Classes will continue virtually on Thursday, March 26th. And, further, with respect to courses, working with each of your schools, we have decided that all classes this semester will be graded pass/fail. This, of course, does not reflect a reduction in expectations, but rather an acknowledgment of the severe complications of this unusual moment.   
+The second purpose for this message is to say that, with the exception of clinical education, I am postponing all instruction for the first three days of next week in order to give everyone a little more time to prepare to resume classes for the final few weeks of the semester. Classes will continue virtually on Thursday, March 26th. And, further, with respect to courses, working with each of your schools, we have decided that all classes this semester will be graded pass/fail. This, of course, does not reflect a reduction in expectations, but rather an acknowledgment of the severe complications of this unusual moment. 
 
-The third purpose is heartbreaking. Given life as it now is, we cannot go forward with Commencement ceremonies on May 20th, as planned. And, unfortunately, we are not in a position at this moment to announce an alternative plan. The situation is too uncertain, and any plans made now run a high risk of having to be abandoned as circumstances change. But this I can assure you: I will confer degrees on May 20th. We are and will continue thinking about this every day, and we will have a plan to honor and celebrate your successes. Speaking personally, there is no academic ceremony I love more, and I expect to love this one the most.   
+The third purpose is heartbreaking. Given life as it now is, we cannot go forward with Commencement ceremonies on May 20th, as planned. And, unfortunately, we are not in a position at this moment to announce an alternative plan. The situation is too uncertain, and any plans made now run a high risk of having to be abandoned as circumstances change. But this I can assure you: I will confer degrees on May 20th. We are and will continue thinking about this every day, and we will have a plan to honor and celebrate your successes. Speaking personally, there is no academic ceremony I love more, and I expect to love this one the most. 
 
-The world has moved on to a different plane, one none of us could have anticipated a short while ago. I want to say, on behalf of all of Columbia, that we are, as always, ready to do our part, which, given the assembled talent and public spiritedness of this community, is never inconsiderable. While a stillness pervades Morningside Heights, that does not mean our work has abated. Meanwhile, a very different atmosphere characterizes our medical campus in Washington Heights, where our colleagues are girding to face the fraught and daunting challenges to come. Indeed, the outpouring of time, effort, commitment, and personal sacrifice of those serving on the front line of the CUIMC campus are already very palpable. This dedication also portrays the work of all employees essential to keeping the University in operation. My deepest thanks to everyone.   
+The world has moved on to a different plane, one none of us could have anticipated a short while ago. I want to say, on behalf of all of Columbia, that we are, as always, ready to do our part, which, given the assembled talent and public spiritedness of this community, is never inconsiderable. While a stillness pervades Morningside Heights, that does not mean our work has abated. Meanwhile, a very different atmosphere characterizes our medical campus in Washington Heights, where our colleagues are girding to face the fraught and daunting challenges to come. Indeed, the outpouring of time, effort, commitment, and personal sacrifice of those serving on the front line of the CUIMC campus are already very palpable. This dedication also portrays the work of all employees essential to keeping the University in operation. My deepest thanks to everyone. 
 
-Sincerely,  
+Sincerely,
 
 Lee C. Bollinger
 

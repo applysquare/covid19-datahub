@@ -3,8 +3,12 @@
 title: '汉化征集：征集汉化文章列表'
 date: 2020-04-09
 link: >-
-slug: 
+status: published
 countryCode: us
+instituteSlug:
+tags:
+  - 留学互助
+  - Student Support
 ---
 
 

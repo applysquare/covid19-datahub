@@ -7,5 +7,7 @@ link: >-
 featuredpost: false
 tags:
   - nytimes
+status: published
 countryCode: us
+instituteSlug:
 ---

@@ -1,11 +1,14 @@
 ---
-# templateKey: article-page 
+# templateKey: article-page
 title: 疫情对美国暑校影响分析
 date: 2020-03-30
-link: 
-slug:
+link:
+status: published
 countryCode: us
-status: draft
+instituteSlug:
+tags:
+  - 政策解读
+  - Policy
 ---
 
 # 疫情对暑校影响分析
