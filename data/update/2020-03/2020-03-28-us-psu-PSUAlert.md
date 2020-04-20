@@ -1,13 +1,14 @@
 ---
 # templateKey: news-page
 title: PSUAlert issued per Clery requirements for first COVID-19 case at Harrisburg
-subtitle: 
+subtitle:
 date: 2020-03-28
 link: >-
   https://news.psu.edu/story/613368/2020/03/28/psualert-issued-clery-requirements-first-covid-19-case-harrisburg
+tags:
+status: published
 countryCode: us
-stauts: published
-instituteSlug: psu
+instituteSlug: us-psu
 ---
 <div class="field field-name-body field-type-text-with-summary field-label-hidden">
 

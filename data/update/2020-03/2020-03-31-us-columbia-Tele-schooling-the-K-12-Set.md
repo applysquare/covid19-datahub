@@ -4,9 +4,10 @@ title: Tele-schooling the K-12 Set
 date: 2020-03-25
 link: >-
   hhttps://news.columbia.edu/news-remote-youth-online-learning-schools
+tags:
+status: published
 countryCode: us
-stauts: published
-instituteSlug: columbia
+instituteSlug: us-columbia
 ---
 
 ![news image](https://news.columbia.edu/sites/default/files/styles/cu_crop/public/content/Research%20Images/youth-remote-learning-large.jpg?itok=hmG7YBrb)
@@ -21,7 +22,7 @@ The result is Youth Remote Learning, an online platform for K-12 students across
 
 The courses, grouped by grade level, topic and time slot, range from fun and practical, such as Ukulele Basics and Japanese or Arabic 101, to intellectually challenging. One course, for example, explores the queer, multiracial story of women’s right to vote and another tackles neurobiology and mindfulness strategies. For the youngest set, there are read-alouds, poetry jams and even a class to learn techniques for tying a friendship bracelet.
 
-Khan, co-author with Jennifer Hirsch of a recent book, Sexual Citizens: A Landmark Study of Sex, Power and Assault on Campus, is teaching two sessions of “Ethnography of the Crisis,” one for middle schoolers and another for high school students. His course will guide students on a discovery journey to document and understand the effect of COVID-19 on themselves, their families and community.  
+Khan, co-author with Jennifer Hirsch of a recent book, Sexual Citizens: A Landmark Study of Sex, Power and Assault on Campus, is teaching two sessions of “Ethnography of the Crisis,” one for middle schoolers and another for high school students. His course will guide students on a discovery journey to document and understand the effect of COVID-19 on themselves, their families and community.
 
 Khan and Lena, author of the newly published, Entitled: Discriminating Tastes and Expansion of the Arts, never imagined that this would grow so quickly in just two weeks.
 
@@ -30,7 +31,7 @@ Khan and Lena, author of the newly published, Entitled: Discriminating Tastes an
 Many who raised their hands were Columbia academics, but instructors from across the country also submitted ideas. Khan’s research assistant, Brian O’Sullivan, a Columbia College senior math and sociology major, helped build the website. As the project’s only paid employee, O'Sullivan will oversee the platform.
 
 # Connecting With Families Who Lack Tech Services
-The organizers expect 500 to 1,000 students to sign up this week, the majority learning about the courses through word of mouth or social media. They’ll connect with instructors through online platforms, such as Google Meet and Zoom, which allow for video conferencing and two-way communication. Most courses run 30 to 45 minutes, and the goal is to keep class sizes to no more than 20.   
+The organizers expect 500 to 1,000 students to sign up this week, the majority learning about the courses through word of mouth or social media. They’ll connect with instructors through online platforms, such as Google Meet and Zoom, which allow for video conferencing and two-way communication. Most courses run 30 to 45 minutes, and the goal is to keep class sizes to no more than 20.
 
 The initiative is strongly committed to making the resource available to low-income families. New York City, which has closed its schools through April 20 and possibly for the school year, is working to find computers and provide Internet access for those households that lack the services, as are other communities and states around the country that have experienced school closures.
 

@@ -1,5 +1,5 @@
 ---
-title: 关于中国籍旅客乘坐航班回国前填报防疫健康信息的公告
+title: 国航关于中国籍旅客乘坐航班回国前填报防疫健康信息的公告
 date: 2020-04-08
 link: >-
   http://www.airchina.com.cn/cn/info_and_services/138686.shtml
