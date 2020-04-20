@@ -3,16 +3,12 @@ nameEn: Stevens Institute of Technology
 nameCn: 斯蒂文斯理工学院
 countryCode: us
 website: http://www.stevens.edu/
-stateCn: 新泽西州
 stateEn: New Jersey
 publicOrPrivate: private
 coursePolicyLink: https://www.stevens.edu/directory/student-health-services/health-advisory-update/coronavirus-2019-covid-19-information
 cover: https://cdn.applysquare.net/a2/institute/stevens/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/stevens/logo.png
-numStateCases: 61850
-numStateDailyNewCases: 3699
-numStateDeaths: 2350
-numStateCures: 0
+bingApiId: newjersey_unitedstates
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-23
 onCampusCourseResumeDate: 

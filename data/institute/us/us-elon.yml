@@ -3,16 +3,12 @@ nameEn: Elon University
 nameCn: 依隆大学
 countryCode: us
 website: http://www.elon.edu/
-stateCn: 北卡罗莱纳州
 stateEn: North Carolina
 publicOrPrivate: private
 coursePolicyLink: https://www.elon.edu/u/coronavirus/
 cover: https://cdn.applysquare.net/a2/institute/elon/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/elon/logo.png
-numStateCases: 4570
-numStateDailyNewCases: 216
-numStateDeaths: 89
-numStateCures: 0
+bingApiId: northcarolina_unitedstates
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-23
 onCampusCourseResumeDate: 

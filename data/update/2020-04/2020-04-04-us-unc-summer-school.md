@@ -5,8 +5,9 @@ subtitle: o continue to mitigate the spread of COVID-19, all summer 2020 courses
 date: 2020-04-01
 link: >-
   https://thewell.unc.edu/2020/04/03/summer-school-to-transition-courses-to-remote-instruction/
+tags:
+status: published
 countryCode: us
-stauts: published
 instituteSlug: us-unc
 ---
 ![img](https://thewell.unc.edu/files/2020/04/bell-tower.jpg)

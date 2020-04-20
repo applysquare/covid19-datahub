@@ -3,16 +3,12 @@ nameEn: Brown University
 nameCn: 布朗大学
 countryCode: us
 website: http://www.brown.edu/
-stateCn: 罗得岛州
 stateEn: Rhode Island
 publicOrPrivate: private
 coursePolicyLink: https://covid.brown.edu/
 cover: https://cdn.applysquare.net/a2/institute/brown/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/brown/logo.png
-numStateCases: 2665
-numStateDailyNewCases: 316
-numStateDeaths: 63
-numStateCures: 0
+bingApiId: rhodeisland_unitedstates
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-30
 onCampusCourseResumeDate: 

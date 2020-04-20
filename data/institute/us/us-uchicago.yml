@@ -3,16 +3,12 @@ nameEn: University of Chicago
 nameCn: 芝加哥大学
 countryCode: us
 website: http://www.uchicago.edu/
-stateCn: 伊利诺伊州
 stateEn: Illinois
 publicOrPrivate: private
 coursePolicyLink: https://coronavirusupdates.uchicago.edu/
 cover: https://cdn.applysquare.net/a2/institute/uchicago/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/uchicago/logo.png
-numStateCases: 
-numStateDailyNewCases: 
-numStateDeaths: 
-numStateCures: 
+bingApiId: illinois_unitedstates
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-04-06
 onCampusCourseResumeDate: 

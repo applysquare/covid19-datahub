@@ -3,16 +3,12 @@ nameEn: University of Bath
 nameCn: 巴斯大学
 countryCode: uk
 website: http://www.bath.ac.uk/
-stateCn: 英国
 stateEn: United Kingdom
 publicOrPrivate: public
 coursePolicyLink: https://www.bath.ac.uk/topics/coronavirus-covid-19/
 cover: https://cdn.applysquare.net/a2/institute/uk.bath/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/uk.bath/logo.png
-numStateCases: 
-numStateDailyNewCases: 
-numStateDeaths: 
-numStateCures: 
+bingApiId: unitedkingdom
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-16
 onCampusCourseResumeDate: 

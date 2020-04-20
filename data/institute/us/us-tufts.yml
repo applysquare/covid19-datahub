@@ -3,16 +3,12 @@ nameEn: Tufts University
 nameCn: 塔夫茨大学
 countryCode: us
 website: http://www.tufts.edu/
-stateCn: 马萨诸塞州
 stateEn: Massachusetts
 publicOrPrivate: private
 coursePolicyLink: https://coronavirus.tufts.edu/
 cover: https://cdn.applysquare.net/a2/institute/tufts/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/tufts/logo.png
-numStateCases: 25475
-numStateDailyNewCases: 2615
-numStateDeaths: 756
-numStateCures: 0
+bingApiId: massachusetts_unitedstates
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-25
 onCampusCourseResumeDate: 

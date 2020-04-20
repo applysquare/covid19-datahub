@@ -120,7 +120,7 @@ export const IndexPageCore = ({ data, errors }) => {
                 <div style={{ color: "#EB5449", fontSize: "20px" }}>
                   {apiData?.totalConfirmed ?? "-"}
                 </div>
-                <div style={{ fontSize: "8px" }}>
+                <div style={{ fontSize: "12px" }}>
                   <span style={{ color: "#999999" }}>新增:</span>
                   <span style={{ color: "#EB5449" }}>
                     {apiData?.totalConfirmedDelta
@@ -215,7 +215,11 @@ export const pageQuery = graphql`
     }
     articles: allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
-      filter: { fields: { templateKey: { eq: "article-page" } } }
+      filter: { fields: { templateKey: { eq: "article-page" } }
+      frontmatter: {
+          countryCode: {in: [null, ""]}
+        }
+      }
     ) {
       edges {
         node {

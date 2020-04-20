@@ -3,16 +3,12 @@ nameEn: Gonzaga University
 nameCn: 贡萨格大学
 countryCode: us
 website: http://www.gonzaga.edu/
-stateCn: 华盛顿州
 stateEn: Washington
 publicOrPrivate: private
 coursePolicyLink: https://www.gonzaga.edu/about/offices-services/emergency-preparedness/zagready/hazard-specific-resources/coronavirus
 cover: https://cdn.applysquare.net/a2/institute/gonzaga/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/gonzaga/logo.png
-numStateCases: 10609
-numStateDailyNewCases: 175
-numStateDeaths: 506
-numStateCures: 0
+bingApiId: washington_unitedstates
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-23
 onCampusCourseResumeDate: 

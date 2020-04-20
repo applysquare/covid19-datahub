@@ -13,7 +13,7 @@ import { translateCourseOperationStatus } from "../components/display";
 // };
 
 const PageCore = ({ data }) => {
-  const { allInstitute = {}, allArea = {} } = data;
+  const { allInstitute = {}, allArea = {}, allCovid19Area = {} } = data;
   const urlCountryCode =
     typeof window !== "undefined" &&
     window.location.pathname.match("[^/]+(?!.*/)")[0];
@@ -21,7 +21,11 @@ const PageCore = ({ data }) => {
   const [institute, setInstitute] = useState(null);
   const [countryCode, setCountryCode] = useState(null);
   const [search, setSearch] = useState(null);
-
+  const getApiData = (apiCode) => {
+    return allCovid19Area?.nodes.find((node) => {
+      return node?.data?.id === apiCode;
+    })?.data;
+  };
   useEffect(() => {
     // const institute = filterArr(allInstitute?.edges, "us");
     const institute = allInstitute?.edges || [];
@@ -99,22 +103,35 @@ const PageCore = ({ data }) => {
           })}
         </div>
         <div className="flex-space-betwwen state-text">
-          <div>大学</div>
+          <div style={{ width: "60%" }}>大学</div>
+          <div>周边确诊</div>
+          <div>周边新增</div>
           <div>状态</div>
         </div>
         <div className="search-result-wrapper">
           <div>
             {(institute || []).map((edge) => {
               const { node } = edge;
+              const instituteApiData = getApiData(node?.bingApiId);
               return (
                 <Link
                   className="flex-space-betwwen item-result"
                   to={node?.fields?.pathname}
                   key={node?.fields?.pathname}
                 >
-                  <div style={{ maxWidth: "80%" }}>
+                  <div style={{ width: "60%" }}>
                     <div className="name-cn all-page-omit">{node?.nameCn}</div>
                     <div className="name-en all-page-omit">{node?.nameEn}</div>
+                  </div>
+                  <div style={{ maxWidth: "15%" }}>
+                    <span style={{ color: "#EB5449" }}>
+                      {instituteApiData?.totalConfirmed || "-"}
+                    </span>
+                  </div>
+                  <div style={{ maxWidth: "15%" }}>
+                    <span style={{ color: "#EB5449" }}>
+                      {instituteApiData?.totalConfirmedDelta || "-"}
+                    </span>
                   </div>
                   {/* <div
                   style={{
@@ -180,6 +197,7 @@ export const pageQuery = graphql`
     allInstitute(filter: { countryCode: { eq: $countryCode } }) {
       edges {
         node {
+          bingApiId
           countryCode
           courseOperationStatus
           id
@@ -188,6 +206,15 @@ export const pageQuery = graphql`
           fields {
             pathname
           }
+        }
+      }
+    }
+    allCovid19Area {
+      nodes {
+        data {
+          id
+          totalConfirmed
+          totalConfirmedDelta
         }
       }
     }

@@ -3,16 +3,12 @@ nameEn: Syracuse University
 nameCn: 雪城大学
 countryCode: us
 website: http://www.syracuse.edu/
-stateCn: 纽约州
 stateEn: New York
 publicOrPrivate: private
 coursePolicyLink: https://www.syracuse.edu/coronavirus/?announcement
 cover: https://cdn.applysquare.net/a2/institute/syr/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/syr/logo.png
-numStateCases: 189033
-numStateDailyNewCases: 8007
-numStateDeaths: 9385
-numStateCures: 0
+bingApiId: newyork_unitedstates
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-16
 onCampusCourseResumeDate: 

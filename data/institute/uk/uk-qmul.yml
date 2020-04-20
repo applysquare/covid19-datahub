@@ -3,16 +3,12 @@ nameEn: Queen Mary University of London
 nameCn: 伦敦大学玛丽王后学院
 countryCode: uk
 website: http://www.qmul.ac.uk/
-stateCn: 英国
 stateEn: United Kingdom
 publicOrPrivate: public
 coursePolicyLink: https://www.qmul.ac.uk/coronavirus/
 cover: https://cdn.applysquare.net/a2/institute/uk.qmul/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/uk.qmul/logo.png
-numStateCases: 
-numStateDailyNewCases: 
-numStateDeaths: 
-numStateCures: 
-courseOperationStatus: holiday
+bingApiId: unitedkingdom
+courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-04-14
 onCampusCourseResumeDate: 

@@ -5,8 +5,10 @@ date: 2020-04-05
 link: >-
   https://www.gov.uk/foreign-travel-advice
 featuredpost: false
-featuredimage: 
+featuredimage:
 tags:
   - gov.uk
+status: published
 countryCode: uk
+instituteSlug:
 ---

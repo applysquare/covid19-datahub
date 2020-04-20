@@ -3,16 +3,12 @@ nameEn: University of Pennsylvania
 nameCn: 宾夕法尼亚大学
 countryCode: us
 website: http://www.upenn.edu/
-stateCn: 宾夕法尼亚州
 stateEn: Pennsylvania
 publicOrPrivate: private
 coursePolicyLink: https://coronavirus.upenn.edu/
 cover: https://cdn.applysquare.net/a2/institute/upenn/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/upenn/logo.png
-numStateCases: 22938
-numStateDailyNewCases: 1219
-numStateDeaths: 557
-numStateCures: 0
+bingApiId: pennsylvania_unitedstates
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-23
 onCampusCourseResumeDate: 

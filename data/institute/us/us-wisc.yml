@@ -3,16 +3,12 @@ nameEn: University of Wisconsin - Madison
 nameCn: 威斯康星大学麦迪逊分校
 countryCode: us
 website: http://www.wisc.edu/
-stateCn: 威斯康星州
 stateEn: Wisconsin
 publicOrPrivate: public
 coursePolicyLink: https://covid19.wisc.edu/
 cover: https://cdn.applysquare.net/a2/institute/wisc/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/wisc/logo.png
-numStateCases: 3341
-numStateDailyNewCases: 128
-numStateDeaths: 144
-numStateCures: 0
+bingApiId: wisconsin_unitedstates
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-23
 onCampusCourseResumeDate: 

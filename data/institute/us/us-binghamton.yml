@@ -3,16 +3,12 @@ nameEn: Binghamton University
 nameCn: 纽约州立大学宾汉姆顿分校
 countryCode: us
 website: http://www.binghamton.edu/
-stateCn: 纽约州
 stateEn: New York
 publicOrPrivate: public
 coursePolicyLink: https://www.binghamton.edu/health/coronavirus/
 cover: https://cdn.applysquare.net/a2/institute/binghamton/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/binghamton/logo.png
-numStateCases: 189033
-numStateDailyNewCases: 8007
-numStateDeaths: 9385
-numStateCures: 0
+bingApiId: newyork_unitedstates
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-19
 onCampusCourseResumeDate: 

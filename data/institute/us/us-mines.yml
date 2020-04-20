@@ -3,16 +3,12 @@ nameEn: Colorado School of Mines
 nameCn: 科罗拉多矿业大学
 countryCode: us
 website: http://www.mines.edu/
-stateCn: 科罗拉多州
 stateEn: Colorado
 publicOrPrivate: public
 coursePolicyLink: https://www.mines.edu/coronavirus/
 cover: https://cdn.applysquare.net/a2/institute/mines/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/mines/logo.png
-numStateCases: 7307
-numStateDailyNewCases: 794
-numStateDeaths: 289
-numStateCures: 0
+bingApiId: colorado_unitedstates
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-30
 onCampusCourseResumeDate: 

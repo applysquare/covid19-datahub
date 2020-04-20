@@ -3,16 +3,12 @@ nameEn: Newcastle University
 nameCn: 纽卡斯尔大学
 countryCode: uk
 website: https://www.ncl.ac.uk/
-stateCn: 英国
 stateEn: United Kingdom
 publicOrPrivate: public
 coursePolicyLink: https://www.ncl.ac.uk/wellbeing/coronavirus-updatedinformation/
 cover: https://cdn.applysquare.net/a2/institute/uk.ncl/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/uk.ncl/logo.png
-numStateCases: 
-numStateDailyNewCases: 
-numStateDeaths: 
-numStateCures: 
+bingApiId: unitedkingdom
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-17
 onCampusCourseResumeDate: 

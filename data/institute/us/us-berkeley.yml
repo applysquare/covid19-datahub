@@ -3,16 +3,12 @@ nameEn: University of California, Berkeley
 nameCn: 加州大学伯克利分校
 countryCode: us
 website: http://www.berkeley.edu/
-stateCn: 加利福尼亚州
 stateEn: California
 publicOrPrivate: public
 coursePolicyLink: https://news.berkeley.edu/coronavirus/
 cover: https://cdn.applysquare.net/a2/institute/berkeley/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/berkeley/logo.png
-numStateCases: 22795
-numStateDailyNewCases: 1089
-numStateDeaths: 641
-numStateCures: 0
+bingApiId: california_unitedstates
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-10
 onCampusCourseResumeDate: 

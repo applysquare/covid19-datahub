@@ -3,16 +3,12 @@ nameEn: University of Florida
 nameCn: 佛罗里达大学
 countryCode: us
 website: http://www.ufl.edu/
-stateCn: 佛罗里达州
 stateEn: Florida
 publicOrPrivate: public
 coursePolicyLink: http://www.ufl.edu/health-updates/
 cover: https://cdn.applysquare.net/a2/institute/ufl/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/ufl/logo.png
-numStateCases: 19895
-numStateDailyNewCases: 1401
-numStateDeaths: 461
-numStateCures: 0
+bingApiId: florida_unitedstates
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-16
 onCampusCourseResumeDate: 

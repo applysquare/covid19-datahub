@@ -3,16 +3,12 @@ nameEn: University of Western Australia
 nameCn: 西澳大学
 countryCode: au
 website: http://www.uwa.edu.au/
-stateCn: 西澳大利亚州
 stateEn: Western Australia
 publicOrPrivate: public
 coursePolicyLink: https://www.web.uwa.edu.au/novel-coronavirus
 cover: https://cdn.applysquare.net/a2/institute/au.uwa/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/au.uwa/logo.png
-numStateCases: 514
-numStateDailyNewCases: 0
-numStateDeaths: 6
-numStateCures: 216
+bingApiId: westernaustralia_australia
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-23
 onCampusCourseResumeDate: 

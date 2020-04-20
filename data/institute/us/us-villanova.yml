@@ -3,16 +3,12 @@ nameEn: Villanova University
 nameCn: 维拉诺瓦大学
 countryCode: us
 website: http://www.villanova.edu/
-stateCn: 宾夕法尼亚州
 stateEn: Pennsylvania
 publicOrPrivate: private
 coursePolicyLink: https://www1.villanova.edu/villanova/studentlife/health/center/Coronavirus.html
 cover: https://cdn.applysquare.net/a2/institute/villanova/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/villanova/logo.png
-numStateCases: 22938
-numStateDailyNewCases: 1219
-numStateDeaths: 557
-numStateCures: 0
+bingApiId: pennsylvania_unitedstates
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-16
 onCampusCourseResumeDate: 

@@ -3,16 +3,12 @@ nameEn: Rutgers, The State University of New Jersey
 nameCn: 罗格斯大学
 countryCode: us
 website: http://newbrunswick.rutgers.edu/
-stateCn: 新泽西州
 stateEn: New Jersey
 publicOrPrivate: public
 coursePolicyLink: https://coronavirus.rutgers.edu/
 cover: https://cdn.applysquare.net/a2/institute/rutgers/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/rutgers/logo.png
-numStateCases: 61850
-numStateDailyNewCases: 3699
-numStateDeaths: 2350
-numStateCures: 0
+bingApiId: newjersey_unitedstates
 courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-03-16
 onCampusCourseResumeDate: 
