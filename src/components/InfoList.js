@@ -20,6 +20,7 @@ const styles = {
     textOverflow: "ellipsis",
     overflow: "hidden",
     marginRight: "10px",
+    flex: 1,
   },
   more: {
     color: "#999999",
