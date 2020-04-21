@@ -6,30 +6,28 @@ import { sliceArr } from "../components/display";
 
 const styles = {
   item: {
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
     fontSize: "14px",
     color: "#333333",
-    padding: "7px 0"
+    padding: "7px 0",
   },
   link: {
     display: "block",
     width: "100%",
-    textDecoration: "none"
+    textDecoration: "none",
   },
   txt: {
     whiteSpace: "nowrap",
     textOverflow: "ellipsis",
     overflow: "hidden",
-    marginRight: "10px"
+    marginRight: "10px",
+    flex: 1,
   },
   more: {
     color: "#999999",
     fontSize: "14px",
     padding: "5px",
-    display: "inline-block"
-  }
+    display: "inline-block",
+  },
 };
 
 const InfoList = ({ infoEdges = [] }) => {
@@ -41,7 +39,7 @@ const InfoList = ({ infoEdges = [] }) => {
     setMore(false);
   }, [infoEdges]);
 
-  const clickBtn = e => {
+  const clickBtn = (e) => {
     e.preventDefault();
     const arr = more ? sliceArr(infoEdges, 3) : infoEdges;
     setInfoArr(arr);
@@ -51,7 +49,7 @@ const InfoList = ({ infoEdges = [] }) => {
     <div>
       <div>
         {infoArr &&
-          infoArr.map(edge => {
+          infoArr.map((edge) => {
             const art = edge?.node?.frontmatter;
             return (
               <Link
@@ -59,7 +57,7 @@ const InfoList = ({ infoEdges = [] }) => {
                 key={edge?.node?.id}
                 to={edge?.node?.fields?.pathname}
               >
-                <div style={styles.item}>
+                <div className="flex-space-betwwen" style={styles.item}>
                   <div style={styles.txt}>{art?.title}</div>
                   <RightOutlined />
                 </div>
@@ -71,7 +69,7 @@ const InfoList = ({ infoEdges = [] }) => {
         <a
           href="###"
           style={styles.more}
-          onClick={e => {
+          onClick={(e) => {
             clickBtn(e);
           }}
         >
