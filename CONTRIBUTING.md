@@ -58,7 +58,7 @@ If you have any data, Please contribute with illustration below.
 | :-------------|:-------------|:-------------------------|:------|
 | title     | **必填** |  标题，注意：当标题中含有冒号时，应在标题两侧加英文双引号  |  Will my grades be affected by COVID-19？  |
 | subtitle     | 选填 |  二级标题，注意：当二级标题中含有冒号时，应在标题两侧加英文双引号  |  For All Students  |
-| date     | 选填 |  该项政策的官方发布日期，注意不是当前日期，格式：YYYY-MM-DD  |  2020-04-05  |
+| date     | **必填** |  该项政策的官方发布日期，若无则填入当前日期，格式：YYYY-MM-DD  |  2020-04-05  |
 | link     | **必填** |  政策所在官网，以http开头  |  <a href="http://www.bu.edu/provost/2020/03/09/remote-teaching-readiness-plan/">示例link</a>  |
 | countryCode    | **必填** |  院校所在国家或地区小写代码，若不确定可点击定义好的<a href="https://docs.google.com/spreadsheets/d/1eZMJ29XtJ_9ozQf-GEJH72fSuSVEiDZMvSYU0RQ3tP0/edit?usp=sharing">国家/地区代码</a>查找，或提取instituteSlug里"-"前的前缀  |  us  |
 | status     | **必填** |  发布状态，发布：published，草稿：draft，置顶：pinned  |  published  |
