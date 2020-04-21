@@ -56,11 +56,13 @@ export const IndexPageCore = ({ data, errors }) => {
   };
 
   return (
-    <div className="index-page">
-      <Link to="/about">
-        <div className="banner"></div>
-      </Link>
-      <div className="flex-space-around" style={{ alignItems: "inherit" }}>
+    <div style={{ background: "rgba(241,241,241,0.8)" }}>     <div className="index-page">
+      <div>       <Link to="/about">
+        <Link to="/about">          <div className="banner"></div>
+          <img style={styles.titleImg} src={indexTitleImg} alt="" />        </Link>
+        </Link>       <div className="flex-space-around" style={{ alignItems: "inherit" }}>
+      </div>
+      <div style={styles.flexParent}>
         <Link
           className="tab-item"
           style={{
