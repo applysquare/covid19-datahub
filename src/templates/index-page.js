@@ -9,6 +9,7 @@ import NewList from "../components/NewList";
 import AllAreaCases from "../components/AllAreaCases";
 import { help } from "../components/const";
 import { sliceArr } from "../components/display";
+import indexTitleImg from "../img/indexTitleImg.png";
 
 // 之后换成网页端交流与资源建设页面入口
 
