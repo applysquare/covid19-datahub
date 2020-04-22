@@ -125,7 +125,7 @@ const InstitutePageCore = ({ data, errors }) => {
             </div>
           </div>
           <div className="flex-item">
-            <div>停课时间</div>
+            <div>网课开始</div>
             <div className="status">
               {(onlineCourseStartDate && formatDate(onlineCourseStartDate)) ??
                 "-"}
