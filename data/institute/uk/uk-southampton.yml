@@ -3,12 +3,11 @@ nameEn: University of Southampton
 nameCn: 南安普敦大学
 countryCode: uk
 website: http://www.southampton.ac.uk/
-stateEn: United Kingdom
 publicOrPrivate: public
 coursePolicyLink: https://www.southampton.ac.uk/news/statements/coronavirus.page
 cover: https://cdn.applysquare.net/a2/institute/uk.southampton/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/uk.southampton/logo.png
 bingApiId: unitedkingdom
-courseOperationStatus: holiday
+courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-04-20
 onCampusCourseResumeDate: 

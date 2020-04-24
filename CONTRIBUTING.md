@@ -38,7 +38,6 @@ If you have any data, Please contribute with illustration below.
 | nameCn     | **必填** | 院校中文名 | 哥伦比亚大学 |
 | countryCode     | **必填** | 院校所在国家或地区小写代码，若不确定可点击定义好的<a href="https://docs.google.com/spreadsheets/d/1eZMJ29XtJ_9ozQf-GEJH72fSuSVEiDZMvSYU0RQ3tP0/edit?usp=sharing">国家/地区代码</a>查找，或提取slug里"-"前的前缀    | us |
 | website     | 选填 | 院校官网，以http开头 | <a href="http://www.columbia.edu/">示例link</a> |
-| stateEn    | **必填** | 院校所在州或二级行政区的英文 | New York |
 | publicOrPrivate     | 选填 | 院校属性，公办：public，私立：private | private |
 | coursePolicyLink     | 选填 | 院校应对疫情的学习发展应对政策所在链接 | <a href="https://covid19.columbia.edu/">示例link</a> |
 | cover     | 选填 | 院校封面图，可通过申请方图片链接直接调用，美国院校slug-之后部分替换掉示例link中的columbia即可，其他国家院校slug中的“-”改为“.”再替换掉示例link中的columbia即可 |  <a href="https://cdn.applysquare.net/a2/institute/columbia/cover_app.jpg">示例link</a> |
@@ -59,7 +58,7 @@ If you have any data, Please contribute with illustration below.
 | :-------------|:-------------|:-------------------------|:------|
 | title     | **必填** |  标题，注意：当标题中含有冒号时，应在标题两侧加英文双引号  |  Will my grades be affected by COVID-19？  |
 | subtitle     | 选填 |  二级标题，注意：当二级标题中含有冒号时，应在标题两侧加英文双引号  |  For All Students  |
-| date     | 选填 |  该项政策的官方发布日期，注意不是当前日期，格式：YYYY-MM-DD  |  2020-04-05  |
+| date     | **必填** |  该项政策的官方发布日期，若无则填入当前日期，格式：YYYY-MM-DD  |  2020-04-05  |
 | link     | **必填** |  政策所在官网，以http开头  |  <a href="http://www.bu.edu/provost/2020/03/09/remote-teaching-readiness-plan/">示例link</a>  |
 | countryCode    | **必填** |  院校所在国家或地区小写代码，若不确定可点击定义好的<a href="https://docs.google.com/spreadsheets/d/1eZMJ29XtJ_9ozQf-GEJH72fSuSVEiDZMvSYU0RQ3tP0/edit?usp=sharing">国家/地区代码</a>查找，或提取instituteSlug里"-"前的前缀  |  us  |
 | status     | **必填** |  发布状态，发布：published，草稿：draft，置顶：pinned  |  published  |

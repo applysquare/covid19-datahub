@@ -3,12 +3,11 @@ nameEn: Cardiff University
 nameCn: 卡迪夫大学
 countryCode: uk
 website: http://www.cardiff.ac.uk/
-stateEn: United Kingdom
 publicOrPrivate: public
 coursePolicyLink: https://www.cardiff.ac.uk/coronavirus
 cover: https://cdn.applysquare.net/a2/institute/uk.cardiff/cover_app.jpg
 logo: https://cdn.applysquare.net/a2/institute/uk.cardiff/logo.png
 bingApiId: unitedkingdom
-courseOperationStatus: holiday
+courseOperationStatus: onlineCourse
 onlineCourseStartDate: 2020-04-20
 onCampusCourseResumeDate: 
