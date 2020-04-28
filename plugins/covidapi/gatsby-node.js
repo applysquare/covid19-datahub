@@ -33,7 +33,19 @@ exports.sourceNodes = async ({ actions, createNodeId, createContentDigest }) => 
         }
     };
 
-    const data = await (await fetch('https://bing.com/covid/data')).json();
+    // const data = await (await fetch('https://bing.com/covid/data')).json();
+    // Use a mock one since bing is no long providing data.
+    const data = {
+        id: "mars",
+        "displayName": "Mars",
+        "areas": [],
+        totalConfirmed: 0,
+        totalDeaths: 0,
+        totalRecovered: 0,
+        totalRecoveredDelta: 0,
+        totalConfirmedDelta: 0,
+        totalDeathsDelta: 0,
+    };
     walkArea(data, (area) => {
         createNode(processResult({
             result: {
