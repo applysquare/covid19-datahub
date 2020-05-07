@@ -6,4 +6,4 @@ link: >-
 airlineCode: japan_airlines
 status: published
 ---
-https://www.jal.co.jp/info/2020/dom/200428/img_sites/hokkaido_ja_0507_0517_200428.pdf
+详细信息见https://www.jal.co.jp/info/2020/dom/200428/img_sites/hokkaido_ja_0507_0517_200428.pdf
