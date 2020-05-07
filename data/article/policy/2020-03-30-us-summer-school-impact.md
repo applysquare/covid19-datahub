@@ -6,9 +6,8 @@ link:
 status: published
 countryCode: us
 instituteSlug:
-tags:
-  - 政策解读
-  - Policy
+tagsCn: 政策解读
+tagsEn: Policy
 ---
 
 # 疫情对暑校影响分析

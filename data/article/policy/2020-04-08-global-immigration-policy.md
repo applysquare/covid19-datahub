@@ -6,9 +6,6 @@ link: https://www.uscreditcardguide.com/yinwuhanguanzhuangbingduzhenduizhongguod
 status: published
 countryCode: us
 instituteSlug:
-tags:
-  - 政策解读
-  - Policy
-  - 签证入境
-  - Visa
+tagsCn: 政策解读，签证入境
+tagsEn: Policy，Visa
 ---
