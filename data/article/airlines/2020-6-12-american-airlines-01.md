@@ -6,8 +6,6 @@ link: >-
 airlineCode: american_airlines
 status: published
 ---
-<div class="invisible">FORT WORTH, Texas — American Airlines Group Inc. (NASDAQ: AAL) is getting ready for summer travel by restoring more flights, offering double AAdvantage<sup>®</sup> miles for flights booked in June, re-opening key Admirals Club lounges, expanding flexible policies and continuing its robust health, well-being and cleaning procedures.</div>
-
 *   Planning to fly more than 55% of its July 2019 domestic capacity in July 2020
 *   Resuming lounge service June 22 at 11 Admirals Club lounges in 10 key U.S. cities
 *   Continuing robust health, well-being and cleaning procedures
