@@ -1,16 +1,11 @@
 ---
-title: "Bring on Summer: American Airlines Increases Domestic Flying for Summer Travel Season, Begins Reopening Admirals Clubs and Increases Flexibility"
+title: American Airlines Increases Domestic Flying for Summer Travel Season, Begins Reopening Admirals Clubs and Increases Flexibility
 date: 2020-06-04
 link: >-
   http://news.aa.com/news/news-details/2020/Bring-on-Summer-American-Airlines-Increases-Domestic-Flying-for-Summer-Travel-Season-Begins-Reopening-Admirals-Clubs-and-Increases-Flexibility-OPS-DIS-06/default.aspx
 airlineCode: american_airlines
 status: published
 ---
-Thursday, June 04, 2020, 6:00 AM
-
-[Share](https://www.facebook.com/sharer/sharer.php)
-
-[Tweet](https://twitter.com/share?ref_src=twsrc%5Etfw)  Share [![](/files/images/email-icon.png) Email](# "Share by email") 
 
 [ Download PDF (English) PDF Format (opens in new window) ? ( PDF 134 KB) ](//s21.q4cdn.com/616071541/files/doc_news/Bring-on-Summer-American-Airlines-Increases-Domestic-Flying-for-Summer-Travel-Season-Begins-Reopening-Admirals-Clubs-and-Increases-Fl-138XR.pdf) 
 
